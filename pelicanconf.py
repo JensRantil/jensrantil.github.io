@@ -6,7 +6,9 @@ AUTHOR = u'Jens Rantil'
 SITENAME = u"Jens Rantil's Hideout"
 SITEURL = ''
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/Stockholm'
+
+THEME = 'themes/iris'
 
 DEFAULT_LANG = u'en'
 
