@@ -23,9 +23,6 @@
                 <footer class="post-info">
                     <abbr>
                       {{ article.locale_date }} 
-                      {% if article.author %}
-                         By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
-                      {% endif %}  
                     </abbr>
                     <div class="entry-summary"> {{ article.summary }}
                     <a href="{{ SITEURL }}/{{ article.url }}">read more</a></div>
