@@ -3,6 +3,7 @@ AngularJS events on initialization
 
 :date: 2013-05-24 00:26
 :tags: AngularJS, JavaScript
+:summary: Triggering events from services might not always work...
 
 In my `previous post`_ I was giving an example of using AngularJS_
 events_.
