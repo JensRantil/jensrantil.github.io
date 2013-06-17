@@ -10,7 +10,7 @@ with the framework, and the more time I spend in it, the more I like it.
 .. _AngularJS: http://angularjs.org
 
 But as with most things, AngularJS has some rough corners. Its
-documentation_ still has a long way to go, altough it has improved since
+documentation_ still has a long way to go, although it has improved since
 last time I used it over a year ago. Common use cases and "Angular-y"
 was of doing things is another thing that I also feel is lacking out
 there. I guess it could be considered documentation depending on how you
@@ -192,8 +192,8 @@ can_ use_ events_ when our promises are resolved:
 Each event is triggered with newly fetched list as event argument.
 
 Since the service can't access the controller that uses it, we trigger
-events from ``$rootScope``. For bigger applications you might
-want to use the calling controller as a parameter to ``refresh()`` avoid
+events from ``$rootScope``. For bigger applications you might want to
+use the calling controller as a parameter to ``refresh()`` to avoid
 bloating the ``$rootScope`` with too many events (and possibly get
 conflicting event names).
 
@@ -239,8 +239,8 @@ call:
     src="http://jsfiddle.net/Ztyx/U9A32/17/embedded/"
     allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-I know this became quite a lot of code example. It all grew out of being
-a simple example, but I think this journey is necessary to fully
+I know this became quite a lot of code. It all grew out of being a
+simple example, but I think this journey is necessary to fully
 understand what considerations goes into making reusable, refreshable,
 services in Angular.
 
@@ -248,4 +248,4 @@ Last, but not least, don't just rip my example. Many times you are
 totally fine with a service that simply fetches resource *once* per page
 load!
 
-Can I do this much simpler? Tell med in the comments.
+Can I do this much simpler? Tell me in the comments.
