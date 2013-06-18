@@ -42,7 +42,7 @@ Random facts about Jens:
 * Jens enjoys playing on his african drums.
 * Jens enjoys learning new programming languages. His latest one is Go_.
 * Jens played guitar in a student musical [2] orchestra and later
-  directing one for two semesters.
+  volunteered as a stage director for two semesters.
 * Jens has had a special fondness when it comes to `Getting Things
   Done`_ and time management. He's been trying over 10 different online
   task management systems. He's pretty picky...
