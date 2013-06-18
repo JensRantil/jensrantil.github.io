@@ -30,3 +30,8 @@ sources on the web. But the truth is, logs are great for many reasons:
 
 Without logs, the Internet would be a much less stable and secure place
 to be in.
+
+While logs can be used for evil, they can also be used for good. I
+just simply want to point out that the coin has two sides. Sometimes
+talking about how information *is* used is more important than *what it
+can* be used for.
