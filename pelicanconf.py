@@ -8,7 +8,7 @@ SITEURL = ''
 
 TIMEZONE = 'Europe/Stockholm'
 
-THEME = 'themes/iris'
+THEME = 'themes/svtle'
 
 DEFAULT_LANG = u'en'
 
