@@ -17,6 +17,11 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
+AUTHOR_BIO = ("Swedish/English, fullstack software engineer"
+              ' (<a href="http://www.telavox.se" target="_blank">@Telavox</a>),'
+              " engineering mathematics, traveller, nerd, juggler, guitarist,"
+              " african drum player. Inspired Swede.")
+
 # Blogroll
 LINKS =  (('Pelican', 'http://getpelican.com/'),
           ('Python.org', 'http://python.org/'),
