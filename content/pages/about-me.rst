@@ -41,7 +41,7 @@ Random facts about Jens:
 * Jens is left handed.
 * Jens enjoys playing on his african drums.
 * Jens enjoys learning new programming languages. His latest one is Go_.
-* Jens played guitar in a student musical [2] orchestra and later
+* Jens played guitar in a student musical [2]_ orchestra and later
   volunteered as a stage director for two semesters.
 * Jens has had a special fondness when it comes to `Getting Things
   Done`_ and time management. He's been trying over 10 different online
