@@ -19,8 +19,9 @@ TRANSLATION_FEED_ATOM = None
 
 AUTHOR_BIO = ("Swedish/English, fullstack software engineer"
               ' (<a href="http://www.telavox.se" target="_blank">@Telavox</a>),'
-              " engineering mathematics, traveller, nerd, juggler, guitarist,"
-              " african drum player. Inspired Swede.")
+              ' <a href="http://www.lth.se/english/education/programmes/master_engineering/engineering_mathematics/">MSc'
+              ' in Engineering Mathematics</a>, traveller, nerd, juggler,'
+              ' guitarist, african drum player. Inspired Swede.')
 
 # Blogroll
 LINKS =  (('Twitter', 'http://www.twitter.com/JensRantil'),
