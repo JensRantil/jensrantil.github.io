@@ -25,7 +25,8 @@ AUTHOR_BIO = ("Swedish/English, fullstack software engineer"
 
 # Blogroll
 LINKS =  (('Twitter', 'http://www.twitter.com/JensRantil'),
-          ('Github', 'http://www.github.com/JensRantil'),)
+          ('Github', 'http://www.github.com/JensRantil'),
+          ('LinkedIn', 'http://www.linkedin.com/in/jensrantil'),)
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
