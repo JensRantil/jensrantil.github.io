@@ -3,6 +3,11 @@ CQRS+Event Sourcing Messaging Patterns
 
 :date: 2013-05-26 23:09
 :tags: cqrs, event sourcing, distributed architecture
+:summary:
+    Designing a decoupled, message based, system based on the CQRS_
+    pattern together with `event sourcing`_ require some thought. Since
+    I've been thinking about it for a while now, I thought I'd share
+    some thoughts so far.
 
 This post is partially related to my `previous blog post`_ about
 Rewind_ and Gorewind_.
