@@ -44,18 +44,18 @@ opposed to Java) were:
 
 * Requiring all code to reside in classes is...ridiculous:
  
- * Not all methods requires state and my personal opinion is that
-   functional paradigm is easier for beginning programmers to
-   understand. Not to mention that functional style of programming
-   easily can encapsulate, too, in its own way.
+  * Not all methods requires state and my personal opinion is that
+    functional paradigm is easier for beginning programmers to
+    understand. Not to mention that functional style of programming
+    easily can encapsulate, too, in its own way.
 
- * Proper object oriented desing is *hard* and takes practise. Sadly,
-   most programmers have never read the `Gang of Four book`_ and while
-   beginner's Java books try to describe concepts such as encapsulation,
-   polymorphism etc. the books don't really make a good job of
-   explaining them. The simple concepts are easy.  Designing APIs and
-   bigger applications is hard. It's taken me a long time and I'm still
-   making mistakes.
+  * Proper object oriented desing is *hard* and takes practise. Sadly,
+    most programmers have never read the `Gang of Four book`_ and while
+    beginner's Java books try to describe concepts such as encapsulation,
+    polymorphism etc. the books don't really make a good job of
+    explaining them. The simple concepts are easy.  Designing APIs and
+    bigger applications is hard. It's taken me a long time and I'm still
+    making mistakes.
 
 * Great support for ZeroMQ_.
 
