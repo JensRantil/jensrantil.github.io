@@ -79,5 +79,5 @@ With great server comes great responsibility
 The above said, a server requires strict testing to make sure you can be
 confident that server works as expected. Since Python is a dynamically
 types language, this puts an extra pressure on testing. Using test
-coverage as a metric is almost must.
+coverage as a metric is almost a must.
 
