@@ -9,8 +9,8 @@ Writing a server in Python
     concerns when it comes to Python. The biggest ones are obviously
     concurrency and the GIL_.
 
-*This post is partially related to my `previous blog post`_ about
-Rewind_.*
+This post is partially related to my `previous blog post`_ about
+Rewind_.
 
 .. _previous blog post: |filename|CQRS-time-to-rewind.rst
 .. _Rewind: http://www.github.com/JensRantil/rewind
