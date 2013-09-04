@@ -9,7 +9,7 @@ GIT mirroring using Jenkins
     goes down.
 
 For the past couple of weeks I've been annoyed by the high latency
-when connecting to Github over SSH. While the other GIT transports could
+when connecting to Github_ over SSH. While the other GIT transports could
 be an option, I prefer to use keys to authenticate against Github.
 
 This got me thinking about setting up a local GIT mirror at our office.
@@ -17,10 +17,13 @@ To keep my project future proof, I planned to make this a cron-job-ish
 project; every so often it would checkout all repositories for a certain
 organization.
 
-Then it struck me - I'm already running a Jenkins installation that
+Then it struck me - I'm already running a Jenkins_ installation that
 pulls commits from Github regularly. Why not reuse those repositories?
 So far my GIT mirror setup has been working great - and has also made us
 more resilient to Github downtime. Here's how I've done it:
+
+.. _Github: https://github.com
+.. _Jenkins: http://www.jenkins-ci.org
 
 Serving the Jenkins checkouts
 -----------------------------
