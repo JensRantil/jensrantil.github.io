@@ -209,7 +209,7 @@ refresh. See ``MyListLengthController`` here:
 .. raw:: html
 
     <iframe width="100%" height="300"
-    src="http://jsfiddle.net/Ztyx/U9A32/13/embedded/"
+    src="http://jsfiddle.net/Ztyx/U9A32/30/embedded/"
     allowfullscreen="allowfullscreen" frameborder="0"></iframe>
     
 A reason why you would want to do this would be if DOM generation is
