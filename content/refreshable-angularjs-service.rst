@@ -203,7 +203,7 @@ get triggered when a new result would have been fetched. Making multiple
 HTTP API calls to fetch the same resource would be both a waste of time
 and bandwidth.
 
-You can also choosing *not* to refresh certain controller scopes on
+You can also choose *not* to refresh certain controller scopes on
 refresh. See ``MyListLengthController`` here:
 
 .. raw:: html
