@@ -224,7 +224,7 @@ service/controller/component:
 .. raw:: html
 
     <iframe width="100%" height="300"
-    src="http://jsfiddle.net/Ztyx/U9A32/14/embedded/"
+    src="http://jsfiddle.net/Ztyx/U9A32/31/embedded/"
     allowfullscreen="allowfullscreen" frameborder="0"></iframe>
     
 Another issue with the above solution is we are partially back to the issue
