@@ -6,7 +6,7 @@ New PGP key
 :summary: I have a new PGP key.
 
 Just wanted to give you a heads up that I recently generated a `new PGP
-key`. Its fingerprint is ``4371 E7ED 3A3D DBB4 12B5 C68F BA63 2DB6 91DA
+key`_. Its fingerprint is ``4371 E7ED 3A3D DBB4 12B5 C68F BA63 2DB6 91DA
 03B8`` and its bound to ``jens.rantil@gmail.com``.
 
 .. _new PGP key: https://dl.dropboxusercontent.com/u/17059539/public.asc
