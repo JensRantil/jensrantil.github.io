@@ -2,11 +2,12 @@ About Jens
 =================
 Jens Rantil is a *developer* and *sysadmin*. He has a *MS in Engineering
 Mathematics* from `Lund Institute of Technology`_ (LTH), Sweden_. His
-current employer is `Telavox`_, a Swedish VOIP provider [1]_.
+current employer is `Tink`_, a startup that helps you with your personal
+economy [1]_.
 
 .. _Lund Institute of Technology: http://www.lth.se/english/
 .. _Sweden: http://www.sweden.se
-.. _Telavox: http://www.telavox.se
+.. _Tink: http://www.tinkapp.com
 
 Jens can found in various corners of the web:
 
@@ -55,5 +56,5 @@ Random facts about Jens:
 .. _Continuous Delivery: http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912
 .. _Go: http://golang.org
 .. _Getting Things Done: http://www.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0142000280
-.. [1] ...although this blog is obviously not affiliated with Telavox in any way.
+.. [1] ...although this blog is obviously not affiliated with Tink in any way.
 .. [2] Often referred to as "Spex" in Sweden.
