@@ -1,7 +1,7 @@
 Salt vs. Ansible
 ################
 
-:date: 2014-03-12 18:34
+:date: 2014-03-17 22:46
 :tags: Salt, Ansible, provisioning
 :summary: A highly opinionated comparison between Salt and Ansible.
 
