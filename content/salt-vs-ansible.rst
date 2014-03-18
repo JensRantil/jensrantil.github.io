@@ -5,7 +5,7 @@ Salt vs. Ansible
 :tags: Salt, Ansible, provisioning
 :summary: A highly opinionated comparison between Salt and Ansible.
 
-Recently I was set to evaluate configuration management systems. I've
+Some time ago was set to evaluate configuration management systems. I've
 heard opinions from someone I respect that Puppet_ and Chef_ were
 complicated beasts to get up and running, and since I am a Python guy
 I've generally always kept an eye on Ansible_ and Salt_. Ruby is so far
@@ -25,18 +25,18 @@ and taught us what structure had worked previously.
 
 .. _Best Practises: http://docs.ansible.com/playbooks_best_practices.html
 
-Three weeks ago I went on a 10-day vacation in Japan, and for those who
-don't know me that usually equals me spending a fair amount of time of
-reading computer literature or documentation! Inbetween great sushi,
-Tokyo skylines, amazing skiing and rough flue I found `the Salt
+A couple of weeks ago I went on a 10-day vacation in Japan, and for
+those who don't know me that usually equals me spending a fair amount of
+time of reading computer literature or documentation! Inbetween great
+sushi, Tokyo skylines, amazing skiing and a rough flue I found `the Salt
 PDF-documentation`_ to be great leisure!
 
 .. _the Salt PDF-documentation: https://media.readthedocs.org/pdf/salt/latest/salt.pdf
 
-I've also spent some time getting a Salt setup up and running with their
-States_ system. Since I now feel like I have a pretty robust background
-in both systems, I feel obliged to make a highly opinionated comparison.
-Let's go:
+I've also spent some time getting a small Salt setup up and running with
+their States_ system. Since I now feel like I have a pretty robust
+background in both systems, I feel obliged to make a highly opinionated
+comparison.  Let's go:
 
 .. _States: http://docs.saltstack.com/topics/tutorials/starting_states.html
 
@@ -354,9 +354,9 @@ To me, Ansible was a great introduction to automated server
 configuration and deployment. It was easy to get up and running and has
 great documentation.
 
-Moving forward, the scalability, speed and architecture of Salt suits my new
-project better. For cloud deployments I find the Salt architecture to be
-a better fit. I'm happy with my choice.
+Moving forward, the scalability, speed and architecture of Salt has it
+going for it. For cloud deployments I find the Salt architecture to be
+a better fit. I would not hesitate to use Salt in the future.
 
 All this said, you should give both projects a spin before making your
 decision. They're fairly quick to set up and test.
