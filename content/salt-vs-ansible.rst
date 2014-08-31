@@ -104,7 +104,7 @@ Because minions have a persistent connection to Salt master commands are
 fast to reach the minions. The minions also cache various data to make
 execution faster.
 
-Ansible is masterless and it uses SSH as it's primary communication
+Ansible is masterless and it uses SSH as its primary communication
 layer.  This means it is slower, but being masterless might make it
 slightly easier to run setup and test Ansible playbooks. Some claim it's
 also more secure because it doesn't require another server application.
@@ -240,10 +240,10 @@ generator), I believe most people would assume an SSH client is secure.
 Ansible can also easily connect as multiple non-root users to a single
 host. If you are extremelly picky about having processes running as
 ``root`` you should evaluate Ansible. That said, Ansible supports using
-``sudo`` to execute it's modules as ``root``. If you don't want to
+``sudo`` to execute its modules as ``root``. If you don't want to
 connect over SSH as ``root``, that is.
 
-Salt uses it's "own" AES implementation and key handling. By "own" I
+Salt uses its "own" AES implementation and key handling. By "own" I
 want to make a point out that it uses the PyCrypto_ package for this.
 There has_ been security issues with Salt, but at the same time I think
 the architecture is so simple that security is fairly easy to maintain.
@@ -251,7 +251,7 @@ the architecture is so simple that security is fairly easy to maintain.
 .. _PyCrypto: https://www.dlitz.net/software/pycrypto/
 .. _has: http://www.cvedetails.com/vulnerability-list/vendor_id-12943/product_id-26420/version_id-155046/Saltstack-Salt-0.17.0.html
 
-What's also important to note is that Salt runs it's master and minions
+What's also important to note is that Salt runs its master and minions
 as ``root`` by default. This can be changed, but obviously it can be
 hard to install Debian packages etc. if you are not root. As for the
 master, you can configure it to allow the ``salt`` command as non-root.
