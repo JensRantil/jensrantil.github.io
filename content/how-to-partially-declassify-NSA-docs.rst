@@ -79,7 +79,7 @@ match:
 
 The reason it does not match fully is due to a slight different kerning_.
 A quick Googling brought me to this_ bug report (are NSA using
-Libreoffice?). Looks like I was not using the exact font (or rendered)
+LibreOffice?). Looks like I was not using the exact font (or rendered)
 match.
 
 .. _kerning: http://en.wikipedia.org/wiki/Kerning
