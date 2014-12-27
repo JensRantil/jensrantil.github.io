@@ -1,5 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jens Rantil's Hideout</title><link href="http://jensrantil.github.io/" rel="alternate"></link><link href="http://jensrantil.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://jensrantil.github.io/</id><updated>2014-03-25T23:27:00+01:00</updated><entry><title>A follow-up on CouchDB as event store</title><link href="http://jensrantil.github.io/a-follow-up-on-couchdb-as-event-store.html" rel="alternate"></link><updated>2014-03-25T23:27:00+01:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2014-03-25:a-follow-up-on-couchdb-as-event-store.html</id><summary type="html">&lt;p&gt;I &lt;a class="reference external" href="http://jensrantil.github.io/bootstrapping-couchdb-as-event-store.html"&gt;recently&lt;/a&gt; wrote about using CouchDB as an event store. One issue that
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jens Rantil's Hideout</title><link href="http://jensrantil.github.io/" rel="alternate"></link><link href="http://jensrantil.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://jensrantil.github.io/</id><updated>2014-12-27T12:12:00+01:00</updated><entry><title>How to (partially) declassify NSA documents</title><link href="http://jensrantil.github.io/how-to-partially-declassify-nsa-documents.html" rel="alternate"></link><updated>2014-12-27T12:12:00+01:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2014-12-27:how-to-partially-declassify-nsa-documents.html</id><summary type="html">&lt;p&gt;The day before Christmas Eve, the (American) NSA published a bunch of
+&lt;a class="reference external" href="https://www.nsa.gov/public_info/declass/IntelligenceOversightBoard.shtml"&gt;declassified reports&lt;/a&gt; that have been handed to the President's
+Intelligence Oversight Board (IOD) for the past 10 years or so. I
+quickly scrolled through a couple of documents to find a lot of heavily
+redacted text:&lt;/p&gt;
+&lt;img alt="Redacted text." src="http://jensrantil.github.io/images/redacted-text.png" /&gt;
+&lt;div class="section" id="the-idea"&gt;
+&lt;h2&gt;The idea&lt;/h2&gt;
+&lt;p&gt;What struck me was that what most of the redacted text that I think the
+public (and me) is interested in is the magnitude of NSA surveillance,
+namely how large the redacted numbers are. I started asking myself,
+&lt;strong&gt;can the space that the redacted numbers take up on a document tell us
+anything about what's redacted behind the white boxes?&lt;/strong&gt; I think the
+answer is fairly obvious - yes - the number &amp;quot;1000000&amp;quot; definitely does
+not fit into most boxes, so we can conclude that targetted surveillance
+is less than that. But can we do better?&lt;/p&gt;
+&lt;p&gt;Before we dig further a basic question; How to we know that the content
+underneath the redaction boxes are similarly sized as the numbers they
+redact? We don't. However, we can always be certain of the width of the
+number plus the space to the left and right of it (since it's visible):&lt;/p&gt;
+&lt;img alt="Known width." src="http://jensrantil.github.io/images/number-width.png" /&gt;
+&lt;p&gt;In the NSA case, we also know that&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;they are not using justified alignments. This would make spacing less
+deterministic.&lt;/li&gt;
+&lt;li&gt;they don't seem to manually add spacing (or zero pad) around their
+non-redacted numbers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In information theory Shannon introduced the concept of entropy as a
+measure of information. In layman's terms, the more similar data is, the
+less information is contains. If we make an analogy to the number width
+problem, we are hoping that different numbers in whatever font the NSA
+is using should have as unique width as possible.&lt;/p&gt;
+&lt;p&gt;For non-monospaced fonts, there is the chance of digits being different
+in size. Further, there is also a chance that they have different
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Kerning"&gt;kerning&lt;/a&gt;, which could make number width signatures even more unique.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-font"&gt;
+&lt;h2&gt;The font&lt;/h2&gt;
+&lt;p&gt;By the way, which font are NSA they using? I gave &lt;a class="reference external" href="https://www.myfonts.com/WhatTheFont/"&gt;WhatTheFont&lt;/a&gt; a try and
+it hinted that the NSA is using any of the following fonts:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Esperanto Condensed Bold&lt;/li&gt;
+&lt;li&gt;URW Garamonds ExtraNarrow Medium&lt;/li&gt;
+&lt;li&gt;Aragon Condensed&lt;/li&gt;
+&lt;li&gt;Printed Claude.&lt;/li&gt;
+&lt;li&gt;FF Seria Sans Pro Bold Italic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Looking at those fonts, the only one the it could potentially be would
+be Garamond, which is a fairly popular font. That said, when overlaying
+it with NSA text it didn't match too well. However, a simple guess that
+the NSA was using the good 'ole Times New Roman looked like a good
+match:&lt;/p&gt;
+&lt;img alt="Times New Roman overlay" src="http://jensrantil.github.io/images/overlay-nsa.png" style="width: 600px;" /&gt;
+&lt;p&gt;The reason it did not match fully is due to a slight different &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Kerning"&gt;kerning&lt;/a&gt;.
+A quick Googling brought me to &lt;a class="reference external" href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=72546"&gt;this&lt;/a&gt; bug report (are NSA using
+Libreoffice?). Looks like I was not using the exact font (or rendered)
+match.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="test-implementation"&gt;
+&lt;h2&gt;Test implementation&lt;/h2&gt;
+&lt;p&gt;To test my theory I wrote a &lt;a class="reference external" href="https://gist.github.com/JensRantil/7cd230367dbb35027a8a"&gt;small Python script&lt;/a&gt; to generate histograms
+of the width of numbers. It uses ImageMagick to generate test images,
+crop and output the width of the images.&lt;/p&gt;
+&lt;p&gt;Output for &amp;quot;Times New Roman&amp;quot; with size 16px:&lt;/p&gt;
+&lt;img alt="Distribution of number widths with Times New Roman, 16px." src="http://jensrantil.github.io/images/number_distributions.png" style="width: 600px;" /&gt;
+&lt;p&gt;Output for &amp;quot;Times New Roman&amp;quot; with size 30px:&lt;/p&gt;
+&lt;img alt="Distribution of number widths with Times New Roman, 30px." src="http://jensrantil.github.io/images/number_distributions_30px.png" style="width: 600px;" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="result"&gt;
+&lt;h2&gt;Result&lt;/h2&gt;
+&lt;p&gt;Sadly, the results show that different numbers yield fairly similar
+width. It also looks like different font sizes didn't make any
+significant difference in length signature.&lt;/p&gt;
+&lt;p&gt;That said, the number of digits yields a unique width so we can
+definitely know the magnitude of the redacted numbers, ie. whether they
+are 10s, 100s or 1000s etc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="discussion"&gt;
+&lt;h2&gt;Discussion&lt;/h2&gt;
+&lt;p&gt;ImageMagick uses the freetype library for font rendering. freetype has
+support for kerning, but kerning could definitely differ in
+implementation. I had a quick look at scripting MS Word, but it looked
+like too much of a hazzle for such a short experiment. Especially on
+MaxOSX. LibreOffice has slightly better scripting support. Scripting a
+fully featured word processor is definitely a future possible
+experiment/improvement.&lt;/p&gt;
+&lt;p&gt;The font I am using is the &amp;quot;Times new roman&amp;quot; font that comes with
+MacOSX. MS Office ships with its own which could have different kerning
+and/or different digit widths. This would probably yield a different
+result from mine.&lt;/p&gt;
+&lt;p&gt;For people who are planning to do safe redaction of text in documents,
+think about the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Use a font with preferably no kerning. Monospaced font will do.&lt;/li&gt;
+&lt;li&gt;Use font with same-width digits. Monospaced font will do.&lt;/li&gt;
+&lt;li&gt;To avoid leaking magnitude of numbers, pad all numbers with fixed, or
+random, spaces.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That said, it would be a fun thought experiment if NSA, or other
+intelligence organizations, would infiltrate (Times New Roman)
+typesetters to create unique kerning for letter constellations. It could
+make it much easier to work around redacted text in declassified
+documents from around the world. Call it a &lt;em&gt;typography backdoor&lt;/em&gt; if you
+will.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This little experiment tested and showed that it's possible to extract
+the magnitude in the redacted numbers in declassified (NSA) documents.
+It could not show that digit width or kerning could help in determining
+the numbers more specifically. However, there is definitely future&lt;/p&gt;
+&lt;p&gt;If you are curious about the magnitude of the redacted NSA numbers,
+consider them leaked. I'll let someone else do the hard work of
+extracting them ;-).&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="NSA"></category></entry><entry><title>A follow-up on CouchDB as event store</title><link href="http://jensrantil.github.io/a-follow-up-on-couchdb-as-event-store.html" rel="alternate"></link><updated>2014-03-25T23:27:00+01:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2014-03-25:a-follow-up-on-couchdb-as-event-store.html</id><summary type="html">&lt;p&gt;I &lt;a class="reference external" href="http://jensrantil.github.io/bootstrapping-couchdb-as-event-store.html"&gt;recently&lt;/a&gt; wrote about using CouchDB as an event store. One issue that
 I mentioned briefly was that my proposed solution would not work for a
 single aggregate root yielding multiple key/values in a CouchDB view:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -96,7 +212,7 @@ overloaded thanks to ZeroMQ.&lt;/p&gt;
 &lt;p&gt;Because minions have a persistent connection to Salt master commands are
 fast to reach the minions. The minions also cache various data to make
 execution faster.&lt;/p&gt;
-&lt;p&gt;Ansible is masterless and it uses SSH as it's primary communication
+&lt;p&gt;Ansible is masterless and it uses SSH as its primary communication
 layer.  This means it is slower, but being masterless might make it
 slightly easier to run setup and test Ansible playbooks. Some claim it's
 also more secure because it doesn't require another server application.
@@ -201,13 +317,13 @@ generator), I believe most people would assume an SSH client is secure.&lt;/p&gt
 &lt;p&gt;Ansible can also easily connect as multiple non-root users to a single
 host. If you are extremelly picky about having processes running as
 &lt;tt class="docutils literal"&gt;root&lt;/tt&gt; you should evaluate Ansible. That said, Ansible supports using
-&lt;tt class="docutils literal"&gt;sudo&lt;/tt&gt; to execute it's modules as &lt;tt class="docutils literal"&gt;root&lt;/tt&gt;. If you don't want to
+&lt;tt class="docutils literal"&gt;sudo&lt;/tt&gt; to execute its modules as &lt;tt class="docutils literal"&gt;root&lt;/tt&gt;. If you don't want to
 connect over SSH as &lt;tt class="docutils literal"&gt;root&lt;/tt&gt;, that is.&lt;/p&gt;
-&lt;p&gt;Salt uses it's &amp;quot;own&amp;quot; AES implementation and key handling. By &amp;quot;own&amp;quot; I
+&lt;p&gt;Salt uses its &amp;quot;own&amp;quot; AES implementation and key handling. By &amp;quot;own&amp;quot; I
 want to make a point out that it uses the &lt;a class="reference external" href="https://www.dlitz.net/software/pycrypto/"&gt;PyCrypto&lt;/a&gt; package for this.
 There &lt;a class="reference external" href="http://www.cvedetails.com/vulnerability-list/vendor_id-12943/product_id-26420/version_id-155046/Saltstack-Salt-0.17.0.html"&gt;has&lt;/a&gt; been security issues with Salt, but at the same time I think
 the architecture is so simple that security is fairly easy to maintain.&lt;/p&gt;
-&lt;p&gt;What's also important to note is that Salt runs it's master and minions
+&lt;p&gt;What's also important to note is that Salt runs its master and minions
 as &lt;tt class="docutils literal"&gt;root&lt;/tt&gt; by default. This can be changed, but obviously it can be
 hard to install Debian packages etc. if you are not root. As for the
 master, you can configure it to allow the &lt;tt class="docutils literal"&gt;salt&lt;/tt&gt; command as non-root.
@@ -965,7 +1081,7 @@ implementation:&lt;/p&gt;
 &lt;span class="cm"&gt;     */&lt;/span&gt;
     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;NonNullable&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;V&lt;/span&gt; &lt;span class="n"&gt;initialValue&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;initialValue&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-            &lt;span class="k"&gt;throw&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nf"&gt;NullPointerException&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Must not be null: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;initialValue&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;toString&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+            &lt;span class="k"&gt;throw&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;NullPointerException&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Must not be null: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;initialValue&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;toString&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
         &lt;span class="o"&gt;}&lt;/span&gt;
         &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;initialValue&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;

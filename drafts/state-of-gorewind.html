@@ -41,67 +41,84 @@
 	<section id="posts">
 	<header>
 		<h1>Jens Rantil's blog</h1>
-		<h3>Posted Wed 21 August 2013</h3>
+		<h3>Posted Mon 13 May 2013</h3>
 	</header>
 	<article>
 		<h1 id="title">
-			<a href="http://jensrantil.github.io/writing-a-server-in-python.html" rel="bookmark"
-				title="Permalink to Writing a server in Python">Writing a server in Python</a>
+			<a href="http://jensrantil.github.io/drafts/state-of-gorewind.html" rel="bookmark"
+				title="Permalink to State of Gorewind">State of Gorewind</a>
 		</h1>
-		<p>This post is partially related to my <a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html">previous blog post</a> about
-<a class="reference external" href="http://www.github.com/JensRantil/rewind">Rewind</a>.</p>
+		<p><em>This post is partially related to my `previous blog post`_ about
+Rewind_.</em></p>
 <p>One of the questions that might hit you is <em>why would you ever write a
-server in Python?</em>. I've heard many people being raising their concerns
-when it comes to Python. The biggest ones are obviously concurrency and
-the <a class="reference external" href="http://wiki.python.org/moin/GlobalInterpreterLock">GIL</a>. I've also heard arguments related to lack of strict typing,
-that Java has better IDE support (partially due to...strict typing) and
-the sheer amount of libraries that other languages, such as Java, has.</p>
-<p>Coming from mostly a Java background when it comes to bigger systems,
-this is a question I've been asking myself too and Rewind gave me some
-time to review this. Some of my reasons for choosing Python (mostly, as
-opposed to Java) were:</p>
+server in Python?</em>. Coming from a Java background, this is a question
+I've been asking myself and Rewind gave me some time to review this.</p>
+<p>Some of my reasons for choosing Python were:</p>
 <ul class="simple">
-<li>I was tired of slow development feedback from coding in Java. Starting
-the JVM takes ages. If you've ever been developing for a runtime
-environment that boots fast, you know what I'm talking about. I've seen
-the light and slow development tools kills me.</li>
+<li>I was tired of slow development feedback from coding in Java.</li>
 <li>I wanted to try out new creative ways to do testing. This involved
-enforcing coding standards through tests that sometimes required some
+enforcing coding standards through tests and sometimes required some
 introspection.</li>
 <li>I wanted to try out full TDD. There were plenty of Python tools for
 this job, including great <cite>mocking</cite> utilities.</li>
 <li>I've been a big fan of Python for a long time. I wanted to see if it
-stood the test also for server backend services.</li>
-<li>Requiring all code to reside in classes is...ridiculous:<ul>
-<li>Not all methods requires state and my personal opinion is that
-functional paradigm is easier for beginning programmers to
-understand. Not to mention that functional style of programming
-easily can encapsulate, too, in its own way.</li>
-<li>Proper object oriented desing is <em>hard</em> and takes practise. Sadly,
-most programmers have never read the <a class="reference external" href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">Gang of Four book</a> and while
-beginner's Java books try to describe concepts such as encapsulation,
-polymorphism etc. the books don't really make a good job of
-explaining them. The simple concepts are easy.  Designing APIs and
-bigger applications is hard. It's taken me a long time and I'm still
-making mistakes.</li>
-</ul>
-</li>
+stood the test also for heavy backend services.</li>
 <li>Great support for <a class="reference external" href="http://www.zeromq.org">ZeroMQ</a>.</li>
 </ul>
 <p>Would Python stand the test for a rather performant server software? I
-think so.  In Rewind's case I made the assumption that all events would
-be persisted as one single event stream. Harddrives are great at
+think so.  In Rewind I made the assumption that all events would be
+persisted as one single event stream. Harddrives are great at
 append-only storage and I was not that worried about concurrency. The
 concurrency requirements lay in the fanout message pattern used to
 notify event listeners of newly persisted events. ZeroMQ would deal with
 that very well. This meant I could/would sleep well at night, not
 worrying about the Python <a class="reference external" href="http://wiki.python.org/moin/GlobalInterpreterLock">GIL</a>.</p>
-<div class="section" id="with-great-server-comes-great-responsibility">
-<h2>With great server comes great responsibility</h2>
-<p>The above said, a server requires strict testing to make sure you can be
-confident that server works as expected. Since Python is a dynamically
-types language, this puts an extra pressure on testing. Using test
-coverage as a metric is almost a must.</p>
+<div class="section" id="zeromq-patterns">
+<h2>ZeroMQ Patterns</h2>
+<p><a class="reference external" href="http://zguide.zeromq.org/page:all">The ZeroMQ Guide</a> is a great source of inspiration when it comes to
+learning about how to build distributed applications using messaging
+(and ZeroMQ). It not only teaches many of the options you have as a
+developer, but also the fact that doing distributed systems the way
+right is <em>hard</em>.</p>
+<p>The guide became my inspiration. I love problem solving and I was
+thinking hard about which parts could be made asynchronous in an event
+sourced system, and which could not. <cite>Rinat Abdullin</cite>, a big CQRS
+proponent, <a class="reference external" href="https://twitter.com/abdullin/status/291827247210459136">hinted</a> that most his code uses async communication. Still, I
+decided to stick to synchronous writes to the event store.
+Asynchronicity could be added to the write client if needed, I thought.</p>
+<p>The other option would be to have asynchronous writes into the event
+store. However, the write side of CQRS always need to make sure what
+writes are persisted to correctly update its state. One option would be
+to make it an event listener of the event store. My issue with that was
+that bad writes also would have had to published as events. I felt that
+would put to much requirements on future implementations. Maaybe I'm
+wrong...</p>
+</div>
+<div class="section" id="storage-engines">
+<h2>Storage engines</h2>
+<p>Generally, all an event store really needs os a key value store. If fast
+querying is not a requirement, simply an append-only file on disk will
+do. Events are never removed anyway.</p>
+<p>I spent a fair amount of time trying to find a decent key-value store
+for Python, that did not have any external requirements. I wanted to
+minimize the hazzle of installing/compiling 3rd party libraries to use
+Rewind.</p>
+<p>Finding a key-value for Python with those requirements turned out to be
+harder than I thought.</p>
+<p>TODO: Move this to above ZeroMQ Patterns?</p>
+<div class="section" id="concurrency-go-and-where-we-are-today">
+<h3>Concurrency, Go and where we are today</h3>
+<p>After listening to <a class="reference external" href="http://beingtheworst.com">The Being the Worst</a> podcast for some time, it hit
+me that an event store is not simply storing a single global event
+stream. It stores.</p>
+</div>
+<div class="section" id="lessons-learned-and-the-future">
+<h3>Lessons learned and the Future</h3>
+<p>Rewind and its child project Gorewind has definitely spurred an
+interest in me when it comes to DDD. I've spent some time reading about
+the concepts...</p>
+<p>TODO: Write.</p>
+</div>
 </div>
 
 
@@ -109,8 +126,8 @@ coverage as a metric is almost a must.</p>
 				Category:
 					<a href="http://jensrantil.github.io/category/misc.html">misc</a>
 				<br />Tags:
-					<a href="http://jensrantil.github.io/tag/python.html">python</a>
-					<a href="http://jensrantil.github.io/tag/java.html">java</a>
+					<a href="http://jensrantil.github.io/tag/cqrs.html">cqrs</a>
+					<a href="http://jensrantil.github.io/tag/distributed-architecture.html">distributed-architecture</a>
 		</div>
 	</article>
 
@@ -128,7 +145,7 @@ coverage as a metric is almost a must.</p>
 		<h2>Comments</h2>
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
-			var disqus_identifier = "writing-a-server-in-python.html";
+			var disqus_identifier = "drafts/state-of-gorewind.html";
 			(function() {
 				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 				dsq.src = 'http://jensrantil.disqus.com/embed.js';

@@ -45,10 +45,10 @@
 	</header>
 	<article>
 		<h1 id="title">
-			<a href="http://jensrantil.github.io/salt-vs-ansible.html" rel="bookmark"
-				title="Permalink to Salt vs. Ansible">Salt vs. Ansible</a>
+			<a href="http://jensrantil.github.io/drafts/benchmarking-mysql-with-real-data.html" rel="bookmark"
+				title="Permalink to Benchmarking MySQL with real data">Benchmarking MySQL with real data</a>
 		</h1>
-		<p>Some time ago was set to evaluate configuration management systems. I've
+		<p>Recently I was set to evaluate configuration management systems. I've
 heard opinions from someone I respect that <a class="reference external" href="http://puppetlabs.com">Puppet</a> and <a class="reference external" href="http://www.getchef.com">Chef</a> were
 complicated beasts to get up and running, and since I am a Python guy
 I've generally always kept an eye on <a class="reference external" href="http://www.ansible.com">Ansible</a> and <a class="reference external" href="http://www.saltstack.com">Salt</a>. Ruby is so far
@@ -59,15 +59,15 @@ project, Ansible was mostly chosen because it was easy to get started
 and had good documentation. The team I was working with was especially
 fond of the <a class="reference external" href="http://docs.ansible.com/playbooks_best_practices.html">Best Practises</a> documentation which got us started quickly
 and taught us what structure had worked previously.</p>
-<p>A couple of weeks ago I went on a 10-day vacation in Japan, and for
-those who don't know me that usually equals me spending a fair amount of
-time of reading computer literature or documentation! Inbetween great
-sushi, Tokyo skylines, amazing skiing and a rough flue I found <a class="reference external" href="https://media.readthedocs.org/pdf/salt/latest/salt.pdf">the Salt
+<p>Three weeks ago I went on a 10-day vacation in Japan, and for those who
+don't know me that usually equals me spending a fair amount of time of
+reading computer literature or documentation! Inbetween great sushi,
+Tokyo skylines, amazing skiing and rough flue I found <a class="reference external" href="https://media.readthedocs.org/pdf/salt/latest/salt.pdf">the Salt
 PDF-documentation</a> to be great leisure!</p>
-<p>I've also spent some time getting a small Salt setup up and running with
-their <a class="reference external" href="http://docs.saltstack.com/topics/tutorials/starting_states.html">States</a> system. Since I now feel like I have a pretty robust
-background in both systems, I feel obliged to make a highly opinionated
-comparison.  Let's go:</p>
+<p>I've also spent some time getting a Salt setup up and running with their
+<a class="reference external" href="http://docs.saltstack.com/topics/tutorials/starting_states.html">States</a> system. Since I now feel like I have a pretty robust background
+in both systems, I feel obliged to make a highly opinionated comparison.
+Let's go:</p>
 <div class="section" id="terminology">
 <h2>Terminology</h2>
 <p>Both Salt and Ansible are originally built as execution engines. That
@@ -111,7 +111,7 @@ overloaded thanks to ZeroMQ.</p>
 <p>Because minions have a persistent connection to Salt master commands are
 fast to reach the minions. The minions also cache various data to make
 execution faster.</p>
-<p>Ansible is masterless and it uses SSH as its primary communication
+<p>Ansible is masterless and it uses SSH as it's primary communication
 layer.  This means it is slower, but being masterless might make it
 slightly easier to run setup and test Ansible playbooks. Some claim it's
 also more secure because it doesn't require another server application.
@@ -216,13 +216,13 @@ generator), I believe most people would assume an SSH client is secure.</p>
 <p>Ansible can also easily connect as multiple non-root users to a single
 host. If you are extremelly picky about having processes running as
 <tt class="docutils literal">root</tt> you should evaluate Ansible. That said, Ansible supports using
-<tt class="docutils literal">sudo</tt> to execute its modules as <tt class="docutils literal">root</tt>. If you don't want to
+<tt class="docutils literal">sudo</tt> to execute it's modules as <tt class="docutils literal">root</tt>. If you don't want to
 connect over SSH as <tt class="docutils literal">root</tt>, that is.</p>
-<p>Salt uses its &quot;own&quot; AES implementation and key handling. By &quot;own&quot; I
+<p>Salt uses it's &quot;own&quot; AES implementation and key handling. By &quot;own&quot; I
 want to make a point out that it uses the <a class="reference external" href="https://www.dlitz.net/software/pycrypto/">PyCrypto</a> package for this.
 There <a class="reference external" href="http://www.cvedetails.com/vulnerability-list/vendor_id-12943/product_id-26420/version_id-155046/Saltstack-Salt-0.17.0.html">has</a> been security issues with Salt, but at the same time I think
 the architecture is so simple that security is fairly easy to maintain.</p>
-<p>What's also important to note is that Salt runs its master and minions
+<p>What's also important to note is that Salt runs it's master and minions
 as <tt class="docutils literal">root</tt> by default. This can be changed, but obviously it can be
 hard to install Debian packages etc. if you are not root. As for the
 master, you can configure it to allow the <tt class="docutils literal">salt</tt> command as non-root.
@@ -305,9 +305,9 @@ most of them have been fixed.</p>
 <p>To me, Ansible was a great introduction to automated server
 configuration and deployment. It was easy to get up and running and has
 great documentation.</p>
-<p>Moving forward, the scalability, speed and architecture of Salt has it
-going for it. For cloud deployments I find the Salt architecture to be
-a better fit. I would not hesitate to use Salt in the future.</p>
+<p>Moving forward, the scalability, speed and architecture of Salt suits my new
+project better. For cloud deployments I find the Salt architecture to be
+a better fit. I'm happy with my choice.</p>
 <p>All this said, you should give both projects a spin before making your
 decision. They're fairly quick to set up and test.</p>
 </div>
@@ -337,7 +337,7 @@ decision. They're fairly quick to set up and test.</p>
 		<h2>Comments</h2>
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
-			var disqus_identifier = "salt-vs-ansible.html";
+			var disqus_identifier = "drafts/benchmarking-mysql-with-real-data.html";
 			(function() {
 				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 				dsq.src = 'http://jensrantil.disqus.com/embed.js';

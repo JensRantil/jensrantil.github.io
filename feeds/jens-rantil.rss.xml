@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jens Rantil's Hideout</title><link href="http://jensrantil.github.io/" rel="alternate"></link><link href="http://jensrantil.github.io/feeds/all.atom.xml" rel="self"></link><id>http://jensrantil.github.io/</id><updated>2014-12-27T12:12:00+01:00</updated><entry><title>How to (partially) declassify NSA documents</title><link href="http://jensrantil.github.io/how-to-partially-declassify-nsa-documents.html" rel="alternate"></link><updated>2014-12-27T12:12:00+01:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2014-12-27:how-to-partially-declassify-nsa-documents.html</id><summary type="html">&lt;p&gt;The day before Christmas Eve, the (American) NSA published a bunch of
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jens Rantil's Hideout</title><link>http://jensrantil.github.io/</link><description></description><atom:link href="http://jensrantil.github.io/feeds/jens-rantil.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 27 Dec 2014 12:12:00 +0100</lastBuildDate><item><title>How to (partially) declassify NSA documents</title><link>http://jensrantil.github.io/how-to-partially-declassify-nsa-documents.html</link><description>&lt;p&gt;The day before Christmas Eve, the (American) NSA published a bunch of
 &lt;a class="reference external" href="https://www.nsa.gov/public_info/declass/IntelligenceOversightBoard.shtml"&gt;declassified reports&lt;/a&gt; that have been handed to the President's
 Intelligence Oversight Board (IOD) for the past 10 years or so. I
 quickly scrolled through a couple of documents to find a lot of heavily
@@ -115,7 +115,7 @@ the numbers more specifically. However, there is definitely future&lt;/p&gt;
 consider them leaked. I'll let someone else do the hard work of
 extracting them ;-).&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="NSA"></category></entry><entry><title>A follow-up on CouchDB as event store</title><link href="http://jensrantil.github.io/a-follow-up-on-couchdb-as-event-store.html" rel="alternate"></link><updated>2014-03-25T23:27:00+01:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2014-03-25:a-follow-up-on-couchdb-as-event-store.html</id><summary type="html">&lt;p&gt;I &lt;a class="reference external" href="http://jensrantil.github.io/bootstrapping-couchdb-as-event-store.html"&gt;recently&lt;/a&gt; wrote about using CouchDB as an event store. One issue that
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Sat, 27 Dec 2014 12:12:00 +0100</pubDate><guid>tag:jensrantil.github.io,2014-12-27:how-to-partially-declassify-nsa-documents.html</guid><category>NSA</category></item><item><title>A follow-up on CouchDB as event store</title><link>http://jensrantil.github.io/a-follow-up-on-couchdb-as-event-store.html</link><description>&lt;p&gt;I &lt;a class="reference external" href="http://jensrantil.github.io/bootstrapping-couchdb-as-event-store.html"&gt;recently&lt;/a&gt; wrote about using CouchDB as an event store. One issue that
 I mentioned briefly was that my proposed solution would not work for a
 single aggregate root yielding multiple key/values in a CouchDB view:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -149,7 +149,7 @@ think I've ever made more than ten changes to a contact. At the same
 time, this CouchDB solution for storing event sourced aggregate roots
 would probably not be viable if you had 10^6 changes to an aggregate
 root...&lt;/p&gt;
-</summary><category term="CouchDB"></category><category term="cqrs"></category><category term="distributed-architecture"></category></entry><entry><title>Salt vs. Ansible</title><link href="http://jensrantil.github.io/salt-vs-ansible.html" rel="alternate"></link><updated>2014-03-17T22:46:00+01:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2014-03-17:salt-vs-ansible.html</id><summary type="html">&lt;p&gt;Some time ago was set to evaluate configuration management systems. I've
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Tue, 25 Mar 2014 23:27:00 +0100</pubDate><guid>tag:jensrantil.github.io,2014-03-25:a-follow-up-on-couchdb-as-event-store.html</guid><category>CouchDB</category><category>cqrs</category><category>distributed-architecture</category></item><item><title>Salt vs. Ansible</title><link>http://jensrantil.github.io/salt-vs-ansible.html</link><description>&lt;p&gt;Some time ago was set to evaluate configuration management systems. I've
 heard opinions from someone I respect that &lt;a class="reference external" href="http://puppetlabs.com"&gt;Puppet&lt;/a&gt; and &lt;a class="reference external" href="http://www.getchef.com"&gt;Chef&lt;/a&gt; were
 complicated beasts to get up and running, and since I am a Python guy
 I've generally always kept an eye on &lt;a class="reference external" href="http://www.ansible.com"&gt;Ansible&lt;/a&gt; and &lt;a class="reference external" href="http://www.saltstack.com"&gt;Salt&lt;/a&gt;. Ruby is so far
@@ -412,7 +412,7 @@ a better fit. I would not hesitate to use Salt in the future.&lt;/p&gt;
 &lt;p&gt;All this said, you should give both projects a spin before making your
 decision. They're fairly quick to set up and test.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="Salt"></category><category term="Ansible"></category><category term="provisioning"></category></entry><entry><title>Why the Web is so Slow</title><link href="http://jensrantil.github.io/why-the-web-is-so-slow.html" rel="alternate"></link><updated>2013-12-02T23:04:00+01:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-12-02:why-the-web-is-so-slow.html</id><summary type="html">&lt;p&gt;I just read the blog post &lt;a class="reference external" href="http://calendar.perfplanet.com/2013/why-is-the-web-so-slow/"&gt;Why is the web so slow?&lt;/a&gt; by &lt;a class="reference external" href="http://www.phpied.com/"&gt;Stoyan
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Mon, 17 Mar 2014 22:46:00 +0100</pubDate><guid>tag:jensrantil.github.io,2014-03-17:salt-vs-ansible.html</guid><category>Salt</category><category>Ansible</category><category>provisioning</category></item><item><title>Why the Web is so Slow</title><link>http://jensrantil.github.io/why-the-web-is-so-slow.html</link><description>&lt;p&gt;I just read the blog post &lt;a class="reference external" href="http://calendar.perfplanet.com/2013/why-is-the-web-so-slow/"&gt;Why is the web so slow?&lt;/a&gt; by &lt;a class="reference external" href="http://www.phpied.com/"&gt;Stoyan
 Stefanov&lt;/a&gt;. This gave me the idea to give some common reasons for the
 web to be slow. I've been using &amp;quot;web application&amp;quot; fairly sloppy here. It
 could also mean &amp;quot;website&amp;quot; etc. Here they are:&lt;/p&gt;
@@ -465,7 +465,7 @@ This is a thing of the past that still bugs me.&lt;/li&gt;
 &lt;p&gt;Google's networking protocol &lt;a class="reference external" href="https://en.wikipedia.org/wiki/SPDY"&gt;SPDY&lt;/a&gt; aims to solve some of these issues
 and make the web faster.&lt;/p&gt;
 &lt;p&gt;Did I miss something? Feel free to comment below!&lt;/p&gt;
-</summary><category term="web"></category><category term="http"></category></entry><entry><title>New PGP key</title><link href="http://jensrantil.github.io/new-pgp-key.html" rel="alternate"></link><updated>2013-11-18T23:43:00+01:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-11-18:new-pgp-key.html</id><summary type="html">&lt;p&gt;Just wanted to give you a heads up that I recently generated a &lt;a class="reference external" href="https://dl.dropboxusercontent.com/u/17059539/public.asc"&gt;new PGP
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Mon, 02 Dec 2013 23:04:00 +0100</pubDate><guid>tag:jensrantil.github.io,2013-12-02:why-the-web-is-so-slow.html</guid><category>web</category><category>http</category></item><item><title>New PGP key</title><link>http://jensrantil.github.io/new-pgp-key.html</link><description>&lt;p&gt;Just wanted to give you a heads up that I recently generated a &lt;a class="reference external" href="https://dl.dropboxusercontent.com/u/17059539/public.asc"&gt;new PGP
 key&lt;/a&gt;. Its fingerprint is &lt;tt class="docutils literal"&gt;4371 E7ED 3A3D DBB4 12B5 C68F BA63 2DB6 91DA
 03B8&lt;/tt&gt; and its bound to &lt;tt class="docutils literal"&gt;jens.rantil&amp;#64;gmail.com&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;I've previously had PGP keys but they are all expired.&lt;/p&gt;
@@ -593,7 +593,7 @@ TN3RArLMZVBon4kjbObXP597r8hhY8dM2hstyoQPmJf+RQ==
 =SPl3
 -----END PGP PUBLIC KEY BLOCK-----
 &lt;/pre&gt;
-</summary><category term="pgp"></category><category term="cryptography"></category></entry><entry><title>I'm a State Engineer. Are you, too?</title><link href="http://jensrantil.github.io/im-a-state-engineer-are-you-too.html" rel="alternate"></link><updated>2013-11-18T18:32:00+01:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-11-18:im-a-state-engineer-are-you-too.html</id><summary type="html">&lt;p&gt;TL;DR: We need to have a more thorough discussion about state and
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Mon, 18 Nov 2013 23:43:00 +0100</pubDate><guid>tag:jensrantil.github.io,2013-11-18:new-pgp-key.html</guid><category>pgp</category><category>cryptography</category></item><item><title>I'm a State Engineer. Are you, too?</title><link>http://jensrantil.github.io/im-a-state-engineer-are-you-too.html</link><description>&lt;p&gt;TL;DR: We need to have a more thorough discussion about state and
 lifecycles in our industry.&lt;/p&gt;
 &lt;p&gt;I recently revisited &lt;a class="reference external" href="http://12factor.net"&gt;The Twelve-Factor App&lt;/a&gt; by &lt;a class="reference external" href="https://www.heroku.com"&gt;Heroku&lt;/a&gt;. It's a great
 read if you are deploying your own application, are interested in
@@ -672,7 +672,7 @@ systems is reading the &lt;a class="reference external" href="http://zguide.zero
 &lt;p&gt;Lately, I've been thinking about retitling myself as a &amp;quot;state engineer&amp;quot;.
 Maybe you should, too? Feel free to discuss below or contact me &lt;a class="reference external" href="http://jensrantil.github.io/pages/about-jens.html"&gt;by some
 other means&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="architecture"></category><category term="programming"></category><category term="state"></category><category term="distributed architecture"></category></entry><entry><title>GIT mirroring using Jenkins</title><link href="http://jensrantil.github.io/git-mirroring-using-jenkins.html" rel="alternate"></link><updated>2013-09-04T18:15:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-09-04:git-mirroring-using-jenkins.html</id><summary type="html">&lt;p&gt;For the past couple of weeks I've been annoyed by the high latency
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Mon, 18 Nov 2013 18:32:00 +0100</pubDate><guid>tag:jensrantil.github.io,2013-11-18:im-a-state-engineer-are-you-too.html</guid><category>architecture</category><category>programming</category><category>state</category><category>distributed architecture</category></item><item><title>GIT mirroring using Jenkins</title><link>http://jensrantil.github.io/git-mirroring-using-jenkins.html</link><description>&lt;p&gt;For the past couple of weeks I've been annoyed by the high latency
 when connecting to &lt;a class="reference external" href="https://github.com"&gt;Github&lt;/a&gt; over SSH. While the other GIT transports could
 be an option, I prefer to use keys to authenticate against Github.&lt;/p&gt;
 &lt;p&gt;This got me thinking about setting up a local GIT mirror at our office.
@@ -742,7 +742,7 @@ mirrored. If you would like to add more branches you do that under &amp;quot;Bra
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
-</summary><category term="git"></category><category term="jenkins"></category><category term="hudson"></category></entry><entry><title>Bootstrapping: CouchDB as event store</title><link href="http://jensrantil.github.io/bootstrapping-couchdb-as-event-store.html" rel="alternate"></link><updated>2013-09-02T22:49:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-09-02:bootstrapping-couchdb-as-event-store.html</id><summary type="html">&lt;p&gt;I've previously written about &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;what event sourcing is&lt;/a&gt;. Reading about
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Wed, 04 Sep 2013 18:15:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-09-04:git-mirroring-using-jenkins.html</guid><category>git</category><category>jenkins</category><category>hudson</category></item><item><title>Bootstrapping: CouchDB as event store</title><link>http://jensrantil.github.io/bootstrapping-couchdb-as-event-store.html</link><description>&lt;p&gt;I've previously written about &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;what event sourcing is&lt;/a&gt;. Reading about
 it, you might think &amp;quot;heck, sounds great! But how do I get started?&amp;quot;.
 This blog post will propose a simple way.&lt;/p&gt;
 &lt;div class="section" id="a-minimum-viable-product"&gt;
@@ -969,7 +969,7 @@ doable with correct authorization it would allow some cool stuff such as
 fully hosting event stored applications in CouchDB, possibly together
 with &lt;a class="reference external" href="http://pouchdb.com"&gt;PouchDB&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="cqrs"></category><category term="distributed-architecture"></category><category term="CouchDB"></category></entry><entry><title>Java's missing optional keyword and the issues of null</title><link href="http://jensrantil.github.io/javas-missing-optional-keyword-and-the-issues-of-null.html" rel="alternate"></link><updated>2013-08-22T00:52:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-08-22:javas-missing-optional-keyword-and-the-issues-of-null.html</id><summary type="html">&lt;p&gt;One of my pet peaves when it comes to the Java programming languages [1]
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Mon, 02 Sep 2013 22:49:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-09-02:bootstrapping-couchdb-as-event-store.html</guid><category>cqrs</category><category>distributed-architecture</category><category>CouchDB</category></item><item><title>Java's missing optional keyword and the issues of null</title><link>http://jensrantil.github.io/javas-missing-optional-keyword-and-the-issues-of-null.html</link><description>&lt;p&gt;One of my pet peaves when it comes to the Java programming languages [1]
 is that it does not do enough &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Type_safety"&gt;type safety&lt;/a&gt;. The issue is, simply, that
 programmers tend to believe that Java infers more safety than it
 actually does. The biggest reason for this can be summarized in one
@@ -1146,7 +1146,7 @@ this issue precisely the way I'd like other programming languages to do.&lt;/p&g
 &lt;p&gt;&lt;em&gt;What do you think? Is this something that could be useful? Is null
 even an issue in Java? Please comment below.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="programming"></category></entry><entry><title>Writing a server in Python</title><link href="http://jensrantil.github.io/writing-a-server-in-python.html" rel="alternate"></link><updated>2013-08-21T09:53:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-08-21:writing-a-server-in-python.html</id><summary type="html">&lt;p&gt;This post is partially related to my &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;previous blog post&lt;/a&gt; about
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Thu, 22 Aug 2013 00:52:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-08-22:javas-missing-optional-keyword-and-the-issues-of-null.html</guid><category>java</category><category>programming</category></item><item><title>Writing a server in Python</title><link>http://jensrantil.github.io/writing-a-server-in-python.html</link><description>&lt;p&gt;This post is partially related to my &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;previous blog post&lt;/a&gt; about
 &lt;a class="reference external" href="http://www.github.com/JensRantil/rewind"&gt;Rewind&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;One of the questions that might hit you is &lt;em&gt;why would you ever write a
 server in Python?&lt;/em&gt;. I've heard many people being raising their concerns
@@ -1201,7 +1201,7 @@ confident that server works as expected. Since Python is a dynamically
 types language, this puts an extra pressure on testing. Using test
 coverage as a metric is almost a must.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="python"></category><category term="java"></category></entry><entry><title>Simpler Cookieless Cookies</title><link href="http://jensrantil.github.io/simpler-cookieless-cookies.html" rel="alternate"></link><updated>2013-08-18T22:39:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-08-18:simpler-cookieless-cookies.html</id><summary type="html">&lt;p&gt;I recently read the blog article &amp;quot;&lt;a class="reference external" href="http://lucb1e.com/rp/cookielesscookies/"&gt;Cookieless Cookies&lt;/a&gt;&amp;quot; that talks
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Wed, 21 Aug 2013 09:53:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-08-21:writing-a-server-in-python.html</guid><category>python</category><category>java</category></item><item><title>Simpler Cookieless Cookies</title><link>http://jensrantil.github.io/simpler-cookieless-cookies.html</link><description>&lt;p&gt;I recently read the blog article &amp;quot;&lt;a class="reference external" href="http://lucb1e.com/rp/cookielesscookies/"&gt;Cookieless Cookies&lt;/a&gt;&amp;quot; that talks
 about &lt;a class="reference external" href="https://en.wikipedia.org/wiki/HTTP_ETag#Tracking_using_ETags"&gt;using ETag for tracking users&lt;/a&gt;. Smart. This is the second
 article I read about obscure ways to store tracking information of a
 user. The first one was about &lt;a class="reference external" href="https://epic.org/privacy/cookies/flash.html"&gt;storing Cookie information using Flash&lt;/a&gt;.&lt;/p&gt;
@@ -1273,7 +1273,7 @@ cookies disabled, this is probably the easiest way you can do this.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;For privacy aware users&lt;/strong&gt;: Make sure to keep track of what's put in
 your URL! ;)&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="HTTP"></category></entry><entry><title>Privacy and Logging</title><link href="http://jensrantil.github.io/privacy-and-logging.html" rel="alternate"></link><updated>2013-06-17T23:08:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-06-17:privacy-and-logging.html</id><summary type="html">&lt;p&gt;Privacy seem to be a &lt;a class="reference external" href="http://www.guardian.co.uk/world/the-nsa-files"&gt;popular discussion these days&lt;/a&gt;. While I do
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Sun, 18 Aug 2013 22:39:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-08-18:simpler-cookieless-cookies.html</guid><category>HTTP</category></item><item><title>Privacy and Logging</title><link>http://jensrantil.github.io/privacy-and-logging.html</link><description>&lt;p&gt;Privacy seem to be a &lt;a class="reference external" href="http://www.guardian.co.uk/world/the-nsa-files"&gt;popular discussion these days&lt;/a&gt;. While I do
 think it's a very very important topic to discuss, I sometimes feel
 there's not enough people who stand up and argue for cases when there's
 a reason to store data.&lt;/p&gt;
@@ -1299,7 +1299,7 @@ to be in.&lt;/p&gt;
 just simply want to point out that the coin has two sides. Sometimes
 talking about how information &lt;em&gt;is&lt;/em&gt; used is more important than &lt;em&gt;what it
 can&lt;/em&gt; be used for.&lt;/p&gt;
-</summary><category term="privacy"></category></entry><entry><title>Line styles in matplotlib</title><link href="http://jensrantil.github.io/line-styles-in-matplotlib.html" rel="alternate"></link><updated>2013-05-28T08:57:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-05-28:line-styles-in-matplotlib.html</id><summary type="html">&lt;p&gt;I'm a big fan of &lt;a class="reference external" href="http://matplotlib.org/"&gt;matplotlib&lt;/a&gt; and tend to use it every time I'd like to
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Mon, 17 Jun 2013 23:08:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-06-17:privacy-and-logging.html</guid><category>privacy</category></item><item><title>Line styles in matplotlib</title><link>http://jensrantil.github.io/line-styles-in-matplotlib.html</link><description>&lt;p&gt;I'm a big fan of &lt;a class="reference external" href="http://matplotlib.org/"&gt;matplotlib&lt;/a&gt; and tend to use it every time I'd like to
 plot something. A while ago I had a line plot with many lines and ran
 out of default colors. When that happens, matplotlib will reuse the
 previously used colors.&lt;/p&gt;
@@ -1310,7 +1310,7 @@ for item in data.items():
     p.plot(item.X, item.Y, next(look), label=item.label)
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;I hope this little piece of code will come in handy for someone else!&lt;/p&gt;
-</summary></entry><entry><title>CQRS+Event Sourcing Messaging Patterns</title><link href="http://jensrantil.github.io/cqrsevent-sourcing-messaging-patterns.html" rel="alternate"></link><updated>2013-05-26T23:09:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-05-26:cqrsevent-sourcing-messaging-patterns.html</id><summary type="html">&lt;p&gt;This post is partially related to my &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;previous blog post&lt;/a&gt; about
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Tue, 28 May 2013 08:57:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-05-28:line-styles-in-matplotlib.html</guid></item><item><title>CQRS+Event Sourcing Messaging Patterns</title><link>http://jensrantil.github.io/cqrsevent-sourcing-messaging-patterns.html</link><description>&lt;p&gt;This post is partially related to my &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;previous blog post&lt;/a&gt; about
 &lt;a class="reference external" href="http://www.github.com/JensRantil/rewind"&gt;Rewind&lt;/a&gt; and &lt;a class="reference external" href="http://www.github.com/JensRantil/gorewind"&gt;Gorewind&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Designing a decoupled, message based, system based on the &lt;a class="reference external" href="http://martinfowler.com/bliki/CQRS.html"&gt;CQRS&lt;/a&gt; pattern
 together with &lt;a class="reference external" href="http://martinfowler.com/eaaDev/EventSourcing.html"&gt;event sourcing&lt;/a&gt; require some thought. Since I've been
@@ -1523,7 +1523,7 @@ you get the point, though! Feel free to make comments below. I'd love to
 hear you input on this.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="cqrs"></category><category term="event sourcing"></category><category term="distributed architecture"></category></entry><entry><title>AngularJS events on initialization</title><link href="http://jensrantil.github.io/angularjs-events-on-initialization.html" rel="alternate"></link><updated>2013-05-24T00:26:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-05-24:angularjs-events-on-initialization.html</id><summary type="html">&lt;p&gt;In my &lt;a class="reference external" href="http://jensrantil.github.io/refreshable-angularjs-service.html"&gt;previous post&lt;/a&gt; I was giving an example of using &lt;a class="reference external" href="http://angularjs.org"&gt;AngularJS&lt;/a&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Sun, 26 May 2013 23:09:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-05-26:cqrsevent-sourcing-messaging-patterns.html</guid><category>cqrs</category><category>event sourcing</category><category>distributed architecture</category></item><item><title>AngularJS events on initialization</title><link>http://jensrantil.github.io/angularjs-events-on-initialization.html</link><description>&lt;p&gt;In my &lt;a class="reference external" href="http://jensrantil.github.io/refreshable-angularjs-service.html"&gt;previous post&lt;/a&gt; I was giving an example of using &lt;a class="reference external" href="http://angularjs.org"&gt;AngularJS&lt;/a&gt;
 &lt;a class="reference external" href="http://docs.angularjs.org/api/ng.$rootScope.Scope#$emit"&gt;events&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I stumbled across a corner case that might be worth noting; If a service
 is triggering an event on initialization, no controllers will get
@@ -1536,7 +1536,7 @@ done as a workaround:&lt;/p&gt;
 &lt;iframe width="100%" height="250"
 src="http://jsfiddle.net/Ztyx/TdykU/3/embedded/"
 allowfullscreen="allowfullscreen" frameborder="0"&gt;&lt;/iframe&gt;&lt;p&gt;Now you know!&lt;/p&gt;
-</summary><category term="AngularJS"></category><category term="JavaScript"></category></entry><entry><title>Refreshable AngularjS service</title><link href="http://jensrantil.github.io/refreshable-angularjs-service.html" rel="alternate"></link><updated>2013-05-23T22:59:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-05-23:refreshable-angularjs-service.html</id><summary type="html">&lt;p&gt;Lately I've been working a lot in &lt;a class="reference external" href="http://angularjs.org"&gt;AngularJS&lt;/a&gt;. This is my second project
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Fri, 24 May 2013 00:26:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-05-24:angularjs-events-on-initialization.html</guid><category>AngularJS</category><category>JavaScript</category></item><item><title>Refreshable AngularjS service</title><link>http://jensrantil.github.io/refreshable-angularjs-service.html</link><description>&lt;p&gt;Lately I've been working a lot in &lt;a class="reference external" href="http://angularjs.org"&gt;AngularJS&lt;/a&gt;. This is my second project
 with the framework, and the more time I spend in it, the more I like it.&lt;/p&gt;
 &lt;p&gt;But as with most things, AngularJS has some rough corners. Its
 &lt;a class="reference external" href="http://docs.angularjs.org/"&gt;documentation&lt;/a&gt; still has a long way to go, although it has improved since
@@ -1686,7 +1686,7 @@ totally fine with a service that simply fetches resource &lt;em&gt;once&lt;/em&g
 load!&lt;/p&gt;
 &lt;p&gt;Can I do this much simpler? Tell me in the comments.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="AngularJS"></category><category term="JavaScript"></category></entry><entry><title>Migrating to Python 3</title><link href="http://jensrantil.github.io/migrating-to-python-3.html" rel="alternate"></link><updated>2013-05-19T21:25:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-05-19:migrating-to-python-3.html</id><summary type="html">&lt;p&gt;This post is partially related to my &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;previous blog post&lt;/a&gt; about
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Thu, 23 May 2013 22:59:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-05-23:refreshable-angularjs-service.html</guid><category>AngularJS</category><category>JavaScript</category></item><item><title>Migrating to Python 3</title><link>http://jensrantil.github.io/migrating-to-python-3.html</link><description>&lt;p&gt;This post is partially related to my &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;previous blog post&lt;/a&gt; about
 &lt;a class="reference external" href="http://www.github.com/JensRantil/rewind"&gt;Rewind&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I initially started the implementation of Rewind in Python 2.7. I
 constantly kept test coverage to 100%, and I tried to stick to &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Test-driven_development"&gt;TDD&lt;/a&gt; as
@@ -1728,7 +1728,7 @@ needed to make Python3 were aliasing of imports:&lt;/p&gt;
     &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;configparser&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="python"></category></entry><entry><title>Bootstrapping software projects</title><link href="http://jensrantil.github.io/bootstrapping-software-projects.html" rel="alternate"></link><updated>2013-05-19T21:22:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-05-19:bootstrapping-software-projects.html</id><summary type="html">&lt;p&gt;This post is partially related to my &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;previous blog post&lt;/a&gt; about
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Sun, 19 May 2013 21:25:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-05-19:migrating-to-python-3.html</guid><category>python</category></item><item><title>Bootstrapping software projects</title><link>http://jensrantil.github.io/bootstrapping-software-projects.html</link><description>&lt;p&gt;This post is partially related to my &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;previous blog post&lt;/a&gt; about
 &lt;a class="reference external" href="http://www.github.com/JensRantil/rewind"&gt;Rewind&lt;/a&gt; and &lt;a class="reference external" href="http://www.github.com/JensRantil/gorewind"&gt;GoRewind&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Even though I've been working as a full-time developer for the past 4-5
 years, it still hits me how much boiler plate is required to create a
@@ -1769,7 +1769,7 @@ formatter&lt;/a&gt; has proven to me that it's a valuable direction to go.&lt;/l
 contribution processes etc.&lt;/p&gt;
 &lt;p&gt;It takes time to set things up. And it's surprising that we, the
 Software Community haven't come further with some of these obstacles.&lt;/p&gt;
-</summary><category term="software"></category><category term="bootstrapping"></category></entry><entry><title>CQRS - Time to Rewind</title><link href="http://jensrantil.github.io/cqrs-time-to-rewind.html" rel="alternate"></link><updated>2013-05-19T21:21:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-05-19:cqrs-time-to-rewind.html</id><summary type="html">&lt;p&gt;For the last year I've been thinking a lot about &lt;a class="reference external" href="http://www.cqrsinfo.com"&gt;CQRS&lt;/a&gt; [&lt;a class="reference external" href="http://martinfowler.com/bliki/CQRS.html"&gt;1&lt;/a&gt;], &lt;a class="reference external" href="http://martinfowler.com/eaaDev/EventSourcing.html"&gt;Event
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Sun, 19 May 2013 21:22:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-05-19:bootstrapping-software-projects.html</guid><category>software</category><category>bootstrapping</category></item><item><title>CQRS - Time to Rewind</title><link>http://jensrantil.github.io/cqrs-time-to-rewind.html</link><description>&lt;p&gt;For the last year I've been thinking a lot about &lt;a class="reference external" href="http://www.cqrsinfo.com"&gt;CQRS&lt;/a&gt; [&lt;a class="reference external" href="http://martinfowler.com/bliki/CQRS.html"&gt;1&lt;/a&gt;], &lt;a class="reference external" href="http://martinfowler.com/eaaDev/EventSourcing.html"&gt;Event
 Sourcing&lt;/a&gt; and distributed architecture using &lt;a class="reference external" href="http://www.zeromq.org"&gt;ZeroMQ&lt;/a&gt;. I first stumbled
 across the concept of CQRS through the mailing list for a &lt;a class="reference external" href="http://www.meetup.com/SoftPub/"&gt;nerd meetup
 in Helsingborg&lt;/a&gt;, Sweden. This led me to a lot of CQRS &lt;a class="reference external" href="http://msdn.microsoft.com/en-us/library/jj554200.aspx"&gt;reading&lt;/a&gt; and
@@ -1857,13 +1857,13 @@ functionality in &lt;a class="reference external" href="http://www.golang.org"&g
 learnt from these two projects; design decisions, testability, ZeroMQ,
 developing in Go among other things.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="cqrs"></category><category term="distributed-architecture"></category></entry><entry><title>That initial blogpost</title><link href="http://jensrantil.github.io/that-initial-blogpost.html" rel="alternate"></link><updated>2013-05-14T22:40:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2013-05-14:that-initial-blogpost.html</id><summary type="html">&lt;p&gt;So it's time to kick off this blog. I cheated a little and posted
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Sun, 19 May 2013 21:21:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-05-19:cqrs-time-to-rewind.html</guid><category>cqrs</category><category>distributed-architecture</category></item><item><title>That initial blogpost</title><link>http://jensrantil.github.io/that-initial-blogpost.html</link><description>&lt;p&gt;So it's time to kick off this blog. I cheated a little and posted
 &lt;a class="reference external" href="http://jensrantil.github.io/replacing-a-folder-in-subversion.html"&gt;a previously written blog post&lt;/a&gt;.
 It was posted on a personal blog that mostly had Swedish material.&lt;/p&gt;
 &lt;p&gt;My intent with this blog will be to &amp;quot;put a URL on my tech and
 possibly entrepreneurship thoughts, in English&amp;quot;. If you'd like to know
 more about me, check out that brand new &lt;a class="reference external" href="http://jensrantil.github.io/pages/about-jens.html"&gt;About Me&lt;/a&gt; page!&lt;/p&gt;
-</summary></entry><entry><title>Replacing a folder in Subversion</title><link href="http://jensrantil.github.io/replacing-a-folder-in-subversion.html" rel="alternate"></link><updated>2008-09-22T02:17:00+02:00</updated><author><name>Jens Rantil</name></author><id>tag:jensrantil.github.io,2008-09-22:replacing-a-folder-in-subversion.html</id><summary type="html">&lt;p&gt;So you have an external library foo version 1.0 that you have committed
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Tue, 14 May 2013 22:40:00 +0200</pubDate><guid>tag:jensrantil.github.io,2013-05-14:that-initial-blogpost.html</guid></item><item><title>Replacing a folder in Subversion</title><link>http://jensrantil.github.io/replacing-a-folder-in-subversion.html</link><description>&lt;p&gt;So you have an external library foo version 1.0 that you have committed
 to your Subversion repository together with your code. Let us for
 simplicity say that your external library is situated in its own folder.&lt;/p&gt;
 &lt;p&gt;One day you realize that there is a new version 2.0 of foo released. You
@@ -1890,4 +1890,4 @@ added/removed in my local checkout before committing - something that
 could have been scripted if I wasn't doing this at 2:30 in the morning
 :-)&lt;/p&gt;
 &lt;p&gt;Please comment if you do have a better solution.&lt;/p&gt;
-</summary><category term="svn"></category><category term="subversion"></category></entry></feed>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jens Rantil</dc:creator><pubDate>Mon, 22 Sep 2008 02:17:00 +0200</pubDate><guid>tag:jensrantil.github.io,2008-09-22:replacing-a-folder-in-subversion.html</guid><category>svn</category><category>subversion</category></item></channel></rss>

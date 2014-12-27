@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://jensrantil.github.io/theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="http://jensrantil.github.io/theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+
+	<link href="http://jensrantil.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jens Rantil's Hideout ATOM Feed" />
+
+
+		<title>Jens Rantil's Hideout</title>
+		<meta charset="utf-8" />
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="http://jensrantil.github.io"><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="http://jensrantil.github.io" class="">Jens Rantil</a></h1>
+			<h2></h2>
+			<p class="bio">Swedish/English, fullstack software engineer (<a href="http://www.tinkapp.com" target="_blank">@Tink</a>), <a href="http://www.lth.se/english/education/programmes/master_engineering/engineering_mathematics/">MSc in Engineering Mathematics</a>, traveller, nerd, juggler, guitarist, african drum player. Inspired Swede.</p>
+			<ul>
+						<li><a href="http://jensrantil.github.io/pages/about-jens.html">About Jens</a></li>
+					<li><a href="http://www.twitter.com/JensRantil">Twitter</a></li>
+					<li><a href="http://www.github.com/JensRantil">Github</a></li>
+					<li><a href="http://www.linkedin.com/in/jensrantil">LinkedIn</a></li>
+			</ul>
+		</div>
+		<footer>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	<header>
+		<h1>Jens Rantil's blog</h1>
+		<h3>Posted Sat 27 December 2014</h3>
+	</header>
+	<article>
+		<h1 id="title">
+			<a href="http://jensrantil.github.io/how-to-partially-declassify-nsa-documents.html" rel="bookmark"
+				title="Permalink to How to (partially) declassify NSA documents">How to (partially) declassify NSA documents</a>
+		</h1>
+		<p>The day before Christmas Eve, the (American) NSA published a bunch of
+<a class="reference external" href="https://www.nsa.gov/public_info/declass/IntelligenceOversightBoard.shtml">declassified reports</a> that have been handed to the President's
+Intelligence Oversight Board (IOD) for the past 10 years or so. I
+quickly scrolled through a couple of documents to find a lot of heavily
+redacted text:</p>
+<img alt="Redacted text." src="http://jensrantil.github.io/images/redacted-text.png" />
+<div class="section" id="the-idea">
+<h2>The idea</h2>
+<p>What struck me was that what most of the redacted text that I think the
+public (and me) is interested in is the magnitude of NSA surveillance,
+namely how large the redacted numbers are. I started asking myself,
+<strong>can the space that the redacted numbers take up on a document tell us
+anything about what's redacted behind the white boxes?</strong> I think the
+answer is fairly obvious - yes - the number &quot;1000000&quot; definitely does
+not fit into most boxes, so we can conclude that targetted surveillance
+is less than that. But can we do better?</p>
+<p>Before we dig further a basic question; How to we know that the content
+underneath the redaction boxes are similarly sized as the numbers they
+redact? We don't. However, we can always be certain of the width of the
+number plus the space to the left and right of it (since it's visible):</p>
+<img alt="Known width." src="http://jensrantil.github.io/images/number-width.png" />
+<p>In the NSA case, we also know that</p>
+<ul class="simple">
+<li>they are not using justified alignments. This would make spacing less
+deterministic.</li>
+<li>they don't seem to manually add spacing (or zero pad) around their
+non-redacted numbers.</li>
+</ul>
+<p>In information theory Shannon introduced the concept of entropy as a
+measure of information. In layman's terms, the more similar data is, the
+less information is contains. If we make an analogy to the number width
+problem, we are hoping that different numbers in whatever font the NSA
+is using should have as unique width as possible.</p>
+<p>For non-monospaced fonts, there is the chance of digits being different
+in size. Further, there is also a chance that they have different
+<a class="reference external" href="http://en.wikipedia.org/wiki/Kerning">kerning</a>, which could make number width signatures even more unique.</p>
+</div>
+<div class="section" id="the-font">
+<h2>The font</h2>
+<p>By the way, which font are NSA they using? I gave <a class="reference external" href="https://www.myfonts.com/WhatTheFont/">WhatTheFont</a> a try and
+it hinted that the NSA is using any of the following fonts:</p>
+<ul class="simple">
+<li>Esperanto Condensed Bold</li>
+<li>URW Garamonds ExtraNarrow Medium</li>
+<li>Aragon Condensed</li>
+<li>Printed Claude.</li>
+<li>FF Seria Sans Pro Bold Italic</li>
+</ul>
+<p>Looking at those fonts, the only one the it could potentially be would
+be Garamond, which is a fairly popular font. That said, when overlaying
+it with NSA text it didn't match too well. However, a simple guess that
+the NSA was using the good 'ole Times New Roman looked like a good
+match:</p>
+<img alt="Times New Roman overlay" src="http://jensrantil.github.io/images/overlay-nsa.png" style="width: 600px;" />
+<p>The reason it did not match fully is due to a slight different <a class="reference external" href="http://en.wikipedia.org/wiki/Kerning">kerning</a>.
+A quick Googling brought me to <a class="reference external" href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=72546">this</a> bug report (are NSA using
+Libreoffice?). Looks like I was not using the exact font (or rendered)
+match.</p>
+</div>
+<div class="section" id="test-implementation">
+<h2>Test implementation</h2>
+<p>To test my theory I wrote a <a class="reference external" href="https://gist.github.com/JensRantil/7cd230367dbb35027a8a">small Python script</a> to generate histograms
+of the width of numbers. It uses ImageMagick to generate test images,
+crop and output the width of the images.</p>
+<p>Output for &quot;Times New Roman&quot; with size 16px:</p>
+<img alt="Distribution of number widths with Times New Roman, 16px." src="http://jensrantil.github.io/images/number_distributions.png" style="width: 600px;" />
+<p>Output for &quot;Times New Roman&quot; with size 30px:</p>
+<img alt="Distribution of number widths with Times New Roman, 30px." src="http://jensrantil.github.io/images/number_distributions_30px.png" style="width: 600px;" />
+</div>
+<div class="section" id="result">
+<h2>Result</h2>
+<p>Sadly, the results show that different numbers yield fairly similar
+width. It also looks like different font sizes didn't make any
+significant difference in length signature.</p>
+<p>That said, the number of digits yields a unique width so we can
+definitely know the magnitude of the redacted numbers, ie. whether they
+are 10s, 100s or 1000s etc.</p>
+</div>
+<div class="section" id="discussion">
+<h2>Discussion</h2>
+<p>ImageMagick uses the freetype library for font rendering. freetype has
+support for kerning, but kerning could definitely differ in
+implementation. I had a quick look at scripting MS Word, but it looked
+like too much of a hazzle for such a short experiment. Especially on
+MaxOSX. LibreOffice has slightly better scripting support. Scripting a
+fully featured word processor is definitely a future possible
+experiment/improvement.</p>
+<p>The font I am using is the &quot;Times new roman&quot; font that comes with
+MacOSX. MS Office ships with its own which could have different kerning
+and/or different digit widths. This would probably yield a different
+result from mine.</p>
+<p>For people who are planning to do safe redaction of text in documents,
+think about the following:</p>
+<ul class="simple">
+<li>Use a font with preferably no kerning. Monospaced font will do.</li>
+<li>Use font with same-width digits. Monospaced font will do.</li>
+<li>To avoid leaking magnitude of numbers, pad all numbers with fixed, or
+random, spaces.</li>
+</ul>
+<p>That said, it would be a fun thought experiment if NSA, or other
+intelligence organizations, would infiltrate (Times New Roman)
+typesetters to create unique kerning for letter constellations. It could
+make it much easier to work around redacted text in declassified
+documents from around the world. Call it a <em>typography backdoor</em> if you
+will.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion</h2>
+<p>This little experiment tested and showed that it's possible to extract
+the magnitude in the redacted numbers in declassified (NSA) documents.
+It could not show that digit width or kerning could help in determining
+the numbers more specifically. However, there is definitely future</p>
+<p>If you are curious about the magnitude of the redacted NSA numbers,
+consider them leaked. I'll let someone else do the hard work of
+extracting them ;-).</p>
+</div>
+
+
+		<div id="article_meta">
+				Category:
+					<a href="http://jensrantil.github.io/category/misc.html">misc</a>
+				<br />Tags:
+					<a href="http://jensrantil.github.io/tag/nsa.html">NSA</a>
+		</div>
+	</article>
+
+	<div class="donations">
+		Dude, did you like this blog post? Feel free to
+		drop me some bitcoins on
+		<a href="bitcoin:1Q79HGDF3ZjfCwXLAW6e7gX4DeDu2GtZ7v">1Q79HGDF3ZjfCwXLAW6e7gX4DeDu2GtZ7v</a>.
+	</div>
+
+	<footer>
+		<a href="http://jensrantil.github.io/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "how-to-partially-declassify-nsa-documents.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://jensrantil.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+
+	</section>
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-40929103-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+</body>
+</html>
