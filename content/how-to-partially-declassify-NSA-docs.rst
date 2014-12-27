@@ -26,10 +26,10 @@ answer is fairly obvious - yes - the number "1000000" definitely does
 not fit into most boxes, so we can conclude that targetted surveillance
 is less than that. But can we do better?
 
-Before we dig further a basic question; How to we know that the content
-underneath the redaction boxes are similarly sized as the numbers they
-redact? We don't. However, we can always be certain of the width of the
-number plus the space to the left and right of it (since it's visible):
+Before we dig further - how to we know that the content underneath the
+redaction boxes are similarly sized as the numbers they redact? We
+don't. However, we can always be certain of the width of the number plus
+the space to the left and right of it (since it's visible):
 
 .. image:: {filename}/images/number-width.png
    :alt: Known width.
@@ -70,14 +70,14 @@ it hinted that the NSA is using any of the following fonts:
 Looking at those fonts, the only one the it could potentially be would
 be Garamond, which is a fairly popular font. That said, when overlaying
 it with NSA text it didn't match too well. However, a simple guess that
-the NSA was using the good 'ole Times New Roman looked like a good
+the NSA was using the good 'ole Times New Roman looked like a better
 match:
 
 .. image:: {filename}/images/overlay-nsa.png
    :alt: Times New Roman overlay
    :width: 600
 
-The reason it did not match fully is due to a slight different kerning_.
+The reason it does not match fully is due to a slight different kerning_.
 A quick Googling brought me to this_ bug report (are NSA using
 Libreoffice?). Looks like I was not using the exact font (or rendered)
 match.
