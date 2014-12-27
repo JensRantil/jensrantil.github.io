@@ -15,10 +15,10 @@ anything about what's redacted behind the white boxes?&lt;/strong&gt; I think th
 answer is fairly obvious - yes - the number &amp;quot;1000000&amp;quot; definitely does
 not fit into most boxes, so we can conclude that targetted surveillance
 is less than that. But can we do better?&lt;/p&gt;
-&lt;p&gt;Before we dig further a basic question; How to we know that the content
-underneath the redaction boxes are similarly sized as the numbers they
-redact? We don't. However, we can always be certain of the width of the
-number plus the space to the left and right of it (since it's visible):&lt;/p&gt;
+&lt;p&gt;Before we dig further - how to we know that the content underneath the
+redaction boxes are similarly sized as the numbers they redact? We
+don't. However, we can always be certain of the width of the number plus
+the space to the left and right of it (since it's visible):&lt;/p&gt;
 &lt;img alt="Known width." src="http://jensrantil.github.io/images/number-width.png" /&gt;
 &lt;p&gt;In the NSA case, we also know that&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -50,12 +50,12 @@ it hinted that the NSA is using any of the following fonts:&lt;/p&gt;
 &lt;p&gt;Looking at those fonts, the only one the it could potentially be would
 be Garamond, which is a fairly popular font. That said, when overlaying
 it with NSA text it didn't match too well. However, a simple guess that
-the NSA was using the good 'ole Times New Roman looked like a good
+the NSA was using the good 'ole Times New Roman looked like a better
 match:&lt;/p&gt;
 &lt;img alt="Times New Roman overlay" src="http://jensrantil.github.io/images/overlay-nsa.png" style="width: 600px;" /&gt;
-&lt;p&gt;The reason it did not match fully is due to a slight different &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Kerning"&gt;kerning&lt;/a&gt;.
+&lt;p&gt;The reason it does not match fully is due to a slight different &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Kerning"&gt;kerning&lt;/a&gt;.
 A quick Googling brought me to &lt;a class="reference external" href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=72546"&gt;this&lt;/a&gt; bug report (are NSA using
-Libreoffice?). Looks like I was not using the exact font (or rendered)
+LibreOffice?). Looks like I was not using the exact font (or rendered)
 match.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="test-implementation"&gt;
