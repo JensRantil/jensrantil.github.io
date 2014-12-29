@@ -18,7 +18,7 @@ redacted text:
 The idea
 --------
 What struck me was that what most of the redacted text that I think the
-public (and me) is interested in is the magnitude of NSA surveillance,
+public (and me) are interested in is the magnitude of NSA surveillance,
 namely how large the redacted numbers are. I started asking myself,
 **can the space that the redacted numbers take up on a document tell us
 anything about what's redacted behind the white boxes?** I think the
@@ -154,6 +154,7 @@ This little experiment tested and showed that it's possible to extract
 the magnitude in the redacted numbers in declassified (NSA) documents.
 It could not show that digit width or kerning could help in determining
 the numbers more specifically. However, there is definitely future
+improvements.
 
 If you are curious about the magnitude of the redacted NSA numbers,
 consider them leaked. I'll let someone else do the hard work of
