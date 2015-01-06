@@ -176,17 +176,17 @@ through all events historically.
 .. _aggregate root: http://en.wikipedia.org/wiki/Domain-driven_design#Building_blocks_of_DDD
 
 In `Asynchronicity and feedback loops`_ we talked about the feedback
-loop of command validation. Event sourcing brings another architectural
+loop of command validation. Event sourcing brings other architectural
 decisions to the table when it comes to feedback loop from the event
 store:
 
 Failing disk writes
 '''''''''''''''''''
 Previously we've only dealt with the fact that network could go down.
-Luckily ZeroMQ makes sure that either a messages delivered once fully,
-or not at all.
+Luckily ZeroMQ (or similar technologies) makes sure that either a
+messages delivered once fully, or not at all.
 
-However, introducing an event store yields a new set of issues; writing
+However, introducing an event store yields a new set of issues; syncing
 an event store to the disk can fail because the disk is full, or because
 it's broken.
 
@@ -217,9 +217,9 @@ Interestingly, there is little online documentation on how command
 handler state is handled in an event sourced CQRS system. So, here are
 some of the different design choices that I've been considering:
 
-**Case 1: No dependence.** Event handlers persists their state fully
+**Case 1: No dependence.** Command handlers persists their state fully
 separate from the event store. If anything goes wrong with events being
-persisted, event handler state and event store might become
+persisted, command handler state and event store might become
 inconsistent. This is an inconsistency that might be hard to correct.
 
 Also, if command handlers in case 1 uses a relational database, we are
@@ -236,10 +236,11 @@ handlers to easily be upgraded, and easily be sharded if needed.
 
 There are two downsides with the solution; Firstly, just like with `case
 3`_ no error will be published by the event store in case something
-failed. Choosing a good timeout will be hard/impossible. Secondly, a
+failed. Choosing a good timeout will be hard. Secondly, a
 command handler will have to incorporate locking strategies to not allow
 two commands to pass through before the first command's equivalent event
-comes back.
+comes back, essentially making it synchronous with respect to event
+store writes.
 
 .. _case 2b:
 
