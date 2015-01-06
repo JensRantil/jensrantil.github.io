@@ -1453,15 +1453,15 @@ can be grouped based on &lt;a class="reference external" href="http://en.wikiped
 quickly get up to speed with a certain aggregate root instead of reading
 through all events historically.&lt;/p&gt;
 &lt;p&gt;In &lt;a class="reference internal" href="#asynchronicity-and-feedback-loops"&gt;Asynchronicity and feedback loops&lt;/a&gt; we talked about the feedback
-loop of command validation. Event sourcing brings another architectural
+loop of command validation. Event sourcing brings other architectural
 decisions to the table when it comes to feedback loop from the event
 store:&lt;/p&gt;
 &lt;div class="section" id="failing-disk-writes"&gt;
 &lt;h3&gt;Failing disk writes&lt;/h3&gt;
 &lt;p&gt;Previously we've only dealt with the fact that network could go down.
-Luckily ZeroMQ makes sure that either a messages delivered once fully,
-or not at all.&lt;/p&gt;
-&lt;p&gt;However, introducing an event store yields a new set of issues; writing
+Luckily ZeroMQ (or similar technologies) makes sure that either a
+messages delivered once fully, or not at all.&lt;/p&gt;
+&lt;p&gt;However, introducing an event store yields a new set of issues; syncing
 an event store to the disk can fail because the disk is full, or because
 it's broken.&lt;/p&gt;
 &lt;/div&gt;
@@ -1488,9 +1488,9 @@ sustain long slow lifecycles.&lt;/p&gt;
 &lt;p&gt;Interestingly, there is little online documentation on how command
 handler state is handled in an event sourced CQRS system. So, here are
 some of the different design choices that I've been considering:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Case 1: No dependence.&lt;/strong&gt; Event handlers persists their state fully
+&lt;p&gt;&lt;strong&gt;Case 1: No dependence.&lt;/strong&gt; Command handlers persists their state fully
 separate from the event store. If anything goes wrong with events being
-persisted, event handler state and event store might become
+persisted, command handler state and event store might become
 inconsistent. This is an inconsistency that might be hard to correct.&lt;/p&gt;
 &lt;p&gt;Also, if command handlers in case 1 uses a relational database, we are
 back to where we started with trying to &lt;a class="reference external" href="http://jensrantil.github.io/cqrs-time-to-rewind.html"&gt;avoid heavy schema migrations&lt;/a&gt;
@@ -1502,10 +1502,11 @@ will be consistent with the event store. It will also allow command
 handlers to easily be upgraded, and easily be sharded if needed.&lt;/p&gt;
 &lt;p&gt;There are two downsides with the solution; Firstly, just like with &lt;a class="reference internal" href="#case-3"&gt;case
 3&lt;/a&gt; no error will be published by the event store in case something
-failed. Choosing a good timeout will be hard/impossible. Secondly, a
+failed. Choosing a good timeout will be hard. Secondly, a
 command handler will have to incorporate locking strategies to not allow
 two commands to pass through before the first command's equivalent event
-comes back.&lt;/p&gt;
+comes back, essentially making it synchronous with respect to event
+store writes.&lt;/p&gt;
 &lt;p id="case-2b"&gt;&lt;strong&gt;Case 2b: Command handler builds state from their generated events.&lt;/strong&gt;
 This, too, assures command handler and event store will be consistent,
 are easily upgraded and sharded if needed. If combined with synchronous
