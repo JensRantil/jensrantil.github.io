@@ -274,7 +274,7 @@ trains and airports.
 
 Obviously, Ansible users do have the option to always execute their
 playbooks from a secured machine that holds the sensitive data. But is
-this was people do?
+this what people do?
 
 Auditability
 ------------
