@@ -1,4 +1,3 @@
 baseurl = "https://jensrantil.github.io"
 languageCode = "en-us"
 title = "Jens Rantil's Hangout"
-theme = "hyde"
