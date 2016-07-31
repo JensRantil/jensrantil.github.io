@@ -1,4 +1,4 @@
-Refreshable AngularjS service
+Refreshable AngularJS service
 =============================
 
 date
