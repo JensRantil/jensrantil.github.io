@@ -27,15 +27,17 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-image: url(/kayak.jpg);
   background-size: 100%;
-  background-repeat: no-repeat;
   background-color: #050c1e;
 }
 body {
   color: #fff;
+  background-repeat: no-repeat;
   text-align: center;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+html body.frontpage {
+  background-image: url(/kayak.jpg);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
