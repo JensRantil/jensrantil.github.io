@@ -1,17 +1,14 @@
+---
+title: "I'm a State Engineer. Are you, too?"
+description: |
+    "Lifecycle" and "state" are two words not used often enough.
+date: 2013-11-18
+tags: [architecture, programming, state, distributed architecture]
+draft: false
+---
+
 I'm a State Engineer. Are you, too?
 ===================================
-
-date
-
-:   2013-11-18 18:32
-
-tags
-
-:   architecture, programming, state, distributed architecture
-
-summary
-
-:   "Lifecycle" and "state" are two words not used often enough.
 
 TL;DR: We need to have a more thorough discussion about state and
 lifecycles in our industry.

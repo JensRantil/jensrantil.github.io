@@ -1,13 +1,12 @@
+---
+title: "Refreshable AngularJS service"
+date: 2013-05-23
+tags: [AngularJS, JavaScript]
+draft: false
+---
+
 Refreshable AngularJS service
 =============================
-
-date
-
-:   2013-05-23 22:59
-
-tags
-
-:   AngularJS, JavaScript
 
 Lately I've been working a lot in [AngularJS](http://angularjs.org).
 This is my second project with the framework, and the more time I spend

@@ -1,22 +1,16 @@
+---
+title: "CQRS+Event Sourcing Messaging Patterns"
+description: |
+    Designing a decoupled, message based, system based on the CQRS pattern
+    together with event sourcing require some thought. Since I've been thinking
+    about it for a while now, I thought I'd share some thoughts so far.
+date: 2013-05-26
+tags: ["cqrs", "event sourcing", "distributed architecture"]
+draft: false
+---
+
 CQRS+Event Sourcing Messaging Patterns
 ======================================
-
-date
-
-:   2013-05-26 23:09
-
-tags
-
-:   cqrs, event sourcing, distributed architecture
-
-summary
-
-:   Designing a decoupled, message based, system based on the
-    [CQRS](http://martinfowler.com/bliki/CQRS.html) pattern together
-    with [event
-    sourcing](http://martinfowler.com/eaaDev/EventSourcing.html) require
-    some thought. Since I've been thinking about it for a while now, I
-    thought I'd share some thoughts so far.
 
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about

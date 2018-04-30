@@ -1,13 +1,12 @@
+---
+title: "Replacing a folder in Subversion"
+date: 2008-09-22
+tags: [svn, subversion]
+draft: false
+---
+
 Replacing a folder in Subversion
 ================================
-
-date
-
-:   2008-09-22 02:17
-
-tags
-
-:   svn, subversion
 
 So you have an external library foo version 1.0 that you have committed
 to your Subversion repository together with your code. Let us for

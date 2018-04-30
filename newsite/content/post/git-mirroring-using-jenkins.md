@@ -1,18 +1,13 @@
+---
+title: "GIT mirroring using Jenkins"
+description: "Using a small hack, you can reuse your local Jenkins installation for faster git fetches, as well as a fallback if Github goes down."
+date: 2013-09-04
+tags: [git, jenkins, hudson]
+draft: false
+---
+
 GIT mirroring using Jenkins
 ===========================
-
-date
-
-:   2013-09-04 18:15
-
-tags
-
-:   git, jenkins, hudson
-
-summary
-
-:   Using a small hack, you can reuse your local Jenkins installation
-    for faster git fetches, as well as a fallback if Github goes down.
 
 For the past couple of weeks I've been annoyed by the high latency when
 connecting to [Github](https://github.com) over SSH. While the other GIT

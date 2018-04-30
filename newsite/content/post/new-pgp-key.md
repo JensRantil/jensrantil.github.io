@@ -1,17 +1,13 @@
+---
+title: "New PGP key"
+description: "I have a new PGP key."
+date: 2013-11-18
+tags: [pgp, cryptography]
+draft: false
+---
+
 New PGP key
 ===========
-
-date
-
-:   2013-11-18 23:43
-
-tags
-
-:   pgp, cryptography
-
-summary
-
-:   I have a new PGP key.
 
 Just wanted to give you a heads up that I recently generated a [new PGP
 key](https://dl.dropboxusercontent.com/u/17059539/public.asc). Its

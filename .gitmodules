@@ -4,3 +4,6 @@
 [submodule "newsite/themes/hyde"]
 	path = newsite/themes/hyde
 	url = https://github.com/spf13/hyde.git
+[submodule "newsite/themes/minimal"]
+	path = newsite/themes/minimal
+	url = https://github.com/calintat/minimal.git

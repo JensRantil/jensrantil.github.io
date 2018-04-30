@@ -1,9 +1,11 @@
+---
+title: "Line styles in matplotlib"
+date: 2013-05-28
+draft: false
+---
+
 Line styles in matplotlib
 =========================
-
-date
-
-:   2013-05-28 08:57
 
 I'm a big fan of [matplotlib](http://matplotlib.org/) and tend to use it
 every time I'd like to plot something. A while ago I had a line plot

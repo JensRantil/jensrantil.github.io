@@ -1,17 +1,12 @@
+---
+title: "Why the Web is so Slow"
+date: 2013-12-02
+tags: [web, http]
+draft: false
+---
+
 Why the Web is so Slow
 ======================
-
-date
-
-:   2013-12-02 23:04
-
-tags
-
-:   web, http
-
-summary
-
-:   Why is the web so slow?
 
 I just read the blog post [Why is the web so
 slow?](http://calendar.perfplanet.com/2013/why-is-the-web-so-slow/) by

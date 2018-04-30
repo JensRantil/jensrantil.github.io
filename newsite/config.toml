@@ -1,3 +1,72 @@
 baseurl = "https://jensrantil.github.io"
 languageCode = "en-us"
-title = "Jens Rantil's Hangout"
+title = "JensRantil"
+theme = "minimal"
+disqusShortname = "jensrantil" # delete this to disable disqus comments
+googleAnalytics = "UA-40929103-1"
+
+[params]
+    author = "Jens Rantil"
+    description = 'Backend/security/infrastructure/DevOps engineer (<a href="https://www.tink.se">@tink</a>), engineering mathematics, traveller, nerd, juggler, guitar/african drum player. Inspired Swede.'
+    githubUsername = "#JensRantil"
+    accent = "red"
+    showBorder = true
+    backgroundColor = "white"
+    font = "Raleway" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "solarized-dark"
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 2
+
+[[menu.main]]
+    url = "/page/about-me/"
+    name = "About"
+    weight = 3
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "mailto:jens.rantil@gmail.com"
+    name = "envelope-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/JensRantil/"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://twitter.com/JensRantil/"
+    name = "twitter"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/jensrantil/"
+    name = "linkedin"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://www.stackoverflow.com/Ztyx/"
+    name = "stack-overflow"
+    weight = 5
+
+[[menu.icon]]
+    url = "https://www.quora.com/profile/Jens-Rantil"
+    name = "quora"
+    weight = 6
+
+[[menu.icon]]
+    url = "https://www.meetup.com/members/13195237/"
+    name = "meetup"
+    weight = 7

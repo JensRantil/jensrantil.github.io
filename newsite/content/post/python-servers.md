@@ -1,21 +1,17 @@
+---
+title: "Writing a server in Python"
+description: |
+    One of the questions that might hit you is 'why would you ever write
+    a server in Python?'. I've heard many people being raising their
+    concerns when it comes to Python. The biggest ones are obviously
+    concurrency and the GIL.
+date: 2013-08-21
+tags: [python, java]
+draft: false
+---
+
 Writing a server in Python
 ==========================
-
-date
-
-:   2013-08-21 09:53
-
-tags
-
-:   python, java
-
-summary
-
-:   One of the questions that might hit you is *why would you ever write
-    a server in Python?*. I've heard many people being raising their
-    concerns when it comes to Python. The biggest ones are obviously
-    concurrency and the
-    [GIL](http://wiki.python.org/moin/GlobalInterpreterLock).
 
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about

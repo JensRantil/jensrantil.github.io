@@ -1,17 +1,13 @@
+---
+title: "A follow-up on CouchDB as event store"
+description: "A different implementation of CouchDB event store."
+date: 2014-03-25
+tags: ["CouchDB", "cqrs", "distributed-architecture"]
+draft: false
+---
+
 A follow-up on CouchDB as event store
 =====================================
-
-date
-
-:   2014-03-25 23:27
-
-tags
-
-:   CouchDB, cqrs, distributed-architecture
-
-summary
-
-:   A different implementation fo CouchDB event store.
 
 I [recently](|filename|couchdb-as-event-store.rst) wrote about using
 CouchDB as an event store. One issue that I mentioned briefly was that

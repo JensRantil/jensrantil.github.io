@@ -1,13 +1,12 @@
+---
+title: "Bootstrapping software projects"
+date: 2013-05-19
+tags: ["software", "bootstrapping"]
+draft: false
+---
+
 Bootstrapping software projects
 ===============================
-
-date
-
-:   2013-05-19 21:22
-
-tags
-
-:   software, bootstrapping
 
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about

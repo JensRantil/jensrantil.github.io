@@ -1,13 +1,12 @@
+---
+title: "Privacy and Logging"
+date: 2013-06-17
+tags: [privacy]
+draft: false
+---
+
 Privacy and Logging
 ===================
-
-date
-
-:   2013-06-17 23:08
-
-tags
-
-:   privacy
 
 Privacy seem to be a [popular discussion these
 days](http://www.guardian.co.uk/world/the-nsa-files). While I do think

@@ -1,9 +1,12 @@
+---
+title: "That initial blogpost"
+date: 2013-05-14
+tags: [howdy]
+draft: false
+---
+
 That initial blogpost
 =====================
-
-date
-
-:   2013-05-14 22:40
 
 So it's time to kick off this blog. I cheated a little and posted [a
 previously written blog post](|filename|replacing-directory-in-svn.rst).

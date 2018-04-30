@@ -1,13 +1,12 @@
+---
+title: "Migrating to Python 3"
+date: 2013-05-19
+tags: [python]
+draft: false
+---
+
 Migrating to Python 3
 =====================
-
-date
-
-:   2013-05-19 21:25
-
-tags
-
-:   python
 
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about

@@ -1,13 +1,12 @@
+---
+title: "CQRS - Time to Rewind"
+date: 2013-05-19
+tags: ["cqrs", "distributed-architecture"]
+draft: false
+---
+
 CQRS - Time to Rewind
 =====================
-
-date
-
-:   2013-05-19 21:21
-
-tags
-
-:   cqrs, distributed-architecture
 
 For the last year I've been thinking a lot about
 [CQRS](http://www.cqrsinfo.com)

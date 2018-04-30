@@ -1,13 +1,12 @@
+---
+title: "How to (partially) declassify NSA documents"
+date: 2014-12-27
+tags: [NSA]
+draft: false
+---
+
 How to (partially) declassify NSA documents
 ===========================================
-
-date
-
-:   2014-12-27 12:12
-
-tags
-
-:   NSA
 
 The day before Christmas Eve, the (American) NSA published a bunch of
 [declassified

@@ -1,17 +1,13 @@
+---
+title: "Salt vs. Ansible"
+description: "A highly opinionated comparison between Salt and Ansible."
+date: 2014-03-17
+tags: [Salt, Ansible, provisioning]
+draft: false
+---
+
 Salt vs. Ansible
 ================
-
-date
-
-:   2014-03-17 22:46
-
-tags
-
-:   Salt, Ansible, provisioning
-
-summary
-
-:   A highly opinionated comparison between Salt and Ansible.
 
 Some time ago was set to evaluate configuration management systems. I've
 heard opinions from someone I respect that
