@@ -1,9 +1,6 @@
-[submodule "themes/svtle"]
-	path = themes/svtle
-	url = https://github.com/JensRantil/pelican-svbtle.git
 [submodule "newsite/themes/hyde"]
-	path = newsite/themes/hyde
+	path = themes/hyde
 	url = https://github.com/spf13/hyde.git
 [submodule "newsite/themes/minimal"]
-	path = newsite/themes/minimal
+	path = themes/minimal
 	url = https://github.com/calintat/minimal.git
