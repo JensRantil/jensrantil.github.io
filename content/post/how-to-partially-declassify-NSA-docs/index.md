@@ -15,7 +15,7 @@ that have been handed to the President's Intelligence Oversight Board
 (IOD) for the past 10 years or so. I quickly scrolled through a couple
 of documents to find a lot of heavily redacted text:
 
-![Redacted text.]({filename}/images/redacted-text.png)
+![Redacted text.](redacted-text.png)
 
 The idea
 --------
@@ -34,7 +34,7 @@ redaction boxes are similarly sized as the numbers they redact? We
 don't. However, we can always be certain of the width of the number plus
 the space to the left and right of it (since it's visible):
 
-![Known width.]({filename}/images/number-width.png)
+![Known width.](number-width.png)
 
 In the NSA case, we also know that
 
@@ -73,7 +73,7 @@ it with NSA text it didn't match too well. However, a simple guess that
 the NSA was using the good 'ole Times New Roman looked like a better
 match:
 
-![Times New Roman overlay]({filename}/images/overlay-nsa.png)
+![Times New Roman overlay](overlay-nsa.png)
 
 The reason it does not match fully is due to a slight different
 [kerning](http://en.wikipedia.org/wiki/Kerning). A quick Googling
@@ -92,11 +92,11 @@ generate test images, crop and output the width of the images.
 
 Output for "Times New Roman" with size 16px:
 
-![Distribution of number widths with Times New Roman, 16px.]({filename}/images/number_distributions.png)
+![Distribution of number widths with Times New Roman, 16px.](number_distributions.png)
 
 Output for "Times New Roman" with size 30px:
 
-![Distribution of number widths with Times New Roman, 30px.]({filename}/images/number_distributions_30px.png)
+![Distribution of number widths with Times New Roman, 30px.](number_distributions_30px.png)
 
 Result
 ------
