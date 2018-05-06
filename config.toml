@@ -1,4 +1,4 @@
-baseurl = "https://jensrantil.github.io"
+baseurl = "https://jensrantil.github.io/"
 languageCode = "en-us"
 title = "JensRantil"
 theme = "minimal"
