@@ -42,7 +42,7 @@ why this is but got no clear answer. Reasons I can think of:
    using auto scaling groups will not avoid 503's if a server process for some
    reason crashes.
  * Retries will increase the latencies for end-users. I personally believe a
-   single retry is much more exppected than fail early. If course, there should
+   single retry is much more expected than fail early. If course, there should
    be a limit to the number of retries. If you have 200 upstream servers,
    retrying all of them isn't viable!
 
