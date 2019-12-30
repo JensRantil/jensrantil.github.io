@@ -98,3 +98,11 @@ footer {
 img {
     max-width: 100%;
 }
+
+body {
+    font-size: 18px !important;
+}
+
+p {
+    margin-bottom: 0.9em !important
+}
