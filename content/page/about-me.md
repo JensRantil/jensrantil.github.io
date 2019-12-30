@@ -16,8 +16,6 @@ Jens can found in various corners of the web:
 -   [Facebook](http://www.facebook.com/jens.rantil)
 -   Skype: skypeztyx
 -   Google chat/e-mail: <jens.rantil@gmail.com>
--   [Google Plus](https://plus.google.com/112898131372161120283) (but
-    he's pretty quiet there)
 
 [^1]: ...although this blog is obviously not affiliated with Tink in any
     way.
