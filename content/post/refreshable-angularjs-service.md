@@ -1,7 +1,7 @@
 ---
 title: "Refreshable AngularJS service"
 date: 2013-05-23
-tags: [AngularJS, JavaScript]
+tags: ["AngularJS", "JavaScript"]
 ---
 
 Refreshable AngularJS service

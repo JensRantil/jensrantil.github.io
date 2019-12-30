@@ -1,7 +1,7 @@
 ---
 title: "Privacy and Logging"
 date: 2013-06-17
-tags: [privacy]
+tags: ["privacy"]
 ---
 
 Privacy and Logging

@@ -1,7 +1,7 @@
 ---
 title: "Why the Web is so Slow"
 date: 2013-12-02
-tags: [web, http]
+tags: ["web", "HTTP"]
 draft: false
 ---
 

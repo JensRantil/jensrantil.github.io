@@ -6,7 +6,7 @@ description: |
     concerns when it comes to Python. The biggest ones are obviously
     concurrency and the GIL.
 date: 2013-08-21
-tags: [python, java]
+tags: ["Python", "Java"]
 ---
 
 Writing a server in Python
