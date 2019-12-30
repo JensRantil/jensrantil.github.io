@@ -2,7 +2,7 @@
 title: "Simpler Cookieless Cookies"
 description: "Another way of doing cookieless cookies."
 date: 2013-08-18
-tags: [HTTP]
+tags: ["HTTP"]
 draft: false
 ---
 

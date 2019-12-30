@@ -1,7 +1,7 @@
 ---
 title: "That initial blogpost"
 date: 2013-05-14
-tags: [howdy]
+tags: ["howdy"]
 draft: false
 ---
 
