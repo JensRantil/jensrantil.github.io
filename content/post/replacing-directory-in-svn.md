@@ -2,7 +2,6 @@
 title: "Replacing a folder in Subversion"
 date: 2008-09-22
 tags: [svn, subversion]
-draft: false
 ---
 
 Replacing a folder in Subversion

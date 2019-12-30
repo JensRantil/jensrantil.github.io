@@ -3,7 +3,6 @@ title: "Salt vs. Ansible"
 description: "A highly opinionated comparison between Salt and Ansible."
 date: 2014-03-17
 tags: [Salt, Ansible, provisioning]
-draft: false
 ---
 
 Salt vs. Ansible

@@ -7,7 +7,6 @@ description: |
     concurrency and the GIL.
 date: 2013-08-21
 tags: [python, java]
-draft: false
 ---
 
 Writing a server in Python

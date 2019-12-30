@@ -2,7 +2,6 @@
 title: "Bootstrapping software projects"
 date: 2013-05-19
 tags: ["software", "bootstrapping"]
-draft: false
 ---
 
 Bootstrapping software projects

@@ -2,7 +2,6 @@
 title: "Migrating to Python 3"
 date: 2013-05-19
 tags: [python]
-draft: false
 ---
 
 Migrating to Python 3
