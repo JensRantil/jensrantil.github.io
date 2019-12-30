@@ -2,7 +2,6 @@
 title: "Blog Update"
 date: 2018-05-06
 tags: []
-draft: false
 ---
 
 I'm happy to announce I've finally gotten the time to migrate my blog from

@@ -4,7 +4,6 @@ description: |
     "Lifecycle" and "state" are two words not used often enough.
 date: 2013-11-18
 tags: [architecture, programming, state, distributed architecture]
-draft: false
 ---
 
 I'm a State Engineer. Are you, too?

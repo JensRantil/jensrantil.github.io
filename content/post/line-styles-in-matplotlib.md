@@ -1,7 +1,6 @@
 ---
 title: "Line styles in matplotlib"
 date: 2013-05-28
-draft: false
 ---
 
 Line styles in matplotlib

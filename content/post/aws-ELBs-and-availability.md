@@ -2,7 +2,6 @@
 title: "AWS ELBs and Availability"
 date: 2018-05-06
 tags: [AWS]
-draft: false
 ---
 Recently I was reading the article ["Introduction to modern network load
 balancing and

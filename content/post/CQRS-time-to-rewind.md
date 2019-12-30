@@ -2,7 +2,6 @@
 title: "CQRS - Time to Rewind"
 date: 2013-05-19
 tags: ["cqrs", "distributed-architecture"]
-draft: false
 ---
 
 CQRS - Time to Rewind

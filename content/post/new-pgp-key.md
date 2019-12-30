@@ -3,7 +3,6 @@ title: "New PGP key"
 description: "I have a new PGP key."
 date: 2013-11-18
 tags: [pgp, cryptography]
-draft: false
 ---
 
 New PGP key

@@ -3,7 +3,6 @@ title: "AngularJS events on initialization"
 description: "Triggering events from services might not always work..."
 date: 2013-05-24
 tags: ["AngularJS", "JavaScript"]
-draft: false
 ---
 
 AngularJS events on initialization
