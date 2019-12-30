@@ -2,11 +2,9 @@ About Jens
 ==========
 
 Jens Rantil is a *developer* and *sysadmin*. He has a MS in Engineering
-Mathematics from [Lund Institute of
-Technology](http://www.lth.se/english/) (LTH),
-Sweden. His current employer is
-[Tink](http://www.tinkapp.com), a startup that helps you with your
-personal finances[^1].
+Mathematics from [Lund Institute of Technology](http://www.lth.se/english/)
+(LTH), Sweden. His current employer is [Tink](http://www.tinkapp.com), a
+startup that helps you with your personal finances[^1].
 
 Jens can found in various corners of the web:
 
