@@ -1,5 +1,5 @@
 ---
-title: "Narrow integration tests"
+title: "On narrow integration tests"
 date: 2020-01-13
 tags: ["testing"]
 ---
