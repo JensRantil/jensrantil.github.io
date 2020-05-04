@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Testing strategy over time</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Testing strategy over time</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/testing-strategy-over-time/">Testing strategy over time</a></h4>
+    <h5>January 12, 2020</h5>
+    
+    <a href="https://jensrantil.github.io/tags/testing"><kbd class="item-tag">testing</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>Last year (2019) I spent a fair amount of time thinking about how to grow
+<a href="https://www.tinkapp.com">Tink</a>&lsquo;s technical platform; how to organise ourselves
+&ndash; alignment vs. autonomy.  What processes, tooling and policies were needed
+for our teams to build amazing, stable, performant things at a fast pace? Tink
+had essentially doubled in size for four years and the growth had really pushed
+our engineering organisation to the limits. We are now around 150 engineers. We
+were less than 10 engineers when I started in early 2014.</p>
+<blockquote>
+<p>What are the foundational building blocks and processes needed for us to have
+twice as many teams in a years time?</p>
+</blockquote>
+<p>The technical platform has grown from a Java monolith consisting of a few
+services that mostly were deployed at the same time, to almost 100 polyglot
+services (mostly microservices) being deployed continuously by lots of teams.</p>
+<p>One thing that really changes once you move towards a microservice architecture
+is testing. Large-scale system testing involving many applications, owned by lots of
+different teams, becomes increasingly difficult.</p>
+<p>As I was thinking about testing strategy, I decided to give a talk at the
+<a href="https://www.meetup.com/Go-Stockholm/events/260663183/">Stockholm Go Meetup</a> on
+how we do testing at Tink (<a href="testing-at-tink.pdf">slides</a>).  Ignoring the fact
+that the slides barely were readable (sorry!), my intention was to talk about 1)
+the different types of test there are and 2) the different tradeoffs we are
+making when choosing different testing strategies. The talk itself came out of
+an observation that a lot of developers have strong opinions about testing.
+However, we rarely talk about what it's actually trying to achieve, or which
+contexts different software can be in.</p>
+<p>The talk started with presenting a small variant of the classical test
+Pyramid:</p>
+<p><a href="pyramid.png"><img src="pyramid.png" alt="The Test Pyramid"></a></p>
+<p>A difference between the test pyramid above and the classical test pyramid is
+that it distinguishes between &ldquo;narrow integration tests&rdquo; and &ldquo;wide integration
+tests&rdquo;. Martin Fowler has written a great
+<a href="https://martinfowler.com/bliki/IntegrationTest.html">article</a> about the
+concept of narrow integration tests. I have more to say about that, but I'll
+leave that to another blog post!</p>
+<p>My presentation then continued making a bunch of small observations about the
+pyramid. Namely, the higher up in the pyramid you are, the</p>
+<ul>
+<li>the fewer tests compared to the base (thus, a Pyramid).</li>
+<li>the <strong>slower feedback</strong> you will get.</li>
+<li>the <strong>more brittle</strong> your tests will become as they involve more components.
+This also means they are harder to make stable.</li>
+<li><strong>more maintenance is needed</strong> as more components are involved.</li>
+<li><strong>harder it becomes to debug</strong> as more components are involved.</li>
+<li><strong>slower the tests</strong> tend to be to run as they need to initialize more
+components. System tests might even need to read up data from disk or
+external database to function.</li>
+<li><strong>more complex they are to run</strong>. System tests might need configuration to
+run.</li>
+<li><strong>closer you are to production</strong>.</li>
+<li><strong>higher coverage per test</strong> as each test generally touches more components.</li>
+<li><strong>harder it gets to reach higher levels of test coverage</strong>. By this I don't
+mean 100% test coverage is a goal. For a long time at Tink we were rather
+system tests heavy. When we started running the same application across many
+production environment, running our system tests for all combinations of
+configuration became impossible.</li>
+</ul>
+<p>Additionally, I also made the observation that tests in the lower part of the
+pyramid requires &ldquo;low coupling and high cohesion&rdquo; (LCHC), generally considered good
+software design practises. That said, it <em>is</em> possible to have low coupling and
+high cohesion in an application which are lacking integration and/or unit tests.</p>
+<p>The fact that LCHC is required for unit tests and narrow integration tests also
+means that <a href="http://www.laputan.org/mud/">big balls</a> <a href="https://en.wikipedia.org/wiki/Big_ball_of_mud">of
+mud</a> are very hard to test with
+such tests. For teams inheriting balls of mud it therefor makes sense to focus
+on blackbox system and/or acceptance tests so they can then refactor the
+application to allow for smaller tests.</p>
+<p>Furthermore, I made an observation how different types of tests&rsquo; cost changes
+as software complexity increases:</p>
+<p><a href="testing-costs.png"><img src="testing-costs.png" alt="Cost of maintaining system and wide integration tests increases with software complexity. Narrow integration and unit tests do not."></a></p>
+<p>The assumption here in the graph is that an &ldquo;Integration test&rdquo; depends on a
+fixed number of components. Therefor the cost of maintaining such test does not
+grow as the software gets more components. This leads to the following benefit/cost
+ratio:</p>
+<p><a href="testing-value.png"><img src="testing-value.png" alt="Value of different types of tests as software complexity increase. The benefit/cost ratio of system and wide integration tests is decreased with increased software complexity. Narrow integration and unit tests do not."></a></p>
+<p>My experience over the years is that software complexity tend to grow over
+time. New requirements &amp; features tend to be added, fewer removed.
+Additionally, rewrites to simplify something are rare. For good reasons! The
+risks in doing a rewrite are huge.</p>
+<p>This insight is key. I believe it explains why our community is so fragmented
+when it comes to testing strategy &ndash; it's because testing <em>strategy must change
+with software complexity</em>! Engineers who only has experience of low complex
+software will argue for investing in a few high-level system or wide integration
+tests. Engineers with experience with high complexity, tend to be weary of
+such tests and instead prefer unit tests and narrow integration tests.</p>
+<p>But the reality is that none of the engineers are right. The distribution of
+different test types is not fixed. Instead, it changes over the life of a
+software. Initially when developing a tiny microservice, I find a single system
+test giving me huge benefits. As my software grows, I implement fewer and fewer
+system and wide integration tests &ndash; the become increasingly painful to work
+with!</p>
+<p>Is there a way to avoid having to change testing strategy over time? Perhaps.
+Avoid introducing complexity or make sure your core developers stay around:</p>
+<p>With the advent of microservices, some companies have a cultural preferences to
+keep their services small. To some extent this can keep complexity down on the
+service level. However, it's worth remembering that it pushes complexity on the
+platform architecture level; for example, investments in observability becomes
+increasingly important.</p>
+<p>To some extent you can also avoid hitting the costs of software complexity by
+making sure you keep core competencies about an application around. Training
+can also, to some extent, help. That said, you are playing a rather risky game
+here as developers will eventually come and go. Eventually complexity will come
+back biting you in the back.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/narrow-integration-tests/">On narrow integration tests</a></h4>
+    <h5>January 13, 2020</h5>
+    
+    <a href="https://jensrantil.github.io/tags/testing"><kbd class="item-tag">testing</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

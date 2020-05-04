@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrapping software projects</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Bootstrapping software projects</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/bootstrapping-software-projects/">Bootstrapping software projects</a></h4>
+    <h5>May 19, 2013</h5>
+    
+    <a href="https://jensrantil.github.io/tags/software"><kbd class="item-tag">software</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/bootstrapping"><kbd class="item-tag">bootstrapping</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><h1 id="bootstrapping-software-projects">Bootstrapping software projects</h1>
+<p>This post is partially related to my <a href="%7Cfilename%7CCQRS-time-to-rewind.rst">previous blog
+post</a> about
+<a href="http://www.github.com/JensRantil/rewind">Rewind</a> and
+<a href="http://www.github.com/JensRantil/gorewind">GoRewind</a>.</p>
+<p>Even though I've been working as a full-time developer for the past 4-5
+years, it still hits me how much boiler plate is required to create a
+proper software project. In fact, I've seen so many times how extra
+functionality is bundled into applications just because the alternative
+would require many hours of setting things up. This despite the fact
+that functionality is orthogonal and has totally different life cycles.</p>
+<p>Some of the things I'm thinking about are:</p>
+<ul>
+<li>Choosing a license and making sure that it is published correctly.
+That is, included in all source files, including my snail mail
+address etc. I even wrote a <a href="https://github.com/JensRantil/rewind/blob/develop/rewind/server/test/test_code.py#L80">test for
+this</a>.</li>
+<li>For Python projects; setting up a proper <code>setup.py</code> file. This also
+includes a bunch of reading figuring out why
+<a href="https://pypi.python.org/pypi/distribute">Distribute</a> should be used
+instead of <a href="https://pypi.python.org/pypi/setuptools">Setuptools</a>.
+Not to mention understanding entry points, test dependencies and
+publishing to <a href="https://pypi.python.org/pypi">PyPi</a>.</li>
+<li>For other projects; setting up a proper build system [3], figure
+out how to run tests, bundle and distribute things etc.</li>
+<li>Choosing a testing platform. In my case
+<a href="http://readthedocs.ord/docs/nose/">Nose</a> proved to be a
+great choice.</li>
+<li>Choosing a coding standard. I was tired of messing around in
+undocumented code with mixed types of indentation. Both
+<a href="http://www.python.org/dev/peps/pep-0008/">PEP8</a> and
+<a href="http://www.python.org/dev/peps/pep-0257/">PEP257</a>
+proved invaluable. In fact, I took things to a new level and created
+<a href="https://github.com/JensRantil/rewind/blob/develop/rewind/server/test/test_code.py">coding standards
+tests</a>
+that asserted all code adhered to these two PEPs. It used the
+<a href="https://github.com/jcrocholl/pep8">pep8</a> and
+<a href="https://github.com/GreenSteam/pep257">pep257</a> projects&rsquo; APIs
+for this. It may sound too strict, but the fact is, it was wonderful
+to have these automatically tested! Also, the fact that
+<a href="http://golang.org">Go</a> comes with <a href="http://golang.org/cmd/go/#hdr-Run_gofmt_on_package_sources">its own
+formatter</a>
+has proven to me that it's a valuable direction to go.</li>
+<li>Choosing <a href="http://semver.org/">versioning strategy</a> and figuring out
+a <a href="http://nvie.com/posts/a-successful-git-branching-model/">branching
+model</a>.</li>
+</ul>
+<p>Open Source projects also involves building a community; mailing lists,
+contribution processes etc.</p>
+<p>It takes time to set things up. And it's surprising that we, the
+Software Community haven't come further with some of these obstacles.</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

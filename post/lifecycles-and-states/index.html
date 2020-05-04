@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>I&#39;m a State Engineer. Are you, too?</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">I&#39;m a State Engineer. Are you, too?</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/lifecycles-and-states/">I&#39;m a State Engineer. Are you, too?</a></h4>
+    <h5>&#34;Lifecycle&#34; and &#34;state&#34; are two words not used often enough.
+</h5>
+    
+    <a href="https://jensrantil.github.io/tags/architecture"><kbd class="item-tag">architecture</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/programming"><kbd class="item-tag">programming</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/state"><kbd class="item-tag">state</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/distributed-architecture"><kbd class="item-tag">distributed architecture</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><h1 id="im-a-state-engineer-are-you-too">I'm a State Engineer. Are you, too?</h1>
+<p>TL;DR: We need to have a more thorough discussion about state and
+lifecycles in our industry.</p>
+<p>I recently revisited <a href="http://12factor.net">The Twelve-Factor App</a> by
+<a href="https://www.heroku.com">Heroku</a>. It's a great read if you are deploying
+your own application, are interested in (organizational and/or
+technincal) scaling or curious of best practices when it comes to
+deployment.</p>
+<p>As I was reading the manifest it struck me that there are two words that
+I hear all too infrequently in our industry, namely <em>state</em> and
+<em>lifecycle</em>. The words have different meaning, yet they are related in
+so many ways. All state has a lifecycle, otherwise the state would not
+be worth thinking of.</p>
+<p>Software engineers are surrounded by <em>state</em> all the time. So are
+software architects. In fact, state can flow through every layer of a
+software stack. Not to mention how state can be spread out across a
+plethora in a distributed system; databases, caches, queues etc. State
+also applies to a wide range of scopes; within a function/method, within
+a class, within a software component, within a distributed application,
+or even an orchestration of distributed applications.</p>
+<p>As software engineers we need to respect state and how inherently
+difficult it to get it right. The majority of bugs are related to state
+in one way of another. This is why we always need to formalize how and
+where state is stored. Asking the question &ldquo;Do we need the state?&rdquo; is
+also worth doing so often.</p>
+<p>The <em>how</em> is important. How can we as software engineers minimize errors
+due to state? Here are a couple of ideas:</p>
+<p><strong>Use constants as much as possible.</strong> Make it clear that a variable
+cannot be changed. The <a href="http://www.erlang.org">Erlang</a> and
+<a href="http://www.haskell.org">Haskell</a> programming languages go as far as not
+even allowing changing the values of any variable. One needs to define a
+new variable.</p>
+<p><strong>Use immutable data structures as much as possible.</strong> Slightly related
+to the previous paragraph. This is especially important when state is
+moving through a system. Sure, this will make systems slower in some
+case, but use immutability by default and mutability only where it's
+really needed. In <a href="http://www.erlang.org">Erlang</a> all state sent between
+components (called &ldquo;processes&rdquo;) is immutable.</p>
+<p><strong>Isolate state</strong> and <strong>minimize inter-state dependencies</strong>. Make sure
+that the implementation modifying state is isolated. This makes it
+easier to get an overview of various states in the system and what makes
+them transition into new states. Two ways of isolating state are two put
+it in a separate (possibly, green) thread or, even better, binding to a
+function/method scope.</p>
+<p>Isolation of state can be an argument to decouple components of a bigger
+system into smaller isolated ones. Paradoxically, isolating state can
+also introduce other issues. A common issue of decoupling state into
+distributed components is that state transitions can fail due to network
+and/or timing issues.</p>
+<p><strong>Make state shortlived.</strong> The fewer state changes the easier it becomes
+to reason about them. This is where state <em>lifecycle</em> becomes an
+important concept. A shortlived state makes programmers less prone to
+introduce errors. Maybe your state can be computed from some other
+external state.</p>
+<p>The <a href="http://www.erlang.org">Erlang</a> programming language brings the
+concept of &ldquo;supervisors&rdquo; to the table. This enables you to do exactly
+this.</p>
+<p><strong>Start thinking about asynchronicity.</strong> An async call between component
+leads to a looser coupling. It also means that unexpected states will
+not break other states.</p>
+<p><strong>For distributed systems; learn about the CAP theorem.</strong> The
+<a href="https://en.wikipedia.org/wiki/CAP_theorem">CAP</a> theorem states that in
+the case of a network partition (P), you have choose between
+<a href="http://basho.com/riak/">availability</a> (A) and
+<a href="https://github.com/coreos/etcd">consistency</a> (C). The concept of a
+<a href="http://pagesperso-systeme.lip6.fr/Marc.Shapiro/papers/RR-6956.pdf">CRDT</a>
+can also be interesting to know about if you'd like to relax consistency
+a bit.</p>
+<p><strong>Have a look at the concepts of CQS, CQRS, event sourcing.</strong> Don't
+worry, you don't necessarily have to use them. But give them some
+thought for a moment.
+<a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation">CQS</a>
+and <a href="http://martinfowler.com/bliki/CQRS.html">CQRS</a> are kind of similar.
+<a href="http://martinfowler.com/eaaDev/EventSourcing.html">Event sourcing</a> can
+be used with CQRS to make things really badass. Are you optimizing for
+reads or writes? Choose.</p>
+<p>This list above is definitely not exhaustive and I'd love to get more
+input in the comments below.</p>
+<p>Over the past couple of years, learning new programming languages and
+studying distributed systems engineering has given me a huge toolset
+when it comes to reasoning about state. This is the one reason I
+encourage software developers to learn about new software paradigms and
+<a href="http://blog.teamtreehouse.com/learn-a-new-programming-language-every-year">one programming language per
+year</a>.
+My greatest insight into how state can be dealt with has definitely been
+looking into how the <a href="http://www.erlang.org">Erlang</a> programming
+language. A good resource when it comes to distributed systems is
+reading the <a href="http://zguide.zeromq.org/page:all">ZeroMQ Guide</a>.</p>
+<p>Lately, I've been thinking about retitling myself as a &ldquo;state engineer&rdquo;.
+Maybe you should, too? Feel free to discuss below or contact me <a href="%7Cfilename%7Cpages/about-me.rst">by some
+other means</a>.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/the-issues-of-null/">Java&#39;s missing optional keyword and the issues of null</a></h4>
+    <h5>August 22, 2013</h5>
+    
+    <a href="https://jensrantil.github.io/tags/java"><kbd class="item-tag">java</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/programming"><kbd class="item-tag">programming</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/cqrs-event-sourcing-messaging-patterns/">CQRS&#43;Event Sourcing Messaging Patterns</a></h4>
+    <h5>Designing a decoupled, message based, system based on the CQRS pattern
+together with event sourcing require some thought. Since I&#39;ve been thinking
+about it for a while now, I thought I&#39;d share some thoughts so far.
+</h5>
+    
+    <a href="https://jensrantil.github.io/tags/cqrs"><kbd class="item-tag">cqrs</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/event-sourcing"><kbd class="item-tag">event sourcing</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/distributed-architecture"><kbd class="item-tag">distributed architecture</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

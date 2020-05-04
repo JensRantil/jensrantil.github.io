@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on JensRantil</title>
+    <link>https://jensrantil.github.io/post/</link>
+    <description>Recent content in Posts on JensRantil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jensrantil.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>On narrow integration tests</title>
+      <link>https://jensrantil.github.io/post/narrow-integration-tests/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/narrow-integration-tests/</guid>
+      <description>Narrow integration tests are tests that only involve very few components, mostly relying on test doubles to simulate external dependencies. As always, we have Martin Fowler to thank for yet another excellent article on integration tests so I&#39;ll simply refer to that for the details of what a narrow integration test is.
+That said, during 2019 I have grown increasingly convinced that the distinction between a narrow and wide integration is an important one, for two reasons:</description>
+    </item>
+    
+    <item>
+      <title>Testing strategy over time</title>
+      <link>https://jensrantil.github.io/post/testing-strategy-over-time/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/testing-strategy-over-time/</guid>
+      <description>Last year (2019) I spent a fair amount of time thinking about how to grow Tink&amp;lsquo;s technical platform; how to organise ourselves &amp;ndash; alignment vs. autonomy. What processes, tooling and policies were needed for our teams to build amazing, stable, performant things at a fast pace? Tink had essentially doubled in size for four years and the growth had really pushed our engineering organisation to the limits. We are now around 150 engineers.</description>
+    </item>
+    
+    <item>
+      <title>AWS ELBs and Availability</title>
+      <link>https://jensrantil.github.io/post/aws-elbs-and-availability/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/aws-elbs-and-availability/</guid>
+      <description>Recently I was reading the article &amp;ldquo;Introduction to modern network load balancing and proxying&amp;rdquo; and I was reminded by something that has bothered, and still is bothering me, about the AWS Load Balancers (ElasticLoad Balancers, or ELBs). The article quotes the Wikipedia article about Load Balancer saying
+ Using multiple components with load balancing instead of a single component may increase reliability and availability through redundancy.
+ I have always assumed that that&#39;s one of the major reasons why putting load balancers in front of application servers.</description>
+    </item>
+    
+    <item>
+      <title>Blog Update</title>
+      <link>https://jensrantil.github.io/post/blog-update/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/blog-update/</guid>
+      <description>I&#39;m happy to announce I&#39;ve finally gotten the time to migrate my blog from Pelican to Hugo! The migration started way too long ago. Life came in the way and last week, I finally got the time to migrate all content.
+What this means for you as a reader Given that I&#39;ve put Continuous Delivery in place and Hugo doesn&#39;t require a virtual Python environment and other bloat around it, writing posts will be much easier.</description>
+    </item>
+    
+    <item>
+      <title>How to (partially) declassify NSA documents</title>
+      <link>https://jensrantil.github.io/post/how-to-partially-declassify-nsa-docs/</link>
+      <pubDate>Sat, 27 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/how-to-partially-declassify-nsa-docs/</guid>
+      <description>How to (partially) declassify NSA documents The day before Christmas Eve, the (American) NSA published a bunch of declassified reports that have been handed to the President&#39;s Intelligence Oversight Board (IOD) for the past 10 years or so. I quickly scrolled through a couple of documents to find a lot of heavily redacted text:
+The idea What struck me was that what most of the redacted text that I think the public (and me) are interested in is the magnitude of NSA surveillance, namely how large the redacted numbers are.</description>
+    </item>
+    
+    <item>
+      <title>A follow-up on CouchDB as event store</title>
+      <link>https://jensrantil.github.io/post/follow-up-on-couchdb-as-eventstore/</link>
+      <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/follow-up-on-couchdb-as-eventstore/</guid>
+      <description>A follow-up on CouchDB as event store I recently wrote about using CouchDB as an event store. One issue that I mentioned briefly was that my proposed solution would not work for a single aggregate root yielding multiple key/values in a CouchDB view:
+ What a view cannot do is keep track of older versions of an aggregate root.
+ Recently I&#39;ve been revisiting this problem (because I find it fun to think about) and have a slightly different solution to propose, namely to store all events for a single aggregate in a single document.</description>
+    </item>
+    
+    <item>
+      <title>Salt vs. Ansible</title>
+      <link>https://jensrantil.github.io/post/salt-vs-ansible/</link>
+      <pubDate>Mon, 17 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/salt-vs-ansible/</guid>
+      <description>Salt vs. Ansible Some time ago was set to evaluate configuration management systems. I&#39;ve heard opinions from someone I respect that Puppet and Chef were complicated beasts to get up and running, and since I am a Python guy I&#39;ve generally always kept an eye on Ansible and Salt. Ruby is so far not my thing, but hey let&#39;s not start a flamewar about that!
+Last year I got to spend a good 6 months working with Ansible for provisioning of servers.</description>
+    </item>
+    
+    <item>
+      <title>Why the Web is so Slow</title>
+      <link>https://jensrantil.github.io/post/why-the-web-is-so-slow/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/why-the-web-is-so-slow/</guid>
+      <description>Why the Web is so Slow I just read the blog post Why is the web so slow? by Stoyan Stefanov. This gave me the idea to give some common reasons for the web to be slow. I&#39;ve been using &amp;ldquo;web application&amp;rdquo; fairly sloppy here. It could also mean &amp;ldquo;website&amp;rdquo; etc. Here they are:
+ Because of actual distance from your computer to the webserver. The upper limit is the speed of light.</description>
+    </item>
+    
+    <item>
+      <title>I&#39;m a State Engineer. Are you, too?</title>
+      <link>https://jensrantil.github.io/post/lifecycles-and-states/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/lifecycles-and-states/</guid>
+      <description>I&#39;m a State Engineer. Are you, too? TL;DR: We need to have a more thorough discussion about state and lifecycles in our industry.
+I recently revisited The Twelve-Factor App by Heroku. It&#39;s a great read if you are deploying your own application, are interested in (organizational and/or technincal) scaling or curious of best practices when it comes to deployment.
+As I was reading the manifest it struck me that there are two words that I hear all too infrequently in our industry, namely state and lifecycle.</description>
+    </item>
+    
+    <item>
+      <title>New PGP key</title>
+      <link>https://jensrantil.github.io/post/new-pgp-key/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/new-pgp-key/</guid>
+      <description>New PGP key Just wanted to give you a heads up that I recently generated a new PGP key. Its fingerprint is 4371 E7ED 3A3D DBB4 12B5 C68F BA63 2DB6 91DA 03B8 and its bound to jens.rantil@gmail.com.
+I&#39;ve previously had PGP keys but they are all expired.
+For people who are learning about PGP I can highly suggest these two links on how to do things the right way:
+ Creating the perfect GPG keypair OpenPGP Best Practices  Get in touch with me if you&#39;d like to sign my key.</description>
+    </item>
+    
+    <item>
+      <title>GIT mirroring using Jenkins</title>
+      <link>https://jensrantil.github.io/post/git-mirroring-using-jenkins/</link>
+      <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/git-mirroring-using-jenkins/</guid>
+      <description>GIT mirroring using Jenkins For the past couple of weeks I&#39;ve been annoyed by the high latency when connecting to Github over SSH. While the other GIT transports could be an option, I prefer to use keys to authenticate against Github.
+This got me thinking about setting up a local GIT mirror at our office. To keep my project future proof, I planned to make this a cron-job-ish project; every so often it would checkout all repositories for a certain organization.</description>
+    </item>
+    
+    <item>
+      <title>Bootstrapping: CouchDB as event store</title>
+      <link>https://jensrantil.github.io/post/couchdb-as-event-store/</link>
+      <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/couchdb-as-event-store/</guid>
+      <description>Bootstrapping: CouchDB as event store I&#39;ve previously written about what event sourcing is. Reading about it, you might think &amp;ldquo;heck, sounds great! But how do I get started?&amp;quot;. This blog post will propose a simple way.
+A Minimum Viable Product The concept of a minimum viable product states that you shouldn&#39;t do more than absolutely necessary before releasing a product. You need to release it when it&#39;s just good enough. If it&#39;s received badly, you haven&#39;t invested too much time or energy into it.</description>
+    </item>
+    
+    <item>
+      <title>Java&#39;s missing optional keyword and the issues of null</title>
+      <link>https://jensrantil.github.io/post/the-issues-of-null/</link>
+      <pubDate>Thu, 22 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/the-issues-of-null/</guid>
+      <description>Java&#39;s missing optional keyword and the issues of null One of my pet peaves when it comes to the Java programming languages [1] is that it does not do enough type safety. The issue is, simply, that programmers tend to believe that Java infers more safety than it actually does. The biggest reason for this can be summarized in one word; null.
+Let&#39;s face it, we&#39;ve all experienced a NullPointerException or two.</description>
+    </item>
+    
+    <item>
+      <title>Writing a server in Python</title>
+      <link>https://jensrantil.github.io/post/python-servers/</link>
+      <pubDate>Wed, 21 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/python-servers/</guid>
+      <description>Writing a server in Python This post is partially related to my previous blog post about Rewind.
+One of the questions that might hit you is why would you ever write a server in Python?. I&#39;ve heard many people being raising their concerns when it comes to Python. The biggest ones are obviously concurrency and the GIL. I&#39;ve also heard arguments related to lack of strict typing, that Java has better IDE support (partially due to&amp;hellip;strict typing) and the sheer amount of libraries that other languages, such as Java, has.</description>
+    </item>
+    
+    <item>
+      <title>Simpler Cookieless Cookies</title>
+      <link>https://jensrantil.github.io/post/simpler-cookieless-cookies/</link>
+      <pubDate>Sun, 18 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/simpler-cookieless-cookies/</guid>
+      <description>Simpler Cookieless Cookies I recently read the blog article &amp;ldquo;Cookieless Cookies&amp;rdquo; that talks about using ETag for tracking users. Smart. This is the second article I read about obscure ways to store tracking information of a user. The first one was about storing Cookie information using Flash.
+Using cookieless tracking is not really something new. While it can be fun to read about various advanced way of tracking users, there&#39;s been a way of doing that without cookies for a long time.</description>
+    </item>
+    
+    <item>
+      <title>Privacy and Logging</title>
+      <link>https://jensrantil.github.io/post/privacy-and-logging/</link>
+      <pubDate>Mon, 17 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/privacy-and-logging/</guid>
+      <description>Privacy and Logging Privacy seem to be a popular discussion these days. While I do think it&#39;s a very very important topic to discuss, I sometimes feel there&#39;s not enough people who stand up and argue for cases when there&#39;s a reason to store data.
+Let me give you an example; Log data. I&#39;m sure many computer users find it scary with logs. Sometimes I do too. Especially if logs are stored for eternity and data mined.</description>
+    </item>
+    
+    <item>
+      <title>Line styles in matplotlib</title>
+      <link>https://jensrantil.github.io/post/line-styles-in-matplotlib/</link>
+      <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/line-styles-in-matplotlib/</guid>
+      <description>Line styles in matplotlib I&#39;m a big fan of matplotlib and tend to use it every time I&#39;d like to plot something. A while ago I had a line plot with many lines and ran out of default colors. When that happens, matplotlib will reuse the previously used colors.
+I used Python&#39;s itertools overcome this:
+import itertools import pylab as p} look = itertools.cycle(itertools.product([&#39;-&#39;, &#39;--&#39;, &#39;.-&#39;, &#39;:&#39;, &#39;,&#39;], &#39;bgrcmykw&#39;)) look = it.</description>
+    </item>
+    
+    <item>
+      <title>CQRS&#43;Event Sourcing Messaging Patterns</title>
+      <link>https://jensrantil.github.io/post/cqrs-event-sourcing-messaging-patterns/</link>
+      <pubDate>Sun, 26 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/cqrs-event-sourcing-messaging-patterns/</guid>
+      <description>CQRS+Event Sourcing Messaging Patterns This post is partially related to my previous blog post about Rewind and Gorewind.
+Designing a decoupled, message based, system based on the CQRS pattern together with event sourcing require some thought. Since I&#39;ve been thinking about it for a while now, I thought I&#39;d share some thoughts so far.
+CQRS First let&#39;s think about the way information conceptually flows in a CQRS system:
+ Client issuing a command -&amp;gt; Command -&amp;gt; Command Handler -&amp;gt; Event -&amp;gt; Event Listeners/Projections</description>
+    </item>
+    
+    <item>
+      <title>AngularJS events on initialization</title>
+      <link>https://jensrantil.github.io/post/angularjs-events-triggered-on-initialization/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/angularjs-events-triggered-on-initialization/</guid>
+      <description>AngularJS events on initialization In my previous post I was giving an example of using AngularJS events.
+I stumbled across a corner case that might be worth noting; If a service is triggering an event on initialization, no controllers will get notified of it. Here&#39;s an example:</description>
+    </item>
+    
+    <item>
+      <title>Refreshable AngularJS service</title>
+      <link>https://jensrantil.github.io/post/refreshable-angularjs-service/</link>
+      <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/refreshable-angularjs-service/</guid>
+      <description>Refreshable AngularJS service Lately I&#39;ve been working a lot in AngularJS. This is my second project with the framework, and the more time I spend in it, the more I like it.
+But as with most things, AngularJS has some rough corners. Its documentation still has a long way to go, although it has improved since last time I used it over a year ago. Common use cases and &amp;ldquo;Angular-y&amp;rdquo; was of doing things is another thing that I also feel is lacking out there.</description>
+    </item>
+    
+    <item>
+      <title>Bootstrapping software projects</title>
+      <link>https://jensrantil.github.io/post/bootstrapping-software-projects/</link>
+      <pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/bootstrapping-software-projects/</guid>
+      <description>Bootstrapping software projects This post is partially related to my previous blog post about Rewind and GoRewind.
+Even though I&#39;ve been working as a full-time developer for the past 4-5 years, it still hits me how much boiler plate is required to create a proper software project. In fact, I&#39;ve seen so many times how extra functionality is bundled into applications just because the alternative would require many hours of setting things up.</description>
+    </item>
+    
+    <item>
+      <title>CQRS - Time to Rewind</title>
+      <link>https://jensrantil.github.io/post/cqrs-time-to-rewind/</link>
+      <pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/cqrs-time-to-rewind/</guid>
+      <description>CQRS - Time to Rewind For the last year I&#39;ve been thinking a lot about CQRS [1], Event Sourcing and distributed architecture using ZeroMQ. I first stumbled across the concept of CQRS through the mailing list for a nerd meetup in Helsingborg, Sweden. This led me to a lot of CQRS reading and videos, and with that the Event Sourcing data model.
+To try out CQRS and Event Sourcing in practise, I started writing an open source event store about a year ago.</description>
+    </item>
+    
+    <item>
+      <title>Migrating to Python 3</title>
+      <link>https://jensrantil.github.io/post/migrating-to-python3/</link>
+      <pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/migrating-to-python3/</guid>
+      <description>Migrating to Python 3 This post is partially related to my previous blog post about Rewind.
+I initially started the implementation of Rewind in Python 2.7. I constantly kept test coverage to 100%, and I tried to stick to TDD as much as possible. The Python testing tool Nose proved to be very valuable, as did Travis CI.
+After some time I thought &amp;ldquo;Hey, why work in Python 2 when Python 3 seems around corner?</description>
+    </item>
+    
+    <item>
+      <title>That initial blogpost</title>
+      <link>https://jensrantil.github.io/post/that-initial-blogpost/</link>
+      <pubDate>Tue, 14 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/that-initial-blogpost/</guid>
+      <description>That initial blogpost So it&#39;s time to kick off this blog. I cheated a little and posted a previously written blog post. It was posted on a personal blog that mostly had Swedish material.
+My intent with this blog will be to &amp;ldquo;put a URL on my tech and possibly entrepreneurship thoughts, in English&amp;rdquo;. If you&#39;d like to know more about me, check out that brand new About Me page!</description>
+    </item>
+    
+    <item>
+      <title>Replacing a folder in Subversion</title>
+      <link>https://jensrantil.github.io/post/replacing-directory-in-svn/</link>
+      <pubDate>Mon, 22 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/replacing-directory-in-svn/</guid>
+      <description>Replacing a folder in Subversion So you have an external library foo version 1.0 that you have committed to your Subversion repository together with your code. Let us for simplicity say that your external library is situated in its own folder.
+One day you realize that there is a new version 2.0 of foo released. You download it and since there was a while ago a lot of the file structure in the foo project has changed.</description>
+    </item>
+    
+  </channel>
+</rss>

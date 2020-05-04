@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Migrating to Python 3</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Migrating to Python 3</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/migrating-to-python3/">Migrating to Python 3</a></h4>
+    <h5>May 19, 2013</h5>
+    
+    <a href="https://jensrantil.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><h1 id="migrating-to-python-3">Migrating to Python 3</h1>
+<p>This post is partially related to my <a href="%7Cfilename%7CCQRS-time-to-rewind.rst">previous blog
+post</a> about
+<a href="http://www.github.com/JensRantil/rewind">Rewind</a>.</p>
+<p>I initially started the implementation of Rewind in Python 2.7. I
+constantly kept test coverage to 100%, and I tried to stick to
+<a href="http://en.wikipedia.org/wiki/Test-driven_development">TDD</a> as much as
+possible. The Python testing tool
+<a href="https://nose.readthedocs.org/en/latest/">Nose</a> proved to be very
+valuable, as did <a href="https://travis-ci.org/JensRantil/rewind">Travis CI</a>.</p>
+<p>After some time I thought &ldquo;Hey, why work in Python 2 when Python 3 seems
+around corner?&quot;. I installed Python 3.2 on my laptop and started
+executing those tests. Travis CI helped a lot here to always make sure
+that Rewind was backward compatible with Python 2.7. Ever nervous about
+a test failing? Make pull request on <a href="http://www.github.com">Github</a> and
+Travis CI will tell you whether the pull request broke something or not.
+Highly convenient. Migration to Python 3 can be summarized in three
+paragraphs:</p>
+<p><strong>Migrate from lists to iterators.</strong> In many ways I like the changes to
+the built-in functions <code>map</code> and <code>reduce</code>. Working with iterators are in
+many ways a higher abstraction. I did have some code that expected these
+functions to return lists. The flip side was that I sometimes had to
+wrap in list:</p>
+<pre><code class="language-{.sourceCode" data-lang="{.sourceCode">variable = list(map(func, someiter))
+</code></pre><p>In hindsight, I probably should have used <a href="http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions">list
+comprehensions</a>
+for many of those cases as they are more readable&hellip;</p>
+<p><strong>Use the &lsquo;bytes&rsquo; type instead of &lsquo;string&rsquo; where appropriate.</strong> <code>bytes</code>
+was introduced as a new type in Python 3. In the Rewind case, this
+mostly involved ZeroMQ message frames handling, that takes <code>bytes</code>. This
+also involved some conversion to and/or from <code>bytes</code> and <code>string</code>. I
+tried to stick to <code>UTF-8</code> for this.</p>
+<p><strong>Use &lsquo;string.format(&hellip;)&rsquo; instead of &lsquo;string % &hellip;&rsquo; pattern.</strong> Nuff
+said.</p>
+<h2 id="looking-back">Looking back</h2>
+<p>In general, Python 3 is very backwards compatible (but Python 2 is not
+forward compatible). As far as I can recollect, the only conditionals I
+needed to make Python3 were aliasing of imports:</p>
+<pre><code class="language-{.sourceCode" data-lang="{.sourceCode">try:
+    # Python &lt; 3
+    import ConfigParser as configparser
+except ImportError:
+    # Python &gt;= 3
+    import configparser
+</code></pre></div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/python-servers/">Writing a server in Python</a></h4>
+    <h5>One of the questions that might hit you is &#39;why would you ever write
+a server in Python?&#39;. I&#39;ve heard many people being raising their
+concerns when it comes to Python. The biggest ones are obviously
+concurrency and the GIL.
+</h5>
+    
+    <a href="https://jensrantil.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/java"><kbd class="item-tag">Java</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

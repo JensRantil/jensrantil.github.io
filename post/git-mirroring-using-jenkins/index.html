@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GIT mirroring using Jenkins</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">GIT mirroring using Jenkins</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/git-mirroring-using-jenkins/">GIT mirroring using Jenkins</a></h4>
+    <h5>Using a small hack, you can reuse your local Jenkins installation for faster git fetches, as well as a fallback if Github goes down.</h5>
+    
+    <a href="https://jensrantil.github.io/tags/git"><kbd class="item-tag">git</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/jenkins"><kbd class="item-tag">Jenkins</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/hudson"><kbd class="item-tag">Hudson</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><h1 id="git-mirroring-using-jenkins">GIT mirroring using Jenkins</h1>
+<p>For the past couple of weeks I've been annoyed by the high latency when
+connecting to <a href="https://github.com">Github</a> over SSH. While the other GIT
+transports could be an option, I prefer to use keys to authenticate
+against Github.</p>
+<p>This got me thinking about setting up a local GIT mirror at our office.
+To keep my project future proof, I planned to make this a cron-job-ish
+project; every so often it would checkout all repositories for a certain
+organization.</p>
+<p>Then it struck me - I'm already running a
+<a href="http://www.jenkins-ci.org">Jenkins</a> installation that pulls commits
+from Github regularly. Why not reuse those repositories? So far my GIT
+mirror setup has been working great - and has also made us more
+resilient to Github downtime. Here's how I've done it:</p>
+<h2 id="serving-the-jenkins-checkouts">Serving the Jenkins checkouts</h2>
+<p>First you need to figure out where Jenkins has its working folder. In
+general this is stored in <code>$HOME/.jenkins</code>. Since I am running Jenkins
+as the user &ldquo;jenkins&rdquo; on my system, my Jenkins working directory is
+<code>/home/jenkins/.jenkins</code>.</p>
+<p>Next, you need to start the GIT daemon that serves your GIT fetches.
+There are many ways to run this command, I'm using
+<a href="http://supervisord.org">supervisord</a>. Here's the command I've been
+using:</p>
+<pre><code>$ git daemon --reuseaddr --verbose --base-path=/home/jenkins/.jenkins/jobs --export-all
+</code></pre>
+<p><strong>Note that the daemon will not do any authentication! Reads will be
+allowed by anyone.</strong> Writes, however, will be blocked. This means
+someone can <em>pull</em> changes from the Jenkins host, but not <em>push</em> any.</p>
+<h2 id="configuring-a-git-client">Configuring a GIT client</h2>
+<p>Configuring your GIT command line client is a two step process:</p>
+<p>First, add a <a href="http://gitref.org/remotes/">GIT remote</a> pointing to your
+Jenkins server:</p>
+<pre><code>$ cd &lt;your-local-git-clone&gt;
+$ git remote add --no-tags jenkins git://YOUR-JENKINS-SERVER/JOB-NAME/workspace/.git
+</code></pre>
+<p><code>JOB-NAME</code> is the name you've given your job in Jenkins.</p>
+<p>Secondly, you need to make a modification to
+<code>&lt;your-local-git-clone&gt;/.git/config</code>. Replace the following line:</p>
+<pre><code>fetch = +refs/heads/*:refs/remotes/jenkins/*
+</code></pre>
+<p>with:</p>
+<pre><code>fetch = +refs/remotes/origin/*:refs/remotes/jenkins/*
+</code></pre>
+<p>. What this change will do, is to ignore all the local branches on your
+Jenkins's host and instead instead only use your Jenkins's remote
+branches.</p>
+<p>When you've done the above you can:</p>
+<pre><code>$ git fetch jenkins
+</code></pre>
+<p>If everything is succesful, you should now have a bunch of <code>jenkins/*</code>
+branches in your local repository.</p>
+<h2 id="additional-comments">Additional comments</h2>
+<blockquote>
+<ul>
+<li>If you choose to not include <code>--no-tags</code> (in <code>git remote add</code>)
+<code>git fetch</code> will fetch a <em>tag</em> for every unique build that Jenkins
+has build historically. If you'd like to checkout a specific
+build, you might want to drop <code>--no-tags</code>. I just felt I was
+bloating my local tags&hellip;</li>
+<li>Only the branches specified to be fetched by Jenkins will
+be mirrored. If you would like to add more branches you do that
+under &ldquo;Branches to build&rdquo; at
+<a href="http://YOUR-JENKINS-SERVER/job/JOB-NAME/configure">http://YOUR-JENKINS-SERVER/job/JOB-NAME/configure</a></li>
+</ul>
+</blockquote>
+</div>
+
+    
+    
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

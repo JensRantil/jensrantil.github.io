@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simpler Cookieless Cookies</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Simpler Cookieless Cookies</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/simpler-cookieless-cookies/">Simpler Cookieless Cookies</a></h4>
+    <h5>Another way of doing cookieless cookies.</h5>
+    
+    <a href="https://jensrantil.github.io/tags/http"><kbd class="item-tag">HTTP</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><h1 id="simpler-cookieless-cookies">Simpler Cookieless Cookies</h1>
+<p>I recently read the blog article &ldquo;<a href="http://lucb1e.com/rp/cookielesscookies/">Cookieless
+Cookies</a>&rdquo; that talks about
+<a href="https://en.wikipedia.org/wiki/HTTP_ETag#Tracking_using_ETags">using ETag for tracking
+users</a>.
+Smart. This is the second article I read about obscure ways to store
+tracking information of a user. The first one was about <a href="https://epic.org/privacy/cookies/flash.html">storing Cookie
+information using Flash</a>.</p>
+<p>Using cookieless tracking is not really something new. While it can be
+fun to read about various advanced way of tracking users, there's been a
+way of doing that without cookies for a long time.</p>
+<h2 id="enter-jsessionid">Enter jsessionid</h2>
+<p>Have you ever seen a URL something like</p>
+<blockquote>
+<p><a href="http://www.example.com/hello/;jsessionid=XXXX">http://www.example.com/hello/;jsessionid=XXXX</a></p>
+</blockquote>
+<p>where <code>XXXX</code> is a code of arbitrary length? <em>jsessionid</em> is the name if
+the session identifier that a couple of Java web servers are using to
+store the unique session identifier that maps the session inbetween
+requests. In the case of <a href="https://tomcat.apache.org/">Tomcat</a>, (by
+default) it tries to set a cookie with the name <code>jsessionid</code>. If it
+can't, <a href="http://fralef.me/tomcat-disable-jsessionid-in-url.html">it puts the session identifier in the URL
+instead</a>.</p>
+<p>Wait a minute here! We are tracking users without cookies here! Touché.
+While there are all these various complicated ways of tracking a user,
+this is a very simple way of doing it.</p>
+<h2 id="url-based-tracking">URL based tracking</h2>
+<p>Let's call this &ldquo;URL based tracking&rdquo;. The tracking is governed by two
+simple rules:</p>
+<ul>
+<li><strong>For a new user that does not have a tracking identifier in its
+URL</strong>: Redirect him/her to the exact same URL, but with a unique
+identifier appended to the url.</li>
+<li><strong>For all other page loads</strong>: Make sure that every single <code>&lt;a&gt;</code> tag
+has its <code>href</code> attribute appended with the unique
+tracking identifier.</li>
+</ul>
+<p>As long as all links on <a href="http://www.example.com">http://www.example.com</a> are appended with the
+tracking identifier, we can every single move that a user makes on a
+website. This type of tracking has three specific features that are
+noteworthy:</p>
+<p>First, as opposed to Flash based or cache/Etag based tracking, <em>URL
+based tracking cannot permanently be disabled</em>. Flash can be
+uninstalled, and a cache can be cleared. Sure, a browser plugin could do
+clientside URL replacement, but there are many complicated ways of
+embedding the session identifier in a URL. You could even use a
+symmetric encryption for it.</p>
+<p>Nowadays there are many websites that are using long and complicated
+URLs. They are a perfect case for cookieless tracking. Just look at
+Amazon's URL:s:</p>
+<pre><code>http://www.amazon.com/gp/product/B0083Q04IQ/ref=s9_pop_gw_g424_ir03/183-0559114-0776210?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=center-2&amp;pf_rd_r=18XKAT7PX42T9S5BHAHV&amp;pf_rd_t=101&amp;pf_rd_p=1263340922&amp;pf_rd_i=507846
+</code></pre>
+<p>Very few visitors would notice if one of these parameters would stay
+unchanged as you would progress from page to page on Amazon. In fact,
+they might even use a cookieless tracking ID already based on the cheer
+number of parameters they have&hellip;</p>
+<p>Secondly, for less obscure tracking identifiers in the URL, it's fairly
+easy for a visitor to reset the tracking id. Simply remove it from the
+URL and reload the page. That said, they'll get a new tracking
+identifier set immediately.</p>
+<p>Thirdly, URL based sessions are not persisted between different website
+visits. If you leave <code>http://www.example.com/something/;jsessionid=XXXX</code>
+and come back to it, you will loose your tracking id. This obviously
+means that tracking cannot be done between browser restarts.</p>
+<h2 id="in-summary">In summary</h2>
+<p><strong>For webmasters</strong>: If you'd like to track your visitors that has
+cookies disabled, this is probably the easiest way you can do this.</p>
+<p><strong>For privacy aware users</strong>: Make sure to keep track of what's put in
+your URL! ;)</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/why-the-web-is-so-slow/">Why the Web is so Slow</a></h4>
+    <h5>December 2, 2013</h5>
+    
+    <a href="https://jensrantil.github.io/tags/web"><kbd class="item-tag">web</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/http"><kbd class="item-tag">HTTP</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

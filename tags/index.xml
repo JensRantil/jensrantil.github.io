@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on JensRantil</title>
+    <link>https://jensrantil.github.io/tags/</link>
+    <description>Recent content in Tags on JensRantil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jensrantil.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>testing</title>
+      <link>https://jensrantil.github.io/tags/testing/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS</title>
+      <link>https://jensrantil.github.io/tags/aws/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NSA</title>
+      <link>https://jensrantil.github.io/tags/nsa/</link>
+      <pubDate>Sat, 27 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/nsa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CouchDB</title>
+      <link>https://jensrantil.github.io/tags/couchdb/</link>
+      <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/couchdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cqrs</title>
+      <link>https://jensrantil.github.io/tags/cqrs/</link>
+      <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/cqrs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>distributed-architecture</title>
+      <link>https://jensrantil.github.io/tags/distributed-architecture/</link>
+      <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/distributed-architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ansible</title>
+      <link>https://jensrantil.github.io/tags/ansible/</link>
+      <pubDate>Mon, 17 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>provisioning</title>
+      <link>https://jensrantil.github.io/tags/provisioning/</link>
+      <pubDate>Mon, 17 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/provisioning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Salt</title>
+      <link>https://jensrantil.github.io/tags/salt/</link>
+      <pubDate>Mon, 17 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/salt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://jensrantil.github.io/tags/http/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://jensrantil.github.io/tags/web/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>https://jensrantil.github.io/tags/architecture/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cryptography</title>
+      <link>https://jensrantil.github.io/tags/cryptography/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PGP</title>
+      <link>https://jensrantil.github.io/tags/pgp/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/pgp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://jensrantil.github.io/tags/programming/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>state</title>
+      <link>https://jensrantil.github.io/tags/state/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/state/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://jensrantil.github.io/tags/git/</link>
+      <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hudson</title>
+      <link>https://jensrantil.github.io/tags/hudson/</link>
+      <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/hudson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jenkins</title>
+      <link>https://jensrantil.github.io/tags/jenkins/</link>
+      <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://jensrantil.github.io/tags/java/</link>
+      <pubDate>Thu, 22 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://jensrantil.github.io/tags/python/</link>
+      <pubDate>Wed, 21 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privacy</title>
+      <link>https://jensrantil.github.io/tags/privacy/</link>
+      <pubDate>Mon, 17 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>event sourcing</title>
+      <link>https://jensrantil.github.io/tags/event-sourcing/</link>
+      <pubDate>Sun, 26 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AngularJS</title>
+      <link>https://jensrantil.github.io/tags/angularjs/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/angularjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://jensrantil.github.io/tags/javascript/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bootstrapping</title>
+      <link>https://jensrantil.github.io/tags/bootstrapping/</link>
+      <pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/bootstrapping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://jensrantil.github.io/tags/software/</link>
+      <pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>howdy</title>
+      <link>https://jensrantil.github.io/tags/howdy/</link>
+      <pubDate>Tue, 14 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/howdy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>subversion</title>
+      <link>https://jensrantil.github.io/tags/subversion/</link>
+      <pubDate>Mon, 22 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/subversion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>svn</title>
+      <link>https://jensrantil.github.io/tags/svn/</link>
+      <pubDate>Mon, 22 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/tags/svn/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

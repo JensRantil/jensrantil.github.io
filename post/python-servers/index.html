@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Writing a server in Python</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Writing a server in Python</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/python-servers/">Writing a server in Python</a></h4>
+    <h5>One of the questions that might hit you is &#39;why would you ever write
+a server in Python?&#39;. I&#39;ve heard many people being raising their
+concerns when it comes to Python. The biggest ones are obviously
+concurrency and the GIL.
+</h5>
+    
+    <a href="https://jensrantil.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/java"><kbd class="item-tag">Java</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><h1 id="writing-a-server-in-python">Writing a server in Python</h1>
+<p>This post is partially related to my <a href="%7Cfilename%7CCQRS-time-to-rewind.rst">previous blog
+post</a> about
+<a href="http://www.github.com/JensRantil/rewind">Rewind</a>.</p>
+<p>One of the questions that might hit you is <em>why would you ever write a
+server in Python?</em>. I've heard many people being raising their concerns
+when it comes to Python. The biggest ones are obviously concurrency and
+the <a href="http://wiki.python.org/moin/GlobalInterpreterLock">GIL</a>. I've also
+heard arguments related to lack of strict typing, that Java has better
+IDE support (partially due to&hellip;strict typing) and the sheer amount of
+libraries that other languages, such as Java, has.</p>
+<p>Coming from mostly a Java background when it comes to bigger systems,
+this is a question I've been asking myself too and Rewind gave me some
+time to review this. Some of my reasons for choosing Python (mostly, as
+opposed to Java) were:</p>
+<ul>
+<li>I was tired of slow development feedback from coding in Java.
+Starting the JVM takes ages. If you've ever been developing for a
+runtime environment that boots fast, you know what I'm
+talking about. I've seen the light and slow development tools
+kills me.</li>
+<li>I wanted to try out new creative ways to do testing. This involved
+enforcing coding standards through tests that sometimes required
+some introspection.</li>
+<li>I wanted to try out full TDD. There were plenty of Python tools for
+this job, including great mocking utilities.</li>
+<li>I've been a big fan of Python for a long time. I wanted to see if it
+stood the test also for server backend services.</li>
+<li>Requiring all code to reside in classes is&hellip;ridiculous:
+<ul>
+<li>Not all methods requires state and my personal opinion is that
+functional paradigm is easier for beginning programmers
+to understand. Not to mention that functional style of
+programming easily can encapsulate, too, in its own way.</li>
+<li>Proper object oriented desing is <em>hard</em> and takes practise.
+Sadly, most programmers have never read the <a href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">Gang of Four
+book</a>
+and while beginner's Java books try to describe concepts such as
+encapsulation, polymorphism etc. the books don't really make a
+good job of explaining them. The simple concepts are easy.
+Designing APIs and bigger applications is hard. It's taken me a
+long time and I'm still making mistakes.</li>
+</ul>
+</li>
+<li>Great support for <a href="http://www.zeromq.org">ZeroMQ</a>.</li>
+</ul>
+<p>Would Python stand the test for a rather performant server software? I
+think so. In Rewind's case I made the assumption that all events would
+be persisted as one single event stream. Harddrives are great at
+append-only storage and I was not that worried about concurrency. The
+concurrency requirements lay in the fanout message pattern used to
+notify event listeners of newly persisted events. ZeroMQ would deal with
+that very well. This meant I could/would sleep well at night, not
+worrying about the Python
+<a href="http://wiki.python.org/moin/GlobalInterpreterLock">GIL</a>.</p>
+<h2 id="with-great-server-comes-great-responsibility">With great server comes great responsibility</h2>
+<p>The above said, a server requires strict testing to make sure you can be
+confident that server works as expected. Since Python is a dynamically
+types language, this puts an extra pressure on testing. Using test
+coverage as a metric is almost a must.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/migrating-to-python3/">Migrating to Python 3</a></h4>
+    <h5>May 19, 2013</h5>
+    
+    <a href="https://jensrantil.github.io/tags/python"><kbd class="item-tag">Python</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

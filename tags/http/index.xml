@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP on JensRantil</title>
+    <link>https://jensrantil.github.io/tags/http/</link>
+    <description>Recent content in HTTP on JensRantil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jensrantil.github.io/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why the Web is so Slow</title>
+      <link>https://jensrantil.github.io/post/why-the-web-is-so-slow/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/why-the-web-is-so-slow/</guid>
+      <description>Why the Web is so Slow I just read the blog post Why is the web so slow? by Stoyan Stefanov. This gave me the idea to give some common reasons for the web to be slow. I&#39;ve been using &amp;ldquo;web application&amp;rdquo; fairly sloppy here. It could also mean &amp;ldquo;website&amp;rdquo; etc. Here they are:
+ Because of actual distance from your computer to the webserver. The upper limit is the speed of light.</description>
+    </item>
+    
+    <item>
+      <title>Simpler Cookieless Cookies</title>
+      <link>https://jensrantil.github.io/post/simpler-cookieless-cookies/</link>
+      <pubDate>Sun, 18 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/simpler-cookieless-cookies/</guid>
+      <description>Simpler Cookieless Cookies I recently read the blog article &amp;ldquo;Cookieless Cookies&amp;rdquo; that talks about using ETag for tracking users. Smart. This is the second article I read about obscure ways to store tracking information of a user. The first one was about storing Cookie information using Flash.
+Using cookieless tracking is not really something new. While it can be fun to read about various advanced way of tracking users, there&#39;s been a way of doing that without cookies for a long time.</description>
+    </item>
+    
+  </channel>
+</rss>

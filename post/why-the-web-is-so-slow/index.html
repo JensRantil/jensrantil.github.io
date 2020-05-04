@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Why the Web is so Slow</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Why the Web is so Slow</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/why-the-web-is-so-slow/">Why the Web is so Slow</a></h4>
+    <h5>December 2, 2013</h5>
+    
+    <a href="https://jensrantil.github.io/tags/web"><kbd class="item-tag">web</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/http"><kbd class="item-tag">HTTP</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><h1 id="why-the-web-is-so-slow">Why the Web is so Slow</h1>
+<p>I just read the blog post <a href="http://calendar.perfplanet.com/2013/why-is-the-web-so-slow/">Why is the web so
+slow?</a> by
+<a href="http://www.phpied.com/">Stoyan Stefanov</a>. This gave me the idea to give
+some common reasons for the web to be slow. I've been using &ldquo;web
+application&rdquo; fairly sloppy here. It could also mean &ldquo;website&rdquo; etc. Here
+they are:</p>
+<ul>
+<li>Because of actual distance from your computer to the webserver. The
+upper limit is the speed of light. This means that it is an
+impossibility for information to travel from Sydney to London in
+less than ~0.056 seconds (17009 kilometers).</li>
+<li>Fetching a webpage requires a roundtrip of information; a request
+and response. This effectively nearly doubles the time to
+fetch something.</li>
+<li>Websites generally has a bunch of static files (images,
+javascript, CSS). The web browser has a
+<a href="http://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser">limit</a>
+on the number of files that can be fetched in parallel. Similar
+images can be assembled into
+<a href="http://css-tricks.com/css-sprites/">sprites</a>, JavaScript and CSS
+can be <a href="https://code.google.com/p/minify/">combined and compressed</a>.</li>
+<li>The <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP
+protocol</a>
+does not support a single connection fetching multiple static assets
+in parallel.</li>
+<li>SSL requires a longer complicated handshake and extra CPU when
+sending and receiving data.</li>
+<li>Because of unnecessary synchronicity in dynamic applications.
+Historically it's been possible for developers to only update the
+portions of a website that needs update. However, the tools have not
+really been up to speed. This has changed. Many modern JavaScript
+frameworks has created new opportunities here. Yes, I'm thinking of
+you <a href="http://angularjs.org/">AngularJS</a>.</li>
+<li>Because of sloppy considerations of caching. Getting up to speed
+with a web application is pretty easy. Getting HTTP caching right
+requires some thought.</li>
+<li>Because many web applications have not migrated to use a
+<a href="https://en.wikipedia.org/wiki/Content_delivery_network">CDN</a>. If we
+come together and all use CDNs, our visitors would be way more
+likely to have the common static files cached.</li>
+<li>Because of complex rendering of websites. The implications of
+complex HTML structure and CSS selectors is that rendering of a
+website is slow. KISS = Keep It Simple, Stupid.</li>
+<li>Because many web servers today are still not delivering compressed
+HTTP responses, such as GZip.</li>
+<li>Because many webdevelopers don't understand the implications of
+using slow third party assets. Yes, I'm looking at you Analytics and
+Ad Companies! Slow assets gives website visitors the feeling that
+the website is not done loading when 99% of the assets really are.</li>
+<li>Because many webdevelopers still are using JavaScript when they
+don't have to. CSS3 can animate and allow for simple logic
+without JavaScript.</li>
+<li>Because we are sending cookies for a lot of content that does not
+require cookes.</li>
+<li>Because HTML is larger that it needs to be. Reusing CSS classes
+reduces the size of HTML to be fetched.</li>
+<li>Because images are sent when they really could be emulated
+using CSS. This is a thing of the past that still bugs me.</li>
+</ul>
+<p>Google's networking protocol <a href="https://en.wikipedia.org/wiki/SPDY">SPDY</a>
+aims to solve some of these issues and make the web faster.</p>
+<p>Did I miss something? Feel free to comment below!</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/simpler-cookieless-cookies/">Simpler Cookieless Cookies</a></h4>
+    <h5>Another way of doing cookieless cookies.</h5>
+    
+    <a href="https://jensrantil.github.io/tags/http"><kbd class="item-tag">HTTP</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>On narrow integration tests</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">On narrow integration tests</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/narrow-integration-tests/">On narrow integration tests</a></h4>
+    <h5>January 13, 2020</h5>
+    
+    <a href="https://jensrantil.github.io/tags/testing"><kbd class="item-tag">testing</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p><em>Narrow integration tests</em> are tests that only involve very few components,
+mostly relying on <a href="https://martinfowler.com/articles/mocksArentStubs.html">test
+doubles</a> to simulate
+external dependencies. As always, we have Martin Fowler to thank for yet
+another excellent
+<a href="https://martinfowler.com/bliki/IntegrationTest.html">article</a> on integration
+tests so I'll simply refer to that for the details of what a narrow integration
+test is.</p>
+<p>That said, during 2019 I have grown increasingly convinced that the distinction
+between a narrow and wide integration is an important one, for two reasons:</p>
+<p>First, given that narrow integration tests depends on very few components the
+<a href="https://jensrantil.github.io/post/testing-strategy-over-time/">cost of maintenance is very low</a>. Compare this to wide integration tests where cost of maintaining them
+increases with number of components and/or software complexity.</p>
+<p>Secondly, because I believe a large majority of the wide integration tests can
+be replaced by a set of narrow integration tests. The benefit would be a more
+maintainable test suite over time, with equal confidence that it catches bugs.
+Let me explain:</p>
+<p>A common counter-argument against unit and narrow integration testing is that
+they don't test the application as a whole. In one way, this is true, but you
+could also look at <em>a whole as an overlap of many smaller pieces</em>. For example,
+a lot of software architecture models involves thinking in layers (<a href="https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)">Hexagonal
+architecture</a>,
+<a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean
+architecture</a>
+and more). So, let's imagine a very simple application that receives an HTTP
+API call, does some business logic and stores something in a database:</p>
+<p><a href="narrow-integration-tests.png"><img src="narrow-integration-tests.png" alt="Narrow integration tests"></a></p>
+<p>An API call from the Internet flows through each layer of our application. With
+input being validated and transformed as it passes through layers towards
+persistence, and result/output from the final persistence eventually trickling
+back to the API caller.</p>
+<p>A growing hypothesis of mine is that <em>it's very unlikely that bugs are
+introduced by miscommunication between non-adjacent layers</em>. This means, that
+as long you have made sure to test each layer boundary, you should in be pretty
+confident that the application works as a whole. For example, in the image
+above, you can see that all the curly braces to the right are overlapping. Each
+curly brace is a set of narrow integration tests.</p>
+<p>Could there be bugs that are introduced by pairs on non-adjacent layers? Yes,
+but like I said very unlikely. Ignoring when you've actually missed a narrow
+integration test case, you <em>might</em> see issues such as</p>
+<ul>
+<li>application using too much resources (CPU, memory, I/O&hellip;) when all
+components are put together.</li>
+<li>low-level concurrency-related issues.</li>
+<li>memory corruption bugs.</li>
+</ul>
+<p>These days, bugs like these are pretty uncommon. My recommendation is that you
+focus on implementing those narrow integration tests first if you can.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/testing-strategy-over-time/">Testing strategy over time</a></h4>
+    <h5>January 12, 2020</h5>
+    
+    <a href="https://jensrantil.github.io/tags/testing"><kbd class="item-tag">testing</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

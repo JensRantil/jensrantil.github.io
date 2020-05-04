@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cryptography on JensRantil</title>
+    <link>https://jensrantil.github.io/tags/cryptography/</link>
+    <description>Recent content in cryptography on JensRantil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jensrantil.github.io/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New PGP key</title>
+      <link>https://jensrantil.github.io/post/new-pgp-key/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/new-pgp-key/</guid>
+      <description>New PGP key Just wanted to give you a heads up that I recently generated a new PGP key. Its fingerprint is 4371 E7ED 3A3D DBB4 12B5 C68F BA63 2DB6 91DA 03B8 and its bound to jens.rantil@gmail.com.
+I&#39;ve previously had PGP keys but they are all expired.
+For people who are learning about PGP I can highly suggest these two links on how to do things the right way:
+ Creating the perfect GPG keypair OpenPGP Best Practices  Get in touch with me if you&#39;d like to sign my key.</description>
+    </item>
+    
+  </channel>
+</rss>

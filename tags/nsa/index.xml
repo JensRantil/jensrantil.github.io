@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NSA on JensRantil</title>
+    <link>https://jensrantil.github.io/tags/nsa/</link>
+    <description>Recent content in NSA on JensRantil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Dec 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jensrantil.github.io/tags/nsa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to (partially) declassify NSA documents</title>
+      <link>https://jensrantil.github.io/post/how-to-partially-declassify-nsa-docs/</link>
+      <pubDate>Sat, 27 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/how-to-partially-declassify-nsa-docs/</guid>
+      <description>How to (partially) declassify NSA documents The day before Christmas Eve, the (American) NSA published a bunch of declassified reports that have been handed to the President&#39;s Intelligence Oversight Board (IOD) for the past 10 years or so. I quickly scrolled through a couple of documents to find a lot of heavily redacted text:
+The idea What struck me was that what most of the redacted text that I think the public (and me) are interested in is the magnitude of NSA surveillance, namely how large the redacted numbers are.</description>
+    </item>
+    
+  </channel>
+</rss>

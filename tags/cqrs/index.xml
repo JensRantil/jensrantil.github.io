@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cqrs on JensRantil</title>
+    <link>https://jensrantil.github.io/tags/cqrs/</link>
+    <description>Recent content in cqrs on JensRantil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Mar 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jensrantil.github.io/tags/cqrs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A follow-up on CouchDB as event store</title>
+      <link>https://jensrantil.github.io/post/follow-up-on-couchdb-as-eventstore/</link>
+      <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/follow-up-on-couchdb-as-eventstore/</guid>
+      <description>A follow-up on CouchDB as event store I recently wrote about using CouchDB as an event store. One issue that I mentioned briefly was that my proposed solution would not work for a single aggregate root yielding multiple key/values in a CouchDB view:
+ What a view cannot do is keep track of older versions of an aggregate root.
+ Recently I&#39;ve been revisiting this problem (because I find it fun to think about) and have a slightly different solution to propose, namely to store all events for a single aggregate in a single document.</description>
+    </item>
+    
+    <item>
+      <title>Bootstrapping: CouchDB as event store</title>
+      <link>https://jensrantil.github.io/post/couchdb-as-event-store/</link>
+      <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/couchdb-as-event-store/</guid>
+      <description>Bootstrapping: CouchDB as event store I&#39;ve previously written about what event sourcing is. Reading about it, you might think &amp;ldquo;heck, sounds great! But how do I get started?&amp;quot;. This blog post will propose a simple way.
+A Minimum Viable Product The concept of a minimum viable product states that you shouldn&#39;t do more than absolutely necessary before releasing a product. You need to release it when it&#39;s just good enough. If it&#39;s received badly, you haven&#39;t invested too much time or energy into it.</description>
+    </item>
+    
+    <item>
+      <title>CQRS&#43;Event Sourcing Messaging Patterns</title>
+      <link>https://jensrantil.github.io/post/cqrs-event-sourcing-messaging-patterns/</link>
+      <pubDate>Sun, 26 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/cqrs-event-sourcing-messaging-patterns/</guid>
+      <description>CQRS+Event Sourcing Messaging Patterns This post is partially related to my previous blog post about Rewind and Gorewind.
+Designing a decoupled, message based, system based on the CQRS pattern together with event sourcing require some thought. Since I&#39;ve been thinking about it for a while now, I thought I&#39;d share some thoughts so far.
+CQRS First let&#39;s think about the way information conceptually flows in a CQRS system:
+ Client issuing a command -&amp;gt; Command -&amp;gt; Command Handler -&amp;gt; Event -&amp;gt; Event Listeners/Projections</description>
+    </item>
+    
+    <item>
+      <title>CQRS - Time to Rewind</title>
+      <link>https://jensrantil.github.io/post/cqrs-time-to-rewind/</link>
+      <pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/cqrs-time-to-rewind/</guid>
+      <description>CQRS - Time to Rewind For the last year I&#39;ve been thinking a lot about CQRS [1], Event Sourcing and distributed architecture using ZeroMQ. I first stumbled across the concept of CQRS through the mailing list for a nerd meetup in Helsingborg, Sweden. This led me to a lot of CQRS reading and videos, and with that the Event Sourcing data model.
+To try out CQRS and Event Sourcing in practise, I started writing an open source event store about a year ago.</description>
+    </item>
+    
+  </channel>
+</rss>

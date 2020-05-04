@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>How to (partially) declassify NSA documents</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">How to (partially) declassify NSA documents</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/how-to-partially-declassify-nsa-docs/">How to (partially) declassify NSA documents</a></h4>
+    <h5>December 27, 2014</h5>
+    
+    <a href="https://jensrantil.github.io/tags/nsa"><kbd class="item-tag">NSA</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><h1 id="how-to-partially-declassify-nsa-documents">How to (partially) declassify NSA documents</h1>
+<p>The day before Christmas Eve, the (American) NSA published a bunch of
+<a href="https://www.nsa.gov/public_info/declass/IntelligenceOversightBoard.shtml">declassified
+reports</a>
+that have been handed to the President's Intelligence Oversight Board
+(IOD) for the past 10 years or so. I quickly scrolled through a couple
+of documents to find a lot of heavily redacted text:</p>
+<p><img src="redacted-text.png" alt="Redacted text."></p>
+<h2 id="the-idea">The idea</h2>
+<p>What struck me was that what most of the redacted text that I think the
+public (and me) are interested in is the magnitude of NSA surveillance,
+namely how large the redacted numbers are. I started asking myself,
+<strong>can the space that the redacted numbers take up on a document tell us
+anything about what's redacted behind the white boxes?</strong> I think the
+answer is fairly obvious - yes - the number &ldquo;1000000&rdquo; definitely does
+not fit into most boxes, so we can conclude that targetted surveillance
+is less than that. But can we do better?</p>
+<p>Before we dig further - how to we know that the content underneath the
+redaction boxes are similarly sized as the numbers they redact? We
+don't. However, we can always be certain of the width of the number plus
+the space to the left and right of it (since it's visible):</p>
+<p><img src="number-width.png" alt="Known width."></p>
+<p>In the NSA case, we also know that</p>
+<ul>
+<li>they are not using justified alignments. This would make spacing
+less deterministic.</li>
+<li>they don't seem to manually add spacing (or zero pad) around their
+non-redacted numbers.</li>
+</ul>
+<p>In information theory Shannon introduced the concept of entropy as a
+measure of information. In layman's terms, the more similar data is, the
+less information is contains. If we make an analogy to the number width
+problem, we are hoping that different numbers in whatever font the NSA
+is using should have as unique width as possible.</p>
+<p>For non-monospaced fonts, there is the chance of digits being different
+in size. Further, there is also a chance that they have different
+<a href="http://en.wikipedia.org/wiki/Kerning">kerning</a>, which could make number
+width signatures even more unique.</p>
+<h2 id="the-font">The font</h2>
+<p>By the way, which font are NSA they using? I gave
+<a href="https://www.myfonts.com/WhatTheFont/">WhatTheFont</a> a try and it hinted
+that the NSA is using any of the following fonts:</p>
+<ul>
+<li>Esperanto Condensed Bold</li>
+<li>URW Garamonds ExtraNarrow Medium</li>
+<li>Aragon Condensed</li>
+<li>Printed Claude.</li>
+<li>FF Seria Sans Pro Bold Italic</li>
+</ul>
+<p>Looking at those fonts, the only one the it could potentially be would
+be Garamond, which is a fairly popular font. That said, when overlaying
+it with NSA text it didn't match too well. However, a simple guess that
+the NSA was using the good &lsquo;ole Times New Roman looked like a better
+match:</p>
+<p><img src="overlay-nsa.png" alt="Times New Roman overlay"></p>
+<p>The reason it does not match fully is due to a slight different
+<a href="http://en.wikipedia.org/wiki/Kerning">kerning</a>. A quick Googling
+brought me to
+<a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=72546">this</a> bug
+report (are NSA using LibreOffice?). Looks like I was not using the
+exact font (or rendered) match.</p>
+<h2 id="test-implementation">Test implementation</h2>
+<p>To test my theory I wrote a <a href="https://gist.github.com/JensRantil/7cd230367dbb35027a8a">small Python
+script</a> to
+generate histograms of the width of numbers. It uses ImageMagick to
+generate test images, crop and output the width of the images.</p>
+<p>Output for &ldquo;Times New Roman&rdquo; with size 16px:</p>
+<p><img src="number_distributions.png" alt="Distribution of number widths with Times New Roman, 16px."></p>
+<p>Output for &ldquo;Times New Roman&rdquo; with size 30px:</p>
+<p><img src="number_distributions_30px.png" alt="Distribution of number widths with Times New Roman, 30px."></p>
+<h2 id="result">Result</h2>
+<p>Sadly, the results show that different numbers yield fairly similar
+width. It also looks like different font sizes didn't make any
+significant difference in length signature.</p>
+<p>That said, the number of digits yields a unique width so we can
+definitely know the magnitude of the redacted numbers, ie. whether they
+are 10s, 100s or 1000s etc.</p>
+<h2 id="discussion">Discussion</h2>
+<p>ImageMagick uses the freetype library for font rendering. freetype has
+support for kerning, but kerning could definitely differ in
+implementation. I had a quick look at scripting MS Word, but it looked
+like too much of a hazzle for such a short experiment. Especially on
+MaxOSX. LibreOffice has slightly better scripting support. Scripting a
+fully featured word processor is definitely a future possible
+experiment/improvement.</p>
+<p>The font I am using is the &ldquo;Times new roman&rdquo; font that comes with
+MacOSX. MS Office ships with its own which could have different kerning
+and/or different digit widths. This would probably yield a different
+result from mine.</p>
+<p>For people who are planning to do safe redaction of text in documents,
+think about the following:</p>
+<ul>
+<li>Use a font with preferably no kerning. Monospaced font will do.</li>
+<li>Use font with same-width digits. Monospaced font will do.</li>
+<li>To avoid leaking magnitude of numbers, pad all numbers with fixed,
+or random, spaces.</li>
+</ul>
+<p>That said, it would be a fun thought experiment if NSA, or other
+intelligence organizations, would infiltrate (Times New Roman)
+typesetters to create unique kerning for letter constellations. It could
+make it much easier to work around redacted text in declassified
+documents from around the world. Call it a <em>typography backdoor</em> if you
+will.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This little experiment tested and showed that it's possible to extract
+the magnitude in the redacted numbers in declassified (NSA) documents.
+It could not show that digit width or kerning could help in determining
+the numbers more specifically. However, there is definitely future
+improvements.</p>
+<p>If you are curious about the magnitude of the redacted NSA numbers,
+consider them leaked. I'll let someone else do the hard work of
+extracting them ;-).</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

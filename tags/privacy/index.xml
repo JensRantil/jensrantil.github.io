@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>privacy on JensRantil</title>
+    <link>https://jensrantil.github.io/tags/privacy/</link>
+    <description>Recent content in privacy on JensRantil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Jun 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jensrantil.github.io/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Privacy and Logging</title>
+      <link>https://jensrantil.github.io/post/privacy-and-logging/</link>
+      <pubDate>Mon, 17 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/privacy-and-logging/</guid>
+      <description>Privacy and Logging Privacy seem to be a popular discussion these days. While I do think it&#39;s a very very important topic to discuss, I sometimes feel there&#39;s not enough people who stand up and argue for cases when there&#39;s a reason to store data.
+Let me give you an example; Log data. I&#39;m sure many computer users find it scary with logs. Sometimes I do too. Especially if logs are stored for eternity and data mined.</description>
+    </item>
+    
+  </channel>
+</rss>

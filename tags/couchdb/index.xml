@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CouchDB on JensRantil</title>
+    <link>https://jensrantil.github.io/tags/couchdb/</link>
+    <description>Recent content in CouchDB on JensRantil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Mar 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jensrantil.github.io/tags/couchdb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A follow-up on CouchDB as event store</title>
+      <link>https://jensrantil.github.io/post/follow-up-on-couchdb-as-eventstore/</link>
+      <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/follow-up-on-couchdb-as-eventstore/</guid>
+      <description>A follow-up on CouchDB as event store I recently wrote about using CouchDB as an event store. One issue that I mentioned briefly was that my proposed solution would not work for a single aggregate root yielding multiple key/values in a CouchDB view:
+ What a view cannot do is keep track of older versions of an aggregate root.
+ Recently I&#39;ve been revisiting this problem (because I find it fun to think about) and have a slightly different solution to propose, namely to store all events for a single aggregate in a single document.</description>
+    </item>
+    
+    <item>
+      <title>Bootstrapping: CouchDB as event store</title>
+      <link>https://jensrantil.github.io/post/couchdb-as-event-store/</link>
+      <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jensrantil.github.io/post/couchdb-as-event-store/</guid>
+      <description>Bootstrapping: CouchDB as event store I&#39;ve previously written about what event sourcing is. Reading about it, you might think &amp;ldquo;heck, sounds great! But how do I get started?&amp;quot;. This blog post will propose a simple way.
+A Minimum Viable Product The concept of a minimum viable product states that you shouldn&#39;t do more than absolutely necessary before releasing a product. You need to release it when it&#39;s just good enough. If it&#39;s received badly, you haven&#39;t invested too much time or energy into it.</description>
+    </item>
+    
+  </channel>
+</rss>

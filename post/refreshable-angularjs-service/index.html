@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Refreshable AngularJS service</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://jensrantil.github.io/css/main.css">
+
+
+ <link rel="stylesheet" href="https://jensrantil.github.io/custom.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.2" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40929103-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-40929103-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Refreshable AngularJS service</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/page/about-me/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:jens.rantil@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/JensRantil/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/JensRantil/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/jensrantil/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/Ztyx/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.quora.com/profile/Jens-Rantil"><i class="fa fa-quora"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.meetup.com/members/13195237/"><i class="fa fa-meetup"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/refreshable-angularjs-service/">Refreshable AngularJS service</a></h4>
+    <h5>May 23, 2013</h5>
+    
+    <a href="https://jensrantil.github.io/tags/angularjs"><kbd class="item-tag">AngularJS</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/javascript"><kbd class="item-tag">JavaScript</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><h1 id="refreshable-angularjs-service">Refreshable AngularJS service</h1>
+<p>Lately I've been working a lot in <a href="http://angularjs.org">AngularJS</a>.
+This is my second project with the framework, and the more time I spend
+in it, the more I like it.</p>
+<p>But as with most things, AngularJS has some rough corners. Its
+<a href="http://docs.angularjs.org/">documentation</a> still has a long way to go,
+although it has improved since last time I used it over a year ago.
+Common use cases and &ldquo;Angular-y&rdquo; was of doing things is another thing
+that I also feel is lacking out there. I guess it could be considered
+documentation depending on how you look at it.</p>
+<p>My intention with this blog post is to go through one such use case,
+namely dealing with complex dependencies. The clientside application
+that I've been working with lately has a bunch of quite complicated
+dependencies and these JSFiddles turned out to be the perfect way for me
+to flesh out how to deal with the dependencies in an structured fashion.
+Specifically, this post will talk about:</p>
+<ul>
+<li>How to share state between controllers.</li>
+<li>How update/refresh state between controllers.</li>
+</ul>
+<p>The level of this tutorial is <em>intermediate</em>. I expect you to know basic
+AngularJS; state injection, controllers, about <code>$timeout</code> and services.</p>
+<h2 id="a-slow-service">A slow service</h2>
+<p>Let's say you have some data you would like to present to your user and
+you prepare some data in your controller. In our case, a list:</p>
+<!-- raw HTML omitted -->
+<p>But in the real world, we rarely hardcode things. We are usually
+interested in dynamic data. There are two (major) alternatives to get
+dynamic data into an AngularJS browser application - either generating
+the data into your JS code, or you make an API call to your backend
+after your AngularJS application has loaded. The latter is better if
+your data takes some time to generate. If you have multiple
+dependencies, fetching them asynchronously using multiple HTTP calls
+usually also tend to decrease page loading times.</p>
+<p>Now, let's create a
+<a href="http://docs.angularjs.org/guide/dev_guide.services">service</a> that
+simulates a slower API call. It uses a
+<a href="http://docs.angularjs.org/api/ng.$q">promise</a> to return an handler that
+deals with handling asynchronous result. Here's the code:</p>
+<!-- raw HTML omitted -->
+<p>Also, it's worth making a mental note that we are storing <em>a promise</em> to
+the scope. This is not the same as the actual list. AngularJS
+automatically resolves this as the actual returned list and presents it
+in the generated HTML. One issue with saving a promises directly to the
+scope is that you don't handle how to deal with errors if the promise
+could not be resolved. Errors <em>do</em> happen, and in most cases you are
+better off explicitly dealing with then. Maybe you can simply ignore it?
+Present an error message? Revert to the previous message? This why I
+nowadays usually resolve all my promises like this:</p>
+<!-- raw HTML omitted -->
+<h2 id="refreshable-data-between-controllers">Refreshable data between controllers</h2>
+<p>Let's say we would like share state between controllers. This can be
+done by nesting controllers. Here's a basic example:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>My first take on this:</p>
+<!-- raw HTML omitted -->
+<p>Notice that my service now returns an object with the function refresh()
+bound to it. The refresh() member function returns a new promise every
+time it's called.</p>
+<p>Looking at the result we notice that the result is presented correctly.
+However, what's interesting is that <code>$scope.watchCallbackCalls</code>
+eventually gets the value <code>4</code>. This is because our promise returned from
+<code>refresh()</code> actually is modified twice; first when it's returned by
+<code>refresh()</code> and secondly when the promise is resolved. Since we call
+<code>refresh()</code> twice, our watcher gets called four times. The expected
+number of watch callback calls are obviously 2 calls.</p>
+<p>How do we overcome this? Instead of using watchers on promises, we
+<a href="http://docs.angularjs.org/api/ng.$rootScope.Scope#$on">can</a>
+<a href="http://docs.angularjs.org/api/ng.$rootScope.Scope#$emit">use</a>
+<a href="http://docs.angularjs.org/api/ng.$rootScope.Scope#$broadcast">events</a>
+when our promises are resolved:</p>
+<!-- raw HTML omitted -->
+<p>Since the service can't access the controller that uses it, we trigger
+events from <code>$rootScope</code>. For bigger applications you might want to use
+the calling controller as a parameter to <code>refresh()</code> to avoid bloating
+the <code>$rootScope</code> with too many events (and possibly get conflicting
+event names).</p>
+<p>Another nice property of using events is that also other services could
+have <code>MySimulatedSlowHTTPService</code> as a dependency and automatically get
+triggered when a new result would have been fetched. Making multiple
+HTTP API calls to fetch the same resource would be both a waste of time
+and bandwidth.</p>
+<p>You can also choose <em>not</em> to refresh certain controller scopes on
+refresh. See <code>MyListLengthController</code> here:</p>
+<!-- raw HTML omitted -->
+<p>One issue with the above solution is that we can't handle the case when
+a refresh fails. A way to remedy this is to use the <code>refresh()</code> call's
+<em>promise</em> instead of the actual resolved result. This moves the
+responsibility of error handling from the service to each dependent
+service/controller/component:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Last, but not least, don't just rip my example. Many times you are
+totally fine with a service that simply fetches resource <em>once</em> per page
+load!</p>
+<p>Can I do this much simpler? Tell me in the comments.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/angularjs-events-triggered-on-initialization/">AngularJS events on initialization</a></h4>
+    <h5>Triggering events from services might not always work...</h5>
+    
+    <a href="https://jensrantil.github.io/tags/angularjs"><kbd class="item-tag">AngularJS</kbd></a>
+    
+    <a href="https://jensrantil.github.io/tags/javascript"><kbd class="item-tag">JavaScript</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jensrantil" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
