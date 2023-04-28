@@ -4,10 +4,6 @@ description: "A highly opinionated comparison between Salt and Ansible."
 date: 2014-03-17
 tags: ["Salt", "Ansible", "provisioning"]
 ---
-
-Salt vs. Ansible
-================
-
 Some time ago was set to evaluate configuration management systems. I've
 heard opinions from someone I respect that
 [Puppet](http://puppetlabs.com) and [Chef](http://www.getchef.com) were

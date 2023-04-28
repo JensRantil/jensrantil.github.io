@@ -7,10 +7,6 @@ description: |
 date: 2013-05-26
 tags: ["cqrs", "event sourcing", "distributed architecture"]
 ---
-
-CQRS+Event Sourcing Messaging Patterns
-======================================
-
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about
 [Rewind](http://www.github.com/JensRantil/rewind) and

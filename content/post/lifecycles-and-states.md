@@ -5,10 +5,6 @@ description: |
 date: 2013-11-18
 tags: ["architecture", "programming", "state", "distributed architecture"]
 ---
-
-I'm a State Engineer. Are you, too?
-===================================
-
 TL;DR: We need to have a more thorough discussion about state and
 lifecycles in our industry.
 

@@ -3,7 +3,6 @@ title: "Blog Update"
 date: 2018-05-06
 tags: []
 ---
-
 I'm happy to announce I've finally gotten the time to migrate my blog from
 [Pelican](https://blog.getpelican.com/) to [Hugo](https://gohugo.io)! The
 migration started [way too long

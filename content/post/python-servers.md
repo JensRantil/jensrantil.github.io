@@ -8,10 +8,6 @@ description: |
 date: 2013-08-21
 tags: ["Python", "Java"]
 ---
-
-Writing a server in Python
-==========================
-
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about
 [Rewind](http://www.github.com/JensRantil/rewind).

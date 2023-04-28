@@ -2,10 +2,6 @@
 title: "Line styles in matplotlib"
 date: 2013-05-28
 ---
-
-Line styles in matplotlib
-=========================
-
 I'm a big fan of [matplotlib](http://matplotlib.org/) and tend to use it
 every time I'd like to plot something. A while ago I had a line plot
 with many lines and ran out of default colors. When that happens,

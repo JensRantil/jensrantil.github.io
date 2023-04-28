@@ -3,10 +3,6 @@ title: "Migrating to Python 3"
 date: 2013-05-19
 tags: ["Python"]
 ---
-
-Migrating to Python 3
-=====================
-
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about
 [Rewind](http://www.github.com/JensRantil/rewind).
