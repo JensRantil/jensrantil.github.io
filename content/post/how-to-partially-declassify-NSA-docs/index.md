@@ -2,7 +2,6 @@
 title: "How to (partially) declassify NSA documents"
 date: 2014-12-27
 tags: [NSA]
-draft: false
 ---
 
 How to (partially) declassify NSA documents

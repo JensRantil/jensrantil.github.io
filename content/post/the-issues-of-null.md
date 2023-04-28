@@ -2,7 +2,6 @@
 title: "Java's missing optional keyword and the issues of null"
 date: 2013-08-22
 tags: ["java", "programming"]
-draft: false
 ---
 
 Java's missing optional keyword and the issues of null

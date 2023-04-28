@@ -2,7 +2,6 @@
 title: "Why the Web is so Slow"
 date: 2013-12-02
 tags: ["web", "HTTP"]
-draft: false
 ---
 
 Why the Web is so Slow
