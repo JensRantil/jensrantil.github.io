@@ -26,12 +26,12 @@ languageName = ":us:"
 [[languages.en.menu.main]]
 name = "Blog"
 weight = 1
-url = "post/"
+url = "posts/"
 
 [[languages.en.menu.main]]
 name = "About"
 weight = 2
-url = "/page/about-me/"
+url = "/pages/about-me/"
 
 [[params.social]]
 name = "E-mail"
