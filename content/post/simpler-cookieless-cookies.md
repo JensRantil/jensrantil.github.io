@@ -4,10 +4,6 @@ description: "Another way of doing cookieless cookies."
 date: 2013-08-18
 tags: ["HTTP"]
 ---
-
-Simpler Cookieless Cookies
-==========================
-
 I recently read the blog article "[Cookieless
 Cookies](http://lucb1e.com/rp/cookielesscookies/)" that talks about
 [using ETag for tracking

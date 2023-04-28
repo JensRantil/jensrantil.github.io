@@ -3,10 +3,6 @@ title: "Bootstrapping software projects"
 date: 2013-05-19
 tags: ["software", "bootstrapping"]
 ---
-
-Bootstrapping software projects
-===============================
-
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about
 [Rewind](http://www.github.com/JensRantil/rewind) and

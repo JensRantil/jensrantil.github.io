@@ -4,10 +4,6 @@ description: "Using a small hack, you can reuse your local Jenkins installation 
 date: 2013-09-04
 tags: ["git", "Jenkins", "Hudson"]
 ---
-
-GIT mirroring using Jenkins
-===========================
-
 For the past couple of weeks I've been annoyed by the high latency when
 connecting to [Github](https://github.com) over SSH. While the other GIT
 transports could be an option, I prefer to use keys to authenticate

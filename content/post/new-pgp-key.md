@@ -4,10 +4,6 @@ description: "I have a new PGP key."
 date: 2013-11-18
 tags: ["PGP", "cryptography"]
 ---
-
-New PGP key
-===========
-
 Just wanted to give you a heads up that I recently generated a [new PGP
 key](https://dl.dropboxusercontent.com/u/17059539/public.asc). Its
 fingerprint is `4371 E7ED 3A3D DBB4 12B5 C68F BA63 2DB6 91DA 03B8` and

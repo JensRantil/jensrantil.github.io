@@ -4,10 +4,6 @@ description: "A different implementation of CouchDB event store."
 date: 2014-03-25
 tags: ["CouchDB", "cqrs", "distributed-architecture"]
 ---
-
-A follow-up on CouchDB as event store
-=====================================
-
 I [recently](|filename|couchdb-as-event-store.rst) wrote about using
 CouchDB as an event store. One issue that I mentioned briefly was that
 my proposed solution would not work for a single aggregate root yielding

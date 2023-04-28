@@ -4,10 +4,6 @@ description: "Triggering events from services might not always work..."
 date: 2013-05-24
 tags: ["AngularJS", "JavaScript"]
 ---
-
-AngularJS events on initialization
-==================================
-
 In my [previous post](|filename|refreshable-angularjs-service.rst) I was
 giving an example of using [AngularJS](http://angularjs.org)
 [events](http://docs.angularjs.org/api/ng.$rootScope.Scope#$emit).

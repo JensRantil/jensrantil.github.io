@@ -3,10 +3,6 @@ title: "How to (partially) declassify NSA documents"
 date: 2014-12-27
 tags: [NSA]
 ---
-
-How to (partially) declassify NSA documents
-===========================================
-
 The day before Christmas Eve, the (American) NSA published a bunch of
 [declassified
 reports](https://www.nsa.gov/public_info/declass/IntelligenceOversightBoard.shtml)

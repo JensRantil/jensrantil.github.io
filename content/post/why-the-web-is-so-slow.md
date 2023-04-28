@@ -3,10 +3,6 @@ title: "Why the Web is so Slow"
 date: 2013-12-02
 tags: ["web", "HTTP"]
 ---
-
-Why the Web is so Slow
-======================
-
 I just read the blog post [Why is the web so
 slow?](http://calendar.perfplanet.com/2013/why-is-the-web-so-slow/) by
 [Stoyan Stefanov](http://www.phpied.com/). This gave me the idea to give
