@@ -7,7 +7,7 @@ googleAnalytics = "UA-40929103-1"
 
 [params]
     author = "Jens Rantil"
-    description = 'Backend/security/infrastructure/DevOps engineer (<a href="https://www.tink.se">@tink</a>), engineering mathematics, traveller, nerd, juggler, guitar/african drum player. Inspired Swede.'
+    description = 'Backend/security/infrastructure/DevOps engineer, engineering mathematics, traveller, nerd, juggler, guitar/african drum player. Inspired Swede.'
     githubUsername = "#JensRantil"
     accent = "red"
     showBorder = true
