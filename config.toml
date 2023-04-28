@@ -1,73 +1,84 @@
-baseurl = "https://jensrantil.github.io/"
-languageCode = "en-us"
+baseurl = "https://jensrantil.github.io"
+languageCode = "en"
 title = "JensRantil"
-theme = "minimal"
+theme = "hugo-coder"
 disqusShortname = "jensrantil" # delete this to disable disqus comments
 googleAnalytics = "UA-40929103-1"
+paginate = 20
+defaultContentLanguage = "en"
 
 [params]
-    author = "Jens Rantil"
-    description = 'Backend/security/infrastructure/DevOps engineer, engineering mathematics, traveller, nerd, juggler, guitar/african drum player. Inspired Swede.'
-    githubUsername = "#JensRantil"
-    accent = "red"
-    showBorder = true
-    backgroundColor = "white"
-    font = "Raleway" # should match the name on Google Fonts!
-    highlight = true
-    highlightStyle = "solarized-dark"
-    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
-    css = ["custom.css"]
+author = "Jens Rantil"
+description = 'Backend/security/infrastructure/DevOps engineer, engineering mathematics, traveller, nerd, juggler, guitar/african drum player. Inspired Swede.'
+avatarURL = "images/avatar.jpg"
+keywords = "blog,developer,personal"
+commit = "https://github.com/luizdepra/hugo-coder/tree/"
+colorScheme = "auto"
+hideColorSchemeToggle = false
+maxSeeAlsoItems = 5
 
-[[menu.main]]
-    url = "/"
-    name = "Home"
-    weight = 1
+[taxonomies]
+tag = "tags"
 
-[[menu.main]]
-    url = "/post/"
-    name = "Posts"
-    weight = 2
+[languages.en]
+languageName = ":us:"
 
-[[menu.main]]
-    url = "/page/about-me/"
-    name = "About"
-    weight = 3
+[[languages.en.menu.main]]
+name = "Blog"
+weight = 1
+url = "post/"
 
-# Social icons to be shown on the right-hand side of the navigation bar
-# The "name" field should match the name of the icon to be used
-# The list of available icons can be found at http://fontawesome.io/icons/
+[[languages.en.menu.main]]
+name = "About"
+weight = 2
+url = "/page/about-me/"
 
-[[menu.icon]]
-    url = "mailto:jens.rantil@gmail.com"
-    name = "envelope-o"
-    weight = 1
+[[params.social]]
+name = "E-mail"
+icon = "fa fa-2x fa-envelope"
+weight = 0
+url = "mailto:jens.rantil@gmail.com"
 
-[[menu.icon]]
-    url = "https://github.com/JensRantil/"
-    name = "github"
-    weight = 2
+[[params.social]]
+name = "Github"
+icon = "fa fa-2x fa-github"
+weight = 1
+url = "https://github.com/JensRantil/"
 
-[[menu.icon]]
-    url = "https://twitter.com/JensRantil/"
-    name = "twitter"
-    weight = 3
+[[params.social]]
+name = "Twitter"
+icon = "fa fa-2x fa-twitter"
+weight = 2
+url = "https://twitter.com/JensRantil/"
 
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/jensrantil/"
-    name = "linkedin"
-    weight = 4
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-2x fa-linkedin"
+weight = 3
+url = "https://www.linkedin.com/in/jensrantil/"
 
-[[menu.icon]]
-    url = "https://www.stackoverflow.com/Ztyx/"
-    name = "stack-overflow"
-    weight = 5
+[[params.social]]
+name = "Stack Overflow"
+icon = "fa fa-2x fa-stack-overflow"
+weight = 4
+url = "https://www.stackoverflow.com/Ztyx/"
 
-[[menu.icon]]
-    url = "https://www.quora.com/profile/Jens-Rantil"
-    name = "quora"
-    weight = 6
+[[params.social]]
+name = "Quora"
+icon = "fa fa-2x fa-quora"
+weight = 5
+url = "https://www.quora.com/profile/Jens-Rantil"
 
-[[menu.icon]]
-    url = "https://www.meetup.com/members/13195237/"
-    name = "meetup"
-    weight = 7
+[[params.social]]
+name = "Meetup"
+icon = "fa fa-2x fa-meetup"
+weight = 6
+url = "https://www.meetup.com/members/13195237/"
+
+[[params.social]]
+name = "RSS"
+icon = "fa fa-2x fa-rss"
+weight = 7
+url = "https://jensrantil.github.io/index.xml"
+rel = "alternate"
+type = "application/rss+xml"

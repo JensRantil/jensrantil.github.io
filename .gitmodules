@@ -1,3 +1,3 @@
-[submodule "newsite/themes/minimal"]
-	path = themes/minimal
-	url = https://github.com/calintat/minimal.git
+[submodule "themes/hugo-coder"]
+	path = themes/hugo-coder
+	url = https://github.com/luizdepra/hugo-coder.git
