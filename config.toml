@@ -1,6 +1,6 @@
 baseurl = "https://jensrantil.github.io"
 languageCode = "en"
-title = "JensRantil"
+title = "Jens Rantil"
 theme = "hugo-coder"
 disqusShortname = "jensrantil"
 googleAnalytics = "UA-40929103-1"
