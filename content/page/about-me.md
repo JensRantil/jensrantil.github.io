@@ -31,6 +31,7 @@ manifest][agile] states
 I have an MSc in Engineering Mathematics from [Lund Institute of
 Technology](http://www.lth.se/english/) (LTH), Sweden.
 
-I can also be found in other various corners of the web. Please [the links on the frontpage][frontpage].
+I can also be found in other various corners of the web. Please see [the links
+on the frontpage][frontpage].
 
 [frontpage]: /
