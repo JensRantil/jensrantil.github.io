@@ -28,7 +28,7 @@ manifest][agile] states
 
 [agile]: https://agilemanifesto.org/
 
-I have an MSc in Engineering Mathematics from [Lund Institute of
+I have a MSc in Engineering Mathematics from [Lund Institute of
 Technology](http://www.lth.se/english/) (LTH), Sweden.
 
 I can also be found in other various corners of the web. Please see [the links
