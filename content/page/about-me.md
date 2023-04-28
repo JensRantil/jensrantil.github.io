@@ -8,7 +8,7 @@ Jens Rantil is a *developer* and *sysadmin*. He has a MS in Engineering
 Mathematics from [Lund Institute of Technology](http://www.lth.se/english/)
 (LTH), Sweden.
 
-Jens can found in various corners of the web:
+Jens can be found in various corners of the web:
 
 -   [Github](http://www.github.com/JensRantil)
 -   Twitter: [@JensRantil](http://www.twitter.com/JensRantil)
