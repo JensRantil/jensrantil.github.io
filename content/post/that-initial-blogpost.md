@@ -2,7 +2,6 @@
 title: "That initial blogpost"
 date: 2013-05-14
 tags: ["howdy"]
-draft: false
 ---
 
 That initial blogpost
