@@ -33,7 +33,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/develop' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./public
           force_orphan: true
           publish_branch: master
 
