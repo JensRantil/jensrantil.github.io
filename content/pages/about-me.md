@@ -5,33 +5,32 @@ About me
 ========
 
 I am a Staff software engineer working within the sphere of people, tech and
-processes. Within these three, _quick feedback, iterations and failing fast_
-are core tennets that gets me going.
+processes. _Quick feedback, iterations and failing fast_ are core tenets and of
+a high value for me. I aim to be a [force multiplier][force-multiplier-book].
 
-**People.** There is nothing like seeing an enabled team or engineer.
-Instilling psychological safety, mentoring and sharing knowledge are things I
-value a lot.
+[force-multiplier-book]: https://www.amazon.com/Force-Multiplier-Teams-Where-Everyone/dp/0998992704
 
-**Tech.** I have a strong background within backend product development,
-software architecture, service-oriented architecture, DevOps, site reliability
-engineering and platform (developer enablement) engineering. I'm a little rusty
-on the web frontend side, but should pick that up at some point again... You
-can find some of my tech insights and learnings over the years [here][quora].
+**People.** I find pleasure in enabling teams and individuals in their daily
+work by improving psychological safety, mentoring and sharing knowledge.
 
+**Tech.** I have a strong background in backend product development, software
+architecture, service-oriented architecture, DevOps, site reliability
+engineering and [platform engineering][platform-engineering]. Some of my tech
+insights and learnings can be [found here][quora].
+
+[platform-engineering]: https://www.honeycomb.io/blog/future-ops-platform-engineering
 [quora]: https://www.quora.com/What-are-the-best-secrets-of-great-programmers/answer/Jens-Rantil
 
-**Processes.** A good process is one does solves a problem, preferably is
-automated, and *does not stand in the way to get things done*. As [the agile
-manifest][agile] states
+**Processes.** A good process is one that solves a problem while [minimizing
+waste][muda]. I strive for *individuals and interactions over processes and
+tools* ([The Agile Manifesto][agile]), and automation over manual work.
 
-> Individuals and interactions over processes and tools.
-
+[muda]: https://kanbantool.com/kanban-guide/what-is-muda
 [agile]: https://agilemanifesto.org/
 
-I have a MSc in Engineering Mathematics from [Lund Institute of
+I hold a MSc in Engineering Mathematics from [Lund Institute of
 Technology](http://www.lth.se/english/) (LTH), Sweden.
 
-I can also be found in other various corners of the web. Please see [the links
-on the frontpage][frontpage].
+You can read more about me through the links [here][frontpage].
 
 [frontpage]: /
