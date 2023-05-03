@@ -93,8 +93,8 @@ validation, storing, logging, counting etc.
 **Memory/CPU bottlenecks** (operational). There is a risk that you have some
 user that decides to import 100 million TODOs. Suddently, your application runs
 out of memory and starts crashing - impacting your other users. You can of
-course set upper limits on request body and/or number of TODOs. Now you need to
-incur the cost of maintaining documentation of that limit...
+course set upper limits on request body size and/or number of TODOs. Now you
+need to incur the cost of maintaining documentation of that limit...
 
 **Worse observability** (operational). You latency metrics can't be trusted as
 much anymore. A key thing when working with performance is to reduce the
