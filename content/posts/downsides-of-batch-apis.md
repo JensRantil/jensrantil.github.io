@@ -25,7 +25,7 @@ POST /todo
 ```
 (300 ms)
 
-## A throughput bottleneck
+## A throughput bottleneck enters the stage
 
 The API works great until your TODO service has turned into a hugely succesful
 TODO SaaS which allows users to import their TODOs from their previous TODO
