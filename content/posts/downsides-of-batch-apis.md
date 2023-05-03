@@ -30,7 +30,7 @@ POST /todo
 The API works great until your TODO service has turned into a hugely succesful
 TODO SaaS which allows users to import their TODOs from their previous TODO
 platforms. With the click of a button we now want users to be able to import
-10k TODOs from the competitor. The immediate problem? Importing them would take
+10,000 TODOs from the competitor. The immediate problem? Importing them would take
 
     10 000x300ms = 3 000 000 ms = 3000 seconds = 50 minutes
 
@@ -77,8 +77,8 @@ how. This turns into one additional things the API caller must handle.
 
 **Behaviour semantics confusion** (implementation). The API caller will need to
 read the documentation (if there is some!) to see what happens if _one_ of the
-TODOs isn't passing validation. Is it storing all other TODOs? Is none of them
-stored?
+TODOs isn't passing validation. Is it storing all other TODOs? Or are none of
+them stored?
 
 **Debuggability and understandability** (maintenance). Generally, if something
 goes wrong (weird HTTP response code returned), the caller will spend a
@@ -151,10 +151,10 @@ There is a problem with the above, though; An API rarely supports 10k
 concurrent API calls, particularly until it has scaled up (using auto-scaling,
 which you have in place, right? 😉). There are ways to combat this:
 
- * **Put a limit on concurrent API calls in the client.** A [counting
+ * **Putting a limit on concurrent API calls in the client.** A [counting
    semaphore][cs] is one way of doing this. A group of threads/coroutines
    popping from a queue is another.
- * **Make API calls [idempotent][idempotency] and implement retries.** Make a
+ * **Making API calls [idempotent][idempotency] and implement retries.** Make a
    timed out, or failed, request retried without having duplicates. Usually
    this is done by the client submitting the identifier of the TODO to avoid
    duplicates.  This has the added benefit of adding resiliency - if your
@@ -167,7 +167,7 @@ which you have in place, right? 😉). There are ways to combat this:
 
 ## When is batching a good idea, then?
 
-Batching _can_ be useful if you want to make sure that either all TODOs are
+Batching _can_ be useful if you want to make sure that all TODOs are
 added [atomically][atomicity]. Ie. "either zero or all TODOs were added".
 
 [atomicity]: https://en.wikipedia.org/wiki/Atomicity_(database_systems)
@@ -183,4 +183,4 @@ API similar to database transactions:
  6. `POST /todo/end?transactionId=abc123`
 
 This does not avoid _all_ problems above, but some. But I would first start
-challenging the requirement whether atomicity truly is needed and worth it...
+challenging the requirement if atomicity is truly needed and worth it...
