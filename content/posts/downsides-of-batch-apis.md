@@ -39,8 +39,8 @@ platforms. With the click of a button we now want users to be able to import
 ## The batching solution
 
 The go-to solution by many is to then modify the API endpoint above (or
-introduce a new "ingest API endpoint") such that has a larger unit of work. In
-this case, we modify it to take a *list* of TODOs instead:
+introduce a new "ingest API endpoint") such that it has a larger unit of work.
+In this case, we modify it to take a *list* of TODOs instead:
 
 ```
 POST /todo
