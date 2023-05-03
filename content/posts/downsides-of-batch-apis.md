@@ -18,7 +18,7 @@ is an example request/response:
 
 ```
 POST /todo
-{text: "Do laundry", completed: false}
+{text: "Do laundry", "completed": false}
 
 200
 {"msg": "Saved TODO!"}
@@ -45,11 +45,11 @@ this case, we modify it to take a *list* of TODOs instead:
 ```
 POST /todo
 [
-    {text: "Do laundry", completed: true},
-    {text: "Fix flat tire", completed: true},
-    {text: "Write that love letter to Rita", completed: true},
-    {text: "Call my best buddy Brad", completed: true},
-    {text: "Do the dishes", completed: true}
+    {"text": "Do laundry", "completed": true},
+    {"text": "Fix flat tire", "completed": true},
+    {"text": "Write that love letter to Rita", "completed": true},
+    {"text": "Call my best buddy Brad", "completed": true},
+    {"text": "Do the dishes", "completed": true}
 ]
 
 200
