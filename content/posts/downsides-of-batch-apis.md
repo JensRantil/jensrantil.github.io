@@ -1,7 +1,7 @@
 +++ 
 date = 2023-05-03T12:50:41+02:00
 title = "The Downsides of API batching"
-description = "Many small API calls are better than once large one."
+description = "Many small API calls are usually better than one large one."
 tags = ["architecture", "api", "simplicity"]
 +++
 
