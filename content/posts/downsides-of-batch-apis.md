@@ -32,7 +32,7 @@ TODO SaaS which allows users to import their TODOs from their previous TODO
 platforms. With the click of a button we now want users to be able to import
 10,000 TODOs from the competitor. The immediate problem? Importing them would take
 
-    10 000x300ms = 3 000 000 ms = 3000 seconds = 50 minutes
+    10,000x300ms = 3,000,000 ms = 3,000 seconds = 50 minutes
 
 . 50 minutes is a long time!
 
