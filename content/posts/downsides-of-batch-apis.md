@@ -73,7 +73,7 @@ implementation, maintenance and operational cost:
 **Validation semantics complexity** (implementation). Every time you make an
 API call and validation fails, you need likely need to start returning a _list_
 of validation errors including _which_ (list index) item failed validation and
-how. This turns into one additional things the API caller must handle.
+how. This turns into one additional thing the API caller must handle.
 
 **Behaviour semantics confusion** (implementation). The API caller will need to
 read the documentation (if there is some!) to see what happens if _one_ of the
