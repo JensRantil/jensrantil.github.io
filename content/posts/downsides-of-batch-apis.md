@@ -71,8 +71,8 @@ The above described solution has many hidden downsides which incur future
 implementation, maintenance and operational cost:
 
 **Validation semantics complexity** (implementation). Every time you make an
-API call and validation fails, you need likely need to start returning a _list_
-of validation errors including _which_ (list index) item failed validation and
+API call and validation fails, you likely need to start returning a _list_ of
+validation errors including _which_ (list index) item failed validation and
 how. This turns into one additional thing the API caller must handle.
 
 **Behaviour semantics confusion** (implementation). The API caller will need to
