@@ -61,14 +61,16 @@ The assumption here is that the API roundtrip is the problem - so by doing a
 single API roundtrip (and usually a single roundtrip to underlying database),
 we spead up the API endpoint a _lot_.
 
-At a glance, this solves the problem! Suddenly we have one roundtrip to the API
-instead of 10k. Sure, the time takes a little longer, but that's expected since
-we _are_ storing more activities than a single.
+At a glance, this solves the problem in a seemlingly simple way! Suddenly we
+have one roundtrip to the API instead of 10k. Sure, the time takes a little
+longer, but that's expected since we _are_ storing more activities than a
+single.
 
 ## The Costs
 
-The above described solution has many hidden downsides which incur future
-implementation, maintenance and operational cost:
+However, contrary to common beliefs, the above described solution has many
+hidden downsides which incur future implementation, maintenance and operational
+cost:
 
 **Validation semantics complexity** (implementation). Every time you make an
 API call and validation fails, you likely need to start returning a _list_ of
@@ -141,7 +143,7 @@ Really, the problem we have here is one of [queueing theory][qt] and [Amdahl's
 law][amdahl]. There are two routes we can take to solve our slow ingestion:
 
  * **Improve the unit of work.** This is what we did above!
- * **Parallellize the work.** This is what I am proposing to do instead.
+ * **Parallellize the work.** This is what I am proposing to do below.
 
 The latter usually comes with none of the above costs, and pushes complexity to
 the calling client. Instead of making _one API call with 10k TODOs_ we make
