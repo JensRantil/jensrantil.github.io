@@ -77,6 +77,11 @@ new service in _one_ place, not many.
 
 [platform-eng]: https://www.honeycomb.io/blog/future-ops-platform-engineering
 
+Finally, usually self-serve is critical to easily be able to start RnD projects
+such as [spikes][spike] or <abbr title="Proof of concept">POCs</abbr>. As such,
+a slow and complex self-serve experience can actually have a daunting impact on
+company innovation.
+
 What are the alternatives? Create a graphical user interface that guides the
 users through the right choices, naming standards etc. Spotify's
 [Backstage][bs] is one such alternative.
