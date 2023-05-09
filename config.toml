@@ -67,7 +67,7 @@ url = "https://www.stackoverflow.com/Ztyx/"
 name = "Quora"
 icon = "fa fa-2x fa-quora"
 weight = 5
-url = "https://www.quora.com/profile/Jens-Rantil"
+url = "https://www.quora.com/What-are-the-best-secrets-of-great-programmers/answer/Jens-Rantil"
 
 [[params.social]]
 name = "Meetup"
