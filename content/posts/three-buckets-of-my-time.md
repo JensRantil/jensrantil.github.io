@@ -45,9 +45,6 @@ I have found that a surprisingly amount of innovation happens in this bucket.
 ## Time distribution between buckets of time
 
 How much is spent in the different buckets depends on your role expectations.
-For example, when I worked as a Staff Engineer I aimed for something like a
-33%/33%/33% split.
-
 However, the distribution between the time spent in the different buckets also
 changes dynamically with time. For example, sometimes I need to charge with
 some individual initiatives if I have worked on mundane team or company tasks.
