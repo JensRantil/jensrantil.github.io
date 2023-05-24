@@ -34,7 +34,7 @@ responsibilities within the team.
 
 These are my personal initiatives which come from my thoughts, ideas and
 visions after for example reading an article, learning something new or trying
-out a new price of technology. It’s that act that gives me energy and a sense
+out a new piece of technology. It’s that act that gives me energy and a sense
 of forwardness.  My initiatives can also take the form of thinking about a new
 technical strategy, building some tool to simplify my day or coding up and a
 proof of concept to showcase it. “Hackday” is a good example of where I think
