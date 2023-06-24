@@ -61,6 +61,4 @@ A former manager always used to tell me
 
 > Jens, we are all product.
 
-- reminding me that “the product and engineering” shared the same goal; building an awesome product together.
-
-By having these three categories for team work, I found that product and engineering started working much closer together, with the same goal in mind, focusing on the right thing, at the right time.
+By saying this, he was reminding me that “the product and engineering” shared the same goal; building an awesome product together. By having these three categories for team work, I found that product and engineering started working much closer together, with the same goal in mind, focusing on the right thing, at the right time.
