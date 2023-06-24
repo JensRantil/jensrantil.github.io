@@ -14,7 +14,7 @@ spend their time.
 Back in the day I had a product owner (PO) for a former team who used to start
 off our sprint planning sessions with
 
-> Here are the *key product asks* I think we should deliver this sprint. What
+> Here are the key **product asks** I think we should deliver this sprint. What
 > *team initiatives* are _you_ interested in driving?
 
 I really loved this opening! I thought it was a great way to initiate a
