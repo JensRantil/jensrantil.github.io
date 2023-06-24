@@ -19,7 +19,9 @@ In essence, we categorized every sprint task into these three categories:
 
 -	Product asks
 -	Team initiatives
--	Operational work (<emph title="Keep The Lights On">KTLO</emph>)
+-	Operational work ([KTLO][ktlo])
+
+[ktlo]: https://dictionary.cambridge.org/dictionary/english/keep-the-lights-on
 
 Let me go through the three categories in detail:
 
