@@ -82,3 +82,6 @@ weight = 7
 url = "https://jensrantil.github.io/index.xml"
 rel = "alternate"
 type = "application/rss+xml"
+
+[markup.goldmark.renderer]
+unsafe= true
