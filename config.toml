@@ -84,4 +84,4 @@ rel = "alternate"
 type = "application/rss+xml"
 
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
