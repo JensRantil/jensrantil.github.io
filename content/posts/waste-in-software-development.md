@@ -8,9 +8,18 @@ externalLink = ""
 +++
 ## Toyota production system and waste
 
-It was  around ~2011 when I first read _[The Toyota Way](https://www.amazon.com/Toyota-Way-Management-Principles-Manufacturer/dp/0071392319)_ book. This book introduced me to _[The Toyota Way principles](https://en.wikipedia.org/wiki/The_Toyota_Way)_ and [the Toyota Production System](https://en.wikipedia.org/wiki/Toyota_Production_System) (TPS). It laid the foundation for me to understand [the Continuous Delivery book](https://www.amazon.se/-/en/Humble-Jez/dp/0321601912) which I later read.
+It was  around ~2011 when I first read _[The Toyota Way][ttw]_ book. This book introduced me to _[The Toyota Way principles][ttwp]_ and [the Toyota Production System][tps] (TPS). It laid the foundation for me to understand [the Continuous Delivery book][cont-delivery-book] which I later read.
 
-The Toyota Way also lay the groundwork for me to understand the inter-related [Lean Manufacturing](https://en.wikipedia.org/wiki/Lean_manufacturing), and particularly [Lean services](https://en.wikipedia.org/wiki/Lean_services) (which applies the Lean concept to the service industry). However, since [there has a been a lot of confusion how various Lean concepts interrelate with TPS](https://bobemiliani.com/comparing-tps-and-lean/), I will just stick to TPS for the sake of the rest of this article.
+[ttw]: https://www.amazon.com/Toyota-Way-Management-Principles-Manufacturer/dp/0071392319
+[ttwp]: https://en.wikipedia.org/wiki/The_Toyota_Way
+[tps]: https://en.wikipedia.org/wiki/Toyota_Production_System
+[cont-delivery-book]: https://www.amazon.se/-/en/Humble-Jez/dp/0321601912
+
+The Toyota Way also lay the groundwork for me to understand the inter-related [Lean Manufacturing][lean-manuf], and particularly [Lean services][lean-services] (which applies the Lean concept to the service industry). However, since [there has a been a lot of confusion how various Lean concepts interrelate with TPS][lean-confusion], I will just stick to TPS for the sake of the rest of this article.
+
+[lean-manuf]: https://en.wikipedia.org/wiki/Lean_manufacturing
+[lean-services]: https://en.wikipedia.org/wiki/Lean_services
+[lean-confusion]: https://bobemiliani.com/comparing-tps-and-lean/
 
 Taiichi Ohno, the father of TPS , introduced the concept of “muda” at Toyota. Muda in Japanese literally means  “waste”. Wasteful tasks don't add any immediate value to the  customers. There are eight types of waste within the Toyota Production System:
 
@@ -29,7 +38,9 @@ Software development is not like making cars (as opposed to Toyota). For example
 
 **Waste of overproduction.** This includes usually "producing" too many features/changes until we deploy to production. In other words, batching up too many changes into a deployment. This leads to slower feedback cycles, and usually higher defects. 
 
-Reducing the [DORA](https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance) metric “Lead Time for Changes” reduces this type of overproduction.
+Reducing the [DORA][dora] metric “Lead Time for Changes” reduces this type of overproduction.
+
+[dora]: https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance
 
 **Waste of time on hand (waiting).** This includes things like waiting for someone else to review your code. A solution can be pair or mob programming as it usually reduces lead time because review happens by someone else in parallel while typing out the code.
 
@@ -47,7 +58,9 @@ Not to mention waiting on Jira’s user interface to load…
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Atlassian claims they have 180.000 <a href="https://twitter.com/hashtag/Jira?src=hash&amp;ref_src=twsrc%5Etfw">#Jira</a> customers (<a href="https://t.co/6O9Md54uVX">https://t.co/6O9Md54uVX</a>.). Assuming an average of 25 users per customer, each user make 30 clicks in Jira every day and Jira&#39;s incredibly slow UI takes 5 seconds per operation, that&#39;s more than 21 man-years wasted per day.</p>&mdash; Jens Rantil (@JensRantil) <a href="https://twitter.com/JensRantil/status/1380065758596759553?ref_src=twsrc%5Etfw">April 8, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-**Waste of transportation.** I usually think of “code refactoring” here. Ohno defined [two types of waste](https://en.wikipedia.org/wiki/Muda_(Japanese_term)):
+**Waste of transportation.** I usually think of “code refactoring” here. Ohno defined [two types of waste][types-of-waste]:
+
+[types-of-waste]: https://en.wikipedia.org/wiki/Muda_(Japanese_term)
 
 * _Muda Type I:_ non value-adding, but necessary for end-customers.
 * _Muda Type II:_ non value-adding and unnecessary for end-customers.
@@ -60,7 +73,9 @@ I also think managerial tasks such “filling out quarterly reports in spreadshe
 
 Kent Beck once stated
 
-> “Make It Work, Make It Right, Make It Fast” ([ref](https://keyholesoftware.com/2023/03/23/writing-quality-code-practicing-make-it-work-make-it-right-make-it-fast/))
+> “Make It Work, Make It Right, Make It Fast” ([ref][work-right-fast])
+
+[work-right-fast]: https://keyholesoftware.com/2023/03/23/writing-quality-code-practicing-make-it-work-make-it-right-make-it-fast/
 
 , making something maintainable is an example of waste if the solution doesn’t work. Making it performant is usually a waste, if it is not maintainable.
 
@@ -78,7 +93,12 @@ Having to switch between _ways of communication_ can have a detrimental impact o
 
 _Unnecessary meetings_ are definitely another form of unnecessary movement. If a meeting can happen through async communication, you don't have to context switch as much.
 
-Having a _diverse set of technology_ can lead to a lot of context switching; switching between different frameworks, libraries and infrastructure components. All of them with their different caveats and documentation. I could write a lot about this, but for now I will simply refer to [Radical Simplicity](https://www.radicalsimpli.city/), [Choosing Boring Tech](https://boringtechnology.club/) and reminding us to [be aware of hype-driven development](https://www.bitecode.dev/p/hype-cycles). The first Google SRE book also has a good [chapter on simplicity](https://sre.google/sre-book/simplicity/) in terms of reliability.
+Having a _diverse set of technology_ can lead to a lot of context switching; switching between different frameworks, libraries and infrastructure components. All of them with their different caveats and documentation. I could write a lot about this, but for now I will simply refer to [Radical Simplicity][rad-simplicity], [Choosing Boring Tech][boring-tech] and reminding us to [be aware of hype-driven development][hype-cycles]. The first Google SRE book also has a good [chapter on simplicity][sre-simplicity] in terms of reliability.
+
+[rad-simplicity]: https://www.radicalsimpli.city/
+[boring-tech]: https://boringtechnology.club/
+[hype-cycles]: https://www.bitecode.dev/p/hype-cycles
+[sre-simplicity]: https://sre.google/sre-book/simplicity/
 
 Many companies require _a lot of movement in the process of developing software_. Here are some:
 
@@ -92,7 +112,9 @@ Finally, certain companies require lots of movement to _make a release to custom
 
 Generally, a higher standardized set of movements to perform a task is usually better than constantly having to figure out which movements are needed to perform a task. For example, once you have standardized which steps are needed to create a microservice, you can take a more structured approach to reduce the steps. In other words, “Lead Time for Changes” variability is usually more important to reduce first before you take a stab at reducing the actual lead time.
 
-**Waste of making defective products.** This is what we mostly call bugs, but it can also include bad UX experiences. Many people think of these defects primarily as immediate customer impact. They are, but there is also the secondary impact on velocity - constantly going back to fix bugs [can have a detrimental impact on velocity](https://www.infoq.com/news/2011/09/bug-fixes-velocity/).
+**Waste of making defective products.** This is what we mostly call bugs, but it can also include bad UX experiences. Many people think of these defects primarily as immediate customer impact. They are, but there is also the secondary impact on velocity - constantly going back to fix bugs [can have a detrimental impact on velocity][bug-velocity].
+
+[bug-velocity]: https://www.infoq.com/news/2011/09/bug-fixes-velocity/
 
 **Waste of underutilized workers.** Not utilizing or growing engineering talent is also a waste. Making engineers ticketing machines by not allowing them to take initiatives nor have a shared ownership of the product backlog can have detrimental effects on product innovation or product development effectiveness.
 
