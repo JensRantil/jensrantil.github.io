@@ -46,7 +46,8 @@ Toyota Production System:
    required to perform the processing.
 7. **Waste of making defective products.** The effort in inspecting for and
    fixing defects.
-8. **Waste of underutilized workers.** Underutilizing people’s talents, skills and knowledge.
+8. **Waste of underutilized workers.** Underutilizing people’s talents, skills
+   and knowledge.
 
 ## Software development waste
 
