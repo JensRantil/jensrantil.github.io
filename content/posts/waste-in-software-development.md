@@ -110,7 +110,7 @@ when engineers struggle to describe why a change is needed from the customer
 perspective. This is why I think encouraging sentences like “Refactoring to be
 able to…” (type I) is important.
 
-I also think managerial tasks such “filling out quarterly reports in
+I also think managerial tasks such as “filling out quarterly reports in
 spreadsheets for management” can end up in this category.
 
 **Waste of processing itself** includes building a feature that the customer
