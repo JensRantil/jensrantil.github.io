@@ -169,6 +169,7 @@ Many companies require _a lot of movement in the process of developing
 software_. Here are some:
 
 * Switching between a ticketing system, Github, terminal and code editor.
+* Always having to create a ticket for _every_ pull request.
 * Having to often switch between source code repositories. A monorepo can
   reduce or avoid this.
 * Needing to jump into a database to change things.
@@ -180,8 +181,10 @@ software_. Here are some:
 
 Finally, certain companies require lots of movement to _make a release to
 customers_; making a release in one place and writing release notes in Slack or
-Jira. The more often you do something, the less movement you should strive for.
-It adds up over time…
+Jira, going through required checklists, making a second pull request to merge
+in production, having to click an extra button and wait (waste!) to deploy to
+production... The more often you do something, the less movement you should
+strive for.  It adds up over time…
 
 Generally, a higher standardized set of movements to perform a task is usually
 better than constantly having to figure out which movements are needed to
