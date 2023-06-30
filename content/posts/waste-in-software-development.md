@@ -6,7 +6,7 @@ tags = []
 categories = []
 externalLink = ""
 +++
-## Toyota production system and waste
+## Toyota Production System and waste
 
 It was  around ~2011 when I first read _[The Toyota Way][ttw]_ book. This book
 introduced me to _[The Toyota Way principles][ttwp]_ and [the Toyota Production
