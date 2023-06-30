@@ -6,7 +6,7 @@ tags = []
 categories = []
 externalLink = ""
 +++
-## Toyota production system and waste
+## Toyota Production System and waste
 
 It was  around ~2011 when I first read _[The Toyota Way][ttw]_ book. This book
 introduced me to _[The Toyota Way principles][ttwp]_ and [the Toyota Production
@@ -30,14 +30,14 @@ article.
 [lean-confusion]: https://bobemiliani.com/comparing-tps-and-lean/
 
 Taiichi Ohno, the father of TPS, introduced the concept of “muda” at Toyota.
-Muda in Japanese literally means  “waste”. Wasteful tasks don't add any
-immediate value to the  customers. There are eight types of waste within the
-Toyota Production System:
+Muda in Japanese means  “waste”. Wasteful tasks don't add any immediate value
+to the  customers. There are eight types of waste within the Toyota Production
+System:
 
 1. **Waste of overproduction (largest waste).** Production ahead of demand.
 2. **Waste of time on hand (waiting).** Waiting for the next production stage. 
-3. **Waste of transportation.** Moving products that are not actually required
-   to perform the processing.
+3. **Waste of transportation.** Moving products that are not required to
+   perform the processing.
 4. **Waste of processing itself.** Resulting from poor tool or product
    design-creating activity.
 5. **Waste of excess inventory.** All components, work-in-process, and finished
@@ -147,7 +147,7 @@ issues, wikis, Miro boards, document systems (Office365, Google Docs) &
 meetings. On an organizational level, I haven’t seen many companies trying to
 reduce these.
 
-_Unnecessary meetings_ are definitely another form of unnecessary movement. If
+_Unnecessary meetings_ are another form of unnecessary movement. If
 a meeting can happen through async communication, you don't have to context
 switch as much.
 
