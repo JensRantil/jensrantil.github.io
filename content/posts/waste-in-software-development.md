@@ -19,17 +19,17 @@ Delivery book][cont-delivery-book] which I later read.
 [cont-delivery-book]: https://www.amazon.se/-/en/Humble-Jez/dp/0321601912
 
 The Toyota Way also lay the groundwork for me to understand the inter-related
-[Lean Manufacturing][lean-manuf], and particularly [Lean
-services][lean-services] (which applies the Lean concept to the service
-industry). However, since [there has a been a lot of confusion how various Lean
-concepts interrelate with TPS][lean-confusion], I will just stick to TPS for
-the sake of the rest of this article.
+[Lean Manufacturing][lean-manuf], particularly [Lean services][lean-services]
+(which applies the Lean concept to the service industry). However, since [there
+has been a lot of confusion about how various Lean concepts interrelate with
+TPS][lean-confusion], I will just stick to TPS for the sake of the rest of this
+article.
 
 [lean-manuf]: https://en.wikipedia.org/wiki/Lean_manufacturing
 [lean-services]: https://en.wikipedia.org/wiki/Lean_services
 [lean-confusion]: https://bobemiliani.com/comparing-tps-and-lean/
 
-Taiichi Ohno, the father of TPS , introduced the concept of “muda” at Toyota.
+Taiichi Ohno, the father of TPS, introduced the concept of “muda” at Toyota.
 Muda in Japanese literally means  “waste”. Wasteful tasks don't add any
 immediate value to the  customers. There are eight types of waste within the
 Toyota Production System:
@@ -38,31 +38,31 @@ Toyota Production System:
 2. **Waste of time on hand (waiting).** Waiting for the next production stage. 
 3. **Waste of transportation.** Moving products that are not actually required
    to perform the processing.
-4. **Waste of processing itself.** Resulting from poor tool or product design
-   creating activity.
+4. **Waste of processing itself.** Resulting from poor tool or product
+   design-creating activity.
 5. **Waste of excess inventory.** All components, work-in-process, and finished
-   product not being processed.
+   products are not being processed.
 6. **Waste of movement.** People or equipment moving or walking more than is
    required to perform the processing.
 7. **Waste of making defective products.** The effort in inspecting for and
    fixing defects.
-8. **Waste of underutilized workers.** Underutilizing people’s talents, skills
+8. **Waste of underutilized workers.** Underutilizing people’s talents, skills,
    and knowledge.
 
 ## Software development waste
 
 Software development is not like making cars (as opposed to Toyota). For
-example, while car manufacturing deals with transportation of physical items
-(waste no 3 above), software development rarely does. But that does not mean
-that waste cannot be found in software development and IT. If we squint our
-eyes a little, using Toyota Production System’s definition of waste can be a
-surprisingly fruitful analogy to understand where waste happens in the software
-industry. Here are some of my findings and solutions for waste within software
-development:  
+example, while car manufacturing deals with the transportation of physical
+items (waste no 3 above), software development rarely does. But that does not
+mean that waste cannot be found in software development and IT. If we squint
+our eyes a little, using Toyota Production System’s definition of waste can be
+a surprisingly fruitful analogy to understand where waste happens in the
+software industry. Here are some of my findings and solutions for waste within
+software development:
 
 **Waste of overproduction.** This includes usually "producing" too many
 features/changes until we deploy to production. In other words, batching up too
-many changes into a deployment. This leads to slower feedback cycles, and
+many changes into a deployment. This leads to slower feedback cycles and
 usually higher defects. 
 
 Reducing the [DORA][dora] metric “Lead Time for Changes” reduces this type of
@@ -101,12 +101,12 @@ defined [two types of waste][types-of-waste]:
 
 [types-of-waste]: https://en.wikipedia.org/wiki/Muda_(Japanese_term)
 
-* _Muda Type I:_ non value-adding, but necessary for end-customers.
-* _Muda Type II:_ non value-adding and unnecessary for end-customers.
+* _Muda Type I:_ non-value-adding, but necessary for end-customers.
+* _Muda Type II:_ non-value-adding and unnecessary for end-customers.
 
 Some refactorings are needed to build a new feature (type I), while other
 refactorings are not needed at all (type II). Type II refactorings are usually
-when engineers struggle to describe why a change is needed from the customer
+when engineers struggle to describe why a change is needed from the customer's
 perspective. This is why I think encouraging sentences like “Refactoring to be
 able to…” (type I) is important.
 
@@ -123,26 +123,26 @@ Kent Beck once stated
 [work-right-fast]: https://keyholesoftware.com/2023/03/23/writing-quality-code-practicing-make-it-work-make-it-right-make-it-fast/
 
 , making something maintainable is an example of waste if the solution doesn’t
-work. Making it performant is usually a waste, if it is not maintainable.
+work. Making it performant is usually a waste if it is not maintainable.
 
 **Waste of excess inventory.** This makes me think of “inventory” as code or
 managing issues:
 
-All code is liability and needs maintenance. Refactorings become more tedious
-that more code you have. Also, every single line you add to an application adds
+All code is a liability and needs maintenance. Refactorings become more tedious
+the more code you have. Also, every single line you add to an application adds
 complexity. Removing code is a great way to remove bugs.
 
-> An issue tracking system is where feature ideas go to die.
+> An issue-tracking system is where feature ideas go to die.
 
 Managing issues/tickets (in Jira etc.) does not add any immediate customer
 value. The more tickets you have, the more time you spend labeling, sorting
-them, updating descriptions to tickets that might never happen etc.
+them, updating descriptions to tickets that might never happen, etc.
 
 **Waste of movement.** In terms of software development, I think of this waste
-as “waste of switching context”. This is a big one!
+as a “waste of switching context”. This is a big one!
 
 Having to switch between _ways of communication_ can have a detrimental impact
-on productivity: Slack, e-mail, issue tracking systems such as Jira, Github
+on productivity: Slack, e-mail, issue-tracking systems such as Jira, Github
 issues, wikis, Miro boards, document systems (Office365, Google Docs) &
 meetings. On an organizational level, I haven’t seen many companies trying to
 reduce these.
@@ -152,10 +152,10 @@ a meeting can happen through async communication, you don't have to context
 switch as much.
 
 Having a _diverse set of technology_ can lead to a lot of context switching;
-switching between different frameworks, libraries and infrastructure
+switching between different frameworks, libraries, and infrastructure
 components. All of them with their different caveats and documentation. I could
-write a lot about this, but for now I will simply refer to [Radical
-Simplicity][rad-simplicity], [Choosing Boring Tech][boring-tech] and reminding
+write a lot about this, but for now, I will simply refer to [Radical
+Simplicity][rad-simplicity], [Choosing Boring Tech][boring-tech], and reminding
 us to [be aware of hype-driven development][hype-cycles]. The first Google SRE
 book also has a good [chapter on simplicity][sre-simplicity] in terms of
 reliability.
@@ -168,7 +168,7 @@ reliability.
 Many companies require _a lot of movement in the process of developing
 software_. Here are some:
 
-* Switching between a ticketing system, Github, terminal and code editor.
+* Switching between a ticketing system, Github, terminal, and code editor.
 * Always having to create a ticket for _every_ pull request.
 * Having to often switch between source code repositories. A monorepo can
   reduce or avoid this.
@@ -176,13 +176,13 @@ software_. Here are some:
 * Needing to jump around in many different files to create a new
   package/microservice/API endpoint.
 * Releasing/packaging a library and then jumping to another place to start
-  using it. I’m looking at you NPM, Maven, Gradle et al… This is where a
+  using it. I’m looking at you NPM, Maven, Gradle, et al… This is where a
   monorepo can shine.
 
 Finally, certain companies require lots of movement to _make a release to
 customers_; making a release in one place and writing release notes in Slack or
 Jira, going through required checklists, making a second pull request to merge
-in production, having to click an extra button and wait (waste!) to deploy to
+in production, clicking an extra button and waiting (waste!) to deploy to
 production... The more often you do something, the less movement you should
 strive for.  It adds up over time…
 
@@ -203,11 +203,11 @@ detrimental impact on velocity][bug-velocity].
 [bug-velocity]: https://www.infoq.com/news/2011/09/bug-fixes-velocity/
 
 **Waste of underutilized workers.** Not utilizing or growing engineering talent
-is also a waste. Making engineers ticketing machines by not allowing them to
-take initiatives nor have a shared ownership of the product backlog can have
+is also a waste. Making engineers ticket machines by not allowing them to
+take initiative or have a shared ownership of the product backlog can have
 detrimental effects on product innovation or product development effectiveness.
 
-Underutilizing workers is a good example where an organization’s culture can
+Underutilizing workers is a good example of where an organization’s culture can
 come into place. Generally, reducing waste in software development is a
 socio-technical problem needing to work within the spheres of improving
-processes, people management and tech.
+processes, people management, and tech.
