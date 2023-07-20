@@ -123,10 +123,10 @@ not go there...)
 
 **Limit creep** (maintenance). Strictly this isn't a problem (and possibly this
 is [slippery slope][slippery-slope]), but I can't help to mention that once
-you've opened up the can of worm of working with list/request limits, there is
+you've opened up the can of worms of working with list/request limits, there is
 a strong risk you will simply start bumping the limit over and over again until
 the above issues grow in magnitude. You are essentially shooting yourself in
-the foot slowly over time. Saying no to batching from the start is once way to
+the foot slowly over time. Saying no to batching from the start is one way to
 avoid this.
 
 [slippery-slope]: https://en.wikipedia.org/wiki/Slippery_slope
