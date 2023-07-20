@@ -59,7 +59,7 @@ POST /todo
 
 The assumption here is that the API roundtrip is the problem - so by doing a
 single API roundtrip (and usually a single roundtrip to underlying database),
-we spead up the API endpoint a _lot_.
+we sped up the API endpoint a _lot_.
 
 At a glance, this solves the problem in a seemlingly simple way! Suddenly we
 have one roundtrip to the API instead of 10k. Sure, the time takes a little
