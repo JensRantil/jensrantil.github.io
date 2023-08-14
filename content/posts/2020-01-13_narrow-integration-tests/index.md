@@ -16,9 +16,11 @@ That said, during 2019 I have grown increasingly convinced that the distinction
 between a narrow and wide integration is an important one, for two reasons:
 
 First, given that narrow integration tests depends on very few components the
-[cost of maintenance is very low]({{< ref "posts/testing-strategy-over-time/index.md"
->}}). Compare this to wide integration tests where cost of maintaining them
-increases with number of components and/or software complexity.
+[cost of maintenance is very low][strategy-cost]. Compare this to wide
+integration tests where cost of maintaining them increases with number of
+components and/or software complexity.
+
+[strategy-cost]: {{< ref "posts/2020-01-12_testing-strategy-over-time/index.md" >}}
 
 Secondly, because I believe a large majority of the wide integration tests can
 be replaced by a set of narrow integration tests. The benefit would be a more

@@ -9,7 +9,7 @@ I recently wrote the post ["The Three Buckets model" for my own
 time][bucket-model]. It reminded me of a similar model for how _teams_ could
 spend their time.
 
-[bucket-model]: {{< ref "/posts/three-buckets-of-my-time.md" >}}
+[bucket-model]: {{< ref "/posts/2023-05-21_three-buckets-of-my-time.md" >}}
 
 Back in the day I had a product owner (PO) for a former team who used to start
 off our sprint planning sessions with
