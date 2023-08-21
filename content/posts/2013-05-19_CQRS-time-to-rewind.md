@@ -2,6 +2,7 @@
 title: "CQRS - Time to Rewind"
 date: 2013-05-19
 tags: ["cqrs", "distributed-architecture"]
+slug: 2013-05-19_CQRS-time-to-rewind
 ---
 For the last year I've been thinking a lot about
 [CQRS](http://www.cqrsinfo.com)

@@ -6,6 +6,7 @@ description: |
     about it for a while now, I thought I'd share some thoughts so far.
 date: 2013-05-26
 tags: ["cqrs", "event sourcing", "distributed architecture"]
+slug: 2013-05-26_cqrs-event-sourcing-messaging-patterns
 ---
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about

@@ -2,6 +2,7 @@
 title: "Java's missing optional keyword and the issues of null"
 date: 2013-08-22
 tags: ["java", "programming"]
+slug: 2013-08-22_the-issues-of-null
 ---
 One of my pet peaves when it comes to the Java programming languages
 \[1\] is that it does not do enough [type

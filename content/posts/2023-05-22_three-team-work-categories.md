@@ -3,6 +3,7 @@ date = 2023-05-22T19:01:45+02:00
 title = "Three categories of team work"
 description = "A useful model for sourcing team work."
 tags = ["team work", "product teams"]
+slug = "2023-05-22_three-team-work-categories"
 +++
 
 I recently wrote the post ["The Three Buckets model" for my own

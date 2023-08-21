@@ -3,6 +3,7 @@ title: "New PGP key"
 description: "I have a new PGP key."
 date: 2013-11-18
 tags: ["PGP", "cryptography"]
+slug: 2013-11-18_new-pgp-key
 ---
 Just wanted to give you a heads up that I recently generated a [new PGP
 key](https://dl.dropboxusercontent.com/u/17059539/public.asc). Its

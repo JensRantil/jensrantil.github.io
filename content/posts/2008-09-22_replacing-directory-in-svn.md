@@ -2,6 +2,7 @@
 title: "Replacing a folder in Subversion"
 date: 2008-09-22
 tags: ["svn", "subversion"]
+slug: 2008-09-22_replacing-directory-in-svn
 ---
 So you have an external library foo version 1.0 that you have committed
 to your Subversion repository together with your code. Let us for

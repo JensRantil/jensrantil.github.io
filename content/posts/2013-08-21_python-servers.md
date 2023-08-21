@@ -7,6 +7,7 @@ description: |
     concurrency and the GIL.
 date: 2013-08-21
 tags: ["Python", "Java"]
+slug: 2013-08-21_python-servers
 ---
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about

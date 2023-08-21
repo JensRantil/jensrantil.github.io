@@ -2,6 +2,7 @@
 title: "Testing strategy over time"
 date: 2020-01-12
 tags: ["testing"]
+slug: 2020-01-12_testing-strategy-over-time
 ---
 Last year (2019) I spent a fair amount of time thinking about how to grow
 [Tink](https://www.tinkapp.com)'s technical platform; how to organise ourselves
