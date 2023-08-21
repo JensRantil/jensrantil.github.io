@@ -2,7 +2,7 @@
 title: "Privacy and Logging"
 date: 2013-06-17
 tags: ["privacy"]
-slug: 2013-06-17_privacy-and-logging
+slug: privacy-and-logging
 ---
 Privacy seem to be a [popular discussion these
 days](http://www.guardian.co.uk/world/the-nsa-files). While I do think

@@ -2,7 +2,7 @@
 title: "On narrow integration tests"
 date: 2020-01-13
 tags: ["testing"]
-slug: 2020-01-13_narrow-integration-tests
+slug: narrow-integration-tests
 ---
 _Narrow integration tests_ are tests that only involve very few components,
 mostly relying on [test

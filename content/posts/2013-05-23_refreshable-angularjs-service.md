@@ -2,7 +2,7 @@
 title: "Refreshable AngularJS service"
 date: 2013-05-23
 tags: ["AngularJS", "JavaScript"]
-slug: 2013-05-23_refreshable-angularjs-service
+slug: refreshable-angularjs-service
 ---
 Lately I've been working a lot in [AngularJS](http://angularjs.org).
 This is my second project with the framework, and the more time I spend

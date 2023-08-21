@@ -5,7 +5,7 @@ description = ""
 tags = []
 categories = []
 externalLink = ""
-slug = "2023-06-27_waste-in-software-development"
+slug = "waste-in-software-development"
 +++
 ## Toyota Production System and waste
 

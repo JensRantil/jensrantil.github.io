@@ -4,7 +4,7 @@ title = "Code as self-serve experience"
 description = "Code such as Terraform & Kubernetes is generally a horrible self-serve experience"
 tags = ["platform engineering", "terraform"]
 aliases = ["/posts/terraform-self-serve-experience/"]
-slug = "2023-05-09_code-as-self-serve-experience"
+slug = "code-as-self-serve-experience"
 +++
 
 **Using "code as self-serve", such as Terraform or Kubernetes, in Platform

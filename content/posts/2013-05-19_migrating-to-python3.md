@@ -2,7 +2,7 @@
 title: "Migrating to Python 3"
 date: 2013-05-19
 tags: ["Python"]
-slug: 2013-05-19_migrating-to-python3
+slug: migrating-to-python3
 ---
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about

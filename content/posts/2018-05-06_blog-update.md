@@ -2,7 +2,7 @@
 title: "Blog Update"
 date: 2018-05-06
 tags: []
-slug: 2018-05-06_blog-update
+slug: blog-update
 ---
 I'm happy to announce I've finally gotten the time to migrate my blog from
 [Pelican](https://blog.getpelican.com/) to [Hugo](https://gohugo.io)! The

@@ -4,7 +4,7 @@ description: |
     "Lifecycle" and "state" are two words not used often enough.
 date: 2013-11-18
 tags: ["architecture", "programming", "state", "distributed architecture"]
-slug: 2013-11-18_lifecycles-and-states
+slug: lifecycles-and-states
 ---
 TL;DR: We need to have a more thorough discussion about state and
 lifecycles in our industry.

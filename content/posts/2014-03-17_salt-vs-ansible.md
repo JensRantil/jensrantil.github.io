@@ -3,7 +3,7 @@ title: "Salt vs. Ansible"
 description: "A highly opinionated comparison between Salt and Ansible."
 date: 2014-03-17
 tags: ["Salt", "Ansible", "provisioning"]
-slug: 2014-03-17_salt-vs-ansible
+slug: salt-vs-ansible
 ---
 Some time ago was set to evaluate configuration management systems. I've
 heard opinions from someone I respect that

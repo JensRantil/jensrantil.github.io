@@ -2,7 +2,7 @@
 title: "Bootstrapping software projects"
 date: 2013-05-19
 tags: ["software", "bootstrapping"]
-slug: 2013-05-19_bootstrapping-software-projects
+slug: bootstrapping-software-projects
 ---
 This post is partially related to my [previous blog
 post](|filename|CQRS-time-to-rewind.rst) about

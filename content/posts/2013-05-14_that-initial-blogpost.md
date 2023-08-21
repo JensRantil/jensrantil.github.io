@@ -2,7 +2,7 @@
 title: "That initial blogpost"
 date: 2013-05-14
 tags: ["howdy"]
-slug: 2013-05-14_that-initial-blogpost
+slug: that-initial-blogpost
 ---
 So it's time to kick off this blog. I cheated a little and posted [a
 previously written blog post](|filename|replacing-directory-in-svn.rst).

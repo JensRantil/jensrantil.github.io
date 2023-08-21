@@ -2,7 +2,7 @@
 title: "AWS ELBs and Availability"
 date: 2018-05-06
 tags: ["AWS"]
-slug: 2018-05-06_aws-ELBs-and-availability
+slug: aws-ELBs-and-availability
 ---
 Recently I was reading the article ["Introduction to modern network load
 balancing and

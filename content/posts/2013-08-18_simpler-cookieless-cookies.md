@@ -3,7 +3,7 @@ title: "Simpler Cookieless Cookies"
 description: "Another way of doing cookieless cookies."
 date: 2013-08-18
 tags: ["HTTP"]
-slug: 2013-08-18_simpler-cookieless-cookies
+slug: simpler-cookieless-cookies
 ---
 I recently read the blog article "[Cookieless
 Cookies](http://lucb1e.com/rp/cookielesscookies/)" that talks about

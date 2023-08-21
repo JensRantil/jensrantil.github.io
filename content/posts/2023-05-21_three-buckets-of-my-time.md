@@ -3,7 +3,7 @@ date = 2023-05-21T23:50:03+02:00
 title = "The Three Buckets of my time"
 description = "A tiny model on where I spend my time."
 tags = ["productivity"]
-slug = "2023-05-21_three-buckets-of-my-time"
+slug = "three-buckets-of-my-time"
 +++
 I have a small framework for how I carve out my professional time. I think of
 my working hours spent into three buckets:

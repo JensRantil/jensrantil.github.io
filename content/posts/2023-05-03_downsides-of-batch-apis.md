@@ -3,7 +3,7 @@ date = 2023-05-03T12:50:41+02:00
 title = "The downsides of batch APIs"
 description = "Many small API calls are usually better than one large one."
 tags = ["architecture", "api", "simplicity"]
-slug = "2023-05-03_downsides-of-batch-apis"
+slug = "downsides-of-batch-apis"
 +++
 
 When an HTTP API is too slow to call repeatedly I have seen engineers

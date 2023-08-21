@@ -2,7 +2,7 @@
 title: "Why the Web is so Slow"
 date: 2013-12-02
 tags: ["web", "HTTP"]
-slug: 2013-12-02_why-the-web-is-so-slow
+slug: why-the-web-is-so-slow
 ---
 I just read the blog post [Why is the web so
 slow?](http://calendar.perfplanet.com/2013/why-is-the-web-so-slow/) by

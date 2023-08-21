@@ -3,7 +3,7 @@ title: "AngularJS events on initialization"
 description: "Triggering events from services might not always work..."
 date: 2013-05-24
 tags: ["AngularJS", "JavaScript"]
-slug: 2013-05-24_angularjs-events-triggered-on-initialization
+slug: angularjs-events-triggered-on-initialization
 ---
 In my [previous post](|filename|refreshable-angularjs-service.rst) I was
 giving an example of using [AngularJS](http://angularjs.org)
