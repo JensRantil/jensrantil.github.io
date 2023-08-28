@@ -3,6 +3,7 @@ date = 2023-08-28T21:42:46+02:00
 title = "Tools for innovation in tech"
 description = "A list of some tools that can be used to foster innovation within tech organizations."
 tags = ["organization"]
+slug = "tools-for-innovation-in-tech"
 +++
 As a tech organization, how do you deal with making sure you innovate? In my
 opinion, innovation doesn't "just happen". While the dream scenario is that any
