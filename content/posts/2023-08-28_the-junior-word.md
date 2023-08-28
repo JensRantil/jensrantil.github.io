@@ -24,4 +24,4 @@ call myself “senior” ever except maybe in a sales call with a customer. I am
 simply “an engineer”. Possibly a tenured one. And I expect my knowledge to
 shine through the questions I ask, the answers I give, and the things I build.
 That’s what we should value. IMO, titles are mostly for engineering ladders and
-salary settings.
+salary settings. Don't let your role title limit your growth.
