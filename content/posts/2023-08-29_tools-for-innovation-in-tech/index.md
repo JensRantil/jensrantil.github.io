@@ -1,5 +1,5 @@
 +++ 
-date = 2023-08-28T21:42:46+02:00
+date = 2023-08-29T18:03:46+02:00
 title = "Tools for innovation in tech"
 description = "A list of some tools that can be used to foster innovation within tech organizations."
 tags = ["organization"]
