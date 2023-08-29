@@ -76,7 +76,7 @@ someone else to review your code. A solution can be pair or mob programming as
 it usually reduces lead time because review happens by someone else in parallel
 while typing out the code.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just extracted some stats from code reviews at <a href="https://twitter.com/tink?ref_src=twsrc%5Etfw">@tink</a> using <a href="https://t.co/12cWRJp3o6">https://t.co/12cWRJp3o6</a>. (The data for the rightmost bar consists of two samples, so let&#39;s ignore that one for now :-P) <a href="https://t.co/TLYncFZDfU">pic.twitter.com/TLYncFZDfU</a></p>&mdash; Jens Rantil (@JensRantil) <a href="https://twitter.com/JensRantil/status/1182325832578150401?ref_src=twsrc%5Etfw">October 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+{{< tweet user="JensRantil" id="1182325832578150401" >}}
 
 If you need additional review steps to deploy to production (code review to
 merge into a “production” branch), it also adds to this type of waste. If
@@ -95,7 +95,7 @@ a development machine.
 
 Not to mention waiting on Jira’s user interface to load…
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Atlassian claims they have 180.000 <a href="https://twitter.com/hashtag/Jira?src=hash&amp;ref_src=twsrc%5Etfw">#Jira</a> customers (<a href="https://t.co/6O9Md54uVX">https://t.co/6O9Md54uVX</a>.). Assuming an average of 25 users per customer, each user make 30 clicks in Jira every day and Jira&#39;s incredibly slow UI takes 5 seconds per operation, that&#39;s more than 21 man-years wasted per day.</p>&mdash; Jens Rantil (@JensRantil) <a href="https://twitter.com/JensRantil/status/1380065758596759553?ref_src=twsrc%5Etfw">April 8, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+{{< tweet user="JensRantil" id="1380065758596759553" >}}
 
 **Waste of transportation.** I usually think of “code refactoring” here. Ohno
 defined [two types of waste][types-of-waste]:
