@@ -129,7 +129,13 @@ knowledge sharing.
 
 ![Knowledge sharing Slack channel.](knowledge-sharing-slack.png)
 
-## Reducing processes
+## Creating clear innovation processes
+
+A common piece of feedback that engineers
+
+At my current job I have created a page called "I have an idea!" where I 
+
+## Reducing processes that kill innovation
 
 Finally, removing rigid processes can be a great way to create innovation.  If
 you [prefer toolkits over rigid processes][toolkits-not-processes] you increase
