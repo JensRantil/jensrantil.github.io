@@ -7,6 +7,9 @@ on:
       - staging
       - trying
   pull_request:
+  schedule:
+    # Once per midnight. This allows me to publish future blog posts automatically.
+    - cron: "* 0 * * *"
 
 jobs:
   deploy:
