@@ -92,11 +92,19 @@ SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEE
 ```
 The likelihood for the first and last query to be found in the cache would be rather small, as the SQL query would be fairly unique.
 
-Another problem would be the query `SELECT SUM(amount) FROM transactions WHERE date BETWEEN '2000-01-01' AND '2023-01-01'`. In the worst-case scenario, if nothing is found in the cache, this would trigger `23 years * 12 months = 276 query` executions against the database!
+Another problem would be the query:
+```sql
+SELECT SUM(amount) FROM transactions WHERE date BETWEEN '2000-01-01' AND '2023-01-01'
+```
+In the worst-case scenario, if nothing is found in the cache, this would trigger `23 years * 12 months = 276 query` executions against the database!
 
 The above two described problems could be solved by two different approaches:
 
-The first workaround would be to **two lookup phases**: First you would do a pass of all cache lookups, wait for them to be done, and then execute *a single* SQL query based on the ranges not within the cache, ie. something like `SELECT SUM(amount) FROM transactions WHERE (date BETWEEN '2000-01-01' AND '2015-01-01') OR (date BETWEEN '2017-01-01' AND '2023-01-01')`. This would definitely reduce the number of queries against the database, but not the `cache_invalidation_tokens` cache!
+The first workaround would be to **two lookup phases**: First you would do a pass of all cache lookups, wait for them to be done, and then execute *a single* SQL query based on the ranges not within the cache, ie. something like:
+```sql
+SELECT SUM(amount) FROM transactions WHERE (date BETWEEN '2000-01-01' AND '2015-01-01') OR (date BETWEEN '2017-01-01' AND '2023-01-01')
+```
+This would definitely reduce the number of queries against the database, but not the `cache_invalidation_tokens` cache!
 
 To hit the cache less, one could use **hierarchical date-based partitioning** where nonces are introduced for different date partition granularity: `NONCE(userId, year)`, `NONCE(userId, month)`, and `NONCE(userId, day)`. A mutation of a financial transaction with the date `2013-08-03` for user X, would then invalidate the cache for the keys `(X, 2013)`, `(X, 2013-08)`, and `(X, 2013-08-03)`. The query logic above would become more complex, but would prefer querying in the following priority if possible:
 
