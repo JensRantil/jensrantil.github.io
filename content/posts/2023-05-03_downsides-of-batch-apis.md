@@ -163,6 +163,8 @@ which you have in place, right? 😉). There are ways to combat this:
    this is done by the client submitting the identifier of the TODO to avoid
    duplicates.  This has the added benefit of adding resiliency - if your
    service has a general hiccup, this might save you big time!
+ * Adding **rate-limiting** to the server to make sure it doesn't get
+   overwhelmed by many API calls.
 
 [qt]: https://en.wikipedia.org/wiki/Queueing_theory
 [amdahl]: https://en.wikipedia.org/wiki/Amdahl%27s_law
