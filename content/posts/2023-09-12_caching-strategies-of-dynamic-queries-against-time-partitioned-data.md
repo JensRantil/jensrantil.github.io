@@ -106,7 +106,7 @@ SELECT SUM(amount) FROM transactions WHERE (date BETWEEN '2000-01-01' AND '2015-
 ```
 This would definitely reduce the number of queries against the database, but not the `cache_invalidation_tokens` cache!
 
-To hit the cache less, one could use **hierarchical date-based partitioning** where nonces are introduced for different date partition granularity: `NONCE(userId, year)`, `NONCE(userId, month)`, and `NONCE(userId, day)`. A mutation of a financial transaction with the date `2013-08-03` for user X, would then invalidate the cache for the keys `(X, 2013)`, `(X, 2013-08)`, and `(X, 2013-08-03)`. The query logic above would become more complex, but would prefer querying in the following priority if possible:
+To hit the cache less, one could instead use **hierarchical date-based partitioning** where nonces are introduced for different date partition granularity. For example, `NONCE(userId, year)`, `NONCE(userId, month)`, and `NONCE(userId, day)`. A mutation of a financial transaction with the date `2013-08-03` for user X, would then invalidate the cache for the keys `(X, 2013)`, `(X, 2013-08)`, and `(X, 2013-08-03)`. The query logic above would become more complex, but would prefer querying in the following priority if possible:
 
  1. year partition from cache.
  2. month partition from cache.
