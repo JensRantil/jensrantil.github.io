@@ -25,7 +25,7 @@ insights and learnings can be [found here][quora].
 waste][muda]. I strive for *individuals and interactions over processes and
 tools* ([The Agile Manifesto][agile]), and *automation over manual work*.
 
-[muda]: https://kanbantool.com/kanban-guide/what-is-muda
+[muda]: {{< ref "/posts/2023-06-27_waste-in-software-development.md" >}}
 [agile]: https://agilemanifesto.org/
 
 I hold a MSc in Engineering Mathematics from [Lund Institute of
