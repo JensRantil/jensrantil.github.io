@@ -65,7 +65,7 @@ SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEE
 SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-04-01' AND '2023-05-01';
 SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-05-01' AND '2023-06-01';
 ```
-Each SQL query would first check if the cache key `HASH(sql) XOR NONCE(year, month)`. Finally, all the results would be summed up to a final `SUM(amount)`. Further, every mutation would then need to update with a new random nonce for the `(year, month)` (as before, either in a database transaction or in a cache).
+Each SQL query would first check if the cache key `HASH(sql) XOR NONCE(year, month)` exists, followed by an optional query against the primary table on cache miss. Finally, all the results would be summed up to a final `SUM(amount)`. Further, every mutation would then need to update with a new random nonce for the `(year, month)` (as before, either in a database transaction or in a cache).
 
 The above-described approach is a trade-off between shorter scans on average when data has been mutated, at the cost of more queries against the database. The size of the time buckets (months etc.) really depends on the tradeoffs between
 
