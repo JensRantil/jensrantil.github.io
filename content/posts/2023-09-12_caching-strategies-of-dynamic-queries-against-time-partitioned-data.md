@@ -85,7 +85,7 @@ SELECT SUM(amount) FROM transactions WHERE date BETWEEN '2023-01-05' AND '2023-0
 ```
 ? Ie.
 ```sql
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-01-01' AND '2023-02-01';
+SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-01-05' AND '2023-02-01';
 SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-02-01' AND '2023-03-01';
 SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-03-01' AND '2023-04-01';
 SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-04-01' AND '2023-04-15';
