@@ -113,7 +113,7 @@ To hit the cache less, one could instead use **hierarchical date-based partition
  3. day partition from cache.
  4. SQL query against the relational primary data.
 
-The hierarchical approach would have the benefit of reducing the hits to the relational database while taking a cost in amplifying the writes needed to `cache_invalidation_tokens` as well storage needed for it. Compared to the 2-phase lookup, 
+The hierarchical approach would have the benefit of reducing the hits to the relational database while taking a cost in amplifying the writes needed to `cache_invalidation_tokens` as well storage needed for it.
 
 ## Addendum I: On read/write ratio & caching
 
