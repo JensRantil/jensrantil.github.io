@@ -23,7 +23,7 @@ insights and learnings can be [found here][quora].
 
 **Processes.** A good process is one that solves a problem while [minimizing
 waste][muda]. I strive for *individuals and interactions over processes and
-tools* ([The Agile Manifesto][agile]), and automation over manual work.
+tools* ([The Agile Manifesto][agile]), and *automation over manual work*.
 
 [muda]: https://kanbantool.com/kanban-guide/what-is-muda
 [agile]: https://agilemanifesto.org/
