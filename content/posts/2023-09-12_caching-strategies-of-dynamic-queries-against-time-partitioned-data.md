@@ -100,7 +100,7 @@ In the worst-case scenario, if nothing is found in the cache, this would trigger
 
 The above two described problems could be solved by two different approaches:
 
-The first workaround would be to **two lookup phases**: First you would do a pass of all cache lookups, wait for them to be done, and then execute *a single* SQL query based on the ranges not within the cache, ie. something like:
+The first workaround would be to do **two lookup phases**: First you would do a pass of all cache lookups, wait for them to be done, and then execute *a single* SQL query based on the ranges not within the cache, ie. something like:
 ```sql
 SELECT SUM(amount) FROM transactions WHERE (date BETWEEN '2000-01-01' AND '2015-01-01') OR (date BETWEEN '2017-01-01' AND '2023-01-01')
 ```
