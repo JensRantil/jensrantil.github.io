@@ -37,11 +37,14 @@ The access pattern **requirements** for this table are as follows:
     2. on date ranges.
  4. Customers expect consecutive queries to return quickly.
 
-It turns out this is a surprisingly hard problem to solve! I like to relax
-engineering problems a bit to understand what is actually hard, so let's build
-up a solution from scratch where we relax some of the problems:
+## Implementation
 
-## Immutable data
+It turns out that the above requirement is a surprisingly hard problem to
+solve! I like to relax engineering problems a bit to understand what is
+actually hard, so let's build up a solution from scratch where we relax some of
+the problems:
+
+### Immutable data
 
 For now, let's assume that the table is immutable (ie. mutations are not
 allowed). So, what is wrong with simply constructing a `SELECT` query against
@@ -54,7 +57,7 @@ it exists - otherwise, run the expensive query against the database.
 this - and can be scaled horizontally. For certain applications, you might even
 be fine with an in-memory cache in your client.)
 
-## In-place mutations & no partitioning
+### In-place mutations & no partitioning
 
 As pointed out in our original requirements, our data is *not* immutable. So,
 let's now assume that our data can be mutated. That is, added, removed, or
@@ -86,7 +89,7 @@ intermittent stale data from time to time. Trade-offs, trade-offs...
 
 [nonce]: https://en.wikipedia.org/wiki/Cryptographic_nonce
 
-## Date-based partitioning
+### Date-based partitioning
 
 The problem with the above approach is that every cache invalidation requires a
 full pass over all the user's data again. Can we do better? Usually, yes, and
@@ -126,14 +129,14 @@ between
  * whether mutations usually update certain date ranges (ie. close to today).
  * how often reads happen (to keep the cache updated).
 
-## Advanced: Prepopulating the cache hot
+### Advanced: Prepopulating the cache hot
 
 If low latency is needed for certain known SQL queries, there is nothing
 stopping a database writer to also asynchronously populating the cache
 afterward. For example, maybe summing the amount without any custom filtering
 is so common, that populating that in the cache is worth it.
 
-## Advanced: 2-phase lookups & hierarchical date-based partitioning
+### Advanced: 2-phase lookups & hierarchical date-based partitioning
 
 The careful reader might have noticed my example above was slightly contrived;
 the date range for my example query was covering full even months. What if
@@ -186,6 +189,18 @@ possible:
 The hierarchical approach would have the benefit of reducing the hits to the
 relational database while taking a cost in amplifying the writes needed to
 `cache_invalidation_tokens` as well storage needed for it.
+
+## Conclusion
+
+Introducing finer-grained partitioned caching is a useful tool to not have to
+invalidate all caches on every mutation.
+
+One important aspect this article did _not_ cover too much is the importance of
+finding the right abstraction such that you can easily iterate on caching
+strategies like this. You need a single place that can control how data is
+written to the relational database, as well as how that data is accessed. If
+you have many different clients accessing your database, you can't do this kind
+of work easily.
 
 ## Addendum I: On read/write ratio & caching
 
