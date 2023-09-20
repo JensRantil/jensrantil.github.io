@@ -132,9 +132,17 @@ between
 ### Advanced: Prepopulating the cache hot
 
 If low latency is needed for certain known SQL queries, there is nothing
-stopping a database writer to also asynchronously populating the cache
-afterward. For example, maybe summing the amount without any custom filtering
-is so common, that populating that in the cache is worth it.
+stopping a database writer from asynchronously populating the cache afterward.
+For example, maybe summing the amount without any custom filtering is so common
+that populating that in the cache is worth it.
+
+The two popular caches [Memcached][memcached] and [Redis][redis] both support
+[atomic incrementation of integers][memc-incr] which also could be done at
+write instead of a full recalculation and storing cache invalidation tokens.
+
+[memcached]: https://memcached.org/
+[redis]: https://redis.com/
+[memc-incr]: https://github.com/memcached/memcached/blob/efee763c93249358ea5b3b42c7fd4e57e2599c30/doc/protocol.txt#L354
 
 ### Advanced: 2-phase lookups & hierarchical date-based partitioning
 
@@ -188,7 +196,7 @@ possible:
 
 The hierarchical approach would have the benefit of reducing the hits to the
 relational database while taking a cost in amplifying the writes needed to
-`cache_invalidation_tokens` as well storage needed for it.
+`cache_invalidation_tokens` as well as the storage needed for it.
 
 ## Conclusion
 
