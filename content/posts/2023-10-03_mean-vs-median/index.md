@@ -13,19 +13,20 @@ They say this as if it's funny and sounds smart. But the irony of it is that it
 actually could be true. Why? Because _mean and median are not the same
 thing_.
 
-When people are taking a course in statistics they tend to come out of it
-thinking that the world mostly consists of normal distributions. Given the
-[Central Limit Theorem][clt], a lot of focus in Statistics 101 tends to focus on
-the normal distribution. This means students leave having a visual
-representation of a statistical distribution as a bell curve. I believe this
-has created a lot of confusion.
+When people are taking a basic course in statistics they tend to come out of it
+thinking that the world mostly consists of normal distributions. This is not
+surprising, given that the [Central Limit Theorem][clt] states that many
+independent variables with the same distribution converges to a normal
+distribution. This does not apply everywhere, though! The Central Limit Theorem
+means students leave Statistics 101 having a visual representation of a statistical
+distribution of a bell curve. I believe this has created a lot of confusion.
 
 [clt]: https://en.wikipedia.org/wiki/Central_limit_theorem
 
 ![Bell Curves](normal-dist.jpg)
 
 A big problem with thinking that all statistical distributions look like a bell
-curve is that it is symmetric along an a vertical axis, the mean. This means
+curve is that it is symmetric along a vertical axis, the mean. This means
 that for a bell curve, the mean and median (or 50th percentile) are identical.
 In layman's speak, 50% of the curve's area is to the left (or to the right) of
 the mean. In the world of statistical distributions, this is an extreme
