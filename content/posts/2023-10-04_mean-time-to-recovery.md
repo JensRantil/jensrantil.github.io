@@ -7,22 +7,21 @@ slug = "mttr-is-the-wrong-metric"
 +++
 {{< tweet user="JensRantil" id="1369762301293781002" >}}
 
-Today I want to talk about why Mean Time To Recovery (MTTR) is the wrong metric
-to look at.
+Today I would like to talk about why Mean Time To Recovery (MTTR) is a wrong
+metric to look at.
 
-For the past few years many software engineering practitioners have been
-talking about [the DORA metrics][dora] to track the performance of software
-delivery in organizations.  One of the DORA metrics is "Time to Restore
-Service", also known as "Mean Time To Recovery (MTTR)". A couple of years ago
-Courtney Nash wrote the article ["MTTR is a Misleading Metric—Now
-What?"][now-what] where she criticized the MTTR concept is too simplistic. I
-could not agree more and that article has really stuck with me since I read it.
+For the past few years many software engineers have been using [the DORA
+metrics][dora] to track the performance of software delivery. One of the DORA
+metrics is "Time to Restore Service", also known as "Mean Time To Recovery
+(MTTR)". A couple of years ago Courtney Nash wrote ["MTTR is a Misleading
+Metric—Now What?"][now-what] she criticized that the MTTR concept is too
+simplistic. I could not agree more.
 
 [dora]: https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance
 [now-what]: https://www.verica.io/blog/mttr-is-a-misleading-metric-now-what/
 
-When I recently wrote [Mean vs. Median][mean-vs-median], I couldn't help but
-think about Courtney's
+When I recently wrote [Mean vs. Median][mean-vs-median], I was reminded of
+Courtney's
 
 > [...] measures of central tendency like the mean, aren’t a good
 > representation of positively-skewed data, in which most values are clustered
@@ -39,10 +38,10 @@ Just like software engineers are using percentiles as a performance number for
 latencies, we should be using _percentiles_ when analyzing recovery times. A
 recovery time is just a latency to fix something, but usually in minutes/hours
 instead of milliseconds/seconds.  We want to be able to know that the recovery
-time for 95% of all incidents is being reduced. Mean does not say anything
+time for 95% of all incidents is being reduced; Mean does not say anything
 about that.
 
-So why is MTTR used in the first place and not PTTR (Percentile Time To
-Recover - remember where you heard it first!)? Probably because a mean is so
-much easier to calculate. DORA metrics are gathered from lots of companies, and
-[percentiles are hard][mean-vs-median].
+So why is MTTR used in the first place and not PTTR (Percentile of Time To
+Recover)? Probably because a mean is so much easier to calculate. DORA metrics
+are gathered from lots of companies, and [percentiles are
+hard][mean-vs-median].
