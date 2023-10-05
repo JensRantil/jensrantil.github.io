@@ -6,8 +6,8 @@ slug = "the-hidden-opportunity-in-feedback"
 tags = ["feedback"]
 +++
 Today I would like to talk about a missed opportunity when giving and receiving
-feedback -- the discussion. A classical way to give feedback is using the
-*observed-perceived* method:
+feedback -- mainly the discussion that happens afterwards. A classical way to
+give feedback is using the *observed-perceived* method:
 
  1. Describe the _observed behavior_ from your point of view. Do it as soon as
     possible about the specific behavior that occurs.
