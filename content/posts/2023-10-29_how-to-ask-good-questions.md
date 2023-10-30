@@ -237,7 +237,11 @@ interested in learning more, here are a couple of additional sources:
    settings.
  * [How To Ask Questions The Smart Way][questions-the-smart-way] by Eric S.
    Raymond
+ * [How to Ask Good Coding Questions That Get Great Answers][asking-questions]
+   by Zell Liew. This post is a bit more opinionated, but Zell's post is a
+   great one!
 
+[asking-questions]: https://zellwk.com/blog/asking-questions/
 [questions-the-smart-way]: http://www.catb.org/~esr/faqs/smart-questions.html
 [linux-questions]: http://www.sabi.co.uk/Notes/linuxHelpAsk.html
 
