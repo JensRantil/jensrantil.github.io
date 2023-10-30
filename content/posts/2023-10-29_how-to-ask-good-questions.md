@@ -197,7 +197,7 @@ culture partially comes in! Some examples:
    worried about this! One way to combat this, is to send of questions to
    specific people. That said, read about load-balancing below!
 
-### Load-balance your questions
+## Load-balance your questions
 
 As a domain expert, it's easy to get bogged down in answering questions all
 day. If you can, try to spread your questions to multiple people. The easiest
@@ -205,7 +205,7 @@ way to do this is to ask your question in a public space (public chat room,
 etc.) where multiple people can pitch in to answer. This also has the benefit
 of other people being able to read the answers and learn something!
 
-### Follow up when you have an answer
+## Follow up when you have an answer
 
 If you find the answer to your question, share it! This signals to others that
 they can stop looking for an answer. But it also means you enable others to
