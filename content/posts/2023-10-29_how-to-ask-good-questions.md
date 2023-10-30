@@ -202,8 +202,12 @@ culture partially comes in! Some examples:
 As a domain expert, it's easy to get bogged down in answering questions all
 day. If you can, try to spread your questions to multiple people. The easiest
 way to do this is to ask your question in a public space (public chat room,
-etc.) where multiple people can pitch in to answer. This also has the benefit
-of other people being able to read the answers and learn something!
+etc.) where multiple people can pitch in to answer. This also gives other
+benefits:
+
+ * Other people other people can read the answers and learn something, too.
+ * You give less experienced engineers an opportunity to shine, celebrate, and
+   show that they also know answers to things.
 
 ## Follow up when you have an answer
 
