@@ -164,10 +164,10 @@ useful when phrasing a question!
 > know. You can find the logs for my error message [here][placeholder-link].
 
 Notice how I preferred to use links to things instead of pasting large bodies
-of logs into my message above. Inlining lots can make a reader overwhelmed. If
-you _do_ need to do it, many collaboration tools (Slack/Discord/...) support
-[uploading code snippets which can be collapsed/expanded][slack-snippet].
-E-mail supports file attachments.
+of logs into my message above. Inlining a lot of information in a message can
+make a reader overwhelmed. If you _do_ need to do it, many collaboration tools
+(Slack/Discord/...) support [uploading code snippets which can be
+collapsed/expanded][slack-snippet].  E-mail supports file attachments.
 
 [minto]: https://untools.co/minto-pyramid
 [slack-snippet]: https://slack.com/intl/en-se/slack-tips/share-code-snippets
