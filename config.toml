@@ -2,7 +2,6 @@ baseurl = "https://jensrantil.github.io"
 languageCode = "en"
 title = "Jens Rantil"
 theme = "hugo-coder"
-disqusShortname = "jensrantil"
 googleAnalytics = "UA-40929103-1"
 paginate = 20
 defaultContentLanguage = "en"
@@ -16,6 +15,7 @@ commit = "https://github.com/luizdepra/hugo-coder/tree/"
 colorScheme = "auto"
 hideColorSchemeToggle = false
 maxSeeAlsoItems = 5
+customCSS = ["/custom.css"]
 
 [taxonomies]
 tag = "tags"
