@@ -19,6 +19,7 @@ customCSS = ["/custom.css"]
 
 [taxonomies]
 tag = "tags"
+category = "categories"
 
 [languages.en]
 languageName = ":us:"
