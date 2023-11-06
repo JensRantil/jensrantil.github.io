@@ -4,6 +4,12 @@ date: 2018-05-06
 tags: []
 slug: blog-update
 ---
+***UPDATE: Since this blog post was written, I have migrated to another theme.
+Have a look at [my blog repo][blog-repo] for how I have set set this up
+today.***
+
+[blog-repo]: https://github.com/JensRantil/jensrantil.github.io/
+
 I'm happy to announce I've finally gotten the time to migrate my blog from
 [Pelican](https://blog.getpelican.com/) to [Hugo](https://gohugo.io)! The
 migration started [way too long
