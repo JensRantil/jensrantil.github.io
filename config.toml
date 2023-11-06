@@ -5,6 +5,7 @@ theme = "hugo-coder"
 googleAnalytics = "UA-40929103-1"
 paginate = 20
 defaultContentLanguage = "en"
+enableEmoji = true
 
 [params]
 author = "Jens Rantil"
