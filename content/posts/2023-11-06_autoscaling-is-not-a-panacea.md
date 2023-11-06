@@ -2,7 +2,7 @@
 date = 2023-11-06T17:25:35+02:00
 title = "Autoscaling is not a panacea"
 description = "There is a belief that autoscaling will solve problems it will not."
-tags = []
+tags = ["simplicity"]
 slug = "autoscaling-not-a-panacea"
 +++
 Back in the day when The Cloud (AWS) was The New Hot Thing, I thought

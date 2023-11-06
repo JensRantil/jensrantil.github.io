@@ -2,7 +2,7 @@
 date = 2023-10-03T21:10:35+02:00
 title = "Microretros"
 description = "Quick feedback in meetings."
-tags = []
+tags = ["simplicity"]
 slug = "microretros"
 +++
 I tend to love a "quick feedback". Usually, this applies to software
