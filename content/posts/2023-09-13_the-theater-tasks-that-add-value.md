@@ -7,9 +7,9 @@ slug = "the-theater-tasks-that-add-value"
 Throughout my career I've been drilled to "have a customer-first mindset". I
 have written user stories, done user testing, measured customer impact, and had
 managers challenging me on what the "customer value" is of what I am working
-on. This has had a very big impact on me and how I approach all technical work
-- constantly asking myself "How will this impact our customer?" or "How can I
-put this in the hands of the customer as quickly as possible?".
+on. This has had a very big impact on me and how I approach all technical work;
+I have constantly asked myself "How will this impact our customer?" or "How can
+I put this in the hands of the customer as quickly as possible?".
 
 The thing is, not all work impacts the customer. In fact, if you work for a
 company your long-term goal is to *satisfy the business owners, usually through
