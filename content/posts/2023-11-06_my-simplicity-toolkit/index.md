@@ -1,6 +1,6 @@
 +++ 
 date = 2023-11-06T19:45:35+02:00
-title = "My simplicity toolkit"
+title = "My simplicity toolkit: Intro"
 description = "Simple vs. easy - and an intro to my simplicity toolbox."
 tags = ["simplicity"]
 categories = ["My Simplicity Toolkit"]
