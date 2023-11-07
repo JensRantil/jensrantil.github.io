@@ -51,11 +51,10 @@ and these days I would even say it is controversial. This includes things like
 focusing on simple programming language constructs, doing _simple_ dependency
 injection without any dependency injection framework/library, focusing on
 simple libraries over frameworks, avoiding complex/complicated build tooling,
-quick compile times, smaller scoped tests, smaller interfaces, not needing
-microservices by default, [not needing SPAs by default][no-spa], [avoiding as
-many moving parts as possible][rad-simplicity] etc. Also, a focus on backward
-compatibility and a preference towards [not using the latest and coolest
-tech][boring-tech].
+smaller scoped tests, smaller interfaces, not needing microservices by default,
+[not needing SPAs by default][no-spa], [avoiding as many moving parts as
+possible][rad-simplicity] etc. Also, a focus on backward compatibility and a
+preference towards [not using the latest and coolest tech][boring-tech].
 
 [no-spa]: https://www.thoughtworks.com/radar/techniques/spa-by-default
 
