@@ -23,9 +23,9 @@ Blog series:
 >
 > Antoine de Saint-Exupery
 
-When it comes to software engineers, I'm a sucker for simplicity and going back
-to basics. I have been coding for ~25+ years (~15 years professionally) and
-have truly gone through [The Evolution of a Software
+When it comes to software engineers, I have increasingly come to value
+_simplicity_ and going back to basics. I have been coding for ~25+ years (~15
+years professionally) and have truly gone through [The Evolution of a Software
 Engineer][engineer-evolution]. Throughout my career I have grown increasingly
 worried about the growing [cargo culted][cargo-cult] complexity in our
 industry.
@@ -47,20 +47,20 @@ As Hickey points out,
 
 > Simplicity is a choice.
 
-and these days I would even say it is controversial. For example, I am a sucker
-for, focusing on simple programming language constructs, doing _simple_
-dependency injection without any dependency injection framework/library,
-focusing on simple libraries over frameworks, avoiding complex/complicated
-build tooling, quick compile times, smaller scoped tests, smaller interfaces,
-not needing microservices by default, [not needing SPAs by default][no-spa], [avoiding as
+and these days I would even say it is controversial. This includes things like
+focusing on simple programming language constructs, doing _simple_ dependency
+injection without any dependency injection framework/library, focusing on
+simple libraries over frameworks, avoiding complex/complicated build tooling,
+quick compile times, smaller scoped tests, smaller interfaces, not needing
+microservices by default, [not needing SPAs by default][no-spa], [avoiding as
 many moving parts as possible][rad-simplicity] etc. Also, a focus on backward
 compatibility and a preference towards [not using the latest and coolest
 tech][boring-tech].
 
 [no-spa]: https://www.thoughtworks.com/radar/techniques/spa-by-default
 
-Further, I am a sucker for simple solutions programming-wise; Boring code is
-good code. This is mainly why I have had a growing fondness for [the Go
+Further, I am a big believer in simple solutions programming-wise; Boring code
+is good code. This is mainly why I have had a growing fondness for [the Go
 programming language][golang] for the past few years.
 
 [rad-simplicity]: https://www.radicalsimpli.city
