@@ -7,6 +7,17 @@ categories = ["My Simplicity Toolkit"]
 slug = "my-simplicity-toolkit"
 +++
 
+{{< notice info >}}
+Blog series:
+
+ 1. [My simplicity toolkit: Intro (this page)](.)
+ 2. [My simplicity toolkit: Programming (part 1)]({{< relref "/posts/2023-11-07_simplicity-toolkit-programming-part-1/index.md" >}})
+ 4. My simplicity toolkit: Programming (part 2)
+ 5. My simplicity toolkit: Testing
+ 6. My simplicity toolkit: Architecture
+ 6. My simplicity toolkit: Patterns
+{{< /notice >}}
+
 > “Perfection is Achieved Not When There Is Nothing More to Add, But When There
 > Is Nothing Left to Take Away”
 >
