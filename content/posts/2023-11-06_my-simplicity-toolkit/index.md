@@ -93,3 +93,7 @@ will enjoy my posts - and if I manage to challenge you to simplify the software
 you are building, even better!
 
 [quora]: https://www.quora.com/What-are-the-best-secrets-of-great-programmers/answer/Jens-Rantil
+
+_This was the intro to my blog post series about my simplicity toolkit. You can find my first toolkit post [here][next-toolkit-post]._
+
+[next-toolkit-post]: {{< ref "/posts/2023-11-07_simplicity-toolkit-programming-part-1/index.md" >}}
