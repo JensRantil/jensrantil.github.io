@@ -97,10 +97,10 @@ toolkit. Many of these preferences are the result of banging my head against
 the keyboard for days and nights and eventually realizing I did not need all
 this complexity.
 
-You will some of these preferences written down in [my Quora post][quora] which
-I used to curate for many years. Others are more recent insights. I hope you
-will enjoy my posts - and if I manage to challenge you to simplify the software
-you are building, even better!
+You will find some of these preferences written down in [my Quora post][quora]
+which I used to curate for many years. Others are more recent insights. I hope
+you will enjoy my posts - and if I manage to challenge you to simplify the
+software you are building, even better!
 
 [quora]: https://www.quora.com/What-are-the-best-secrets-of-great-programmers/answer/Jens-Rantil
 
