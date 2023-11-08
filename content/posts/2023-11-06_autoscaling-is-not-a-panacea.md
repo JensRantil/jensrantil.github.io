@@ -66,6 +66,19 @@ the impact garbage collection has. Request-based limits (maximum length on
 request body etc.) help here, but over time adjusting the vertical sizing
 usually needs to happen unless your workload never changes.
 
+Another problem with autoscaling is that it implicitly invalidates all the
+hardcoded constants found during a performance benchmark. When you run
+performance benchmarks, you usually configure the optimal number of threads in
+thread pools, database connection pool size, etc. All of those constants are
+_based on the current state of your architecture, including number of instances
+running_. Once any of these things change, you need different settings. If you
+truly need optimal performance with autoscaling, you also need to invest in
+something like [Conc][conc] or [Netflix's `concurrency-limits`][conc-limits].
+Introducing autoscaling means you now have a new problem.
+
+[conc]: https://github.com/JensRantil/conc
+[conc-limits]: https://github.com/Netflix/concurrency-limits
+
 > "Once we have autoscaling, I will not need to tune the horizontal
 > sizing of my system."
 
