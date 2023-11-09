@@ -68,7 +68,17 @@ as possible of my side-effect free code from the part that has side-effects.
 This makes it easy to understand, easy to write unit tests for, and has few
 surprises.
 
+I want to make a specific callout to [the Repository pattern][repo-pattern]
+here. It is the most underused pattern that can have a huge impact on testing
+and code structure. By stuffing all your side-effecty access to data in a
+database within a repository implementation, you can easily implement an
+in-memory repository. By doing so, _all your business logic can be tested using
+an in-memory implementation - and those unit tests will be able to run within a
+second_. It also means that your business logic isn't sprinkled with low-level
+database logic such as SQL queries.
+
 [side-effects]: https://en.wikipedia.org/wiki/Side_effect_(computer_science)
+[repo-pattern]: https://www.linkedin.com/pulse/what-repository-pattern-alper-sara%C3%A7/
 
 See [Functional Core, Imperative Shell][fcis] for more on this.
 
