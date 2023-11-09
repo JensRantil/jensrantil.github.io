@@ -4,7 +4,8 @@ title = "My simplicity toolkit: Programming (part 1)"
 description = "Simple software programming preferences in my simplicity toolbox."
 tags = ["simplicity"]
 categories = ["My Simplicity Toolkit"]
-slug = "programming-simplicity"
+slug = "programming-simplicity-part-1"
+aliases = ["/posts/programming-simplicity/"]
 +++
 **This post is part of of my blog series about [_My Simplicity
 Toolkit_][simpl-toolkit]. I suggest you read [the initial
