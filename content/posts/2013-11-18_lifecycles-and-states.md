@@ -95,8 +95,8 @@ and [CQRS](http://martinfowler.com/bliki/CQRS.html) are kind of similar.
 be used with CQRS to make things really badass. Are you optimizing for
 reads or writes? Choose.
 
-This list above is definitely not exhaustive and I'd love to get more
-input in the comments below.
+This list above is definitely not exhaustive and don't hesitate to reach
+out if you have additional input!
 
 Over the past couple of years, learning new programming languages and
 studying distributed systems engineering has given me a huge toolset
@@ -105,10 +105,9 @@ encourage software developers to learn about new software paradigms and
 [one programming language per
 year](http://blog.teamtreehouse.com/learn-a-new-programming-language-every-year).
 My greatest insight into how state can be dealt with has definitely been
-looking into how the [Erlang](http://www.erlang.org) programming
-language. A good resource when it comes to distributed systems is
-reading the [ZeroMQ Guide](http://zguide.zeromq.org/page:all).
+looking into [the Erlang programming language](http://www.erlang.org). A good
+resource when it comes to distributed systems is reading the [ZeroMQ
+Guide](http://zguide.zeromq.org/page:all).
 
 Lately, I've been thinking about retitling myself as a "state engineer".
-Maybe you should, too? Feel free to discuss below or contact me [by some
-other means](|filename|pages/about-me.rst).
+Maybe you should, too?
