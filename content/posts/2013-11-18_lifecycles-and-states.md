@@ -29,11 +29,10 @@ also applies to a wide range of scopes; within a function/method, within
 a class, within a software component, within a distributed application,
 or even an orchestration of distributed applications.
 
-As software engineers we need to respect state and how inherently
-difficult it to get it right. The majority of bugs are related to state
-in one way of another. This is why we always need to formalize how and
-where state is stored. Asking the question "Do we need the state?" is
-also worth doing so often.
+As software engineers we need to respect state and how inherently difficult it
+is to get it right. The majority of bugs are related to state in one way of
+another. This is why we always need to formalize how and where state is stored.
+Asking the question "Do we need the state?" is also worth doing so often.
 
 The *how* is important. How can we as software engineers minimize errors
 due to state? Here are a couple of ideas:
