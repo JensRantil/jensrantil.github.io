@@ -45,10 +45,10 @@ Autoscaling offers automated restarts of services. That's great and definitely
 improves system stability since crashed, or deadlocked, services automatically
 gets restarted.
 
-However, autoscaling also comes with scaling up and down. Over and over again,
-I have seen downscaling impact availability; shutdowns not properly draining
-ongoing HTTP requests, or improperly set shutdown timeouts killing processes
-prematurely.
+However, autoscaling also (optionally) comes with scaling up and down. Over and
+over again, I have seen downscaling impact availability; shutdowns not properly
+draining ongoing HTTP requests, or improperly set shutdown timeouts killing
+processes prematurely.
 
 Scaling up can, surprisingly, also impact stability negatively. If your
 application is doing any lazy loading, it can be slow until it has
