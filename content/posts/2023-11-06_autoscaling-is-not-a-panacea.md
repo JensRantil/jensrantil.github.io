@@ -27,6 +27,12 @@ of instances.
 service? Booting up an ORM, loading all the classes, and reading up stuff from
 a database takes time. I've seen many services taking close to a minute to start.
 
+"My service is the bottleneck." Anyone who has done any significant performance
+benchmark knows that the performance bottleneck moves around. For example,
+services backed by supporting infrastructure such as databases can usually only
+scale up until a certain level until the database turns into the performance
+bottleneck.
+
 > "Once we have autoscaling, our stability will improve."
 
 Autoscaling offers automated restarts of services. That's great and definitely
