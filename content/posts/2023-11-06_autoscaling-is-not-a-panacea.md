@@ -18,12 +18,12 @@ autoscaling. Suddenly receiving 20k requests per second within a minute? My
 service would scale up immediately, handle those requests, and then quickly
 scale down! I had three invalid assumptions here:
 
-**"Autoscaling would kick in within a second."** This isn't true.  Autoscaling
+**"Autoscaling will kick in within a second."** This isn't true.  Autoscaling
 usually kicks in within _minutes_. And usually you don't want autoscaling to be
 that sensitive anyway as it likely would immediately overprovision the number
 of instances.
 
-**"My application would start within a few seconds."** Ever started a large Java
+**"My application will start within a few seconds."** Ever started a large Java
 service? Booting up an ORM, loading all the classes, and reading up stuff from
 a database takes time. I've seen many services taking close to a minute to start.
 
