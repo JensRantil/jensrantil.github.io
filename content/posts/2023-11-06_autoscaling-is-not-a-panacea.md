@@ -31,7 +31,7 @@ a database takes time. I've seen many services taking close to a minute to start
 performance benchmark knows that the performance bottleneck [moves
 around][max-flow-min-cut]. For example, services backed by supporting
 infrastructure such as databases can usually only scale up until a certain
-level until the database turns into the performance bottleneck.
+level until _the database_ turns into the performance bottleneck instead.
 
 [max-flow-min-cut]: https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem
 
