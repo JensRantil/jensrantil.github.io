@@ -66,7 +66,7 @@ def calculate_sum_of_squared():
 
         numbers.append(num)
     
-    result = reduce(lambda acc, value: acc * (value ** 2), numbers, 0)
+    result = reduce(lambda acc, value: acc + (value ** 2), numbers, 0)
     
     print("Sum of numbers:", result)
 
@@ -92,7 +92,7 @@ def get_numbers_from_terminal():
     return numbers
 
 def calculate_sum_of_squared(numbers):
-    return reduce(lambda acc, value: acc * (value ** 2), numbers, 0)
+    return reduce(lambda acc, value: acc + (value ** 2), numbers, 0)
 
 if __name__ == "__main__":
     numbers = get_numbers_from_terminal()
@@ -107,7 +107,7 @@ stages, first asking the user for numbers, followed by making a calculation.
 Another thing that is different is that the most _low-level_, the `reduce(...)`
 function call has been moved into a smaller function as deep into the callstack
 as possible. By doing so, we can put a name on what it does. Parsing what
-`reduce(lambda acc, value: acc * (value ** 2), numbers, 0)` means is not
+`reduce(lambda acc, value: acc + (value ** 2), numbers, 0)` means is not
 simple.
 
 ## Layered software architecture over mixing transport, business logic, or persistence
