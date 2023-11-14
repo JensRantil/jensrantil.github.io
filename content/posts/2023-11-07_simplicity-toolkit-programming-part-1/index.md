@@ -7,17 +7,17 @@ categories = ["My Simplicity Toolkit"]
 slug = "programming-simplicity-part-1"
 aliases = ["/posts/programming-simplicity/"]
 +++
-**This post is part of of my blog series about [_My Simplicity
+**This post is part of my blog series about [_My Simplicity
 Toolkit_][simpl-toolkit]. I suggest you read [the initial
 post][simpl-toolkit-init] before reading this post.**
 
 [simpl-toolkit]: {{< ref "/categories/my-simplicity-toolkit/" >}}
 [simpl-toolkit-init]: {{< ref "/posts/2023-11-06_my-simplicity-toolkit/index.md" >}}
 
-As engineers it is our duty to constantly battle complexity to be able to ship
+As engineers, we have to constantly battle complexity creeping in to be able to ship
 at a sustainable pace. This is particularly important when writing code. This
 post is a list of things that I have helped keep the source code I am working
-in simple.
+on simple.
 
 ## Composition over inheritance
 
@@ -27,8 +27,8 @@ likely supports class inheritance. A lot of people have gone before me and
 idea][avoid-inheritance] so I will simply refer to those.
 
 Above said, after having been programming professionally in Java for over 10
-years, I have only found _one_ case where inheritance should be used, and that
-is if a third party library takes a `class` as a parameter instead of an
+years, I have only found _one_ case where inheritance should be used and that
+is if a third-party library takes a `class` as a parameter instead of an
 `interface`. That's it. All other cases should use composition and Java
 interfaces.
 
@@ -41,12 +41,12 @@ easy! In 2013, I wrote [I'm a State Engineer. Are you, too?][state-engineer].
 It talks about how trying to hold as little mutable state in your head as you
 possibly can.
 
-[state-engineer]: {{< ref "/posts/2013-11-18_lifecycles-and-states.md" >}}
+[state-engineer]: {{< relref "/posts/2013-11-18_lifecycles-and-states.md" >}}
 
 ## Startup over runtime
 
 [I'm a State Engineer. Are you, too?][state-engineer] also talked about
-prefering doing more things at startup than at runtime. The more complexity
+preferring doing more things at startup than at runtime. The more complexity
 that can be done at startup than after my HTTP service is in service, the less
 likely bugs will happen when servicing requests. I happily crash my application
 on startup before it is in service.
@@ -60,18 +60,18 @@ over having to read from the database on every API call.
 Functions, or methods, depending on external state other than their input
 parameters are called to have ["side-effects"][side-effects]. For example, a
 function depending on an external database is an example of something that has
-side-effects; the function will behaving differently depending on what is in
+side-effects; the function will behave differently depending on what is in
 the database.
 
-Side-effect free code is really nice as it makes it very explicit what
-(parameters) will alter the behaviour of the code, and I try to isolate as much
-as possible of my side-effect free code from the part that has side-effects.
+Side-effect-free code is nice as it makes it very explicit what
+(parameters) will alter the behavior of the code, and I try to isolate as much
+as possible of my side-effect-free code from the part that has side-effects.
 This makes it easy to understand, easy to write unit tests for, and has few
 surprises.
 
 I want to make a specific callout to [the Repository pattern][repo-pattern]
 here. It is the most underused pattern that can have a huge impact on testing
-and code structure. By stuffing all your side-effecty access to data in a
+and code structure. By stuffing all your side-effect access to data in a
 database within a repository implementation, you can easily implement an
 in-memory repository. By doing so, _all your business logic can be tested using
 an in-memory implementation - and those unit tests will be able to run within a
@@ -89,21 +89,21 @@ See [Functional Core, Imperative Shell][fcis] for more on this.
 
 Most "frameworks" are, by definition, a lot of functionalities
 [complected][complect] together. This means it's usually hard, or hacky, to
-disentangle them, use subset of its functionalities, or replace certain parts
-of the framework with another library. Finding frameworks which exists as a set
-of smaller set of opinionated libraries is rare.
+disentangle them, use a subset of its functionalities, or replace certain parts
+of the framework with another library. Finding frameworks that exist as a set
+of smaller sets of opinionated libraries is rare.
 
 [complect]: https://youtu.be/SxdOUGdseq4?si=AYiDh-n_KMwCLwl4&t=1895
 
 If you have seriously maintained a framework-heavy source code, you know that
 the weight of your framework grows heavier and heavier the more you have
 invested in it; upgrading it becomes a nightmare, and replacing it if
-maintainers step down is every worse. By instead of using a set of smaller
+maintainers step down is even worse. Instead of using a set of smaller
 libraries, it gets easier to replace/upgrade your application pieces one piece
 at a time.
 
-A common argument for frameworks is that they are quick get started with. This
-is true! But that optimises on _easy_ over simple. Understanding how it works
+A common argument for frameworks is that they are quick to get started with. This
+is true! But that optimizes on _easy_ over simple. Understanding how it works
 is usually harder, drilling into its source code is commonly overwhelming, and
 it comes with a lot of things [You Ain't Gonna Need][yagni]
 
@@ -119,12 +119,12 @@ complexity, not more.
 ![A horrible generic TypeScript function from TypeORM.](typescript.png)
 
 This also includes simpler type systems over complex ones. Looking at you,
-TypeScript! Hello, Java! I am not sure how many of you have spent a day or two
-trying to get Java generics to compile? You fix one type, maybe trying to
-figure out if you need to use the `extends` or `super` keyword, and suddently
+TypeScript! Hello, Java! Ever struggled to make Java generics compile?
+You fix one type, maybe trying to
+figure out if you need to use the `extends` or `super` keyword, and suddenly
 you have a completely different compilation error in another part of your
-source code. After a day of fixing compilation errors, you realise you have
-been going in circles..qq
+codebase. After a day of fixing compilation errors, you realize you have
+been going in circles...
 
 This is why I have found [the Go programming language][golang] so refreshing.
 It trades verbosity over expressiveness, as a feature. Sure, I need to write
@@ -170,7 +170,7 @@ const serviceB = new ServiceB(serviceA);
 serviceB.doSomethingElse();
 ```
 In the example code above, `ServiceB` depends on `ServiceA`. By doing "manual"
-dependency injection instead of using an IoC container library, I can
+dependency injection instead of using an IoC container library, I able to
 
  * understand the order of how objects are created and easily find where my
    application's entrypoint is.
@@ -189,15 +189,15 @@ Simplicity is less magic.
 
 Did you ever learn the build tooling you use today at university? Did you learn
 how to use _any_ build tool at university? The build tools we are, and have
-been using, in our industry is very complex with heavy documentation, and are
+been using, in our industry are very complex with heavy documentation, and are
 usually slow to execute.
 
 Have you ever worked with Java's [Apache Ant][ant], [Apache Maven][maven], or
-[Gradle][gradle]? Or [GNU's Autoconf][autoconf]? It takes more time to learn
+[Gradle][gradle]? Or [GNU's Autoconf][autoconf]? It takes less time to learn
 your equivalent programming language than to master the build tool! Ant is
 basically a programming language in XML, and Maven similarly with opinionated
-build stages that _never_ matches your business requirements. Autoconf is sort
-like a meta-build system that generates you build system.
+build stages that _never_ match your business requirements. Autoconf is sort
+of like a meta-build system that generates your build system.
 
 [maven]: https://maven.apache.org/
 [gradle]: https://gradle.org/
