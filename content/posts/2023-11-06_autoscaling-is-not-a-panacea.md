@@ -16,7 +16,7 @@ problems I initially thought it would.
 I thought any traffic spike would immediately be handled by
 autoscaling. Suddenly receiving 20k requests per second within a minute? My
 service would scale up immediately, handle those requests, and then quickly
-scale down! I had two invalid assumptions here:
+scale down! I had three invalid assumptions here:
 
 **"Autoscaling would kick in within a second."** This isn't true.  Autoscaling
 usually kicks in within _minutes_. And usually you don't want autoscaling to be
