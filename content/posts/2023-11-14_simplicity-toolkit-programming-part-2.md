@@ -54,7 +54,7 @@ Here is a small Python program:
 ```python
 from functools import reduce
 
-def sum_numbers():
+def calculate_sum_of_squared():
     numbers = []
     
     while True:
@@ -71,9 +71,9 @@ def sum_numbers():
     print("Sum of numbers:", result)
 
 if __name__ == "__main__":
-    sum_numbers()
+    calculate_sum_of_squared()
 ```
-It does everything in one function, `sum_numbers()`. Compare that to:
+It does everything in one function, `calculate_sum_of_squared()`. Compare that to:
 ```python
 from functools import reduce
 
