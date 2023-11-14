@@ -215,5 +215,7 @@ Java, I guess I will have to go with...Gradle? :sweat_smile:
 
 ## Conclusion
 
-These are some of the tools I use to keep complexity low when writing code.
-There is more, but I will leave that for a future post!
+This was the first part about the tools I use to keep complexity low when
+writing code. You can [read the next part here][next-part].
+
+[next-part]: {{< relref "/posts/2023-11-14_simplicity-toolkit-programming-part-2.md" >}}
