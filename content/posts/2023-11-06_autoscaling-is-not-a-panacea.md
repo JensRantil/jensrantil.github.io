@@ -27,6 +27,10 @@ of instances.
 service? Booting up an ORM, loading all the classes, and reading up stuff from
 a database takes time. I've seen many services taking close to a minute to start.
 
+The same applies to autoscaling of stateful services such as databases - they
+need to load things into RAM until they fully can be considered performant.
+This takes time.
+
 **"My application is the bottleneck."** Anyone who has done any significant
 performance benchmark knows that the performance bottleneck [moves
 around][max-flow-min-cut]. For example, application backed by supporting
