@@ -1,7 +1,7 @@
 +++ 
 date = 2023-11-07T07:45:35+02:00
 title = "My simplicity toolkit: Programming (part 1)"
-description = "Simple software programming preferences in my simplicity toolbox."
+description = "Simple software programming preferences in my simplicity toolbox. Part 1."
 tags = ["simplicity"]
 categories = ["My Simplicity Toolkit"]
 slug = "programming-simplicity-part-1"
