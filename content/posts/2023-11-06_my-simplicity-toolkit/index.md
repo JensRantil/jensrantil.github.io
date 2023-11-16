@@ -66,17 +66,6 @@ programming language][golang] for the past few years.
 [boring-tech]: https://boringtechnology.club
 [golang]: https://go.dev
 
-## A note on pragmatism
-
-Choosing X over Y is about preference, not a rule. I think the software we are
-building should have the same level of complexity as the business problems we
-are solving; By focusing on simplicity first, we work with simple constructs
-allowing us to gradually introduce complexity into our software.
-
-I am sure there are cases where larger interfaces are needed, where Kubernetes
-is a good platform to use instead of a managed service, etc. IMO, it just
-should not be our go-to solutions.
-
 ## My Simplicity Toolkit
 
 There are many nuggets in Hickey's talk, but one of my favorites is the slide
@@ -91,6 +80,14 @@ showing that simplicity is a choice, a stand against something, you force
 people to make a decision away from [complecting][complect] things.
 
 [complect]: https://youtu.be/SxdOUGdseq4?si=AYiDh-n_KMwCLwl4&t=1895
+
+Above said, choosing X over Y is about _preference_, not a rule. I am sure
+there are cases where a larger interfaces are needed, where Kubernetes is a
+good platform to use instead of a managed service, etc. IMO, it just should not
+be our go-to solutions.  I think the software we are building should have the
+same level of complexity as the business problems we are solving. By focusing
+on simplicity first, we work with simple constructs allowing us to gradually
+introduce complexity into our software.
 
 In the next few blog posts, I would like to share some of _my_ simplicity
 toolkit. Many of these preferences are the result of banging my head against
