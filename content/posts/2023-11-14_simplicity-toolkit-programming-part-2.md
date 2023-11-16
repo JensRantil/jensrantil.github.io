@@ -7,17 +7,27 @@ categories = ["My Simplicity Toolkit"]
 slug = "programming-simplicity-part-2"
 +++
 {{< notice info >}}
+This is the second part of two talking about my simplicity toolkit when
+programming. If you have not read [the previous post][prev-post] I highly
+encourage you to do so first.
+
 This post is part of my blog series about [_My Simplicity
-Toolkit_][simpl-toolkit]. The previous post can be found [here][prev-post].
+Toolkit_][simpl-toolkit].
 
 [simpl-toolkit]: {{< relref "/categories/my-simplicity-toolkit/" >}}
 [prev-post]: {{< relref "/posts/2023-11-07_simplicity-toolkit-programming-part-1/index.md" >}}
 {{< /notice >}}
 
-As engineers, we have to constantly battle complexity to be able to ship
-at a sustainable pace. This is particularly important when programming. This
-post is part 2 of a list of things that I have helped keep the source code I am
-working on simple.
+At the beginning of [my previous post][prev-post] about simplicity within
+programming, I talked about the numerous benefits that bringing simplicity to
+[programming](programming) can be: Easy to understand, use, debug, etc.
+
+[prev-post]: {{< relref "/posts/2023-11-07_simplicity-toolkit-programming-part-1/index.md" >}}
+
+Choosing simplicity can be radical, and choosing it means taking a stance
+_against something_. I have therefore decided to formulate all my simplicity
+tools as "X over Y". The following preferences are a continuation of the
+previous post:
 
 ## SQL over ORM
  
