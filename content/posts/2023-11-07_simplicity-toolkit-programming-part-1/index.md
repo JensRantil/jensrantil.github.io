@@ -7,12 +7,14 @@ categories = ["My Simplicity Toolkit"]
 slug = "programming-simplicity-part-1"
 aliases = ["/posts/programming-simplicity/"]
 +++
-**This post is part of my blog series about [_My Simplicity
+{{< notice info >}}
+This post is part of my blog series about [_My Simplicity
 Toolkit_][simpl-toolkit]. I suggest you read [the initial
-post][simpl-toolkit-init] before reading this post.**
+post][simpl-toolkit-init] before reading this post.
 
 [simpl-toolkit]: {{< ref "/categories/my-simplicity-toolkit/" >}}
 [simpl-toolkit-init]: {{< ref "/posts/2023-11-06_my-simplicity-toolkit/index.md" >}}
+{{< /notice >}}
 
 As engineers, we have to constantly battle complexity creeping in to be able to ship
 at a sustainable pace. This is particularly important when writing code. This

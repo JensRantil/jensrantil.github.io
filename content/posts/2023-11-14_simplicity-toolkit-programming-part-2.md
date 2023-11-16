@@ -6,11 +6,13 @@ tags = ["simplicity"]
 categories = ["My Simplicity Toolkit"]
 slug = "programming-simplicity-part-2"
 +++
-**This post is part of my blog series about [_My Simplicity
-Toolkit_][simpl-toolkit]. The previous post can be found [here][prev-post].**
+{{< notice info >}}
+This post is part of my blog series about [_My Simplicity
+Toolkit_][simpl-toolkit]. The previous post can be found [here][prev-post].
 
 [simpl-toolkit]: {{< ref "/categories/my-simplicity-toolkit/" >}}
 [prev-post]: {{< relref "/posts/2023-11-07_simplicity-toolkit-programming-part-1/index.md" >}}
+{{< /notice >}}
 
 As engineers, we have to constantly battle complexity to be able to ship
 at a sustainable pace. This is particularly important when programming. This
