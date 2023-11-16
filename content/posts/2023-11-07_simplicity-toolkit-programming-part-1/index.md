@@ -16,9 +16,32 @@ post][simpl-toolkit-init] before reading this post.
 [simpl-toolkit-init]: {{< relref "/posts/2023-11-06_my-simplicity-toolkit/index.md" >}}
 {{< /notice >}}
 
-As engineers, we have to constantly battle complexity creeping in to be able to ship
-at a sustainable pace. This is particularly important when writing code. This
-post is a list of things that I have helped keep the source code I am working
+In [the previous post][simpl-toolkit-init] I talked about the difference
+between simple and easy. From the perspective of programming and writing code,
+simple code/functions/methods/objects are not trying to do multiple things
+(["complect"][complect]) unless needed. Some of the benefits that come
+naturally with simplicity are the following:
+
+ * **Easy to understand.** By focusing on few/one thing(s), technical
+   components don't require a lot of context to understand them.
+ * **Easy to debug.** You can look under the hood and not be surprised about
+   dealing with new, unrelated, concepts.
+ * **Easy to use.** By focusing on simplicity, technical components don't need
+   complex APIs to work them. This means, leaner and simpler APIs - and fewer
+   surprises. It also means that a user of those APIs doesn't need to constantly
+   need to look up details on how to use them (hello all mocking libraries and
+   most ORMs!).
+ * **Easy to use a subset of.** By definition, simplicity implies consisting of
+   simple pieces. As such, you can easily decide to use, or not use, a subset
+   of the technical components. Ever struggled to use a different validation
+   library for a web framework? That's because many frameworks are
+   [complected][complect] with their validation implementation.
+
+[simpl-toolkit-init]: {{< relref "/posts/2023-11-06_my-simplicity-toolkit/index.md" >}}
+
+As engineers, we have to constantly battle complexity creeping in to be able to
+ship at a sustainable pace. This is particularly important when writing code.
+This post is a list of things that I use to keep the source code I am working
 on simple.
 
 ## Composition over inheritance
