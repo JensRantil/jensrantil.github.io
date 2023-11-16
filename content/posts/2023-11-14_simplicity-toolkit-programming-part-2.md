@@ -327,6 +327,10 @@ I tend to think of REST services as generally having three stages:
     requests and shuts down.
 
 I try to do as much as possible during the boot phase instead of when serving.
+For example, if I can read up some small data from the database and store it as
+an in-memory immutable object for the rest of the application, I prefer that
+over having to read from the database on every API call.
+
 This has the following benefits:
 
  * **Fewer incidents.** If anything goes wrong during boot, the application

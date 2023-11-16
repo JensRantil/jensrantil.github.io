@@ -43,18 +43,6 @@ possibly can.
 
 [state-engineer]: {{< relref "/posts/2013-11-18_lifecycles-and-states.md" >}}
 
-## Startup over runtime
-
-[I'm a State Engineer. Are you, too?][state-engineer] also talked about
-preferring doing more things at startup than at runtime. The more complexity
-that can be done at startup than after my HTTP service is in service, the less
-likely bugs will happen when servicing requests. I happily crash my application
-on startup before it is in service.
-
-For example, if I can read up some small data from the database and store it as
-an in-memory immutable object for the rest of the application, I prefer that
-over having to read from the database on every API call.
-
 ## Side-effect free code over side-effects
 
 Functions, or methods, depending on external state other than their input
