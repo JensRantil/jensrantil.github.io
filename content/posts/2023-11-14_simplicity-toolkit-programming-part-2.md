@@ -10,7 +10,7 @@ slug = "programming-simplicity-part-2"
 This post is part of my blog series about [_My Simplicity
 Toolkit_][simpl-toolkit]. The previous post can be found [here][prev-post].
 
-[simpl-toolkit]: {{< ref "/categories/my-simplicity-toolkit/" >}}
+[simpl-toolkit]: {{< relref "/categories/my-simplicity-toolkit/" >}}
 [prev-post]: {{< relref "/posts/2023-11-07_simplicity-toolkit-programming-part-1/index.md" >}}
 {{< /notice >}}
 
