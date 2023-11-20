@@ -15,7 +15,7 @@ Google"][google-acquired] by Shreyans Bhansali. Shreyans wrote
 > and new results...on spreadsheets! 
 
 The above quote reminded of how hard, and often understated, quality assurance
-QA) in AI/ML systems is. Each change to a model needs to be validated, and
+(QA) in AI/ML systems is. Each change to a model needs to be validated, and
 validation is _hard_ and _cumbersome_. Also, the fact that models can have a
 _freshness_ does not help - that means that quality assurance must be done
 continuously and treated as a [service level][sl].
@@ -25,7 +25,7 @@ continuously and treated as a [service level][sl].
 To make my case, I thought I could share a tale about a classification system I
 used to work on a bit.
 
-## An tale
+## A tale
 
 At a former employer we had a system that categorized a stream of financial
 transactions using ML. For example, "MacDonald's" was categorized as
