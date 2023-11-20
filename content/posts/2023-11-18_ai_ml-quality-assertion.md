@@ -40,8 +40,8 @@ the ML model.
 
 Initially, we considered to ask for explicit feedback ("Was this category
 correct?") from the user in the UI. However, we concluded that we did not want
-to make our UI bloated. We asked ourselves, can we somehow figure out whether
-our classification is accurate without modifying our UI?
+to make our UX bloated. We asked ourselves, can we somehow figure out whether
+our classification is accurate without changing our UX?
 
 Our first iteration was a service level based on the ratio between the “number
 of manual corrections” and “total categorizations”. This did not work very well
