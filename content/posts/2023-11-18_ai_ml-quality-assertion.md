@@ -63,8 +63,8 @@ Randomly not categorising 1% of all financial transactions was a good idea! But
 it turned out to have a surprising backlash from users; They perceived our
 classification as accuracy having become significantly worse:
 
-> "Why are you unable to categorize 'MdDonalds'?? C'mon, I expect better from
-> you!
+> "Why are you unable to categorize "McDonald's"?? C'mon, I expect better from
+> your product!
 
 It turns out, we were not classifying some of the things we were certain about.
 Could we do better?
@@ -72,7 +72,7 @@ Could we do better?
 We were lucky that our ML could spit out a certainty measure for our
 classification between [0,1]. We started using the probability of skipping
 categorizing a transaction based on the inverse of that certainty. That meant
-"McDonalds", having a high certainty, was rarely skipped anymore. Good!
+"McDonald's", having a high certainty, was rarely skipped anymore. Good!
 
 Instead of certainty, the inverse frequency could have been a different factor
 to use to avoid common descriptions being randomly skipped. As far as I know,
@@ -82,9 +82,11 @@ Through a series of events, our business pivoted and started having customers
 using our classification API and presenting the result in a UI of their own.
 Since the customers could not always adjust incorrect categories in the UI, we
 had to resort to manual quality assurance instead where people would sit and
-verify that categories were correctly identified. This also made it hard for
-use to treat ML accuracy as a service level. We instead had to do higher
-quality assurance before release time, instead.
+verify that categories were correctly identified. This also made it hard for us
+to treat ML accuracy as a service level. We instead had to do more quality
+assurance before release time, instead. Unfortunately that lead to longer
+iteration cycles for new models, but at least we knew we could trust the data
+fairly well.
 
 ## In conclusion
 
