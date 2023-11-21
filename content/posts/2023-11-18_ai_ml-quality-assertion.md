@@ -88,6 +88,23 @@ assurance before release time, instead. Unfortunately that lead to longer
 iteration cycles for new models, but at least we knew we could trust the data
 fairly well.
 
+## On the topic of unit tests
+
+We _did_ have unit tests in place for the descriptions of common financial
+transactions. And we were, over time, building up a suite of common
+descriptions and what they were supposed to match. However, there were a few
+problems with this:
+
+ * The freshness I mentioned at the beginning of this post was a problem; Unit
+   tests grew old. "Grand Daddy's house" was once a pizza in one part of Sweden
+   and a clothing store in another part of Sweden a couple of years later. We
+   had to update our unit tests.
+ * We ended up having different models for different countries/regions. Having
+   unit tests for all of them didn't scale. Plus, we did not know common
+   merchants in all the regions - our company was mostly based out of Sweden.
+ * The whole idea with the ML model was that it was supposed to scale and us
+   not doing all the manual classification!
+
 ## In conclusion
 
 Measuring AI/ML model quality takes a lot of creativity bordering SRE practises
