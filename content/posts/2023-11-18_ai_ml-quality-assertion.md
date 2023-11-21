@@ -59,9 +59,9 @@ they set against what our model would have guessed. Our service level was
 defined as the "number of adjustments that matched our ML model's guess"
 divided by the "total number of adjustments".
 
-Randomly uncategorising 1% was a good idea! But it turned out to have a
-surprising backlash from users; They perceived our classification as accuracy
-having become significantly worse:
+Randomly not categorising 1% of all financial transactions was a good idea! But
+it turned out to have a surprising backlash from users; They perceived our
+classification as accuracy having become significantly worse:
 
 > "Why are you unable to categorize 'MdDonalds'?? C'mon, I expect better from
 > you!
