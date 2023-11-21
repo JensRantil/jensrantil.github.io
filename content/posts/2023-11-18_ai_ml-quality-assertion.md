@@ -29,8 +29,9 @@ used to work on a bit.
 
 At a former employer we had a system that categorized a stream of financial
 transactions using ML. For example, "MacDonald's" was categorized as
-"Restaurant", and "H&M" was categorized as "Clothing", etc. The users could
-adjust incorrectly categorized transactions if they were wrong. Our goal was to
+"Restaurant", and "H&M" was categorized as "Clothing", etc. If we were
+uncertain, we set the category "Uncategorized". The users could adjust
+incorrectly categorized transactions if they were wrong. Our goal was to
 measure the [accuracy][accuracy] of how well these categories were applied by
 the ML model.
 
