@@ -63,7 +63,7 @@ Randomly not categorising 1% of all financial transactions was a good idea! But
 it turned out to have a surprising backlash from users; They perceived our
 classification as accuracy having become significantly worse:
 
-> "Why are you unable to categorize "McDonald's"?? C'mon, I expect better from
+> "Why are you unable to categorize 'McDonalds'?? C'mon, I expect better from
 > your product!
 
 It turns out, we were not classifying some of the things we were certain about.
