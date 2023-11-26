@@ -10,9 +10,9 @@ enableGitInfo = true
 
 [params]
 author = "Jens Rantil"
-description = 'Backend/security/infrastructure/DevOps engineer, engineering mathematics, traveller, nerd, juggler, guitar/african drum player. Inspired Swede.'
+description = 'Backend/security/infrastructure/DevOps/staff(ish) engineer, engineering mathematics, traveller, nerd, juggler, guitar/african drum player. Inspired Swede.'
 avatarURL = "images/avatar.jpg"
-keywords = "blog,developer,personal"
+keywords = "blog,developer,staff engineering,personal"
 commit = "https://github.com/JensRantil/jensrantil.github.io/tree"
 colorScheme = "auto"
 hideColorSchemeToggle = false
