@@ -7,7 +7,7 @@ categories = []
 externalLink = ""
 slug = "waste-in-software-development"
 +++
-## Toyota Production System and waste
+## The Toyota Production System
 
 It was  around ~2011 when I first read _[The Toyota Way][ttw]_ book. This book
 introduced me to _[The Toyota Way principles][ttwp]_ and [the Toyota Production
@@ -29,6 +29,8 @@ article.
 [lean-manuf]: https://en.wikipedia.org/wiki/Lean_manufacturing
 [lean-services]: https://en.wikipedia.org/wiki/Lean_services
 [lean-confusion]: https://bobemiliani.com/comparing-tps-and-lean/
+
+## Waste in TPS
 
 Taiichi Ohno, the father of TPS, introduced the concept of “muda” at Toyota.
 Muda in Japanese means  “waste”. Wasteful tasks don't add any immediate value
@@ -55,11 +57,11 @@ System:
 Software development is not like making cars (as opposed to Toyota). For
 example, while car manufacturing deals with the transportation of physical
 items (waste no 3 above), software development rarely does. But that does not
-mean that waste cannot be found in software development and IT. If we squint
-our eyes a little, using Toyota Production System’s definition of waste can be
-a surprisingly fruitful analogy to understand where waste happens in the
-software industry. Here are some of my findings and solutions for waste within
-software development:
+mean that waste cannot be found in software development. If we squint our eyes
+a little, using Toyota Production System’s definition of waste can be a
+surprisingly fruitful analogy to understand where waste happens when making
+software. Let's go through each type of waste and see what this means for
+software:
 
 **Waste of overproduction.** This includes usually "producing" too many
 features/changes until we deploy to production. In other words, batching up too
@@ -117,13 +119,13 @@ spreadsheets for management” can end up in this category.
 **Waste of processing itself** includes building a feature that the customer
 doesn't want. Quick feedback loops help here!
 
-Kent Beck once stated
+Kent Beck once stated:
 
 > “Make It Work, Make It Right, Make It Fast” ([ref][work-right-fast])
 
 [work-right-fast]: https://keyholesoftware.com/2023/03/23/writing-quality-code-practicing-make-it-work-make-it-right-make-it-fast/
 
-, making something maintainable is an example of waste if the solution doesn’t
+Making something maintainable is an example of waste if the solution doesn’t
 work. Making it performant is usually a waste if it is not maintainable.
 
 **Waste of excess inventory.** This makes me think of “inventory” as code or
