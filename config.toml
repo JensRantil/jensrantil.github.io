@@ -6,13 +6,14 @@ googleAnalytics = "UA-40929103-1"
 paginate = 20
 defaultContentLanguage = "en"
 enableEmoji = true
+enableGitInfo = true
 
 [params]
 author = "Jens Rantil"
 description = 'Backend/security/infrastructure/DevOps engineer, engineering mathematics, traveller, nerd, juggler, guitar/african drum player. Inspired Swede.'
 avatarURL = "images/avatar.jpg"
 keywords = "blog,developer,personal"
-commit = "https://github.com/luizdepra/hugo-coder/tree/"
+commit = "https://github.com/JensRantil/jensrantil.github.io/tree"
 colorScheme = "auto"
 hideColorSchemeToggle = false
 maxSeeAlsoItems = 5
