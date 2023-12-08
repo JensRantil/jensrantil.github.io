@@ -53,7 +53,7 @@ something different in a store; ie. buying "makeup" from "H&M" instead of
 "Clothing". This made our numbers look much worse than they were! We did not
 get any positive feedback on the correct classifications.
 
-Our next take was not to categorize 1% of all financial transactions to force
+Our next take was to not categorize 1% of all financial transactions to force
 our users to set the correct category. When they did set it, we compared what
 they set against what our model would have guessed. Our service level was
 defined as the "number of adjustments that matched our ML model's guess"
