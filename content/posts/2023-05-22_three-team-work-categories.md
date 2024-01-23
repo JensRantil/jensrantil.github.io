@@ -20,8 +20,8 @@ off our sprint planning sessions with
 
 I really loved this opening! I thought it was a great way to initiate a
 conversation between product and engineering - inviting everyone’s expertise to
-the table. It also brought a sense of autonomy andshared ownership of the
-product backlog.
+the table. It also brought a sense of autonomy, trust and shared ownership of the
+backlog.
 
 In essence, we categorized every sprint task into these three categories:
 
