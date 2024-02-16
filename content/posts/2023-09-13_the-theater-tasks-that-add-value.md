@@ -8,18 +8,18 @@ Throughout my career I've been drilled to "have a customer-first mindset". I
 have written user stories, done user testing, measured customer impact, and had
 managers challenging me on what the "customer value" is of what I am working
 on. This has had a very big impact on me and how I approach all technical work;
-I have constantly asked myself "How will this impact our customer?" or "How can
-I put this in the hands of the customer as quickly as possible?".
+I have often asked questions such as "How will this impact our customer?" and
+"How can I put this in the hands of the customer as quickly as possible?".
 
-The thing is, not all work impacts the customer. In fact, if you work for a
-company your long-term goal is to *satisfy the business owners, usually through
+However, not all work impacts the customer. In fact, if you work for a company
+your long-term goal is to *satisfy the business owners, usually through
 profit*. This means that there is a lot more work than satisfying a customer.
 There is a reason why we talk about _stakeholders_. That's because they can
 take many forms: A Head of Security, a CEO, an employee, a CTO, a supplier, a
-CFO, a customer, an architect, an auditor, etc. Identifying a stakeholder for
-work is really important. It means that you have someone who can explain why
-something needs to be done, and let you know that the work is completed with
-satisfaction.
+CFO, a customer, an architect, an auditor, etc. The ultimate stakeholder is
+_the board_. Identifying a stakeholder for work is really important. It means
+that you have someone who can explain why something needs to be done, and let
+you know that the work is completed with satisfaction.
 
 Sometimes I have had work delegated to me that is presented or looks like
 "customer-impacting", but when poking around to understand the objective of the
