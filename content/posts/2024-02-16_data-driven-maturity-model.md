@@ -89,4 +89,4 @@ pretty well:
 
 If you want your team to improve on their Service Levels, Observability, KPI
 journey, I highly recommend asking yourself where you are in this maturity
-model and how to take your team to the next step.
+model and how to take your team to the next level.
