@@ -84,9 +84,9 @@ Since the customers could not always adjust incorrect categories in the UI, we
 had to resort to manual quality assurance instead where people would sit and
 verify that categories were correctly identified. This also made it hard for us
 to treat ML accuracy as a service level. We instead had to do more quality
-assurance before release time, instead. Unfortunately that lead to longer
-iteration cycles for new models, but at least we knew we could trust the data
-fairly well.
+assurance before release time. Unfortunately that lead to longer iteration
+cycles for new models, but at least we knew we could trust the data fairly
+well.
 
 ## On the topic of unit tests
 
