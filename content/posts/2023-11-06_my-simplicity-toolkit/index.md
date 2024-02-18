@@ -13,7 +13,7 @@ Blog series:
  1. [My simplicity toolkit: Intro (this page)](.)
  2. [My simplicity toolkit: Programming (part 1)]({{< relref "/posts/2023-11-07_simplicity-toolkit-programming-part-1/index.md" >}})
  4. [My simplicity toolkit: Programming (part 2)]({{< relref "/posts/2023-11-14_simplicity-toolkit-programming-part-2.md" >}})
- 5. My simplicity toolkit: Testing
+ 5. [My simplicity toolkit: Testing]({{< relref "/posts/2024-02-18_simplicity-toolkit-testing.md" >}})
  6. My simplicity toolkit: Architecture
  6. My simplicity toolkit: Patterns
 {{< /notice >}}
