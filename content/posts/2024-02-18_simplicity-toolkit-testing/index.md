@@ -136,7 +136,7 @@ def my_test():
   assert c == a + b
 ```
 The latter example makes it unclear what it is trying to test; Are we checking
-if the results return from `random_integer()` can be summed? Or are we checking
+if the results return from `random_number()` can be summed? Or are we checking
 that the behavior of `sum(...)` behaves as we expect?
 
 > "I don't dare to remove this test, because it might be testing something
