@@ -103,8 +103,14 @@ See [Functional Core, Imperative Shell][fcis] for more on this.
 Most "frameworks" are, by definition, a lot of functionalities
 [complected][complect] together. This means it's usually hard, or hacky, to
 disentangle them, use a subset of its functionalities, or replace certain parts
-of the framework with another library. Finding frameworks that exist as a set
-of smaller sets of opinionated libraries is rare.
+of the framework with another library/framework. Finding frameworks that exist
+as a set of smaller sets of opinionated libraries is rare.
+
+Some frameworks are so compact and magic, that you don't even know how to find
+your application entrypoint (ie. `main()` function/method). Since frameworks
+tend to do all the calling if your code, you can't use a modern IDE to follow
+your callers up the stack and end up where/how its being called. This makes
+code navigation, and debugging, harder.
 
 [complect]: https://youtu.be/SxdOUGdseq4?si=AYiDh-n_KMwCLwl4&t=1895
 
