@@ -491,6 +491,28 @@ implementation you would need.
 [typeorm]: https://typeorm.io
 [cassandra]: https://cassandra.apache.org/_/index.html
 
+## Simple code over annotations
+
+A common thing many frameworks and libraries do is to use `@Annotation`s to
+control validation, HTTP routing, SQL generation, OpenAPI documentation, and
+more. I think annotations are an excellent example of where our industry is
+choosing easy over simple. At a first glance, an annotation looks simple,
+right?!
+
+The thing is, it's usually very hard to understand the implication of an
+annotation. The actual code handling the annotation is hidden inside a foreign
+framework or library, leading to [Action at a Distance][action-at-a-distance].
+Ever wondered in what order the annotations are handled in? Or the implications
+of adding an ORM annotation to your SQL? Good luck.
+
+[action-at-a-distance]: https://en.wikipedia.org/wiki/Action_at_a_distance_(computer_programming)
+
+The alternative is boring code, usually in a function. Want to validate your
+DTO? How about implementing `validateMyDTO(): []error` and calling it when you
+want to validate it? By doing this, you can debug your validation, write
+(simple) tests for your validation, understand exactly where you validation is
+being called in your IDE, and more. Less magic, more simplicity.
+
 ## Conclusion
 
 This post concludes summarising my simplicity toolkit when programming. Next up
