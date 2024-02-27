@@ -54,11 +54,13 @@ data structures and algorithms:
 
 * Caching
   * What is caching?
-  * What are LFU (Least Frequently Used) and LRU (Least Recently Used)?
-    * Processor cache
-    * Database cache
-    * In-memory cache (running in Node). Example: https://www.npmjs.com/package/node-cache
-    * Distributed caches: Redis and Memcached
+  * What are LFU (Least Frequently Used) and LRU (Least Recently Used)? Some resources:
+    * https://redis.com/blog/cache-eviction-strategies/
+    * http://antirez.com/news/109 (the creator of Redis, quite technical)
+  * What kind of caches does a processor have? What are they used for?
+  * What kind of cache does a database such as Postgres and/or MySQL have?
+  * In-application caching (running in Node, etc.). Example: https://www.npmjs.com/package/node-cache
+  * Distributed caches: How does caching in Redis and/or Memcached work?
 
 * Sorting Algorithms
   * What are some common sorting techniques?
