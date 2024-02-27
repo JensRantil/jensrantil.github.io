@@ -73,7 +73,7 @@ data structures and algorithms:
 
 * JavaScript Objects
   * When iterating over the keys in a JavaScript object, what is the order of iteration?
-  * What type of data structure do you/we prefer?
+  * What type of data structure(s) do you think a JavaScript object is being backed by?
 
 * Linked Lists
   * What is a linked list?
