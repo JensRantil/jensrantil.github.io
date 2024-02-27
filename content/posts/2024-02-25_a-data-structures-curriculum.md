@@ -61,7 +61,7 @@ data structures and algorithms:
     * Distributed caches: Redis and Memcached
 
 * Sorting Algorithms
-  * What are common sorting techniques?
+  * What are some common sorting techniques?
   * What are the fastest sorting algorithms in terms of time complexity?
   * What is the difference between a stable and unstable sorting algorithm?
   * How do you sort an array in NodeJS/JavaScript? Which sorting algorithm is used?
