@@ -79,6 +79,7 @@ data structures and algorithms:
   * What is a linked list?
   * How does it differ from an array?
   * Advantages? Disadvantages?
+  * What is a "skip list"? Advantages? Disadvantages?
 
 * Trees and Graphs
   * What is a tree?
