@@ -78,7 +78,7 @@ API call and validation fails, you likely need to start returning a _list_ of
 validation errors including _which_ (list index) item failed validation and
 how. This turns into one additional thing the API caller must handle.
 
-**Behaviour semantics confusion** (implementation). The API caller will need to
+**Atomicity confusion** (implementation). The API caller will need to
 read the documentation (if there is some!) to see what happens if _one_ of the
 TODOs aren't passing validation. Is it storing all other TODOs? Or are none of
 them stored?
