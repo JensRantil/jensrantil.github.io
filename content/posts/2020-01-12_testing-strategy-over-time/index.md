@@ -5,7 +5,7 @@ tags: ["testing"]
 slug: testing-strategy-over-time
 ---
 Last year (2019) I spent a fair amount of time thinking about how to grow
-[Tink](https://www.tinkapp.com)'s technical platform; how to organise ourselves
+[Tink's](https://www.tinkapp.com) technical platform; how to organise ourselves
 -- alignment vs. autonomy.  What processes, tooling and policies were needed
 for our teams to build amazing, stable, performant things at a fast pace? Tink
 had essentially doubled in size for four years and the growth had really pushed
