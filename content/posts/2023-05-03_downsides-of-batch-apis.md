@@ -139,6 +139,14 @@ systems. Your API perimeter team will start asking all internal services to
 support batching. Suddenly you have the above-mentioned issues all over your
 backend and not just at the perimeter.
 
+**Rate-limiting complexity (maintenance & operational).** Rate-limiting is far
+less useful for API endpoints if you do batching. This is because each API
+call can either be a heavy (1000 items) or lightweight (1 item) one. If you
+want to put rate-limiting in place for your batch API properly, you will need
+custom rate-limiting based on the number of items being sent in each API call.
+Now the question of atomicity comes into play - should certain items be stored
+but not others? Do you _really_ want the client to deal with that?
+
 
 ## An alternative
 
