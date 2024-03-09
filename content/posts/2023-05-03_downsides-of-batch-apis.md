@@ -8,7 +8,7 @@ slug = "downsides-of-batch-apis"
 
 When an HTTP API is too slow to call repeatedly I have seen engineers
 immediately turn to making the API *do more in one unit of work*. I think this
-pattern can be very harmful, and have many battle scars from this, so I thought
+pattern can be very harmful and have many battle scars from this. So I thought
 I would write a post about it.
 
 ## An example
