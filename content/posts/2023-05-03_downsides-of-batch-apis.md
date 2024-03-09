@@ -132,12 +132,13 @@ avoid this.
 
 [slippery-slope]: https://en.wikipedia.org/wiki/Slippery_slope
 
-**Virality of batching** (?). Finally, what I have observed is that once you
-start doing a larger unit of work in your public API, a larger unit of work also
-starts creeping into every corner of your backend systems. Your API perimeter
-team will start asking all internal services to support batching. Suddenly you
-have the above-mentioned issues all over your backend and not just at the
-perimeter.
+**Virality of batching** (maintenance & operational). Finally, what I have
+observed is that once you start doing a larger unit of work in your public API,
+a larger unit of work also starts creeping into every corner of your backend
+systems. Your API perimeter team will start asking all internal services to
+support batching. Suddenly you have the above-mentioned issues all over your
+backend and not just at the perimeter.
+
 
 ## An alternative
 
