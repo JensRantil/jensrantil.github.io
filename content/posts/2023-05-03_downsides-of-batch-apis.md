@@ -13,9 +13,9 @@ I would write a post about it.
 
 ## An example
 
-Let's start with example: You have a web service that stores TODO items. It has
-an API endpoint, `POST /todo`, which gets called to add a new TODO item. Here
-is an example request/response:
+Let's start with an example: You have a web service that stores TODO items. It
+has an API endpoint, `POST /todo`, which gets called to add a new TODO item.
+Here is an example request/response:
 
 ```
 POST /todo
