@@ -51,7 +51,11 @@ pyramid. Namely, the higher up in the pyramid you are, the
  * the fewer tests compared to the base (thus, a Pyramid).
  * the **slower feedback** you will get.
  * the **more brittle** your tests will become as they involve more components.
-   This also means they are harder to make stable.
+   This means they break more easily as the are coupled to a larger
+   implementation surface are.
+ * the higher probability of your tests being **flaky**. Timeouts to a
+   database, or starting up a webserver, etc., become more common. Tests also
+   tend to become less deterministic.
  * **more maintenance is needed** as more components are involved.
  * **harder it becomes to debug** as more components are involved.
  * **slower the tests** tend to be to run as they need to initialize more
