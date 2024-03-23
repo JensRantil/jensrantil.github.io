@@ -48,7 +48,7 @@ My presentation then continued making a bunch of small observations about the
 pyramid. Namely, the higher up in the pyramid you are, the
 
  * the fewer tests compared to the base (thus, a Pyramid).
- * the **slower feedback** you will get.
+ * the **slower feedback** you will get as tests are slower to execute.
  * the **more brittle** your tests will become as they involve more components.
    This means they break more easily as they are coupled to a larger
    implementation surface is.
