@@ -70,7 +70,6 @@ as long as the outcome is the same. This will make refactoring a lot easier.
 > testing purposes.
 
 Mocks, spies, fakes, stubs, and dummies are all examples of test doubles.
-
 Fowler further defines a Mock as
 
 > [...] pre-programmed with expectations which form a specification of the
