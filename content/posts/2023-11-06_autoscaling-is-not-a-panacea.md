@@ -104,6 +104,24 @@ aggressive and your downscaling to rarely scale down.  I have seen systems that
 constantly run on the maximum number of instances. In that case, I would
 probably disable autoscaling altogether.
 
+**"I can easily autoscale stateful infrastructure."** The database is slow?
+Just scale up more instances! There are three common misconceptions here:
+
+The first one is that copying data has no weight. Starting up another database
+instance means you must first copy all the data it needs to serve.  Independent
+of if your database stores 10 GB, 50 GB, 100 GB, or 1 TB, this will take time.
+
+The second misconception is that horizontally scaling _writes_ can be done
+easily. While this _is_ true if you are running certain NoSQL databases, it is
+not for ACID-compliant databases such as RDBM/PostgreSQL/MySQL.  For an RDBM,
+you will likely need to do some sharding. Switching between shards can have an
+impact on availability.
+
+The third misconception is that database performance will be good immediately.
+Generally, databases contain caches (looking at you, MySQL & PostgreSQL) that
+need to be "heated" (populated, loaded into RAM) until they can be considered
+fully performant. This impacts performance for the first minutes/hour when a
+new database instance has come up.
 
 ## Conclusion
 
