@@ -36,7 +36,7 @@ environment as wasteful. They can be summed up in three big categories:
 
 Let me explain:
 
-### Not sustainable
+### Not sustainable over time
 
 As engineers, we are all encouraged to build up automated test suites (unit
 tests, etc.) to make sure that tests can verify that today's behavior will work
@@ -46,6 +46,49 @@ environments encourage manual testing. If we want to Build Quality In(tm), we
 need automated testing.  If we need automated testing, we need to stop manual
 testing. A great way to stop manual testing is to not have a staging
 environment.
+
+### Bottlenecked shared resource
+
+> Good morning! Could everyone hold off with your deploys (to staging) for the
+> next hour? We are testing something on staging.
+
+The more engineers you have, the more a staging environment will bottleneck as
+a testing ground. One team is testing something and want a stable environment
+to make sure that other bugs randomly pop up. By definition, they can't control
+which other changes are made to the environment since it is shared between
+teams.
+
+### Version surprises
+
+Let's say services A & B both have the following CI pipeline: ``` code review
+-> staging -> [approval] -> production ``` The `[approval]` step means that the
+deployment flow is what is called a "staged rollout".
+
+If each service is being deployed from version 1 to version 2, the version
+combinations in production for services A & B can then be (1, 1), (1, 2), (2,
+1), and (2, 2). Four combinations! For three services, that's eight
+combinations.
+
+Needless to say, the number of version combinations that could be running in
+production grows exponentially - and making sure to cover all the cases becomes
+an impossibility. By skipping staging we would know that what is running in
+production is what is the latest version in our source code. Much simpler,
+fewer surprises.
+
+### Batched deploys
+
+Continuing on the topic of staged rollout above, the manual `[approval]` step
+requires manual work. And manual work tends to happen less often. This means
+that there are multiple changes queued up in staging to be deployed to
+production. While this gives an increased sense of safety, this actually has
+the opposite effect:
+
+It makes it much harder to debug if a deployment breaks in production. Which of
+the 6 changes have a bug in it? What did we change? Had we deployed each change
+individually to production, we would immediately know which change was bad.
+
+Deployers are not _really_ reviewing what is going out in production because
+the list is just too big.
 
 ### A false sense of safety
 
