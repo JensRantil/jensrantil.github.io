@@ -1,7 +1,7 @@
 +++ 
 date = 2024-05-12T10:28:35+02:00
 title = "Security is just one part of risk"
-description = "What are we trading when focusing on security?"
+description = "What are we trading when improving security?"
 tags = ["security", "risk"]
 slug = "security-and-risk"
 +++
