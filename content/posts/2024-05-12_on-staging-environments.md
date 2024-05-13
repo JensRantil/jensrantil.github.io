@@ -100,9 +100,11 @@ _different_ than production. Here are some common things that can differ
 between staging and production:
 
  * The amount of data being stored.
+ * The actual data being stored. Production usually have a lot of surprises...
  * Traffic patterns
- * Runtime configuration
+ * Runtime configuration (CPU, memory, application configuration...)
  * Feature flags
+ * Different database schema (by mistake).
  * And more...
 
 **Believing that a change will work in production if it works on staging is a
