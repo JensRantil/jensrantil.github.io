@@ -255,12 +255,11 @@ having an environment.
 
 ## Closing thoughts
 
-Certain workplaces have _more_ than one pre-production environment (hello,
-banks! :wave:). I have seen banks internally having multiple environments
-("staging", "testing", "qa", "pre-production"...) Suffice to say, everything in
-this document applies to all of these pre-production environments
-proportionally to the number of additional environments that need to be
-maintained.
+Certain workplaces have _more_ than one pre-production environment ("staging",
+"testing", "qa", "pre-production"... - hello banks! :wave::blush:). Suffice to
+say, everything in this document applies to all of these pre-production
+environments proportionally to the number of additional environments that need
+to be maintained.
 
 Having a staging environment can be useful for [town planners][town-planner].
 But if a company values moving quickly over risk averseness, I would strongly
