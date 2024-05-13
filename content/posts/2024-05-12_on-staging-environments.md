@@ -240,9 +240,18 @@ exactly what some of these tools do.
 
 ## Reasons for _having_ a staging environment
 
-I have seen staging environments being required for compliance reasons. If I
-would end up in that situation, I would make sure to at least deploy to
-production and staging in parallel, if I could.
+I have seen staging environments being required for compliance reasons. That's
+a valid reason! If I would end up in that situation, I would make sure to at
+least deploy to production and staging in parallel, if I could.
+
+There _might_ occasionally be a reason where you might want to have a
+production replica temporarily if you are doing a big rewrite of something.
+That said, [big rewrites are generally bad][rewrites], so I would avoid it.
+
+[rewrites]: https://skamille.medium.com/avoiding-the-rewrite-trap-b1283b8dd39e
+
+Apart from the above, I am struggling to find real good long-term reasons for
+having an environment.
 
 ## Closing thoughts
 
