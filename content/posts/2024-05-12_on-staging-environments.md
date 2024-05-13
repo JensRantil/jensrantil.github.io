@@ -258,3 +258,14 @@ But if a company values moving quickly over risk averseness, I would strongly
 suggest to not have a staging environment.
 
 [town-planner]: https://orghacking.com/pioneers-settlers-town-planners-wardley-9dcd3709cde7
+
+## References
+
+I am not the first person to write about this. Here are some other articles on the Internet:
+
+ * [Yes, I Test in Production (And So Do You)](https://www.infoq.com/presentations/testing-production-2018/)
+ * [Go Ahead, Test in Production](https://thenewstack.io/honeycombs-charity-majors-go-ahead-test-in-production/) by Charity Majors
+ * [Staging Environments: An Inefficient Relic of the Past?](https://www.linkedin.com/pulse/staging-environments-inefficient-relic-past-julien-danjou-/)
+ * [The myth of the staging environment: Why production testing is crucial](https://www.linkedin.com/pulse/myth-staging-environment-why-production-testing-crucial-tobias-mende/)
+ * [Do you really need a Staging environment?](https://refactoring.fm/p/do-you-need-staging)
+ * [Why we don’t use a staging environment](https://squeaky.ai/blog/development/why-we-dont-use-a-staging-environment/)
