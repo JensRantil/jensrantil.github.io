@@ -227,6 +227,11 @@ Finally, whenever you have learned something new, remember that it's now your
 responsibility to share this knowledge with other people if they ever happen to
 have the same question!
 
+_Did you find this article useful? Have a look at my more recent blog post on
+[how to write good answers][good-answers]._
+
+[good-answers]: {{< relref "2024-05-18_how-to-give-good-answers.md" >}}
+
 ## References
 
 I am by no means the first to write down how to ask questions. If you are
