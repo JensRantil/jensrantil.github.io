@@ -22,8 +22,8 @@ was proud to show our engineers how one could work truly in short cycles and
 get a ton of Shit Done(tm). I was fixing business problems at amazing speed - I
 thought I had reached a global optimum at work!
 
-However, there were two problems I was seeing; I was a bottleneck, and I was
-increasingly stressed:
+However, there were two problems I was beginning to see; I was a bottleneck,
+and I was increasingly stressed:
 
 "Bottleneck?", you might think. I was definitely _not_ a bottleneck when it
 came to _cycle time_ of tasks picked up. However, there was an increasing
@@ -86,7 +86,7 @@ that much faster than anyone else" (not really hero culture, but close).
 
 That is, taking a step back to create space for others is _hard_. Not only due
 to the short-term forces mentioned above but also because it can be hard for
-oneself (am still useful???).
+one's ego (am still useful???).
 
 For me, I was lucky and had a ticket out. As it turns out, I got the
 opportunity to work for 6 weeks from another side of the globe. Adding a
