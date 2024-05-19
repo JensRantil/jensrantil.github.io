@@ -149,8 +149,8 @@ Adding a delay to answer questions can have the following positive outcomes:
 
 ## Can you answer in public?
 
-I ones used to be [hammered by questions in <abbr title="Direct
-Messages">DMs</abbr>][knowledge-bottleneck]. People would reach out to me
+I ones used to be [hammered by questions in direct
+messages][knowledge-bottleneck]. People would reach out to me
 personally, and every answer I gave had a single recipient.
 
 [knowing-bottleneck]: {{< relref "2023-08-29_the-knowledge-bottleneck-I-used-to-be.md" >}}
@@ -203,7 +203,7 @@ through you. Some realizations I have had when doing Five Whys are:
 
 ## Closing thoughts
 
-If we write well-written responses, you can use them as reference material if
+If you write well-written responses, you can use them as reference material if
 someone asks the same question again. Most chat apps allow you to copy the URL
 to a response and paste it as a conversation (but remember, don't just answer
 with a link!). Common answers can also be [pinned][pin-slack] :pin: in certain
