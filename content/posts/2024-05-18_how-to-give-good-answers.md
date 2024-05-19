@@ -149,11 +149,10 @@ Adding a delay to answer questions can have the following positive outcomes:
 
 ## Can you answer in public?
 
-I ones used to be [hammered by questions in direct
-messages][knowledge-bottleneck]. People would reach out to me
+I ones used to be [hammered by questions in <abbr title="Direct messages">DMs</abbr>][knowledge-bottleneck]. People would reach out to me
 personally, and every answer I gave had a single recipient.
 
-[knowing-bottleneck]: {{< relref "2023-08-29_the-knowledge-bottleneck-I-used-to-be.md" >}}
+[knowledge-bottleneck]: {{< relref "2023-08-29_the-knowledge-bottleneck-I-used-to-be.md" >}}
 
 This meant that every answer I gave only benefitted a single person. If you
 have ever been in a position of being a local expert at something, you quickly
