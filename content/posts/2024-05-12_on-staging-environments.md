@@ -254,7 +254,7 @@ That said, [big rewrites are generally bad][rewrites], so I would avoid it.
 [rewrites]: https://skamille.medium.com/avoiding-the-rewrite-trap-b1283b8dd39e
 
 Apart from the above, I am struggling to find real good long-term reasons for
-having an environment.
+having a staging environment.
 
 ## Closing thoughts
 
