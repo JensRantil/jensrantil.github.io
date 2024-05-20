@@ -2,7 +2,6 @@ baseurl = "https://jensrantil.github.io"
 languageCode = "en"
 title = "Jens Rantil"
 theme = "hugo-coder"
-googleAnalytics = "UA-40929103-1"
 paginate = 20
 defaultContentLanguage = "en"
 enableEmoji = true
@@ -88,3 +87,6 @@ type = "application/rss+xml"
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[params.googleTagManager]
+id = "G-8QE7N3YHJ3"
