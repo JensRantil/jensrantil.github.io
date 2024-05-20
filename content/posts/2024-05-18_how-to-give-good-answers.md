@@ -149,7 +149,7 @@ Adding a delay to answer questions can have the following positive outcomes:
 
 ## Can you answer in public?
 
-I ones used to be [hammered by questions in <abbr title="Direct messages">DMs</abbr>][knowledge-bottleneck]. People would reach out to me
+I once used to be [hammered by questions in <abbr title="Direct messages">DMs</abbr>][knowledge-bottleneck]. People would reach out to me
 personally, and every answer I gave had a single recipient.
 
 [knowledge-bottleneck]: {{< relref "2023-08-29_the-knowledge-bottleneck-I-used-to-be.md" >}}
