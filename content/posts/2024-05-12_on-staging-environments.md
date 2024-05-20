@@ -275,7 +275,7 @@ suggest to not have a staging environment.
 I am not the first person to write about this. Here are some other articles on the Internet:
 
  * [Yes, I Test in Production (And So Do You)](https://www.infoq.com/presentations/testing-production-2018/)
- * [Go Ahead, Test in Production](https://thenewstack.io/honeycombs-charity-majors-go-ahead-test-in-production/) by Charity Majors
+ * [Go Ahead, Test in Production](https://thenewstack.io/honeycombs-charity-majors-go-ahead-test-in-production/)
  * [Staging Environments: An Inefficient Relic of the Past?](https://www.linkedin.com/pulse/staging-environments-inefficient-relic-past-julien-danjou-/)
  * [The myth of the staging environment: Why production testing is crucial](https://www.linkedin.com/pulse/myth-staging-environment-why-production-testing-crucial-tobias-mende/)
  * [Do you really need a Staging environment?](https://refactoring.fm/p/do-you-need-staging)
