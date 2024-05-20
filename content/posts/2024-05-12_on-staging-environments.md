@@ -179,6 +179,9 @@ A full staging environment is _not_ a requirement to be able to do this. It can
 be done by starting up a [frontend preview per pull request[pr-preview], and
 have that frontend pointing to a production backend.
 
+Or even better, wrap your new UX change behind a feature flag and have your
+colleagues, alpha, or beta testers test it in production!
+
 [pr-preview]:
 https://docs.aws.amazon.com/amplify/latest/userguide/pr-previews.html
 
