@@ -41,7 +41,7 @@ Largely, there are five problems with feedback myopia:
    * does not ask clarifying questions from the giver, **risking to not fully
      understand why the behaviour is perceived the way it is**. Sometimes when
      you get feedback, the underlying perceived impact is based on something
-     explicit. The person might be scared, worried, or reminded of a similar
+     implicit. The person might be scared, worried, or reminded of a similar
      situation from the past.
    * **misses an opportunity to engage the person giving the feedback** in
      coming up with a solution. After all, it's a giver who knows the best how
