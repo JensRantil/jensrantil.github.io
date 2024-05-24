@@ -8,15 +8,15 @@ slug = "three-buckets-of-my-time"
 I have a small framework for how I carve out my professional time. I think of
 my working hours spent into three buckets:
 
- * Team work ("team bucket")
+ * Teamwork ("team bucket")
  * Company-wide work ("company bucket")
  * My own initiatives ("me bucket")
 
 Let's go through them one by one:
 
-## Team work ("team bucket")
+## Teamwork ("team bucket")
 
-Time spent in the "team work" bucket is time I spend on tasks related to the
+Time spent in the "teamwork" bucket is time I spend on tasks related to the
 local team I am primarily working with. Usually these tasks are tied to issues
 in a ticketing system, but it also includes team ceremonies (retros or planning
 etc.).

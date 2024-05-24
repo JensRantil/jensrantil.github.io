@@ -1,9 +1,10 @@
 +++
 date = 2023-05-22T19:01:45+02:00
-title = "Three categories of team work"
-description = "A useful model for sourcing team work."
-tags = ["team work", "product teams"]
-slug = "three-team-work-categories"
+title = "Three categories of teamwork"
+description = "A useful model for sourcing teamwork."
+tags = ["teamwork", "product teams"]
+slug = "three-teamwork-categories"
+aliases = ["three-team-work-categories"]
 +++
 
 I recently wrote the post ["The Three Buckets model" for my own
@@ -95,6 +96,6 @@ A former manager always used to tell me
 
 By saying this, he was reminding me that “the product and engineering” shared
 the same goal; building an awesome product together. By having these three
-categories for team work, I found that product and engineering started working
+categories for teamwork, I found that product and engineering started working
 much closer together, with the same goal in mind, focusing on the right thing,
 at the right time.
