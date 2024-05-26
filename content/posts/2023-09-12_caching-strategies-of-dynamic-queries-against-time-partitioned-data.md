@@ -98,27 +98,43 @@ invalidation by date. By partitioning our cached SQL results by date, for
 example, month, we can invalidate only certain parts of our data. Let me
 explain:
 
-For simplicity, let's just ignore the `userId` field and assume we always
-filter by it and take it into consideration when doing a lookup from the cache.
-If we instead define our `cache_invalidation_tokens` mapping as `(year, month)
-=> nonce`, the query
+If we instead define our `cache_invalidation_tokens` mapping as `(userId, year, month)
+=> nonce` (refered to as `NONCE(x)` from now on), the query
 ```sql
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-01-01' AND '2023-06-01'
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND
+  date BETWEEN '2023-01-01' AND '2023-06-01'
 ```
 would trigger five cache lookups and potentially five SQL query executions:
 ```sql
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-01-01' AND '2023-02-01';
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-02-01' AND '2023-03-01';
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-03-01' AND '2023-04-01';
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-04-01' AND '2023-05-01';
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-05-01' AND '2023-06-01';
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND
+  date BETWEEN '2023-01-01' AND '2023-02-01';
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND
+  date BETWEEN '2023-02-01' AND '2023-03-01';
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND
+  date BETWEEN '2023-03-01' AND '2023-04-01';
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND
+  date BETWEEN '2023-04-01' AND '2023-05-01';
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND
+  date BETWEEN '2023-05-01' AND '2023-06-01';
 ```
-Each SQL query would first check if the cache key `HASH(sql) XOR NONCE(year,
-month)` exists, followed by an optional query against the primary table on
-cache miss. Finally, all the results would be summed up to a final
-`SUM(amount)`. Further, every mutation would then need to update with a new
-random nonce for the `(year, month)` (as before, either in a database
-transaction or in a cache).
+Each SQL query would first check if the cache key `HASH(sql) XOR NONCE(userId,
+year, month)` exists, followed by a query against the primary table on cache
+miss. Finally, all the results would be summed up to a final `SUM(amount)`.
+Further, every mutation would then need to update with a new random nonce for
+`(userId, year, month)` (as before, either in a database transaction or in a
+cache).
 
 The above-described approach is a trade-off between shorter scans on average
 when data has been mutated, at the cost of more queries against the database.
@@ -136,58 +152,78 @@ stopping a database writer from asynchronously populating the cache afterward.
 For example, maybe summing the amount without any custom filtering is so common
 that populating that in the cache is worth it.
 
-The two popular caches [Memcached][memcached] and [Redis][redis] both support
-[atomic incrementation of integers][memc-incr] which also could be done at
-write instead of a full recalculation and storing cache invalidation tokens.
+The two popular distributed caches [Memcached][memcached] and [Redis][redis]
+both support [atomic incrementation of integers][memc-incr] which also could be
+done at write instead of a full recalculation and storing cache invalidation
+tokens.
 
 [memcached]: https://memcached.org/
 [redis]: https://redis.com/
 [memc-incr]: https://github.com/memcached/memcached/blob/efee763c93249358ea5b3b42c7fd4e57e2599c30/doc/protocol.txt#L354
 
-### Advanced: 2-phase lookups & hierarchical date-based partitioning
+### Advanced: 2-phase lookups
 
 The careful reader might have noticed my example above was slightly contrived;
-the date range for my example query was covering full even months. What if
+the date range for my example query was covering even months. What if
 someone would query
 ```sql
-SELECT SUM(amount) FROM transactions WHERE date BETWEEN '2023-01-05' AND '2023-04-15'
+SELECT SUM(amount) FROM transactions WHERE
+    userId=123
+  AND
+    date BETWEEN '2023-01-05' AND '2023-04-15'
 ```
 ? Ie.
 ```sql
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-01-05' AND '2023-02-01';
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-02-01' AND '2023-03-01';
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-03-01' AND '2023-04-01';
-SELECT SUM(amount) FROM transactions WHERE description='Netflix' AND date BETWEEN '2023-04-01' AND '2023-04-15';
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND
+  date BETWEEN '2023-01-05' AND '2023-02-01';
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND
+  date BETWEEN '2023-02-01' AND '2023-03-01';
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND date BETWEEN '2023-03-01' AND '2023-04-01';
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  description='Netflix' AND
+  date BETWEEN '2023-04-01' AND '2023-04-15';
 ```
 The likelihood for the first and last query to be found in the cache would be
 rather small, as the SQL query would be fairly unique.
 
-Another problem would be the query:
+A fix for this would be to do **two lookup phases**: First you would do a pass
+of all cache lookups, wait for them to be done, and then execute *a single* SQL
+query based on the ranges not within the cache, ie. something like:
 ```sql
-SELECT SUM(amount) FROM transactions WHERE date BETWEEN '2000-01-01' AND '2023-01-01'
-```
-In the worst-case scenario, if nothing is found in the cache, this would
-trigger `23 years * 12 months = 276 query` executions against the database!
-
-The above two described problems could be solved by two different approaches:
-
-The first workaround would be to do **two lookup phases**: First you would do a
-pass of all cache lookups, wait for them to be done, and then execute *a
-single* SQL query based on the ranges not within the cache, ie. something like:
-```sql
-SELECT SUM(amount) FROM transactions WHERE (date BETWEEN '2000-01-01' AND '2015-01-01') OR (date BETWEEN '2017-01-01' AND '2023-01-01')
+SELECT SUM(amount) FROM transactions WHERE
+  (date BETWEEN '2000-01-01' AND '2015-01-01')
+OR
+  (date BETWEEN '2017-01-01' AND '2023-01-01')
 ```
 This would definitely reduce the number of queries against the database, but
 not the `cache_invalidation_tokens` cache!
 
-To hit the cache less, one could instead use **hierarchical date-based
-partitioning** where nonces are introduced for different date partition
-granularity. For example, `NONCE(userId, year)`, `NONCE(userId, month)`, and
-`NONCE(userId, day)`. A mutation of a financial transaction with the date
-`2013-08-03` for user X, would then invalidate the cache for the keys `(X,
-2013)`, `(X, 2013-08)`, and `(X, 2013-08-03)`. The query logic above would
-become more complex, but would prefer querying in the following priority if
-possible:
+### Advanced: Hierarchical date-based partitioning
+
+Another problem would be the query:
+```sql
+SELECT SUM(amount) FROM transactions WHERE
+  userId=123 AND
+  date BETWEEN '2000-01-01' AND '2023-01-01'
+```
+In the worst-case scenario, if nothing is found in the cache, this would
+trigger `23 years * 12 months = 276 query` executions against the database! Further the cache would get hit pretty often.
+
+To avoid excessive cache and database lookups, one could instead use
+**hierarchical date-based partitioning** where nonces are introduced for
+different date partition granularity. For example, `NONCE(userId, year)`,
+`NONCE(userId, year, month)`, and `NONCE(userId, year, month, day)`. A mutation
+of a financial transaction with the date `2013-08-03` for user X, would then
+invalidate the cache for the keys `(X, 2013)`, `(X, 2013-08)`, and `(X,
+2013-08-03)`. The query logic above would become more complex, but would prefer
+querying in the following priority if possible:
 
  1. year partition from cache.
  2. month partition from cache.
