@@ -57,7 +57,7 @@ it exists - otherwise, run the expensive query against the database.
 this - and can be scaled horizontally. For certain applications, you might even
 be fine with an in-memory cache in your client.)
 
-### In-place mutations & no partitioning
+### In-place mutations & user partitioning
 
 As pointed out in our original requirements, our data is *not* immutable. So,
 let's now assume that our data can be mutated. That is, added, removed, or
