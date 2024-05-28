@@ -167,7 +167,7 @@ idea?". It's not always clear! The answer depends on
 If it's not clear where to direct ideas they are dropped and become missed
 opportunities.
 
-At my two previous employers, I have created an internal document called "I have
+At my two previous employers, I have created an internal guide called "I have
 an idea!" where I have explained what actions engineers should take if they
 have ideas.  What to do depends a lot on what type of idea. Depending on if you
 come up with a completely new business idea vs. a small UX improvement has a
@@ -195,9 +195,9 @@ include things like
 
 Which recommendations you give depend on your company's ways of working.
 
-By having an "I have an idea!" you guide people on what they should do when
-they have an idea. Without such a document it is not always clear where to take ideas
-and there is a risk you lose out on innovative ideas.
+By having an "I have an idea!" guide you help people on what they should do
+when they have an idea. Without such a document it is not always clear where to
+take ideas and there is a risk you lose out on innovative ideas.
 
 ## Reducing processes that kill innovation
 
