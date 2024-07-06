@@ -31,6 +31,8 @@ invalid assumptions here:
    around][max-flow-min-cut]. For example, an application backed by supporting
    infrastructure such a database can usually only scale up until a certain
    level until _the database_ turns into the performance bottleneck instead.
+   That said, based on experience 99% of the time, _the database_ is the
+   bottleneck, not your application...
 
 [max-flow-min-cut]: https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem
 
