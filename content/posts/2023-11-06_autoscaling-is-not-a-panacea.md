@@ -60,7 +60,7 @@ have another problem to solve!
 limit on the maximum number of instances configured by you. AWS also maintains
 limits which usually always kick in at the worst possible time degrading your
 system. Funnily enough, increasing the max instances limit tends to introduce
-an [induced demand][induced-demane] such that you start hitting your new
+an [induced demand][induced-demand] such that you start hitting your new
 limit...
 
 [induced-demand]: https://en.wikipedia.org/wiki/Induced_demand
