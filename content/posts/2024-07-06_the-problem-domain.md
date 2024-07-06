@@ -65,3 +65,11 @@ between the problem and solution space. By doing so, they
 
 Having these skills can be a very effective way to get promoted (if you are not
 working in an organization with role silos).
+
+Finally, I believe working in the problem space is part of what I would define
+as engineering _work_. Once I had that epiphany, I no longer felt frustrated
+spending my days writing RFCs, being in workshops, or doing product workshops.
+It's just as much "work" as building something. As long as it's not
+[waste][waste], of course.
+
+[waste]: {{< relref "2023-06-27_waste-in-software-development.md" >}}
