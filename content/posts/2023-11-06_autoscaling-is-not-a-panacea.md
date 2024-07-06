@@ -29,7 +29,7 @@ invalid assumptions here:
  * _"My application is the bottleneck."_ Anyone who has done any significant
    performance benchmark knows that the performance bottleneck [moves
    around][max-flow-min-cut]. For example, an application backed by supporting
-   infrastructure such as databases can usually only scale up until a certain
+   infrastructure such a database can usually only scale up until a certain
    level until _the database_ turns into the performance bottleneck instead.
 
 [max-flow-min-cut]: https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem
