@@ -1,5 +1,5 @@
 +++
-date = 2024-06-03T09:40:35+02:00
+date = 2024-07-03T09:40:35+02:00
 title = "Architecture at multiple scales"
 description = "Architecture is a fractal concept."
 tags = []
