@@ -5,9 +5,9 @@ description = "I think the CrowdStrike incident is a great example of centralize
 tags = ["security", "risk"]
 slug = "centralised-risk-management"
 +++
-Today I wanted to write something about [the recent CrowdStrike Falcon debacle][crowdstrike-debacle] and about one contributing factor, namely _centralised risk management_.
+Today I wanted to write something about [the recent CrowdStrike Falcon incident][crowdstrike-incident] and about one contributing factor, namely _centralised risk management_.
 
-[crowdstrike-debacle]: https://en.wikipedia.org/wiki/2024_CrowdStrike_incident
+[crowdstrike-incident]: https://en.wikipedia.org/wiki/2024_CrowdStrike_incident
 
 ## The importance of local risk assessment
 
