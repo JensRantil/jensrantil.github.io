@@ -1,6 +1,6 @@
 +++
 date = 2024-07-31T17:36:35+02:00
-title = "Risk assessment must happen at the sharp end"
+title = "Crowdstrike: Risk assessment is better off at the sharp end"
 description = "I think the Crowdstrike incident is a great example of centralized risk management gone wrong."
 tags = ["security", "risk"]
 slug = "centralised-risk-management"
