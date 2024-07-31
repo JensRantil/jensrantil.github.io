@@ -1,11 +1,11 @@
 +++
 date = 2024-07-31T17:36:35+02:00
-title = "Crowdstrike: Risk assessment is better off at the sharp end"
-description = "I think the Crowdstrike incident is a great example of centralized risk management gone wrong."
+title = "CrowdStrike: Risk assessment is better off at the sharp end"
+description = "I think the CrowdStrike incident is a great example of centralized risk management gone wrong."
 tags = ["security", "risk"]
 slug = "centralised-risk-management"
 +++
-Today I wanted to write something about [the recent Crowdstrike Falcon debacle][crowdstrike-debacle] and about one contributing factor, namely _centralised risk management_.
+Today I wanted to write something about [the recent CrowdStrike Falcon debacle][crowdstrike-debacle] and about one contributing factor, namely _centralised risk management_.
 
 [crowdstrike-debacle]: https://en.wikipedia.org/wiki/2024_CrowdStrike_incident
 
@@ -30,11 +30,11 @@ The above implication is that we probably want to do much more careful rollouts 
 
 Centralized risk management tends to treat multiple systems the same, even though they have very different risk profiles. For example, a security department might require "all security upgrades must be rolled out immediately to all internal services" - even though certain systems such as the authentication system must be upgraded much more carefully!
 
-## Crowdstrike and centralized rollouts
+## CrowdStrike and centralized rollouts
 
-So, what does this have to do with Crowdstrike's Falcon incident? In the case of Falcon, Crowdstrike _centrally_ decided how to roll out a new version of Falcon to all customers, _independently of how sensitive the downstream systems were to risk_.
+So, what does this have to do with CrowdStrike's Falcon incident? In the case of Falcon, CrowdStrike _centrally_ decided how to roll out a new version of Falcon to all customers, _independently of how sensitive the downstream systems were to risk_.
 
-**Falcon had the same rollout strategy independently of whether it was pushing it out to a core system of an airline/bank, or a small SaaS startup.** The decision to perform an upgrade, how quickly, and in what way, must [always be done at "sharp end"][sharp-end]. It might be easy to point the finger at Crowdstrike for rolling out a bug, but I think it was Crowdstrike's customers that made the bigger mistake here; Configuring automatic 0-day upgrades to go out automatically to very critical core systems (where downtime is very very expensive) is not a smart thing. Rollouts like this should be staggered, tested, and possibly passed through a staging environment of some sort.
+**Falcon had the same rollout strategy independently of whether it was pushing it out to a core system of an airline/bank, or a small SaaS startup.** The decision to perform an upgrade, how quickly, and in what way, must [always be done at "sharp end"][sharp-end]. It might be easy to point the finger at CrowdStrike for rolling out a bug, but I think it was CrowdStrike's customers that made the bigger mistake here; Configuring automatic 0-day upgrades to go out automatically to very critical core systems (where downtime is very very expensive) is not a smart thing. Rollouts like this should be staggered, tested, and possibly passed through a staging environment of some sort.
 
 [sharp-end]: https://how.complexsystems.fail/#11
 
