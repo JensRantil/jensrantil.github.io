@@ -38,4 +38,16 @@ So, what does this have to do with CrowdStrike's Falcon incident? In the case of
 
 [sharp-end]: https://how.complexsystems.fail/#11
 
-I would not be surprised if Falcon security upgrade policies were enforced by central security departments far away from the "sharp end". Only time will tell if I am right.
+Compare the CrowdStrike incident to the the global [Log4shell incident][log4shell] which happened in 2021. According to [the incident's wiki page][log4shell] it
+
+> [...] had the potential to affect hundreds of millions of devices.
+
+and
+
+> [...] the vulnerability affected 93% of enterprise cloud environments.
+
+Still, the rollouts to fix Log4shell did not bring down airlines or banks to any large extent. Why? I would guess it was because operators were able to carry out a controlled rollout of fixes to one system at a time, with testing along the way for each system based on its risk profile.
+
+[log4shell]: https://en.wikipedia.org/wiki/Log4Shell
+
+The CrowdStrike incident was a missed opportunity for our industry to tailor change management based on different risk profiles.
