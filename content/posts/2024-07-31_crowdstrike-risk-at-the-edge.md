@@ -16,7 +16,7 @@ I recently watched [the trailer][safety-differently-trailer] for the movie ["Saf
 [safety-differently-trailer]: https://www.youtube.com/watch?v=IEYN38nir_w
 [safety-differently]: https://www.youtube.com/watch?v=EeIucLnEa24
 
-For example, if you are a security & risk department far away from your developers, the controls you put in place for the developer's software will likely not reduce risk the way you expect. You might for example [add security controls that make operational risk worse][operational-risk]. Instead of enforcing specific controls on all developers, a much better approach is to give the requirement and work _together_ with the developers to come up with a solution. Don't do "we must use nginx for TLS". Instead, tell them that transport encryption is a must and they get to pick their favorite HTTP server that works best for them.
+For example, if you are a security & risk department far away from your developers, the controls you put in place for the developer's software will likely not reduce risk the way you expect. You might for example [add security controls that make _operational_ risk worse][operational-risk]. Instead of enforcing specific controls on all developers, a much better approach is to give the requirement and work _together_ with the developers to come up with a solution. Don't do "we must use nginx for TLS". Instead, tell them that transport encryption is a must and they get to pick their favorite HTTP server that works best for them.
 
 [operational-risk]: {{< relref "2024-05-12_security-and-risk.md" >}}
 
@@ -24,9 +24,9 @@ For example, if you are a security & risk department far away from your develope
 
 Different systems have different risk profiles. However, centralized risk management commonly doesn't tailor its risk assessment to subsystems.
 
-For example, let's say I am a SaaS company. The SaaS has a central authentication service and a service that sends out overnight mobile push notifications. The authentication system is much more important for the SaaS to function properly than the overnight push notifications. Customers must be able to log in at all times. Push notifications are much less important.
+For example, let's say I am a SaaS company. The company has a central authentication service and a service that sends out overnight mobile push notifications. The authentication system is much more important for the SaaS to function properly than the overnight push notifications. Customers must be able to log in at all times. Push notifications are much less important.
 
-The above implication is that we probably want to do much more careful rollouts of changes to the authentication service than the push notification service. The former needs more observability, and possibly even a slow staggered rollout of changes to ensure logins still work.
+The above implication is that we probably want to do much more careful rollouts of changes to the authentication service than the push notification service. The former might need more observability, slower rollouts (gradually increasing over a couple of days), and a well-tested release candidate that has been battle-tested by the industry/company for at least a week or two - all this to ensure logins still work.
 
 Centralized risk management tends to treat multiple systems the same, even though they have very different risk profiles. For example, a security department might require "all security upgrades must be rolled out immediately to all internal services" - even though certain systems such as the authentication system must be upgraded much more carefully!
 
@@ -34,7 +34,7 @@ Centralized risk management tends to treat multiple systems the same, even thoug
 
 So, what does this have to do with CrowdStrike's Falcon incident? In the case of Falcon, CrowdStrike _centrally_ decided how to roll out a new version of Falcon to all customers, _independently of how sensitive the downstream systems were to risk_.
 
-**Falcon had the same rollout strategy independently of whether it was pushing it out to a core system of an airline/bank, or a small SaaS startup.** The decision to perform an upgrade, how quickly, and in what way, must [always be done at "sharp end"][sharp-end]. It might be easy to point the finger at CrowdStrike for rolling out a bug, but I think it was CrowdStrike's customers that made the bigger mistake here; Configuring automatic 0-day upgrades to go out automatically to very critical core systems (where downtime is very very expensive) is not a smart thing. Rollouts like this should be staggered, tested, and possibly passed through a staging environment of some sort.
+**Falcon had the same rollout strategy independently of whether it was pushing it out to a core system of an airline/bank, or a small SaaS startup.** The decision to perform an upgrade, how quickly, and in what way, should [be done at "sharp end"][sharp-end]. It might be easy to point the finger at CrowdStrike for rolling out a bug, but I think it was CrowdStrike's customers that made the bigger mistake here; Configuring automatic 0-day upgrades to go out automatically to very critical core systems (where downtime is very very expensive) is not a smart thing. Rollouts like this should be staggered, tested, and possibly passed through a staging environment of some sort.
 
 [sharp-end]: https://how.complexsystems.fail/#11
 
