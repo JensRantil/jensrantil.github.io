@@ -14,7 +14,7 @@ For the past few years many software engineers have been using [the DORA
 metrics][dora] to track the performance of software delivery. One of the DORA
 metrics is "Time to Restore Service", also known as "Mean Time To Recovery
 (MTTR)". A couple of years ago Courtney Nash wrote ["MTTR is a Misleading
-Metric—Now What?"][now-what] she criticized that the MTTR concept is too
+Metric—Now What?"][now-what] where she criticized that the MTTR concept is too
 simplistic. I could not agree more.
 
 [dora]: https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance
