@@ -41,4 +41,4 @@ Thirdly, by clearly defining the problem, I become **less attached to my propose
 
 ## Closing thoughts
 
-A downside of explicitly working in the problem space is that people around you might feel frustrated that "we are not moving forward". I have seen this frustration from many people, irrespective of their role. I am confident that exploring the problem space implicitly is to solve a problem. However, there needs to be an understanding of this. Which is why I wrote this article.
+A downside of explicitly working in the problem space is that people around you might feel frustrated that "we are not moving forward". I have seen this frustration from many people, irrespective of their role. I am confident that exploring the problem space implicitly solves a problem. However, not everyone does. Hopefully, this article help to clarify this.
