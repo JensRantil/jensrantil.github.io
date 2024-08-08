@@ -35,7 +35,7 @@ Most engineers iterate between the two spaces somewhat implicitly. However, ther
 
 First, by being explicit about your problem space, you can **document your problem space for others to see**. I have found <abbr title="Request for Comments">RFCs</abbr> containing the background to a solution to be immensely useful when explaining to peers why something was done the way it was.
 
-Secondly, it **reduces frustration**. As engineers, many of us have been told our job is to _solve_ problems, not define them. This is why many engineers are frustrated by meetings & workshops - spending time in the problem space means we are not doing our job. However, I believe engineering is equally much about defining the problems we are trying to solve. (Don't get me wrong, there are unproductive meetings & workshops, too, though! :wink:)
+Secondly, it **reduces frustration**. As engineers, many of us have been told our job is to _solve_ problems, not define them. This is why many engineers are frustrated by meetings & workshops - spending time in the problem space means we are not doing our job. However, I believe that engineering is equally much about defining the problems we are trying to solve. (Don't get me wrong, there are unproductive meetings & workshops, too, though! :wink:)
 
 Thirdly, by clearly defining the problem, I become **less attached to my proposed solution and more open to others** replacing it with something entirely different.
 
