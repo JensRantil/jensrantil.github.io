@@ -228,11 +228,14 @@ negatively impacting users:
  * Smoke tests to make sure a deployment rolled out properly.
  * End-to-end tests to make sure that important user flows work after a
    deployment.
- * Automatic rollback on errors.
+ * Automatic rollback on errors. This can be done both on an
+   infrastructure level, but much simpler [on intra-service level in
+   source code][automatic-rollback].
 
 [aws-weighted-dns]: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-weighted.html
 [source-sharding]: https://github.com/JensRantil/java-canary-tools?tab=readme-ov-file#weightedshardedbuilder
 [rr-source]: https://github.com/JensRantil/java-canary-tools?tab=readme-ov-file#weightedroundrobinbuilder
+[automatic-rollback]: https://github.com/JensRantil/java-canary-tools?tab=readme-ov-file#circuitbreakerfallbackbuilder
 
 In the article ["Why CEOs are failing software engineers and other creative
 teams"][ceo-fail], Gene Bond talks about how Creative Management has the goal
