@@ -42,7 +42,7 @@ As engineers, we are all encouraged to build up automated test suites (unit
 tests, etc.) to make sure that tests can verify that today's behavior will work
 in the future. Manual testing, such as the one used in a staging environment,
 is frowned upon in our industry. Yet, why are we doing it? I think staging
-environments encourage manual testing. If we want to Build Quality In(tm), we
+environments encourage manual testing. If we want to Build Quality In:tm:, we
 need automated testing.  If we need automated testing, we need to stop manual
 testing. A great way to stop manual testing is to not have a staging
 environment.
