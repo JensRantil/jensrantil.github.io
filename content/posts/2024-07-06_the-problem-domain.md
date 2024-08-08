@@ -2,7 +2,7 @@
 date = 2024-07-06T17:12:35+02:00
 title = "The Problem Space"
 description = "Many engineers lack skills in the problem space."
-tags = []
+tags = ["problem space"]
 slug = "the-problem-domain"
 +++
 As engineers, we are great at solving problems and working in the "solution
