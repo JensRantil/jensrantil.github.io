@@ -1,7 +1,7 @@
 +++
 date = 2024-08-21T08:44:35+02:00
 title = "Engineers are not just builders"
-description = "Solutions fall naturally out of well-defined problems."
+description = "Some of the things that product owners do can, and should, equally be done by engineers."
 tags = []
 slug = "not-just-builders"
 +++
