@@ -23,15 +23,16 @@ One good thing was that the group accepted my idea to have a meeting every Monda
 
 My first step was to draw up a table where I asked the group to summarize what we were trying to achieve at the end of the quarter. While this might seem obvious at first glance, you might be surprised by the different answers you get when there are 15 people involved! After some conversation, we agreed to a common statement. Our whiteboard now looked something like this:
 
-![Kanban board with columns labeled End-to-end delivery, Team 1, Team 2, and continuing up to Team N. A yellow sticky note is in the End-to-end delivery column, representing E2E product delivery (aka 'Stories'), as explained in a legend on the right. The board tracks the progress of a product through various teams.](1.svg)
+{{< figure src="1.svg" alt="Kanban board with columns labeled End-to-end delivery, Team 1, Team 2, and continuing up to Team N. A yellow sticky note is in the End-to-end delivery column, representing E2E product delivery (aka 'Stories'), as explained in a legend on the right. The board tracks the progress of a product through various teams." caption="Kanban board tracking end-to-end delivery across multiple teams. Currently only containing our end-of-quarter delivery." >}}
 
 I then continued and asked everyone to write down all the tasks they thought their team would need to finish to reach our goal. I knew we needed to break these down into smaller, incremental deliveries, but I also knew that there were forces that did not have an agile mindset. If we did not write down _everything_ that needed to be done, they would feel uncomfortable and not in control. We used a different color for tasks, and this is what the board looked like after this step:
 
-![Diagram showing an end-to-end delivery workflow across multiple teams. The 'End-to-end delivery' column on the left contains a yellow box labeled 'E2E product delivery (aka Stories).' Each team (Team 1, Team 2, up to Team N) has green boxes representing 'Tasks' associated with the product delivery. Teams work in parallel on different tasks related to the overall end-to-end delivery.](2.svg)
+{{< figure src="2.svg" alt="Diagram showing an end-to-end delivery workflow across multiple teams. The 'End-to-end delivery' column on the left contains a yellow box labeled 'E2E product delivery (aka Stories).' Each team (Team 1, Team 2, up to Team N) has green boxes representing 'Tasks' associated with the product delivery. Teams work in parallel on different tasks related to the overall end-to-end delivery." caption="Diagram containing our end-of-quarter delivery and an unstructured list of all tasks the teams thought they needed to do." >}}
+
 
 "Wow, that's a lot of tasks!", I said smiling. "I think we need to add some structure to this. How about we add arrows between tasks that we know depend on each other? Let's also move, tasks needed to be done earlier higher up and tasks done later further down.". People nodded and once again engaged in the Miro board. The outcome looked something like this:
 
-![Diagram illustrating an end-to-end delivery process across multiple teams with dependencies. A yellow box labeled 'E2E product delivery (aka Stories)' is shown in the 'End-to-end delivery' column. Green boxes in each team column (Team 1, Team 2, up to Team N) represent 'Tasks.' Arrows between tasks indicate dependencies.](3.svg)
+{{< figure src="3.svg" alt="Diagram illustrating an end-to-end delivery process across multiple teams with dependencies. A yellow box labeled 'E2E product delivery (aka Stories)' is shown in the 'End-to-end delivery' column. Green boxes in each team column (Team 1, Team 2, up to Team N) represent 'Tasks.' Arrows between tasks indicate dependencies." caption="Diagram of the end-of-quarter delivery with task dependencies across multiple teams." >}}
 
 At this point, I suggested to build a really small end-to-end implementation by the end of the week. Something that we could show to product owners and managers[^1].
 
@@ -47,11 +48,11 @@ I made three changes to our whiteboard:
 
 Our whiteboard now looked like this:
 
-![Diagram illustrating an end-to-end delivery process across multiple teams with dependencies. Yellow boxes labeled 'E2E product delivery (aka Stories)' is shown in the 'End-to-end delivery' column. Green boxes in each team column (Team 1, Team 2, up to Team N) represent 'Tasks.' Arrows between tasks or E2E deliveries indicate dependencies.](4.svg)
+{{< figure src="4.svg" alt="Diagram illustrating an end-to-end delivery process across multiple teams with dependencies. Yellow boxes labeled 'E2E product delivery (aka Stories)' are shown in the 'End-to-end delivery' column. Green boxes in each team column (Team 1, Team 2, up to Team N) represent 'Tasks.' Arrows between tasks or E2E deliveries indicate dependencies." caption="End-to-end delivery process with dependencies across multiple teams, including deliveries and tasks." >}}
 
 In our final step for our planning session, we moved all the tasks related to our first end-to-end implementation up into "This week". This allowed everyone to see exactly the low-level tasks that needed to be implemented and how they depended on each other:
 
-![Diagram illustrating an end-to-end delivery process across multiple teams with dependencies. Yellow boxes labeled 'E2E product delivery (aka Stories)' is shown in the 'End-to-end delivery' column. Green boxes in each team column (Team 1, Team 2, up to Team N) represent 'Tasks.' Arrows between tasks or E2E deliveries indicate dependencies. Tasks and deliveries are split up vertically into 'This week' and 'Later'.](5.svg)
+{{< figure src="5.svg" alt="Diagram illustrating an end-to-end delivery process across multiple teams with dependencies. Yellow boxes labeled 'E2E product delivery (aka Stories)' are shown in the 'End-to-end delivery' column. Green boxes in each team column (Team 1, Team 2, up to Team N) represent 'Tasks.' Arrows between tasks or E2E deliveries indicate dependencies. Tasks and deliveries are split up vertically into 'This week' and 'Later'." caption="End-to-end delivery process with dependencies, organized by timeframe for tasks and deliveries." >}}
 
 This visualization was particularly useful in identifying bottlenecks early. Which team would likely block other teams? Could we somehow support that team with more engineers, or have another team implement something?
 
@@ -64,7 +65,7 @@ Every Monday, we revisited our board, and
 
 It looked something like this:
 
-![Similar to the previous diagram, but now also with a 'Done' row for stuff that was wrapped up.](6.svg)
+{{< figure src="6.svg" alt="Similar to the previous diagram, but now also with a 'Done' row for items that were wrapped up." caption="End-to-end delivery process with dependencies and an added 'Done' row for completed items." >}}
 
 I found the "Done" row to be a great way to also celebrate all the work we had done as our quarter progressed.
 
