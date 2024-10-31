@@ -19,3 +19,7 @@ I have been in far too many incident review meetings where the right counterpart
 So, what's the alternative? Just make a small adjustment - call it "action item candidates". They are _candidate_ action items - albeit high priority - that you will bring into your planning session.
 
 Throughout my career, I think this has been the biggest reason why incident review action items are forgotten, lost, and never implemented.
+
+**Addendum:** My friend and former colleague [jeekl][jeekl] pointed out that some teams have some kind of goalie/on-caller that doesn't work on a backlog. They can of course start working on action items as long as they don't compete with a backlog.
+
+[jeekl]: https://www.linkedin.com/in/jeeklund/
