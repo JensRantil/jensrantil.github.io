@@ -5,13 +5,13 @@ description = "Agile done, in a sneaky way."
 tags = []
 slug = "large-project-breakup"
 +++
-Earlier this year, I was on a multi-team project that was handed to us by our product organization. The project had lots of dependencies between teams and could have been a disaster. Today I would like to share how I helped to contribute to the project's success.
+Earlier this year, I was on a complex multi-team project that was handed to us by our product organization. The project had lots of dependencies between teams and could have been a disaster. Today I would like to share an approach we took to structure the project into what eventually made it a success.
 
-The project was to deliver a new product feature, and the deadline was three months in the future. About 15 engineers were involved in this project, and no product owner was included in the project group to guide us.
+The project was to deliver a new product feature, and the deadline was three months in the future. About 15 engineers were involved in this project, and close to no product owner was included in the project group to guide us.
 
 [miro]: https://miro.com
 
-Our first week was a mess. It was somewhat unclear who was running the project, and worse, we lacked common ground on how to approach it. Someone proposed that we create (virtual) Post-it notes on our (online) whiteboard, one Post-it for every task needed to finish the project. Suddenly, the board was filled with many unstructured tasks. But how would we approach them?
+Our first week was a mess. It was somewhat unclear who was running the project, and worse, we lacked common ground on how to approach it. Someone proposed that we create (virtual) Post-it notes on our (online) whiteboard, one Post-it for every task needed to finish the project. Suddenly, the board was filled with many unstructured tasks. But how would we approach implementing them?
 
 As someone who has seen large-scale engineering efforts fail miserably, I was getting worried. I noticed that some people seemed contemptuous about their team's tasks. They signaled that now they knew exactly what they needed to build for the next 2,5 months and the teams would simply piece together things as we went along. Others, like me, were worried that we would end up with a failed waterfall project. Quick feedback on delivery was lacking, and were were [following a plan over responding to change][agile].
 
@@ -73,4 +73,4 @@ I found the "Done" row to be a great way to also celebrate all the work we had d
 
 I liked this approach of using a whiteboard over spending a lot of time in a ticketing system for planning. It was fun, pragmatic, and social. It also allowed us to visualize planning without overplanning.
 
-Also, by facilitating, I helped our working group to collaboratively structure the work we needed to do. By breaking down the work into smaller, weekly, end-to-end deliverables, we ended up showing our stakeholders progress every week. We approached our project in an agile way, without me ever having to use the convoluted term "Agile". The project was delivered successfully - on time.
+By facilitating, I helped our working group to collaboratively structure the work we needed to do. By breaking down the work into smaller, weekly, end-to-end deliverables, we ended up showing the stakeholders our progress every week. We approached our project in an agile way, without me ever having to use the convoluted term "Agile". The project was delivered successfully - on time.
