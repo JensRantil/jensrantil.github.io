@@ -1,7 +1,7 @@
 +++
 date = 2024-10-31T11:04:35+02:00
 title = "Incident review action items"
-description = "An example sometimes speaks more than a thousand explanations."
+description = "Action item _candidates_."
 tags = ["incident management"]
 slug = "incident-action-items"
 +++
