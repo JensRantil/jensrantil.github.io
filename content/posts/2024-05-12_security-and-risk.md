@@ -24,7 +24,7 @@ SaaS's REST API over the Internet. For security they used
 [certificate-pinning]: https://sv.wikipedia.org/wiki/Certificate_pinning
 
 The <abbr title="Chief Information Security Office">CISO</abbr> department of
-this particular bank reached out to us and required us to to use [mutual
+this particular bank reached out to us and required us to to use [Mutual
 TLS][mtls] (mTLS) since it was "more secure". I thought their request was
 [security theatre][theatre]; it would not improve our security in any
 particular way.  Also, we had used TLS+pinning+token for many years, it worked
