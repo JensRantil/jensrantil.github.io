@@ -60,8 +60,10 @@ representative responded with:
 With that, I never heard from them again. I won my argument!
 
 My biggest learning from this was how useful it is for **a security department
-to take a more holistic approach to risk**. Without this, you are missing what
+to take a more [holistic approach to risk][not-just-security]**. Without this, you are missing what
 you are trading for "higher security".
+
+[not-just-security]: https://www.philvenables.com/post/crucial-questions-from-cios-and-ctos#:~:text=cybersecurity%20isn%E2%80%99t%20necessarily%20the%20only%20or%20even%20the%20major%20technology%20risk%20in%20most%20organizations.
 
 ## Other types of risk
 
