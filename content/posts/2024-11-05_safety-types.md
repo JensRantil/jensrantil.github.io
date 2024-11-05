@@ -44,5 +44,6 @@ The shift from type 1 to type 2 has many implications. Here are some of the shif
  * A stronger focus on getting smaller changes out in production as soon as possible (to know it's working) over weeks of work to prevent all possible bugs.
  * An organization celebrates learning from mistakes and is blameless.
  * A stronger focus on DevOps as a Culture; Developers are more involved with the rollout and how a system is being used by customers.
+ * Incident training is a natural part of daily work - practicing for things going bad, because they eventually will.
 
 The implication of shifting towards safety type 2 is also increased agility; You are resilient to experiments with negative outcomes.
