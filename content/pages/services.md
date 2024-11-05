@@ -4,7 +4,7 @@ date: 2023-04-28
 Services
 ========
 
-_Sweet Potato Tech_  offers IT consultancy services in areas such as site reliability engineering (SRE), DevOps, platform engineering & strategy, agile development, technical architecture, product development, and more. I offer training, workshops, coaching, mentoring, and hands-on technical work. It all depends on what your needs are.
+I am the founder of _Sweet Potato Tech_ which  offers IT consultancy services in areas such as site reliability engineering (SRE), DevOps, platform engineering & strategy, agile development, technical architecture, product development, and more. I offer training, workshops, coaching, mentoring, and hands-on technical work. It all depends on what your needs are.
 
 For inquiries, feel free to send me [an e-mail][email] or [reach out on LinkedIn][linkedin].
 
