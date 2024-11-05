@@ -47,3 +47,9 @@ The shift from type 1 to type 2 has many implications. Here are some of the shif
  * Incident training is a natural part of daily work - practicing for things going bad, because they eventually will.
 
 The implication of shifting towards safety type 2 is also increased agility; You are resilient to experiments with negative outcomes.
+
+{{< notice tip >}}
+Heads up! [I offer consultancy services][services] in this space. Don't hesitate to reach out if you would like me to help your company improve when it comes to reliability, resiliency, architecture feedback, on-call, alerting, or incident training. :wave:
+
+[services]: {{< relref "/services" >}}
+{{< /notice >}}
