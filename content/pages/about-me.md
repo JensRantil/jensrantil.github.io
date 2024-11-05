@@ -36,4 +36,4 @@ You can read more about me through the links [here][frontpage].
 [frontpage]: /
 
 Finally, opinions expressed on this website are solely my own and do not
-necessarily express the views or opinions of my employer.
+necessarily express the views or opinions of my employer or customers.

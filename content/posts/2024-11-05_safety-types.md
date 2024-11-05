@@ -13,12 +13,12 @@ In safety systems engineering (SSE) people talk about "safety type 1" and "safet
 
 Software systems (and software companies) are complex. And for complex systems, type 1 safety (prevention) will not save us for three key reasons:
 
-**Reason 1a:** Many [unknowns][unknown-unknowns] types of errors can happen to a complex system. Since [we don't know what they are][latent-errors], it is impossible to prevent them from ever happening. You can't write unit tests for all potential error scenarios you don't know about.
+**Reason 1a:** It's impossible to prevent all failures from happening in a complex system. Many of them are [unknowns][unknown-unknowns] we can't  [can't know them beforehand][latent-errors]. This makes it impossible to prevent them from ever happening. You can't write unit tests for all potential error scenarios you don't know about.
 
 [unknown-unknowns]: https://en.wikipedia.org/wiki/There_are_unknown_unknowns
 [latent-errors]: https://how.complexsystems.fail/#4
 
-**Reason 1b:** There is an assumption that all failure is introduced by an operator. In essence, assume that the context in which a system operates is static. This [simply is not true][temporal-proximity]; For example, load changes over time, new users are registering, auto-scaling might happen, third-party providers might be unavailable, we run out of memory, or we run out of memory on our database. Many things can happen!
+**Reason 1b:** The context around a system is never static. There is an assumption that all failure is introduced by an operator. But this is [not always the case][temporal-proximity]; For example, load changes over time, new users are registering, auto-scaling might happen, third-party providers might be unavailable, we run out of memory, or we run out of memory on our database. A system is dynamic on many dimensions, and many things can happen.
 
 [temporal-proximity]: https://how.complexsystems.fail/#6
 
