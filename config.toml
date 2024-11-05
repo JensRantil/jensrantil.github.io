@@ -35,6 +35,11 @@ name = "About"
 weight = 2
 url = "/pages/about-me/"
 
+[[languages.en.menu.main]]
+name = "Services"
+weight = 2
+url = "/pages/services/"
+
 [[params.social]]
 name = "E-mail"
 icon = "fa fa-2x fa-envelope"
