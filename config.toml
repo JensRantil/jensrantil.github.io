@@ -31,14 +31,14 @@ weight = 1
 url = "posts/"
 
 [[languages.en.menu.main]]
-name = "About"
-weight = 2
-url = "/pages/about-me/"
-
-[[languages.en.menu.main]]
 name = "Services"
 weight = 2
 url = "/pages/services/"
+
+[[languages.en.menu.main]]
+name = "About"
+weight = 3
+url = "/pages/about-me/"
 
 [[params.social]]
 name = "E-mail"
