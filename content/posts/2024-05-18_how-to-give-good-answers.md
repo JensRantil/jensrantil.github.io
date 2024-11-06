@@ -205,8 +205,10 @@ through you. Some realizations I have had when doing Five Whys are:
 If you write well-written responses, you can use them as reference material if
 someone asks the same question again. Most chat apps allow you to copy the URL
 to a response and paste it as a conversation (but remember, don't just answer
-with a link!). Common answers can also be [pinned][pin-slack] :pin: in certain
-chat apps such as Slack to make them easily found.
+with a link!). Common answers can also be pinned :round_pushpin: in certain
+chat apps ([such as Slack][pin-slack]) to make them easily found.
+
+[pin-slack]: https://slack.com/intl/en-gb/help/articles/205239997-Pin-messages-and-bookmark-links
 
 Also, if you notice someone isn't that great at asking questions. You can of
 course also recommend that they have a look [my previous blog post on "How to
