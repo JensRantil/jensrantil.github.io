@@ -13,7 +13,7 @@ In safety systems engineering (SSE) people talk about "safety type 1" and "safet
 
 Software systems (and software companies) are complex. And for complex systems, type 1 safety (prevention) will not save us for three key reasons:
 
-**Reason 1a:** It's impossible to prevent all failures from happening in a complex system. Many of them are [unknowns][unknown-unknowns] we can't  [can't know them beforehand][latent-errors]. This makes it impossible to prevent them from ever happening. You can't write unit tests for all potential error scenarios you don't know about.
+**Reason 1a:** It's impossible to prevent all failures from happening in a complex system. Many of them are [unknowns][unknown-unknowns] and we [can't know them beforehand][latent-errors]. This makes it impossible to prevent them from ever happening. You cannot write unit tests for all potential error scenarios you don't know about.
 
 [unknown-unknowns]: https://en.wikipedia.org/wiki/There_are_unknown_unknowns
 [latent-errors]: https://how.complexsystems.fail/#4
