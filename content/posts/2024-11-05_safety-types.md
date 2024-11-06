@@ -18,7 +18,7 @@ Software systems (and software companies) are complex. And for complex systems, 
 [unknown-unknowns]: https://en.wikipedia.org/wiki/There_are_unknown_unknowns
 [latent-errors]: https://how.complexsystems.fail/#4
 
-**Reason 1b:** The context around a system is never static. There is an assumption that all failure is introduced by an operator. But this is [not always the case][temporal-proximity]; For example, load changes over time, new users are registering, auto-scaling might happen, third-party providers might be unavailable, we run out of memory, or we run out of memory on our database. A system is dynamic on many dimensions, and many things can happen.
+**Reason 1b:** The context around a system is never static. There is an assumption that all failure is introduced by an operator. But this is [not always the case][temporal-proximity]; For example, load changes over time, new users are registering, auto-scaling might happen, third-party providers might be unavailable, we run out of memory, or we run out of memory in our database. A system is dynamic on many dimensions, and many things can happen.
 
 [temporal-proximity]: https://how.complexsystems.fail/#6
 
