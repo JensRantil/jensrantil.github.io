@@ -30,7 +30,7 @@ Software systems (and software companies) are complex. And for complex systems, 
 
 Safety type 2 instead focuses on resilience. It does not entirely replace safety type 1 - there is still value in automated checks in CI/CD - but the insight is that they will _not_ prevent all errors. Type 2 instead tries to make sure that **given that something is broken, we make sure to minimize the impact it has on the business**. Safety investments must be balanced between type 1 and type 2. In my experience, most companies focus too much on type 1.
 
-Generally, companies that are resilient to errors handle unprevented errors much better. In a way, if you have a company that is good at safety type 2, you don't need to focus too much on prevention. For example, let's say that a change to a software system is first rolled out to 0,1% of a random subset of users, and that change can automatically be rolled back within 60 seconds. If the change has an unprevented bug, the bug has almost no negative impact on the business.
+Generally, companies that are resilient to errors handle unprevented errors much better. In a way, if you have a company that is good at safety type 2, you don't need to focus too much on prevention. For example, let's say that a change to a software system is first rolled out to 0.1% of a random subset of users, and that change can automatically be rolled back within 60 seconds. If the change has an unprevented bug, the bug has almost no negative impact on the business.
 
 ## The type 1 to type 2 shift
 
