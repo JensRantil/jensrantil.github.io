@@ -10,8 +10,8 @@ slug = "on-staging-environments"
 > it's supposed to do or not. This happens in production.
 
 Every technical decision has a tradeoff, but certain things are
-rarely challenged in our industry. Having a staging environment[1], and having
-every change go through the staging environment, are two of those things.
+rarely challenged in our industry. Having a staging environment[^1], and having
+every change go through that staging environment, are two of those things.
 
 So, what is a staging environment? It is a full replica of a production
 environment. Do you have a backend service running in production? Then you also
@@ -20,10 +20,8 @@ need a database in your staging environment. Etcetera. Most companies having a
 staging environment require every change to first go through staging to verify
 that the change works before hitting production.
 
-{{< notice info "Many names" >}}
-[1] A staging environment can have many names: staging, QA, pre-prod,
+[^1]: A staging environment can have many names: staging, QA, pre-prod,
 preproduction, testing, etc.
-{{< /notice >}}
 
 ## Reasons for _not_ having a staging environment
 
