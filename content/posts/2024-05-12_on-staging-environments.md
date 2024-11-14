@@ -26,7 +26,9 @@ preproduction, testing, etc.
 ## Reasons for _not_ having a staging environment
 
 There are multiple reasons why I consider having, and using, a staging
-environment as wasteful. They can be summed up in three big categories:
+environment as [wasteful][waste]. They can be summed up in three big categories:
+
+[waste]: {{< relref "2023-06-27_waste-in-software-development.md" >}}
 
  * A staging environment gives a false sense of safety.
  * It slows down developer velocity.
