@@ -79,7 +79,7 @@ fewer surprises.
 
 Continuing on the topic of staged rollout above, the manual `[approval]` step
 requires manual work. And manual work tends to happen less often. This means
-that there are multiple changes queued up in staging to be deployed to
+that there are multiple changes lined up in staging to be deployed to
 production. While this gives an increased sense of safety, this actually has
 the opposite effect:
 
