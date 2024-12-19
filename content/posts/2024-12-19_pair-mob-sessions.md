@@ -1,7 +1,7 @@
 +++
 date = 2024-12-19T13:26:35+02:00
 title = "Pair and mob sessions"
-description = "Pair and mob programming is not just about coding."
+description = "Pair and mob programming are not just about coding."
 tags = []
 slug = "pair-mob-sessions"
 +++
