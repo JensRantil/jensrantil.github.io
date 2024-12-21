@@ -20,4 +20,4 @@ As software engineers, we use processes all the time. We just don't notice all o
 
 Most of the above processes are flawless and help us get our job done. But then we have these processes that simply are in our way; Filing expenses in a horrible expenses system, submitting vacation requests in HR systems, ...
 
-Since the word "process" is so frowned upon, I try to avoid using it. These days, I just say something like "Could we standardize a bit how we do this [to avoid mistakes]?". I propose a process. You just don't know it.
+Since the word "process" is so frowned upon, I try to avoid using it. These days, I just say something like "Could we standardize a bit how we do this to avoid mistakes?". I propose a process. You just don't know it.
