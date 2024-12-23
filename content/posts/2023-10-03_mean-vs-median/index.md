@@ -9,16 +9,17 @@ Over the years, I have heard many people say something like
 
 > Over 50% of people think they are better than the average car driver.
 
-They say this as if it's funny or sounds smart. In fact that actually could be
-true and the reason is _mean and median are not the same thing_.
+They say this as if it's funny or sounds smart. But the fact is that actually
+could be true, and the reason is because _mean and median are not the same
+thing_.
 
 When people take a basic course in statistics, they are likely to come out of
 it thinking that the world mostly consists of normal distributions. That is not
-surprising, given the [Central Limit Theorem][clt] states that many independent
-variables with the same distribution converges to a normal distribution. This
-does not apply everywhere. The Central Limit Theorem means students leave
-Statistics 101 having a visual representation of a statistical distribution of
-a bell curve. I believe this has created a lot of confusion.
+surprising, given that the [Central Limit Theorem][clt] states that many
+independent variables with the same distribution converges to a normal
+distribution. This does not apply everywhere. The Central Limit Theorem means
+students leave Statistics 101 having a visual representation of a statistical
+distribution of a bell curve. I believe this has created a lot of confusion.
 
 [clt]: https://en.wikipedia.org/wiki/Central_limit_theorem
 
