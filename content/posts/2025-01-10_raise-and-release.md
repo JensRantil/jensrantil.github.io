@@ -1,7 +1,7 @@
 +++
 date = 2025-01-10T13:26:35+02:00
 title = "Raise and Release"
-description = "Sometimes you just need to let an organization fail."
+description = "A practical principle for sharing concerns constructively and letting go of ownership when decisions are outside your control."
 tags = ["leadership", "safety", "security", "feedback"]
 slug = "raise-and-release"
 +++
