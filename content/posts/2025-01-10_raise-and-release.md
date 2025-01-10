@@ -23,13 +23,13 @@ If I believe there is a very big/expensive/serious failure approaching, I have o
 
 The "Release" step involves two things:
 
-First, I let the involved people know that "This is my feedback on why I think this idea is a bad one, but I will let _you_ decide if you would like to progress with it or not". That is, I make it very clear this is not my decision to take.
+First, I let the involved people know that "This is my feedback on why I think this idea is a bad one, but I will let _you_ decide if you would like to progress with it or not". That is, I make it very clear this is not my decision to make.
 
 Secondly, I move on and release this issue from my responsibilities, my emotional burden, the decision process, and the outcome's consequences. Poff. I have done my part.
 
 ## An example
 
-Some time ago I worked with some engineers who proposed to introduce a public HTTP API that worked with batches of items. Having had many years of (bad) production experience with this (and knowing the pain of API deprecations), I knew that there were many dangers with the solution. However, this project was not mine and the implementation decisions were not mine.
+Some time ago I worked with some engineers who proposed to introduce a public HTTP API that worked with batches of items. Having had many years of (bad) production experience with this (and knowing the pain of API deprecations), I knew that there were many pitfalls with the solution. However, this project and the implementation decisions were not mine.
 
 Initially, I voiced my concerns informally. But I noticed that they were taken rather lightly. This led me to write my blog post ["The downsides of batch APIs"][batch] which I shared as a link in the RFC document as well as in a public chat.
 
