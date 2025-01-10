@@ -5,7 +5,7 @@ description = "A practical principle for sharing concerns constructively and let
 tags = ["leadership", "safety", "security", "feedback"]
 slug = "raise-and-release"
 +++
-Amazon's founder Jeff Besos is famous for his ["disagree and commit" management principle][disagree-commit] used in leadership. According to Wikipedia, it means "that individuals are allowed to disagree while a decision is being made, but that once a decision has been made, everybody must commit to implementing the decision".
+Amazon's founder Jeff Besos is famous for his "disagree and commit" management principle used in leadership. [According to Wikipedia][disagree-commit], it means "that individuals are allowed to disagree while a decision is being made, but that once a decision has been made, everybody must commit to implementing the decision".
 
 [disagree-commit]: https://en.wikipedia.org/wiki/Disagree_and_commit
 
