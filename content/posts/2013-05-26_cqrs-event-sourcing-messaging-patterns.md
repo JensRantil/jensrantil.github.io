@@ -5,7 +5,7 @@ description: |
     together with event sourcing require some thought. Since I've been thinking
     about it for a while now, I thought I'd share some thoughts so far.
 date: 2013-05-26
-tags: ["cqrs", "event sourcing", "distributed architecture"]
+tags: ["CQRS", "event sourcing", "distributed architecture"]
 slug: cqrs-event-sourcing-messaging-patterns
 ---
 This post is partially related to my [previous blog

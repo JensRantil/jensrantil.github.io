@@ -1,7 +1,7 @@
 ---
 title: "CQRS - Time to Rewind"
 date: 2013-05-19
-tags: ["cqrs", "distributed-architecture"]
+tags: ["CQRS", "distributed architecture"]
 slug: CQRS-time-to-rewind
 ---
 For the last year I've been thinking a lot about

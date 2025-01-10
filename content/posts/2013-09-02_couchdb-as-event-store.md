@@ -2,7 +2,7 @@
 title: "Bootstrapping: CouchDB as event store"
 description: "Bootstrapping a project that uses event sourcing? Have a look at CouchDB."
 date: 2013-09-02
-tags: ["cqrs", "distributed-architecture", "CouchDB"]
+tags: ["CQRS", "distributed architecture", "CouchDB"]
 slug: couchdb-as-event-store
 ---
 I've previously written about [what event sourcing
