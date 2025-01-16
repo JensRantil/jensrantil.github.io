@@ -5,7 +5,6 @@ description = "An agile template for regular 1-on-1 meetings."
 tags = ["leadership", "management", "templates"]
 slug = "one-on-one-template"
 +++
-![A screenshot of the one-on-one template.](screenshot.png)
 
 I have used the same one-on-one template with my last six managers, including other regular check-ins. I am very happy with it! A recent conversation with a friend made me realize I better share the template with the world. If nothing else, I should share it for my own sake - in case I need it for another regular 1-on-1 setting sometime in the future.
 
@@ -20,11 +19,13 @@ I have used the same one-on-one template with my last six managers, including ot
 
 A "one-on-one", also known as "1-on-1", "1:1", or a "check-in", is a private meeting between two individuals. While part of the template would make sense for a non-recurring one-on-one, you get the most value from it in recurring one-on-ones.
 
-Also, one-on-ones are _not_ just between your manager. It can be regular meetings with anyone, such as skip-level meetings where you talk to your grand boss once in a while, or that regular meeting you have with your team's product manager, etc.
+Also, one-on-ones are _not_ just between your manager. It can be regular meetings with anyone, such as skip-level meetings where you talk to your grand boss once in a while, or that regular meeting you have with your team's product manager.
 
 At a very high level, I think of a one-on-one as a place and time to 1) sync on the current landscape and 2) decide how to act. As such, a one-on-one template should help with that.
 
 ## The template
+
+![A screenshot of the one-on-one template.](screenshot.png)
 
 The template document has three sections:
 
