@@ -6,7 +6,7 @@ tags = ["leadership", "management", "templates"]
 slug = "one-on-one-template"
 +++
 
-I have used the same [one-on-one template][template] with my last six managers, including other regular check-ins. I am very happy with it! A recent conversation with a friend made me realize I better share the template with the world. If nothing else, I should share it for my own sake - in case I need it for another regular 1-on-1 setting sometime in the future.
+I have used the same [one-on-one template][template] with my last six managers, including other regular check-ins. I am very happy with it! A recent conversation with a friend made me realize I better share the template with the world. If nothing else, I should share it for my own sake - in case I need it again in the future.
 
 The template has given me a lot of structure to my one-on-ones which I previously never had. It has also guided my one-on-ones toward more actionable meetings, focusing on what needs to happen next.
 
