@@ -6,7 +6,9 @@ tags = ["leadership", "management", "templates"]
 slug = "one-on-one-template"
 +++
 
-I have used the same one-on-one template with my last six managers, including other regular check-ins. I am very happy with it! A recent conversation with a friend made me realize I better share the template with the world. If nothing else, I should share it for my own sake - in case I need it for another regular 1-on-1 setting sometime in the future.
+I have used the same [one-on-one template][template] with my last six managers, including other regular check-ins. I am very happy with it! A recent conversation with a friend made me realize I better share the template with the world. If nothing else, I should share it for my own sake - in case I need it for another regular 1-on-1 setting sometime in the future.
+
+The template has given me a lot of structure to my one-on-ones which I previously never had. It has also guided my one-on-ones toward more actionable meetings, focusing on what needs to happen next.
 
 {{< notice note >}}
 **TLDR;** You can find the template [HERE][gdoc]. Feel free to use it by [making a copy of it][gcopy].
@@ -15,11 +17,13 @@ I have used the same one-on-one template with my last six managers, including ot
 [gcopy]: https://support.google.com/docs/thread/263397551?hl=en&msgid=263400451
 {{< /notice >}}
 
+[template]: https://docs.google.com/document/d/1Det7O1UQxIFgUywivldqTejmhyyeQ-YD1CNxXcGTPV0/edit?usp=sharing
+
 ## One-on-one?
 
 A "one-on-one", also known as "1-on-1", "1:1", or a "check-in", is a private meeting between two individuals. While part of the template would make sense for a non-recurring one-on-one, you get the most value from it in recurring one-on-ones.
 
-Also, one-on-ones are _not_ just between your manager. It can be regular meetings with anyone, such as skip-level meetings where you talk to your grand boss once in a while, or that regular meeting you have with your team's product manager.
+Most commonly one-on-ones are discussed between that of a manager and their report. However, one-on-ones are _not_ just between a manager and a report. It can be regular meetings with anyone, such as skip-level meetings where you talk to your grand boss once in a while, or that regular meeting you have with your team's product manager.
 
 At a very high level, I think of a one-on-one as a place and time to 1) sync on the current landscape and 2) decide how to act. As such, a one-on-one template should help with that.
 
@@ -27,7 +31,7 @@ At a very high level, I think of a one-on-one as a place and time to 1) sync on 
 
 ![A screenshot of the one-on-one template.](screenshot.png)
 
-The template document has three sections:
+My template document has three sections:
 
  * **Current landscape** describing the current state of things.
  * **Next 1:1/Backlog** containing a list of things that should be discussed in the next 1:1.
@@ -67,22 +71,24 @@ while there_is_still_time_left_in_meeting():
   while item_is_being_discussed():
     add_notes_to_item(item)
 ```
+All of these actions above can be done by any of the participants.
 
 ## Implications of using this template
 
-At my previous job, I switched managers five times in 2,5 years. :exploding_head: Whenever I switched manager, I could make a copy of the document, remove/redact things I was not willing to share with my new manager, and then share the new copy with my manager[^1]. I then asked my new manager to skim the notes section and sit down with me to discuss. This was a 
+At my previous job, I switched managers five times in 2,5 years. :exploding_head: Whenever I switched manager, I could make a copy of the document, remove/redact things I was not willing to share with my new manager, and then share the new copy with my manager[^1]. I then asked my new manager to skim the notes section and sit down with me to discuss. This made handover to my new managers much smoother than starting from scratch. Within a week, they had an overview of my ongoing challenges, mind space, and successes.
 
 [^1]: Make sure to [remove the old version of the document from the version history][removeversion], though!
 
 [removeversion]: https://www.groovypost.com/howto/delete-version-history-in-google-docs/
 
-{{< notice note >}}
-You can find the template [HERE][gdoc]. Feel free to use it by [making a copy of it][gcopy].
+But the most important thing is that the document has given my one-on-ones a lean structure and helped me avoid wasting my time.
 
-[gdoc]: https://docs.google.com/document/d/1Det7O1UQxIFgUywivldqTejmhyyeQ-YD1CNxXcGTPV0/edit?usp=sharing
+You can [download the template here][template]. Instructions on how to make a copy of a Google Docs document can be found [here][gcopy].
+
 [gcopy]: https://support.google.com/docs/thread/263397551?hl=en&msgid=263400451
-{{< /notice >}}
 
+{{< notice info >}}
 PS. I _think_ credit for this initial template goes to my old manager [Fredrik Wallenius][freddew]. Thank you, Fredrik! :bow:
 
 [freddew]: https://www.linkedin.com/in/fredrik-wallenius
+{{< /notice >}}
