@@ -81,7 +81,7 @@ At my previous job, I switched managers five times in 2,5 years. :exploding_head
 
 [removeversion]: https://www.groovypost.com/howto/delete-version-history-in-google-docs/
 
-But the most important thing is that the document has given my one-on-ones a lean structure and helped me avoid wasting my time.
+But the most important thing is that the document has given my one-on-ones a lean structure and helped us avoid wasting our time in one-on-ones.
 
 You can [download the template here][template]. Instructions on how to make a copy of a Google Docs document can be found [here][gcopy].
 
