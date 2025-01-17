@@ -21,7 +21,7 @@ The template has given me a lot of structure to my one-on-ones which I previousl
 
 ## One-on-one?
 
-A "one-on-one", also known as "1-on-1", "1:1", or a "check-in", is a private meeting between two individuals. While part of the template would make sense for a non-recurring one-on-one, you get the most value from it in recurring one-on-ones.
+A "one-on-one", also known as "1-on-1", "1:1", "1-1", or a "check-in", is a private meeting between two individuals. While part of the template would make sense for a non-recurring one-on-one, you get the most value from it in recurring one-on-ones.
 
 Most commonly one-on-ones are discussed between that of a manager and their report. However, one-on-ones are _not_ just between a manager and a report. It can be regular meetings with anyone, such as skip-level meetings where you talk to your grand boss once in a while, or that regular meeting you have with your team's product manager.
 
