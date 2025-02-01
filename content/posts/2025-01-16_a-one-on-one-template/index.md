@@ -75,7 +75,7 @@ All of these actions above can be done by any of the participants.
 
 ## Implications of using this template
 
-At my previous job, I switched managers five times in 2,5 years. :exploding_head: Whenever I switched manager, I could make a copy of the document, remove/redact things I was not willing to share with my new manager, and then share the new copy with my manager[^1]. I then asked my new manager to skim the notes section and sit down with me to discuss. This made handover to my new managers much smoother than starting from scratch. Within a week, they had an overview of my ongoing challenges, mind space, and successes.
+At my previous job, I switched managers five times in 2,5 years. :exploding_head: Whenever I switched manager, I would make a copy of the document, remove/redact things I was not willing to share with my new manager, and then share the new copy[^1]. I then asked my new manager to skim the notes section and sit down with me to discuss. This made handover _much_ smoother than starting from scratch. Within a week, they had an overview of my ongoing challenges, mind space, and successes.
 
 [^1]: Make sure to [remove the old version of the document from the version history][removeversion], though!
 
