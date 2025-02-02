@@ -88,7 +88,7 @@ You can [download the template here][template]. Instructions on how to make a co
 [gcopy]: https://support.google.com/docs/thread/263397551?hl=en&msgid=263400451
 
 {{< notice info >}}
-PS. I _think_ credit for this initial template goes to my old manager [Fredrik Wallenius][freddew]. Thank you, Fredrik! :bow:
+PS. Credit for this initial template goes to my old manager [Fredrik Wallenius][freddew]. Thank you, Fredrik! :bow:
 
 [freddew]: https://www.linkedin.com/in/fredrik-wallenius
 {{< /notice >}}
