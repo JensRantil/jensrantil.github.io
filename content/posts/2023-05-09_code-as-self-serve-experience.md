@@ -7,8 +7,8 @@ aliases = ["/posts/terraform-self-serve-experience/"]
 slug = "code-as-self-serve-experience"
 +++
 
-**Using "code as self-serve", such as Terraform or Kubernetes, in Platform
-Engineering is a rather bad idea. Let me explain why!**
+Using "code as self-serve", such as Terraform or Kubernetes, in Platform
+Engineering is a rather bad idea. Let me explain why:
 
 These days [there is all the rage around Platform Engineering][platform-eng],
 and in fact I spent my last few years at `$previousEmployer` doing exactly
@@ -29,9 +29,9 @@ A common thing I have seen multiple Platform Engineering teams do is to use
 (declarative) "code as self-serve", for example using Terraform or Kubernetes
 (K8s). I don't know how many times I've heard a Platform team say
 
-> No problem, we have a self-serve experience - the developers can just submit
+> "No problem, we have a self-serve experience - the developers can just submit
 > a pull request to our Terraform/Kubernetes code to create their new database.
-> We will review it and merge it for them.
+> We will review it and merge it for them."
 
 For example, if you don't have any kind of [abstraction layer around your
 Kubernetes YAML][helm], writing >300 lines of YAML is _not_ a pleasant
@@ -66,11 +66,11 @@ want.
 
 **Lack of change locality.** Creating a new microservices likely requires
 
- * A new git repository.
- * A new database.
- * A new load balancer
- * A skeleton source code containing a _Hello World_ implementation.
- * And more...
+ * a new git repository.
+ * a new database.
+ * a new load balancer
+ * a skeleton source code containing a _Hello World_ implementation.
+ * and more...
 
 Code as self-serve has a tendency to ask the developer to make these changes in
 _multiple_ places (because Terraform can't generate the source code etc.). A
@@ -94,5 +94,5 @@ Above said, I understand the common journey for companies is to start with code
 as self-serve. It's a good start! Just make sure to not get stuck there.
 Platform Engineering involves thinking of developer experience with a product
 mindset. Just like most SaaS companies will not ask their end-customers to
-write YAML instead of using a GUI, the same applies to the domain of Platform
+write YAML over using a GUI, the same applies to the domain of Platform
 Engineering.
