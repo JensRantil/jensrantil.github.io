@@ -48,6 +48,16 @@ The shift from type 1 to type 2 has many implications. Here are some of the shif
 
 The implication of shifting towards safety type 2 is also increased agility; You are resilient to experiments with negative outcomes.
 
+## Further reading
+
+ * [Richard Cooks's "Resilience In Complex Adaptive Systems: Operating At The Edge of Failure"][cook] from Vecolity 2013 was my first introduction to these ideas and they have followed me since.
+ * [The Theory Behind Understanding Failure][failure] by Evan Smith.
+ * [How Complex Systems Fail][complex-failure] by Richard Cook.
+
+[cook]: https://www.youtube.com/watch?v=PGLYEDpNu60
+[failure]: https://iamevan.me/blog/the-theory-behind-understanding-failure/
+[complex-failure]: https://how.complexsystems.fail
+
 {{< notice tip >}}
 Heads up! [I offer consultancy services][services] in this space. Don't hesitate to reach out if you would like me to help your company improve when it comes to reliability, resiliency, architecture feedback, on-call, alerting, or incident training. :wave:
 
