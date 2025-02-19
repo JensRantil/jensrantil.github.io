@@ -2,10 +2,12 @@ baseurl = "https://jensrantil.github.io"
 languageCode = "en"
 title = "Jens Rantil"
 theme = "hugo-coder"
-paginate = 20
 defaultContentLanguage = "en"
 enableEmoji = true
 enableGitInfo = true
+
+[pagination]
+pagerSize = 20
 
 [params]
 author = "Jens Rantil"
