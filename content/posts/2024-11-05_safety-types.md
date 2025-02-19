@@ -61,5 +61,5 @@ The implication of shifting towards safety type 2 is also increased agility; You
 {{< notice tip >}}
 Heads up! [I offer consultancy services][services] in this space. Don't hesitate to reach out if you would like me to help your company improve when it comes to reliability, resiliency, architecture feedback, on-call, alerting, or incident training. :wave:
 
-[services]: {{< relref "/services" >}}
+[services]: {{< relref "/pages/services" >}}
 {{< /notice >}}
