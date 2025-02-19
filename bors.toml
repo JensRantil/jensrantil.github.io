@@ -1,4 +1,0 @@
-status = [
-  "deploy",
-]
-delete_merged_branches = true
