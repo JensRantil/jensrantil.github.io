@@ -8,9 +8,11 @@ slug = "autoscaling-not-a-panacea"
 Back in the day when The Cloud (AWS) was The New Hot Thing, I thought
 autoscaling would solve most of our problems related to costs, availability,
 performance, and scalability. Over the years, I have learned that autoscaling
-has a high maintenance cost, adds complexity, and doesn't solve all those
-problems I initially thought it would. In this article I will give examples of
-incorrect assumptions I made when it came to autoscaling:
+has a high maintenance cost, adds complexity, and [doesn't solve all those
+problems I initially thought it would][automation-ironies]. In this article I
+will give examples of incorrect assumptions I made when it came to autoscaling:
+
+[automation-ironies]: https://en.wikipedia.org/wiki/Ironies_of_Automation
 
 **"Once we have autoscaling, we will never have any performance problems."** I
 thought any traffic spike would immediately be handled by autoscaling. Suddenly
