@@ -132,4 +132,6 @@ new database instance has come up.
 Whether autoscaling is useful to you requires a cost-benefit analysis. If you
 are not hitting any memory or CPU limits nor cost is a big problem, I would
 suggest you stay away from automatic upscaling/downscaling to keep things
-simple.
+[simple][simplicity].
+
+[simplicity]: {{< relref "2023-11-06_my-simplicity-toolkit" >}}
