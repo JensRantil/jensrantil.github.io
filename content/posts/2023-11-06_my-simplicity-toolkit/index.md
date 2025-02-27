@@ -23,7 +23,7 @@ Blog series:
 >
 > Antoine de Saint-Exupery
 
-When it comes to software engineers, I have increasingly come to value
+When it comes to software engineering, I have increasingly come to value
 _simplicity_ and going back to basics. I have been coding for ~25+ years (~15
 years professionally) and have truly gone through [The Evolution of a Software
 Engineer][engineer-evolution]. Throughout my career I have grown increasingly
