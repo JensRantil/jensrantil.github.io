@@ -1,5 +1,5 @@
 +++
-date = 2025-01-22T20:23:35+02:00
+date = 2025-02-22T20:23:35+02:00
 title = "Apache Kafka in 15 minutes"
 description = "High-level Apache Kafka architecture."
 tags = ["Apache Kafka", "Distributed Systems"]
