@@ -38,6 +38,15 @@ So, what does this have to do with CrowdStrike's Falcon incident? In the case of
 
 [sharp-end]: https://how.complexsystems.fail/#11
 
+Above said, CrowdStrike could also had offered customers the possibility to auto-apply updates based on things like:
+ * a **hardcoded minimum delay** such as "apply this after 2 days since release".
+ * a **hardcoded maximum delay** such as "apply this at most after 5 days since release".
+ * **compatibility score** (similar to [Dependabot][compat-score]) such as "apply this only if more than 10% of CrowdStrike's customers have applied it succesfully.
+
+This would have allowed CrowdStrike's customers to tune their risk vs. speed apetite tailored to their specific system.
+
+[compat-score]: https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/about-dependabot-security-updates#about-compatibility-scores
+
 Compare the CrowdStrike incident to the the global [Log4shell incident][log4shell] which happened in 2021. According to [the incident's wiki page][log4shell] it
 
 > [...] had the potential to affect hundreds of millions of devices.
