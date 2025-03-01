@@ -14,7 +14,23 @@ Hopefully, these articles will avoid future battle scars for people who dabble w
 
 ## High-level concepts
 
-{{< figure src="service-architecture.svg" alt="The Apache Kafka diagram represents a high-level architecture showing how data flows between producers, topics, brokers, and consumers. On the left, multiple producers generate and send data to Kafka topics, which act as logical channels for organizing records. These topics are managed by Kafka brokers, which distribute and store the data across partitions for scalability and fault tolerance. On the right, consumers subscribe to specific topics and retrieve data in real time, often as part of consumer groups that distribute the load across multiple instances. Additional components such as connectors and stream processors may be present, enabling integrations with external systems and real-time data transformations. The overall flow illustrates how Kafka enables decoupled, scalable, and reliable event-driven architectures." caption="A high-level architecture of Apache Kafka. The arrows show how records flow through the system." >}}
+<figure>
+  <img id="service-arch" src="/posts/apache-kafka-architecture/service-architecture-0.svg" alt="The Apache Kafka diagram represents a high-level architecture showing how data flows between producers, topics, brokers, and consumers. On the left, multiple producers generate and send data to Kafka topics, which act as logical channels for organizing records. These topics are managed by Kafka brokers, which distribute and store the data across partitions for scalability and fault tolerance. On the right, consumers subscribe to specific topics and retrieve data in real time, often as part of consumer groups that distribute the load across multiple instances. Additional components such as connectors and stream processors may be present, enabling integrations with external systems and real-time data transformations. The overall flow illustrates how Kafka enables decoupled, scalable, and reliable event-driven architectures.">
+  <figcaption>
+    <p>A high-level architecture of Apache Kafka. The arrows show how records flow through the system.</p>
+  </figcaption>
+</figure>
+<script>
+archCount = 0;
+function update_arch_svg() {
+  src = "/posts/apache-kafka-architecture/service-architecture-" + archCount + ".svg";
+  document.getElementById("service-arch").setAttribute("src", src);
+  nStates = 6;
+  archCount = (archCount+1) % nStates;
+  setTimeout(update_arch_svg, 1000);
+}
+update_arch_svg();
+</script>
 
 Apache Kafka (from now on, referred to as "Kafka"), is a system that asynchronously transports messages from a set of **producers** to a set of **consumers**. "Messages" are, in Kafka lingo, called **records**. A Kafka cluster consists of a set of **brokers**. Each record passes through a broker[^1]. Each broker stores the records to disk such that consumers can consume them at a later stage. I will go more into detail about how a broker works later.
 
