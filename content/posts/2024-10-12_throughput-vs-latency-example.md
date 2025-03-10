@@ -13,9 +13,9 @@ In software engineering jargon, people often speak of "performance" without defi
 
 I remember my early days of trying to understand the difference. My breakthrough came when somebody gave the following example:
 
-> "Suppose you want to transfer 10 petabytes of hard drives from Europe to America. For this example, that would be ~10k hard drives.
+> "Suppose you want to transfer 10 petabytes of data from Europe to America. For this example, that would be ~10k hard drives.
 > 
-> One approach would be to transfer one hard drive at a time across the Atlantic subsea cables. The latency of sending each hard drive would be fairly low (maybe an hour), but throughput very low (number of hard drives uploaded per hour).
+> One approach would be to transfer one hard drive at a time across the Atlantic subsea cables over the Internet. The latency of sending each hard drive would be fairly low (maybe an hour), but throughput very low (number of hard drives uploaded per hour).
 > 
 > A completely different approach would be to fill up an entire airplane with all the hard drives, fly them across the Atlantic, and deliver them to the destination data center. This latency of sending each hard drive would be very high (probably ~12 hours from datacenter to datacenter), but the throughput will be significantly higher (10k hard drives in 12 hours - or hundreds of hard drives per hour)."
 
