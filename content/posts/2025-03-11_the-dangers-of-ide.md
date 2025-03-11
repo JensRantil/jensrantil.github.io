@@ -1,7 +1,7 @@
 +++
 date = 2025-03-11T10:38:35+02:00
 title = "The Dangers of an IDE"
-description = "An IDE makes it"
+description = "A modern IDE constantly nudges you to couple your code in a bad way."
 tags = ["Simplicity", "Testing"]
 slug = "integrated-development-environments-harmful"
 +++
