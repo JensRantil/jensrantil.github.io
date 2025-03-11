@@ -20,7 +20,7 @@ Contrary to common beliefs, programmers spend the majority of their time _readin
 
 [distance]: https://en.wikipedia.org/wiki/Action_at_a_distance_(computer_programming)
 
-IDEs work against that. They allow you to treat your source code as a giant, unstructured list of files, classes, functions, and global variables. All these can be accessed "at your fingertips" at all times through what is know as "code completion", "auto-complete", "IntelliSense" etc. These are all problematic.
+Modern IDEs work against that. They allow you to treat your source code as a giant, unstructured list of files, classes, functions, and global variables. All these can be accessed "at your fingertips" at all times through what is know as "code completion", "auto-complete", "IntelliSense" etc. These are all problematic.
 
 If I am working in one part of my source code, I should generally not have to care about other parts of the source code - keeping fewer things in my head. Code completion constantly nudges you to consider using classes and functions in a completely different part of the source code. It nudges you to couple difference modules in ways that they should not interact[^1].
 
