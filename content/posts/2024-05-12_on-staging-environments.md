@@ -49,8 +49,8 @@ environment.
 
 ### Bottlenecked shared resource
 
-> Good morning! Could everyone hold off with your deploys (to staging) for the
-> next hour? We are testing something on staging.
+> Good morning! Could everyone hold off with your deploys for then ext hour?
+> We are testing something on staging.
 
 The more engineers you have, the more a staging environment will bottleneck as
 a testing ground. One team is testing something and want a stable environment
