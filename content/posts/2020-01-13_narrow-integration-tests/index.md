@@ -1,7 +1,7 @@
 ---
 title: "On narrow integration tests"
 date: 2020-01-13
-tags: ["testing", "simplicity"]
+tags: ["testing", "simplicity", "system testing", "integration testing", "end-to-end testing"]
 slug: narrow-integration-tests
 ---
 _Narrow integration tests_ are tests that only involve very few components,
@@ -14,7 +14,7 @@ tests so I'll simply refer to that for the details of what a narrow integration
 test is.
 
 That said, during 2019 I have grown increasingly convinced that the distinction
-between a narrow and wide integration is an important one, for two reasons:
+between a narrow and wide integration (also know as _system tests_ or _end-to-end tests_) is an important one, for two reasons:
 
 First, given that narrow integration tests depends on very few components the
 [cost of maintenance is very low][strategy-cost]. Compare this to wide
