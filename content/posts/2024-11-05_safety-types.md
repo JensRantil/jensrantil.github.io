@@ -2,7 +2,7 @@
 date = 2024-11-05T16:19:35+02:00
 title = "Reliability vs. Resilience"
 description = "There are two types of safety."
-tags = ["safety", "site reliability engineering"]
+tags = ["safety", "site reliability engineering", "testing"]
 slug = "safety-type-1-and-2"
 +++
 In safety systems engineering (SSE) people talk about "safety type 1" and "safety type 2". The first one is about prevention & **reliability**, the second is about **resilience**. Type 1 has been around for a long time, and type 2 is [fairly new][holnagel-2015].
