@@ -84,7 +84,7 @@ consumer_groups:
 ```
 As soon as consumer group X has processed record 66 in partition 1, it updates `consumer_groups.X.partitions.1` to `66`.
 
-To avoid contention in incrementing these consumer offsets, **every partition is assigned to one consumer** in each consumer group. It is up to each consumer to update these offsets whenever they want (every minute, every message, after 10 messages, etc.). This means that there is only one broker that consumes each partition. This has immense implications, which my next blog post will be about.
+To avoid contention in incrementing these consumer offsets, **every partition is assigned to one consumer** in each consumer group. It is up to each consumer to update these offsets whenever they want (every minute, every message, after 10 messages, etc.). This means that _there is only one consumer per consumer group that consumes each partition_. This has immense implications, which my next blog post will be about.
 
 ## Further reading
  
