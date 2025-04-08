@@ -54,7 +54,7 @@ Okay, so far, I have described a horizontally scalable message-passing system su
 
 Each partition on a broker is stored as a **log** on disk. A log is an append-only file where each record gets added at the end. Each record has an implicit **offset** counting from the start of the log.
 
-To avoid needing to store all records for infinity, the on-disk log file is chunked up in something like ~100MB files[^3}. Files older than a configurable <emph title="Time To Live">TTL</emph> are deleted. It's worth pointing out that the record's offset remains the same. An important thing to notice here is that **no messages are deleted once they have been consumed by all subscribed consumers**.
+To avoid needing to store all records for infinity, the on-disk log file is chunked up in something like ~100MB files[^3]. Files older than a configurable <emph title="Time To Live">TTL</emph> are deleted. It's worth pointing out that the record's offset remains the same. An important thing to notice here is that **no messages are deleted once they have been consumed by all subscribed consumers**.
 
 [^3]: The chunk size is configurable.
 
