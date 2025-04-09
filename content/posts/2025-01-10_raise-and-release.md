@@ -45,4 +45,4 @@ Throughout my years, I have found the "Raise and Release" principle to be really
 
 Personally, the "Raise and Release" principle has also helped me to not waste my social capital or spend any energy on decisions I simply could not affect.
 
-Not all hills are worth dying on. With the "Raise and Release" principle, some of my employer's failures are no longer _my_ failure.
+Not all hills are worth dying on. With the "Raise and Release" principle, some of my employers' failures are no longer _my_ failure.
