@@ -49,9 +49,9 @@ processes prematurely.
 
 Scaling up can, surprisingly, also impact stability negatively. If your
 application is doing any lazy loading, it can be slow until it has warmed up
-(hello Java!). This is a problem that gets magnified if you scale up
-frequently. There are workarounds here, though. You _can_ spend time heating
-your process after startup.
+(hello <emph title="Java Virtual Machine">JVM</emph>!). This is a problem that
+gets magnified if you scale up frequently. There are workarounds here, though.
+You _can_ spend time heating your process after startup.
 
 Further, since there is no subsecond autoscaling there will be a time until
 scale-up happens. During that time, your service might not be able to serve all
