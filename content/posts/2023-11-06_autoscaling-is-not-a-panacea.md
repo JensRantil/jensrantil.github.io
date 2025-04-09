@@ -5,7 +5,7 @@ description = "There is a belief that autoscaling will solve problems it will no
 tags = ["simplicity"]
 slug = "autoscaling-not-a-panacea"
 +++
-Back in the day when The Cloud (AWS) was The New Hot Thing, I thought
+Back in the day when The Cloud (AWS) was The New Hot Thing:tm:, I thought
 autoscaling would solve most of our problems related to costs, availability,
 performance, and scalability. Over the years, I have learned that autoscaling
 has a high maintenance cost, adds complexity, and [doesn't solve all those
