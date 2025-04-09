@@ -30,13 +30,13 @@ invalid assumptions here:
    minute to start..
  * _"My application is the bottleneck."_ Anyone who has done any significant
    performance benchmark knows that the performance bottleneck [moves
-   around][max-flow-min-cut]. For example, an application backed by supporting
+   around][theory-of-constraints]. For example, an application backed by supporting
    infrastructure such a database can usually only scale up until a certain
    level until _the database_ turns into the performance bottleneck instead.
    That said, based on experience 99% of the time, _the database_ is the
    bottleneck, not your application...
 
-[max-flow-min-cut]: https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem
+[theory-of-constraints]: https://en.wikipedia.org/wiki/Theory_of_constraints
 
 **"Once we have autoscaling, our stability will improve."** Autoscaling offers
 automated restarts of services. That's great and definitely improves system
