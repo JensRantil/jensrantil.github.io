@@ -67,7 +67,7 @@ new_notes_section = add_a_new_headline_under_notes(todays_date)
 while there_is_still_time_left_in_meeting():
   topic = pick_most_important_item_from_next_1:1_section()
   remove_from_next_1:1_section(topic)
-  item = add_item_to_notes_section(new_notes_section)
+  item = add_item_to_notes_section(new_notes_section, item)
   while item_is_being_discussed():
     add_notes_to_item(item)
 ```
