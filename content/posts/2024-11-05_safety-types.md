@@ -41,11 +41,13 @@ The shift from type 1 to type 2 has many implications. Here are some of the shif
  * Rollout strategy for new features is early on a key part of the development process. This includes working with things like staggered rollouts, random sampling & feature flags.
  * The time it takes to roll back a system becomes more important than preventing errors in the system. When an organization realizes that the details around rolling back are very error-prone, they realize that forward rollbacks are much simpler. They then focus on reducing the general time to deploy.
  * A stronger focus on the observability of user impact in production (service levels) over "if CI/CD passes, it works".
- * A stronger focus on shipping things to _production_ over "if it works on staging, my work is done".
+ * A stronger focus on [shipping things to _production_ over "if it works on staging, my work is done"][staging].
  * A stronger focus on getting smaller changes out in production as soon as possible (to know it's working) over weeks of work to prevent all possible bugs.
  * An organization celebrates learning from mistakes and is blameless.
  * A stronger focus on DevOps as a Culture; Developers are more involved with the rollout and how a system is being used by customers.
  * Incident training is a natural part of daily work - practicing for things going bad, because they eventually will.
+
+[staging]: {{< relref "2024-05-12_on-staging-environments.md" >}}
 
 The implication of shifting towards safety type 2 is also increased agility; You are resilient to experiments with negative outcomes.
 
