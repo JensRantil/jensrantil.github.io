@@ -265,10 +265,10 @@ I once heard someone say something of the like
 > 1:1 ratio between reads and > writes.
 
 It's so true! If I recall correctly, the quote came from someone when they were
-talking about [the Command-Query Responsibility Segregation(CQRS)][cqrs]
-pattern. It's a pattern where you explicitly split your system into one part
-that takes care of writes (validation & data consistency) and another part that
-takes care of serving reads.
+talking about [the <abbr title="Command-Query Responsibility
+Segregation">CQRS</abbr> pattern][cqrs] . It's a pattern where you explicitly
+split your system into one part that takes care of writes (validation & data
+consistency) and another part that takes care of serving reads.
 
 [cqrs]: https://martinfowler.com/bliki/CQRS.html
 
