@@ -1,6 +1,6 @@
 +++
 date = 2025-04-12T23:10:35+02:00
-title = "Work Charades & Values"
+title = "Work Charades and Values"
 description = "When work becomes a forced charade, we risk losing our true selves."
 tags = []
 slug = "work-charades"
