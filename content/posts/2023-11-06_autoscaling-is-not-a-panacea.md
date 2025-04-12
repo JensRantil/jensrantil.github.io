@@ -49,7 +49,7 @@ processes prematurely.
 
 Scaling up can, surprisingly, also impact stability negatively. If your
 application is doing any lazy loading, it can be slow until it has warmed up
-(hello <emph title="Java Virtual Machine">JVM</emph>!). This is a problem that
+(hello <abbr title="Java Virtual Machine">JVM</abbr>!). This is a problem that
 gets magnified if you scale up frequently. There are workarounds here, though.
 You _can_ spend time heating your process after startup.
 
