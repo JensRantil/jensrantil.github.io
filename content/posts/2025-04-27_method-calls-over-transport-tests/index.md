@@ -85,7 +85,7 @@ paths:
                     type: string
                     example: Hello, John!
 ```
-The generated server `interface` would look something like this:
+The generated (Java) server `interface` would look something like this:
 
 ```java
 package com.example.api;
