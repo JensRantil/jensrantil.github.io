@@ -19,7 +19,7 @@ as a Code (IaaS) in place which allowed us to iterate quickly on things.
 Whenever something was broken, I was on it! Whenever someone needed my
 assistance, I was fixing it. My cycle time for fixing things was _short_ and I
 was proud to show our engineers how one could work truly in short cycles and
-get a ton of Shit Done(tm). I was fixing business problems at amazing speed - I
+get a ton of Shit Done:tm:. I was fixing business problems at amazing speed - I
 thought I had reached a global optimum at work!
 
 However, there were two problems I was beginning to see; I was a bottleneck,
@@ -84,11 +84,11 @@ that much faster than anyone else" (not really hero culture, but close).
 
 [hero-culture]: https://www.inteqgroup.com/blog/transforming-a-hero-culture
 
-That is, taking a step back to create space for others is _hard_. Not only due
+Taking a step back to create space for others is _hard_. Not only due
 to the short-term forces mentioned above but also because it can be hard for
 one's ego (am still useful???).
 
-For me, I was lucky and had a ticket out. As it turns out, I got the
+For me, I was lucky and had a ticket out. Litteraly. As it turns out, I got the
 opportunity to work for 6 weeks from another side of the globe. Adding a
 12-hour latency to answer questions in Slack is an amazing way to encourage
 colleagues to try out things themselves. Every morning I woke up I would see a
@@ -110,13 +110,13 @@ moving on with new tasks, finding & solving new interesting problems, and
 "always be learning".
 
 Eventually, I also discovered mob programming and have increasingly been doing
-pair programming. By rotating who is coding, you force people with less
-knowledge to do the work instead of you. It's a great way to share knowledge
+pair programming. By rotating who is coding, I have forced people with less
+knowledge to do the work instead of me. It's a great way to share knowledge
 and offload responsibilities from me.
 
 Finally, by no longer putting myself in the spotlight I feel like I have
 transitioned to be a true team member. I know it's cheesy, but there truly is
-no "I" in "team".
+no longer an "I" in my teams.
 
 ## My learnings
 
