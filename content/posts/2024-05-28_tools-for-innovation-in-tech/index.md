@@ -10,7 +10,8 @@ ideas risk getting lost or discarded and you risk missing out on great
 opportunities.
 
 **As a tech organization, how do you make sure that you are innovating?** In my
-opinion, innovation doesn't "just happen". While the dream scenario is that any
+opinion, innovation doesn't "just happen". It's part of [Creative
+Management][creative-management]. While the dream scenario is that any
 engineers can propose an idea to work on within their team sprint, I have seen
 multiple reasons why this fails:
 
@@ -28,6 +29,8 @@ multiple reasons why this fails:
    just don't feel as creative if I need to explicitly ask for permission and
    plan for innovation. I am the most innovative when I sometimes stumble
    across a small problem and immediately can spend time finding a solution.
+
+[creative-management]: https://iism.org/article/why-are-ceos-failing-software-engineers-56
 
 So, if innovation is hard to get into the regular planning with the team, how
 can we increase innovation? Here are some tools that I have seen successfully
