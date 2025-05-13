@@ -84,6 +84,8 @@ such as [spikes][spike] or <abbr title="Proof of concept">POCs</abbr>. As such,
 a slow and complex self-serve experience can actually have a daunting impact on
 company innovation.
 
+[spike]: https://www.visual-paradigm.com/scrum/what-is-scrum-spike/
+
 What are the alternatives? Create a graphical user interface that guides the
 users through the right choices, naming standards etc. Spotify's
 [Backstage][bs] is one such alternative.
