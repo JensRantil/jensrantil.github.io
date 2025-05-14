@@ -7,7 +7,7 @@ slug = "work-charades"
 +++
 > **Charade.** A pretense or false show — something that’s meant to look real or sincere but is actually fake or deceptive. Like a theater.
 
-Sometimes, I have felt like work -- the professional domain -- is like a real-life role-playing game. Stepping into an office has occasionally felt like stepping into an improv theater where rules apply that don't otherwise:
+Sometimes, I have felt like work -- the professional domain -- is like a real-life role-playing game. Stepping into an office has occasionally been like stepping into an improv theater where rules apply that don't otherwise:
 
 [**Feelings should be left outside the office**][work-feelings], despite all of us _are_ human beings with feelings. There is strong evidence that gut feel and feelings play a major role in making the right decisions, including business decisions. Yes, there are work places that do not tap into that.
 
