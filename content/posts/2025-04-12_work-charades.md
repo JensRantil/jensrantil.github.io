@@ -9,7 +9,7 @@ slug = "work-charades"
 
 Sometimes, I have felt like work -- the professional domain -- is like a real-life role-playing game. Stepping into an office has occasionally been like stepping into an improv theater where rules apply that don't otherwise:
 
-[**Feelings should be left outside the office**][work-feelings], despite all of us _are_ human beings with feelings. There is strong evidence that gut feel and feelings play a major role in making the right decisions, including business decisions. Yes, there are work places that do not tap into that.
+[**Feelings should be left outside the office**][work-feelings], despite all of us _are_ human beings with feelings. There is strong evidence that gut feel and feelings play a major role in making the right decisions, including business decisions. Yet, there are work places that do not tap into that.
 
 [work-feelings]: https://www.forbes.com/councils/theyec/2019/12/03/feelings-and-their-place-at-work/
 
