@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Jens Rantil</title><link>https://jensrantil.github.io/tags/programming/</link><description>Recent content in Programming on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 13 Nov 2023 17:14:44 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>I'm a State Engineer. Are you, too?</title><link>https://jensrantil.github.io/posts/lifecycles-and-states/</link><pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/lifecycles-and-states/</guid><description>&lt;p>TL;DR: We need to have a more thorough discussion about state and
+lifecycles in our industry.&lt;/p>
+&lt;p>I recently revisited &lt;a href="http://12factor.net" class="external-link" target="_blank" rel="noopener">The Twelve-Factor App&lt;/a> by
+&lt;a href="https://www.heroku.com" class="external-link" target="_blank" rel="noopener">Heroku&lt;/a>. It&amp;rsquo;s a great read if you are deploying
+your own application, are interested in (organizational and/or
+technincal) scaling or curious of best practices when it comes to
+deployment.&lt;/p>
+&lt;p>As I was reading the manifest it struck me that there are two words that
+I hear all too infrequently in our industry, namely &lt;em>state&lt;/em> and
+&lt;em>lifecycle&lt;/em>. The words have different meaning, yet they are related in
+so many ways. All state has a lifecycle, otherwise the state would not
+be worth thinking of.&lt;/p></description></item><item><title>Java's missing optional keyword and the issues of null</title><link>https://jensrantil.github.io/posts/the-issues-of-null/</link><pubDate>Thu, 22 Aug 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/the-issues-of-null/</guid><description>&lt;p>One of my pet peaves when it comes to the Java programming languages
+[1] is that it does not do enough &lt;a href="https://en.wikipedia.org/wiki/Type_safety" class="external-link" target="_blank" rel="noopener">type
+safety&lt;/a>. The issue is,
+simply, that programmers tend to believe that Java infers more safety
+than it actually does. The biggest reason for this can be summarized in
+one word; &lt;code>null&lt;/code>.&lt;/p>
+&lt;p>Let&amp;rsquo;s face it, we&amp;rsquo;ve all experienced a &lt;code>NullPointerException&lt;/code> or two.
+Why? Because we focus so much on which variable type to use. This makes
+us tend to forget the simple fact that the variable might not have a
+value at all; It can be &lt;code>null&lt;/code>.&lt;/p></description></item></channel></rss>
