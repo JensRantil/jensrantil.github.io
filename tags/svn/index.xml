@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Svn on Jens Rantil</title><link>https://jensrantil.github.io/tags/svn/</link><description>Recent content in Svn on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 22 Aug 2023 00:13:45 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/svn/index.xml" rel="self" type="application/rss+xml"/><item><title>Replacing a folder in Subversion</title><link>https://jensrantil.github.io/posts/replacing-directory-in-svn/</link><pubDate>Mon, 22 Sep 2008 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/replacing-directory-in-svn/</guid><description>&lt;p>So you have an external library foo version 1.0 that you have committed
+to your Subversion repository together with your code. Let us for
+simplicity say that your external library is situated in its own folder.&lt;/p>
+&lt;p>One day you realize that there is a new version 2.0 of foo released. You
+download it and since there was a while ago a lot of the file structure
+in the foo project has changed. How can you replace the files in your
+current repository in a good looking fashion?&lt;/p></description></item></channel></rss>
