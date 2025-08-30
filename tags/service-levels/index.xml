@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Service Levels on Jens Rantil</title><link>https://jensrantil.github.io/tags/service-levels/</link><description>Recent content in Service Levels on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 18 Feb 2024 12:26:32 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/service-levels/index.xml" rel="self" type="application/rss+xml"/><item><title>A maturity model for data-driven teams</title><link>https://jensrantil.github.io/posts/a-data-driven-maturity-model/</link><pubDate>Fri, 16 Feb 2024 14:00:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/a-data-driven-maturity-model/</guid><description>&lt;p>I recently read the excellent article &lt;a href="https://www.amorphousdata.com/blog/data-is-not-a-strategy" class="external-link" target="_blank" rel="noopener">Data is not a
+Strategy&lt;/a>. It reminded me that I&amp;rsquo;ve been wanting to share
+some of my own learnings and thoughts when it comes to data-driven teams:&lt;/p>
+&lt;p>I was part of a big push to introduce service levels at my previous job. The
+objective of the project was to make our company data-driven when it came to
+operational excellence. A thing I kept seeing was that many people saw the
+project as a &lt;em>technical&lt;/em> project; gathering metrics, creating tooling for
+defining SLIs/SLOs &amp;amp; dashboards, etc. We did all of that work, but still the
+project did not succeed. Why? I kept reminding people that&lt;/p></description></item><item><title>An AI/ML accuracy tale</title><link>https://jensrantil.github.io/posts/ai-ml-accuracy-tale/</link><pubDate>Sat, 18 Nov 2023 23:55:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/ai-ml-accuracy-tale/</guid><description>&lt;p>I recently read the article &lt;a href="https://shreyans.org/google" class="external-link" target="_blank" rel="noopener">&amp;ldquo;What I learned getting acquired by
+Google&amp;rdquo;&lt;/a> by Shreyans Bhansali. Shreyans wrote&lt;/p>
+&lt;blockquote>
+&lt;p>On the other hand there was the discovery that most Search improvements are
+manually reviewed by engineers through ‘side-by-side’ comparisons between old
+and new results&amp;hellip;on spreadsheets!&lt;/p>
+&lt;/blockquote>
+&lt;p>The above quote reminded of how hard, and often understated, quality assurance
+(QA) in AI/ML systems is. Each change to a model needs to be validated, and
+validation is &lt;em>hard&lt;/em> and &lt;em>cumbersome&lt;/em>. Also, the fact that models can have a
+&lt;em>freshness&lt;/em> does not help - that means that quality assurance must be done
+continuously and treated as a &lt;a href="https://sre.google/sre-book/service-level-objectives/" class="external-link" target="_blank" rel="noopener">service level&lt;/a>.&lt;/p></description></item></channel></rss>
