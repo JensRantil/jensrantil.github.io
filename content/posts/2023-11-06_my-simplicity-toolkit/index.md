@@ -36,10 +36,13 @@ industry.
 In Rich Hickey's classical talk ["Simple Made Easy"][simple-made-easy] he talks
 about the difference between "Simple" and "Easy". _Simple_ pertains to the lack
 of complexity or intricacy, while _easy_ relates to the level of effort or
-skill required to accomplish a task. Hickey argues that we, as software
-engineers, should choose simple over easy, but often end up doing the opposite.
+skill required to accomplish a task. Simplicity reduces [cognitive
+load][cognitive-load], ease does not necessarily do that. Hickey argues that
+we, as software engineers, should choose simple over easy, but often end up
+doing the opposite.
 
 [simple-made-easy]: https://www.youtube.com/watch?v=SxdOUGdseq4
+[cognitive-load]: https://github.com/zakirullin/cognitive-load
 
 ## Simplicity is controversial
 
