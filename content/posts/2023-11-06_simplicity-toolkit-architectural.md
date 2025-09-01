@@ -25,6 +25,9 @@ https://sre.google/sre-book/simplicity/
 
 ### Server-side rendered over client-side rendered web pages
 
+https://www.thoughtworks.com/radar/techniques/spa-by-default
+https://www.jonoalderson.com/conjecture/its-time-for-modern-css-to-kill-the-spa/
+
 ### One environment over multiple
 
 Your staging environment will never look and behave like your production environment. Consider dropping your staging environment altogether and learn how to test in production using feature flags, canary deploys etc. instead.
