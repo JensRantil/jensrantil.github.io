@@ -204,6 +204,10 @@ Simplicity is less magic.
 
 [singleton-pattern]: https://en.wikipedia.org/wiki/Singleton_pattern
 
+If you want to learn more about this, I recommend [Greg Young's keynote "8 Lines of code"][gyoung].
+
+[gyoung]: https://www.infoq.com/presentations/8-lines-code-refactoring/
+
 ## Simple build tooling over complex
 
 Did you ever learn the build tooling you use today at university? Did you learn
