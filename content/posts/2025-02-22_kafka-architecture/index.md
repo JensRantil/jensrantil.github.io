@@ -38,23 +38,23 @@ Apache Kafka (from now on, referred to as "Kafka"), is a system that asynchronou
 
 Like most message-passing systems, Kafka also has the concept of a **topic**. Topics are used to organise the records stored in a Kafka cluster. Every record sent to a Kafka cluster has a topic destination. To consume that record, a consumer must use the same topic name. For example, if you are running a website analytics company, you might have a topic called `user_clicks` that contains all the tracked events of website visitors.
 
-A topic is split up into **partitions**. Each partition is associated with a broker[^2]. As depicted in the figure above, this means that there _can_ be brokers that do not store any records for a specific topic.
+A topic is split up into **partitions**. Each partition is associated with a broker[^2]. A broken can have multiple partitions assigned to it. As depicted in the figure above, this means that there _can_ be brokers that do not store any records for a specific topic.
 
-Partitions are the core concept that allows Kafka to scale horizontally. Incoming records are assigned to a partition and, through that, a broker. How partition assignment is done is up to the producer of the record. Each message has an optional **key**. If the key is null, the message is sent to a random partition (ie, Round-Robin). If the key is set to a string, the producer picks a partition based on a hash of the key (ie, something like `partition := hash(record.key) % numPartitions`).
+Partitions are the core concept that allows Kafka to scale horizontally. Incoming records are assigned to a partition and, through that, a broker. Which partition a record is routed to is up to the producer of the record to decide. Each message has an optional **key**. If the key is null, the message is sent to a random partition (ie, Round-Robin). If the key is set to a string, the producer picks a partition based on a hash of the key (ie, something like `partition := hash(record.key) % numberOfPartitions`).
 
 [^2]: Actually, every partition is associated with _multiple_ brokers for redundancy reasons. This means that every record is written to _all_ brokers for a specific partition. That said, for simplicity, let's just assume that there is just one broker per partition for now.
 
-Each consumer belongs to a **consumer group**, and each consumer group is associated with a topic. Every record will be sent to one broker in each consumer group. This means that each consumer group will, as a whole, receive every record. This allows for _fan-out_ such that you can have multiple downstream consumer systems that each process every message. In the case of the website analytics company, you might have one downstream consumer group that triggers alerts and another consumer group that generates hourly website statistics that can be graphed. Each of these two systems receives all the user events.
+Each consumer belongs to a **consumer group**, and each consumer group is associated with a topic. Every record will be sent to one consumer in each consumer group. This means that each consumer group for topix X will, as a whole, receive every record for topix X. This allows for _fan-out_ such that you can have multiple downstream consumer systems that each process every message. In the case of the website analytics company, you might have one downstream consumer group that triggers alerts and another consumer group that generates hourly website statistics that can be graphed. Each of these two systems receives all the user events.
 
 Okay, so far, I have described a horizontally scalable message-passing system supporting fan-out. I have left out one particular detail, which is how partitions and consumers relate. To be able to explain that, I need to talk about how brokers store their data.
 
-## The Log
+## The partition log
 
 {{< figure src="log.svg" alt="A figure depicting a log with indexed records stacked from left to right. There is an arrow at the far right that signals that messages are appended." caption="An append-only log of records. Each record has an index called 'offset'." >}}
 
 Each partition on a broker is stored as a **log** on disk. A log is an append-only file where each record gets added at the end. Each record has an implicit **offset** counting from the start of the log.
 
-To avoid needing to store all records for infinity, the on-disk log file is chunked up in something like ~100MB files[^3]. Files older than a configurable <abbr title="Time To Live">TTL</abbr> are deleted. It's worth pointing out that the record's offset remains the same. An important thing to notice here is that **no messages are deleted once they have been consumed by all subscribed consumers**.
+To avoid needing to store all records for infinity, the on-disk log file is chunked up in something like ~100MB files[^3]. Files older than a configurable <abbr title="Time To Live">TTL</abbr> are deleted. It's worth pointing out that the record's offset remains the same. Another important thing to notice here is that **no messages are deleted once they have been consumed by all subscribed consumers**.
 
 [^3]: The chunk size is configurable.
 
