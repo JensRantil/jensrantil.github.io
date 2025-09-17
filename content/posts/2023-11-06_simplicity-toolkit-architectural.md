@@ -27,6 +27,7 @@ https://sre.google/sre-book/simplicity/
 
 https://www.thoughtworks.com/radar/techniques/spa-by-default
 https://www.jonoalderson.com/conjecture/its-time-for-modern-css-to-kill-the-spa/
+https://www.radicalsimpli.city/
 
 ### One environment over multiple
 
