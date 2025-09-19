@@ -54,7 +54,7 @@ environment.
 
 The more engineers you have, the more a staging environment will bottleneck as
 a testing ground. One team is testing something and want a stable environment
-to make sure that other bugs randomly pop up. By definition, they can't control
+to make sure that no other bugs randomly pop up. By definition, they can't control
 which other changes are made to the environment since it is shared between
 teams.
 
