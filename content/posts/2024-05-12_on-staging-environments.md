@@ -32,7 +32,7 @@ environment as [wasteful][waste]. They can be summed up in three big categories:
 
  * A staging environment gives a false sense of safety.
  * It slows down developer velocity.
- * It has a high operational cost.
+ * It has a high operational and financial cost.
 
 Let me explain:
 
