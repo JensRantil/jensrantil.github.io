@@ -1,7 +1,7 @@
 +++ 
 date = 2023-05-09T08:24:19+02:00
-title = "Code as self-serve experience"
-description = "Code such as Terraform & Kubernetes is generally a horrible self-serve experience"
+title = "Code as a self-serve experience"
+description = "Code such as Terraform & Kubernetes is generally a horrible self-serve experience."
 tags = ["platform engineering", "terraform"]
 aliases = ["/posts/terraform-self-serve-experience/"]
 slug = "code-as-self-serve-experience"
