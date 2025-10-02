@@ -3,7 +3,7 @@ date = 2023-09-18T23:18:33+02:00
 title = "The hidden opportunity in feedback"
 description = "The gold of feedback lies in the conversation that follows."
 slug = "the-hidden-opportunity-in-feedback"
-tags = ["feedback"]
+tags = ["feedback", "leadership"]
 +++
 Today I would like to talk about a missed opportunity when giving and receiving
 feedback -- mainly the discussion that happens afterwards. A classical way to
