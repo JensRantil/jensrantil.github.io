@@ -27,8 +27,11 @@ As I was thinking about testing strategy, I decided to give a talk at the
 [Stockholm Go Meetup](https://www.meetup.com/Go-Stockholm/events/260663183/) on
 how we do testing at Tink ([slides](testing-at-tink.pdf)).  Ignoring the fact
 that the slides barely were readable (sorry!), my intention was to talk about
-1) the different types of tests there are and 2) the different tradeoffs we are
-making when choosing different testing strategies. The talk itself came out of
+1) the different types of tests there are; and
+2) the different tradeoffs we are
+making when choosing different testing strategies.
+
+The talk itself came out of
 an observation that a lot of developers have strong opinions about testing.
 However, we rarely talk about what it's actually trying to achieve, or which
 contexts different software can be in.
