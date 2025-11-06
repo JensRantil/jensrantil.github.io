@@ -45,7 +45,7 @@ that it distinguishes between "narrow integration tests" and "wide integration
 tests". Martin Fowler has written a great
 [article](https://martinfowler.com/bliki/IntegrationTest.html) about the
 concept of narrow integration tests. I have more to say about that, but I'll
-leave that to another blog post!
+leave that to another blog post.
 
 My presentation then continued making a bunch of small observations about the
 pyramid. Namely, the higher up in the pyramid you are, the
@@ -110,11 +110,11 @@ integration tests. Engineers with experience with high complexity, tend to be
 wary of such tests and instead prefer unit tests and narrow integration tests.
 
 But the reality is that none of the engineers are right. The distribution of
-different test types is not fixed. Instead, it changes over the life of the
+different test types is not fixed. Instead, it changes over the life of a
 software. Initially, when developing a tiny microservice, I found that a single
 system test gives me huge benefits. As my software grows, I implement fewer and
 fewer system and wide integration tests -- they become increasingly painful to
-work with!
+work with.
 
 Is there a way to avoid having to change the testing strategy over time?
 Perhaps.  Avoid introducing complexity or make sure your core developers stay
@@ -122,8 +122,7 @@ around:
 
 With the advent of microservices, some companies have a cultural preference to
 keep their services small. To some extent, this can keep complexity down at the
-service level. However, it's worth remembering that it pushes complexity on the
-platform architecture level; for example, investments in observability become
+service level. However, it's worth remembering that that instead pushes complexity to live _between_ microservices instead. For example, investments in observability become
 increasingly important.
 
 You can partially also avoid hitting the costs of software complexity by making
