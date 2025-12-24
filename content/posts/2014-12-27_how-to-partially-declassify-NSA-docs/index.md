@@ -131,8 +131,7 @@ think about the following:
 
 That said, it would be a fun thought experiment if NSA, or other
 intelligence organizations, would infiltrate (Times New Roman)
-typesetters to create unique kerning for letter constellations. It could
-make it much easier to work around redacted text in declassified
+typesetters to create unique kerning for digits such that one could reverse engineer redacted numbers in declassified
 documents from around the world. Call it a *typography backdoor* if you
 will.
 
