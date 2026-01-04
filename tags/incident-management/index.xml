@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Incident Management on Jens Rantil</title><link>https://jensrantil.github.io/tags/incident-management/</link><description>Recent content in Incident Management on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 17 Dec 2025 16:59:10 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/incident-management/index.xml" rel="self" type="application/rss+xml"/><item><title>What is an incident, anyway?</title><link>https://jensrantil.github.io/posts/what-is-an-incident/</link><pubDate>Wed, 17 Dec 2025 16:57:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/what-is-an-incident/</guid><description>&lt;h1 id="incident-process">
+ Incident process?
+ &lt;a class="heading-link" href="#incident-process">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;p>Many companies have an incident process. An incident process (often called an incident management process) is a defined set of steps an organization follows to detect, respond to, manage, resolve, and learn from incidents that disrupt normal operations or pose a risk.&lt;/p>
+&lt;figure>
+&lt;div class="mermaid">
+flowchart LR
+ A[Incident detected] --> B
+ B[Incident declared] --> C
+ C[Mitigation in place] --> D
+ D[Incident resolved] --> E
+ E[Incident review] --> F
+ F[Corrective / Preventive Actions] --> G[Incident closed]
+
+&lt;/div>
+
+&lt;caption>A common incident process.&lt;/caption>
+&lt;/figure>
+&lt;p>The exact meaning depends a bit on the field, but the core idea is the same: handle unexpected problems in a structured, repeatable way.&lt;/p></description></item><item><title>Incident review action items</title><link>https://jensrantil.github.io/posts/incident-action-items/</link><pubDate>Thu, 31 Oct 2024 11:04:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/incident-action-items/</guid><description>&lt;p>I recently read the article &lt;a href="https://surfingcomplexity.blog/2024/09/28/why-i-dont-like-discussing-action-items-during-incident-reviews/" class="external-link" target="_blank" rel="noopener">&amp;ldquo;Why I don’t like discussing action items during incident reviews&amp;rdquo;&lt;/a> by Lorin Hochstein. The article lists a few reasons why action items should not be discussed during incident reviews&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. While I personally think an incident review is a great place to think about possible action items, I &lt;em>am&lt;/em> missing one major reason to not decide on action items in that meeting: &lt;strong>An incident review is &lt;em>not&lt;/em> a planning session.&lt;/strong>&lt;/p></description></item></channel></rss>

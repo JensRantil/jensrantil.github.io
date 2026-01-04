@@ -1,0 +1,243 @@
+<!doctype html><html lang=en><head><title>Salt vs. Ansible · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="A highly opinionated comparison between Salt and Ansible."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Salt vs. Ansible"><meta name=twitter:description content="A highly opinionated comparison between Salt and Ansible."><meta property="og:url" content="https://jensrantil.github.io/posts/salt-vs-ansible/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Salt vs. Ansible"><meta property="og:description" content="A highly opinionated comparison between Salt and Ansible."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-03-17T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-22T00:13:45+02:00"><meta property="article:tag" content="Salt"><meta property="article:tag" content="Ansible"><meta property="article:tag" content="Provisioning"><link rel=canonical href=https://jensrantil.github.io/posts/salt-vs-ansible/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/salt-vs-ansible/>Salt vs. Ansible</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2014-03-17T00:00:00Z>March 17, 2014
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+12-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/salt/>Salt</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/ansible/>Ansible</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/provisioning/>Provisioning</a></span></div></div></header><div class=post-content><p>Some time ago was set to evaluate configuration management systems. I&rsquo;ve
+heard opinions from someone I respect that
+<a href=http://puppetlabs.com class=external-link target=_blank rel=noopener>Puppet</a> and <a href=http://www.getchef.com class=external-link target=_blank rel=noopener>Chef</a> were
+complicated beasts to get up and running, and since I am a Python guy
+I&rsquo;ve generally always kept an eye on <a href=http://www.ansible.com class=external-link target=_blank rel=noopener>Ansible</a>
+and <a href=http://www.saltstack.com class=external-link target=_blank rel=noopener>Salt</a>. Ruby is so far not my thing, but
+hey let&rsquo;s not start a flamewar about that!</p><p>Last year I got to spend a good 6 months working with Ansible for
+provisioning of servers. I became very familiar with the tool. In that
+project, Ansible was mostly chosen because it was easy to get started
+and had good documentation. The team I was working with was especially
+fond of the <a href=http://docs.ansible.com/playbooks_best_practices.html class=external-link target=_blank rel=noopener>Best
+Practises</a>
+documentation which got us started quickly and taught us what structure
+had worked previously.</p><p>A couple of weeks ago I went on a 10-day vacation in Japan, and for
+those who don&rsquo;t know me that usually equals me spending a fair amount of
+time of reading computer literature or documentation! Inbetween great
+sushi, Tokyo skylines, amazing skiing and a rough flue I found <a href=https://media.readthedocs.org/pdf/salt/latest/salt.pdf class=external-link target=_blank rel=noopener>the Salt
+PDF-documentation</a>
+to be great leisure!</p><p>I&rsquo;ve also spent some time getting a small Salt setup up and running with
+their
+<a href=http://docs.saltstack.com/topics/tutorials/starting_states.html class=external-link target=_blank rel=noopener>States</a>
+system. Since I now feel like I have a pretty robust background in both
+systems, I feel obliged to make a highly opinionated comparison. Let&rsquo;s
+go:</p><h2 id=terminology>Terminology
+<a class=heading-link href=#terminology><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Both Salt and Ansible are originally built as execution engines. That
+is, they allow executing commands on one or more remote systems, in
+parallel if you want.</p><p>Ansible supports executing arbitrary command line commands on multiple
+machines. It also supports executing <em>modules</em>. An <a href=http://docs.ansible.com/modules.html class=external-link target=_blank rel=noopener>Ansible
+module</a> is basically a Python
+module written in a certain Ansible friendly way. Most standard Ansible
+modules are idempotent. This means you tell them the state you&rsquo;d want
+your system to be in, and the module tries to make the system look like
+that.</p><p>Ansible also has the concept of a
+<a href=http://docs.ansible.com/playbooks.html class=external-link target=_blank rel=noopener>Playbook</a>. A playbook is a file
+that defines a series of module executions for a set of hosts. A
+playbook can vary the hosts modules are executed on. This makes it
+possible to orchestrate multiple machines, such as take them out of a
+load balancers before upgrading an application.</p><p>Salt has two types of modules; <a href=http://docs.saltstack.com/ref/modules/all/index.html class=external-link target=_blank rel=noopener>execution
+modules</a> and
+<a href=http://docs.saltstack.com/ref/states/all/index.html class=external-link target=_blank rel=noopener>state modules</a>.
+Execution modules are modules simply executes something, it could be a
+command line execution, or downloading a file. A state module is more
+like an Ansible module, where the arguments define a state and the
+module tries to fulfill that end state. In general state modules are
+using execution modules to most of their work.</p><p>State modules are executed using the the <code>state</code> execution module. The
+state module also supports defining states in files, called SLS files.
+Which states to apply to which hosts is defined in a
+<a href=http://docs.saltstack.com/ref/states/top.html class=external-link target=_blank rel=noopener>top.sls</a> file.</p><p>Both playbooks and SLS files (usually) are written in YAML.</p><p>As a side-note I want to point out the a remote execution engine is
+highly useful for tasks such as doing inventory or kick off a certain
+operation on multiple machines.</p><h3 id=architecture>Architecture
+<a class=heading-link href=#architecture><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Salt is built around a <em>Salt master</em> and multiple <em>Salt minions</em> that
+are connecting to the master when they boot. Generally, commands are
+issued on the master command line. The master then dispatches those
+commands out to minions. Initially minions initiate a handshake
+consisting of a cryptographic key exchange and after that they have a
+persistent encrypted TCP connection. I could babble at length about how
+they are using the <a href=http://zeromq.org class=external-link target=_blank rel=noopener>ZeroMQ</a> library for
+communication, but let&rsquo;s just say that a Salt master can handle a
+_lot_ of minions without being overloaded thanks to ZeroMQ.</p><p>Because minions have a persistent connection to Salt master commands are
+fast to reach the minions. The minions also cache various data to make
+execution faster.</p><p>Ansible is masterless and it uses SSH as its primary communication
+layer. This means it is slower, but being masterless might make it
+slightly easier to run setup and test Ansible playbooks. Some claim it&rsquo;s
+also more secure because it doesn&rsquo;t require another server application.
+Read more about that under &ldquo;Security&rdquo; further down.</p><p>Ansible does support a ZeroMQ version, but it requires an initial SSH
+connection to setup. I tried it, and to be honest I didn&rsquo;t see that much
+of a speedup. I guess bigger improvements can be seen for larger
+playbooks and more hosts.</p><p>To keep track of machines Ansible recommends you have an <em>inventory</em>
+file that basically contains a list of hosts, grouped by groups,
+possibly with attributes added to either a group or a single host. You
+can have multiple inventory files, say, one for staging and one for
+production.</p><p>Salt also supports using SSH instead of ZeroMQ using <a href=http://docs.saltstack.com/topics/ssh/ class=external-link target=_blank rel=noopener>Salt
+SSH</a>. But beware, it&rsquo;s alpha
+software (and I haven&rsquo;t tried it)&mldr;</p><h3 id=community>Community
+<a class=heading-link href=#community><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>For both projects I&rsquo;ve had inquiries both on IRC and on mailing list.
+I&rsquo;ve also contributed patches to them both - Python code and
+documentation patches. Here&rsquo;s a summary of my experience:</p><p>Ansible: Quick friendly response on IRC. The rest of the project seems
+to be less of a community effort and more a one-man-show lead by Michael
+DeHaan. I&rsquo;m sorry to say, but I enjoy communities that are more open to
+improvements and has a friendlier tone. Ansible improvement issues are
+closed before fixed, which I feel like is hiding issues under the rug.
+Good news all inquiries has been getting a response.</p><p>Salt has so far proven to be a more welcoming community. IRC responses
+has mostly been quick and friendly. Sometimes I&rsquo;ve had to resort to the
+mailing list. I&rsquo;ve had a couple of mailing list issues that has taken
+~4 days to get a response on, but it seems like most threads will get a
+follow-up response eventually.</p><p>My clear impression is that Salt has a more mature community in terms of
+tone, welcomeness and collaboration. I&rsquo;m probably stepping on a lot of
+people&rsquo;s toes saying this, but hey - this is an oppinionated review!</p><h2 id=speed>Speed
+<a class=heading-link href=#speed><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>While you might think that speed is not important when you have a few
+servers, I believe you are wrong. Being able to iterate fast is always
+important. Period. A slow startup slows you down. If something takes
+more than 30 seconds to compile I end up on Twitter, which means
+compiling just took 120 seconds. It&rsquo;s the same with deployment.</p><p>Ansible is always using SSH for initiating connections. This is slow.
+Its ZeroMQ implementation (mentioned earlier) does help, but
+initialization is still slow. Salt uses ZeroMQ by default, and it is
+_fast_.</p><p>Like said earlier, Salt has a permanent minion processes. This enables
+Salt to cache files for faster reexecution of things.</p><h2 id=code-structure>Code structure
+<a class=heading-link href=#code-structure><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>My biggest pet peeve with Ansible modules is that they can&rsquo;t be imported
+(because they are <a href=https://github.com/JensRantil/ansible/blob/devel/library/files/copy#L189 class=external-link target=_blank rel=noopener>executing code on
+import</a>).
+This means there&rsquo;s some magic involved when testing modules because you
+can&rsquo;t import a module like any other. I don&rsquo;t like magic. I prefer pure
+simple code. This is more of the Salt style.</p><p>Using less magic also means that it is more clear how to write test
+suites for Salt modules. Salt is thouroughly tested. It also made me
+happy to see that Salt comes with a
+<a href=http://docs.saltstack.com/topics/development/tests/ class=external-link target=_blank rel=noopener>three</a>
+<a href=http://docs.saltstack.com/topics/tests/integration.html class=external-link target=_blank rel=noopener>chapters</a> on
+<a href=http://docs.saltstack.com/topics/development/tests/unit.html class=external-link target=_blank rel=noopener>testing</a>,
+including the fact that they encourage mocking to enable testing of
+infrastructure if you don&rsquo;t have, say, a MySQL instance.</p><p>The above said, Ansible has a pretty clean code in general. I managed to
+navigate it pretty quickly. However, <a href=https://groups.google.com/d/msg/ansible-project/mpRFULSiIQw/jIIQdOSubnUJ class=external-link target=_blank rel=noopener>improving code
+structure</a>
+was clearly not of interest to the &ldquo;community&rdquo;.</p><p>Both Ansible and Salt have regular installables
+<a href=https://pypi.python.org/pypi/ansible class=external-link target=_blank rel=noopener>via</a>
+<a href=https://pypi.python.org/pypi/salt class=external-link target=_blank rel=noopener>PyPi</a>.</p><h2 id=vagrant>Vagrant
+<a class=heading-link href=#vagrant><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>While talking about testing&mldr; DevOps people loves Vagrant. Until
+recently I had not worked with it. Vagrant comes with provisioning
+modules both for Salt and Ansible. This makes it a breeze to get up and
+running with a master+minion in Vagrant, or executing a playbook on
+startup.</p><h2 id=orchestration>Orchestration
+<a class=heading-link href=#orchestration><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Both Ansible and Salt supports orchestration. I&rsquo;d say orchestration
+rules generally are easier to get an overview of in Ansible. Basically,
+a playbook is split up in groups of tasks, where each group matches to a
+set of hosts (or a hostgroup). Each group is executed chronologically
+according to order. The same comes for the executions order of tasks.</p><p>Salt supports
+<a href=http://docs.saltstack.com/topics/event/index.html class=external-link target=_blank rel=noopener>events</a> and
+<a href=http://docs.saltstack.com/topics/reactor/ class=external-link target=_blank rel=noopener>reactors</a> to those events.
+This means a Salt execution can trigger things on another machine.
+Salt&rsquo;s execution engine also enables things such as monitoring and it&rsquo;s
+going to be really interesting to see what comes of that in the future.
+For basic orchestration you can also use
+<a href=http://docs.saltstack.com/ref/states/overstate.html class=external-link target=_blank rel=noopener>Overstate</a> to set
+up various roles in a cluster in a special order.</p><p>Ansible wins here because of its simplicity. Salt wins in features
+because of it being able to react continuously to cluster changes.</p><p>Both Salt and Ansible also supports executing tasks over a window of
+machines. This is useful to make sure a service is always available
+through for example an upgrade.</p><h2 id=security>Security
+<a class=heading-link href=#security><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Ansible uses SSH for transport. SSH is a battle tested protocol. As long
+as the SSH server is correctly configured (with a good random number
+generator), I believe most people would assume an SSH client is secure.</p><p>Ansible can also easily connect as multiple non-root users to a single
+host. If you are extremelly picky about having processes running as
+<code>root</code> you should evaluate Ansible. That said, Ansible supports using
+<code>sudo</code> to execute its modules as <code>root</code>. If you don&rsquo;t want to connect
+over SSH as <code>root</code>, that is.</p><p>Salt uses its &ldquo;own&rdquo; AES implementation and key handling. By &ldquo;own&rdquo; I want
+to make a point out that it uses the
+<a href=https://www.dlitz.net/software/pycrypto/ class=external-link target=_blank rel=noopener>PyCrypto</a> package for this.
+There
+<a href=http://www.cvedetails.com/vulnerability-list/vendor_id-12943/product_id-26420/version_id-155046/Saltstack-Salt-0.17.0.html class=external-link target=_blank rel=noopener>has</a>
+been security issues with Salt, but at the same time I think the
+architecture is so simple that security is fairly easy to maintain.</p><p>What&rsquo;s also important to note is that Salt runs its master and minions
+as <code>root</code> by default. This can be changed, but obviously it can be hard
+to install Debian packages etc. if you are not root. As for the master,
+you can configure it to allow the <code>salt</code> command as non-root. I highly
+recommend that.</p><h3 id=sensitive-data>Sensitive data
+<a class=heading-link href=#sensitive-data><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>All sensitive data being rolled out will at some point need to reside on
+the provisioning machine. If the provisioning machine is a sysadmin&rsquo;s
+machine, which nowadays usually are laptops, you risk having that data
+stolen.</p><p>After deep and long thinking about this I believe the authoritarian
+master approach is a better one. This means sensitive data can be
+enforced to only reside on one locked down place (with encrypted
+backups, of course). Salt lets you store security credentials in
+&ldquo;Pillars&rdquo;. Sure, a master intrusion would be devastating, but you only
+need to secure one machine. Not all developer machines in cafés, on
+trains and airports.</p><p>Obviously, Ansible users do have the option to always execute their
+playbooks from a secured machine that holds the sensitive data. But is
+this what people do?</p><h3 id=auditability>Auditability
+<a class=heading-link href=#auditability><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>When talking about security I also think auditability is important.
+Here, Salt wins big. Every execution Salt does is
+<a href=http://docs.saltstack.com/topics/jobs/index.html class=external-link target=_blank rel=noopener>stored</a> for X number
+of days on the master. This makes it easy to both debug, but also see if
+there&rsquo;s been anything fishy going on.</p><h2 id=deployment>Deployment
+<a class=heading-link href=#deployment><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Ansible is definitely easier here. No deployment is needed. Sure, Salt
+supports SSH but the documentation mostly assumes ZeroMQ. But hey, SSH
+is slow anyway&mldr;</p><p>A nice thing about provisioning minions is that they are the ones
+connecting to the master. This makes it quick and easy to bootstrap a
+bunch of new machines quickly. The minion-connects architecture is also
+useful if you&rsquo;d like to use something like Amazon&rsquo;s autoscaling
+features. Each autoscaled instance will automatically become a minion.</p><p>The Salt <a href=https://github.com/saltstack/salt-bootstrap class=external-link target=_blank rel=noopener>bootstrap script</a>
+is incredibly useful for bootstrapping and makes it a breeze. It handles
+a bunch of different distributions and is <a href=http://salt.readthedocs.org/en/latest/topics/tutorials/salt_bootstrap.html class=external-link target=_blank rel=noopener>well
+documented</a>.</p><h2 id=learning-curve>Learning curve
+<a class=heading-link href=#learning-curve><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Ansible wins here. It&rsquo;s easier to get started and comprehend. Mostly
+because nothing else is needed than cloning the Ansible GIT repo,
+setting a couple of environment variables and starting to execute your
+playbooks.</p><p>Salt can run in <a href=http://docs.saltstack.com/topics/tutorials/quickstart.html class=external-link target=_blank rel=noopener>masterless
+mode</a>. This
+makes it easier to get it up and running. However, for production (and
+stability) I recommend getting an actual master up and running.</p><p>Generally, Salt comes with more bells and whistles but the cost is that
+the learning curve is steeper. Salt is <a href=http://docs.saltstack.com/topics/development/modular_systems.html class=external-link target=_blank rel=noopener>highly
+modular</a>.
+This is great in terms of code structure but requires more parts to be
+understood to fully grok Salt.</p><h2 id=upgrading>Upgrading
+<a class=heading-link href=#upgrading><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Upgrading Salt depends on how it was installed. For Debian based
+distributions there is an <code>apt</code> repository holding the latest Debian
+packages. So upgrading is simply <code>apt-get upgrade</code>. For Ubuntu, there is
+a PPA. Both repositories are actively maintained. The latest <code>2014.1.0</code>
+release that came out recently had its Debian/Ubuntu packages packaged
+within a week (and that was long!).</p><p>Upgrading Ansible is even simpler; You simply execute
+<code>git fetch && git checkout &lt;tag></code>. That&rsquo;s it.</p><h2 id=documentation>Documentation
+<a class=heading-link href=#documentation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>As of documentation, both projects have all information you need to get
+up and running, developing modules and configure setups. Ansible has
+historically had a better structure of its documentation than Salt. That
+said, there has been
+<a href=https://github.com/saltstack/salt/issues/10526 class=external-link target=_blank rel=noopener>great</a>
+<a href=https://github.com/saltstack/salt/pull/10792 class=external-link target=_blank rel=noopener>effort</a> to structure the
+Salt documentation recently. I contributed a lot of issues to that goal
+and most of them have been fixed.</p><h2 id=conclusion>Conclusion
+<a class=heading-link href=#conclusion><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>To me, Ansible was a great introduction to automated server
+configuration and deployment. It was easy to get up and running and has
+great documentation.</p><p>Moving forward, the scalability, speed and architecture of Salt has it
+going for it. For cloud deployments I find the Salt architecture to be a
+better fit. I would not hesitate to use Salt in the future.</p><p>All this said, you should give both projects a spin before making your
+decision. They&rsquo;re fairly quick to set up and test.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/cba53b20c33afbbecaa6fd8cc3149dd381e636f7 target=_blank rel=noopener>cba53b2</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>
