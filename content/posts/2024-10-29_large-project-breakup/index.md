@@ -11,7 +11,7 @@ The project was to deliver a new product feature, and the deadline was three mon
 
 [miro]: https://miro.com
 
-Our first week was a mess. It was somewhat unclear who was running the project, and worse, we lacked common ground on how to approach it. Someone proposed that we create (virtual) Post-it notes on our (online) whiteboard, one Post-it for every task needed to finish the project. Suddenly, the board was filled with many unstructured tasks. But how would we approach implementing them?
+Our first week was a mess. It was somewhat unclear who was running the project, and worse, we lacked common ground on how to approach it. Someone proposed that we would create (virtual) Post-it notes on our (online) whiteboard, one Post-it for every task needed to finish the project. Suddenly, the board was filled with many unstructured tasks. But how would we approach implementing them?
 
 As someone who has seen large-scale engineering efforts fail miserably, I was getting worried. I noticed that some people seemed contemptuous about their team's tasks. They signaled that now they knew exactly what they needed to build for the next 2,5 months and the teams would simply piece together things as we went along. Others, like me, were worried that we would end up with a failed waterfall project. Quick feedback on delivery was lacking, and were were [following a plan over responding to change][agile].
 
@@ -30,7 +30,7 @@ I then continued and asked everyone to write down all the tasks they thought the
 {{< figure src="2.svg" alt="Diagram showing an end-to-end delivery workflow across multiple teams. The 'End-to-end delivery' column on the left contains a yellow box labeled 'E2E product delivery (aka Stories).' Each team (Team 1, Team 2, up to Team N) has green boxes representing 'Tasks' associated with the product delivery. Teams work in parallel on different tasks related to the overall end-to-end delivery." caption="Diagram containing our end-of-quarter delivery and an unstructured list of all tasks the teams thought they needed to do." >}}
 
 
-"Wow, that's a lot of tasks!", I said smiling. "I think we need to add some structure to this. How about we add arrows between tasks that we know depend on each other? Let's also move, tasks needed to be done earlier higher up and tasks done later further down.". People nodded and once again engaged in the Miro board. The outcome looked something like this:
+"That's a lot of tasks!", I said. "I think we need to add some structure to this. How about we add arrows between tasks that we know depend on each other? Let's also move, tasks needed to be done earlier higher up and tasks done later further down.". People nodded and once again engaged in the Miro board. The outcome looked something like this:
 
 {{< figure src="3.svg" alt="Diagram illustrating an end-to-end delivery process across multiple teams with dependencies. A yellow box labeled 'E2E product delivery (aka Stories)' is shown in the 'End-to-end delivery' column. Green boxes in each team column (Team 1, Team 2, up to Team N) represent 'Tasks.' Arrows between tasks indicate dependencies." caption="Diagram of the end-of-quarter delivery with task dependencies across multiple teams." >}}
 
