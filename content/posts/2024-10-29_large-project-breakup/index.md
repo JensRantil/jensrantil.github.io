@@ -5,7 +5,7 @@ description = "Agile done, in a sneaky way."
 tags = []
 slug = "large-project-breakup"
 +++
-Earlier this year, I was on a complex multi-team project that was handed to us by our product organization. The project had lots of dependencies between teams and could have been a disaster. Today I would like to share an approach we took to structure the project into what eventually made it a success.
+Earlier this year, I was on a complex multi-team project that was handed to us by our product organization. The project had a lot of dependencies between teams and could have been a disaster. Today I would like to share an approach we took to structure the project into what eventually made it a success.
 
 The project was to deliver a new product feature, and the deadline was three months in the future. About 15 engineers were involved in this project, and close to no product owner was included in the project group to guide us.
 
