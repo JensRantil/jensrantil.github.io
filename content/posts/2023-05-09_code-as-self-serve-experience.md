@@ -88,9 +88,11 @@ company innovation.
 
 What are the alternatives? Create a graphical user interface that guides the
 users through the right choices, naming standards etc. Spotify's
-[Backstage][bs] is one such alternative.
+[Backstage][bs] is one such alternative. Or at least create [a high-level
+abstraction that only requires a simple file to set up a service][ae].
 
 [bs]: https://backstage.io/
+[ae]: https://docs.cloud.google.com/appengine/docs/standard/reference/app-yaml?tab=python
 
 Above said, I understand the common journey for companies is to start with code
 as self-serve. It's a good start! Just make sure to not get stuck there.
