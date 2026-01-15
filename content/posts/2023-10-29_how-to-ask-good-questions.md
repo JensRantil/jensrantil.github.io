@@ -98,7 +98,7 @@ that it can be done in a much better, different, way.
 for one-off solution or a sustainable solution? For former hints that someone
 could share a one-off hack or workaround.
 
-**The urgency if you question.** Are you stuck solving an incident? Let people
+**The urgency of you question.** Are you stuck solving an incident? Let people
 know! Have you found a workaround? Let people know as it signals it's less
 urgent. Further, let people know if you are blocked or not - and when you would
 love to have an answer (ie. "I would appreciate if someone could give me some
