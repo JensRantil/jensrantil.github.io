@@ -22,7 +22,7 @@ Overflow, or in your company Slack, etc.
 
 When I was in high school, I had a teacher in my programming class who mostly did not know the programming language he was teaching. Our Principal
 had made a mistake in hiring someone to teach C++, when he was later told to teach
-the C programming language. Ignoring the fact that [C _mostly_used to be is a subset of
+the C programming language. Ignoring the fact that [C _mostly_ used to be is a subset of
 C++][c-c++] (it's rarely anymore), his immediate response to most questions was:
 
 > "Have you tried googling for it? That's what all programmers do when they get
