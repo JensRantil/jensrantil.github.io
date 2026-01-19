@@ -72,6 +72,12 @@ In my article ["Reliability vs. Resilience"][safety-types], I wrote about the va
 
 Also, it's worth pointing out that severity and impact are _estimates_. A recommendation I have given is the always lean on the higher end if uncertain. Better to be safe than sorry.
 
+{{< notice info >}}
+**Update:** I have written an addendum to this article. If you are curious, have a look at [The missed incident priority: The Near Miss][near-miss].
+
+[near-miss]: {{< relref "2026-01-19_near-misses-priority.md" >}}
+{{< /notice >}}
+
 {{< notice tip >}}
 Heads up! [I offer consultancy services][services] in this space. Don't hesitate to reach out if you would like me to help your company improve when it comes to reliability, resiliency, architecture feedback, on-call, alerting, or incident training. :wave:
 
