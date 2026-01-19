@@ -58,7 +58,7 @@ Using your incident processes also for a near miss can be great. In my [previous
   </tr>
 </table>
 
-I usually recommend only paging/alerting when customers _actually_ are impacted. As such, near misses are usually not paged for at all. Instead, they are discovered through dashboards, metrics, and logs - or simply brought up when someone discovered they were close to making a mistake. The latter obviously requires a large amount of [psychological safety][psyc-safe].
+I usually recommend only paging/alerting when customers _actually_ are impacted. As such, near misses are usually not paged for at all. Instead, they are discovered through dashboards, metrics, and logs - or simply brought up when someone discovers they were close to making a mistake. The latter obviously requires a large amount of [psychological safety][psyc-safe].
 
 [psyc-safe]: https://blog.jobelenus.dev/blog/psychological-safety/
 
