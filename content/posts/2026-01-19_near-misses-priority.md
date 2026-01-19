@@ -11,8 +11,9 @@ In my [article about incidents][incident], I wrote:
 
 > "Raise an incident when you think a postmortem would be useful for what you are seeing."
 
-This also includes raising an incident for a near miss. A **near miss** refers to an event that could have caused an incident, outage, security breach, or service degradation — but ultimately did not. Near misses can be a great source of learning, and [reducing near-misses can reduce actual incidents][safety-triangle].
+This also includes raising an incident for a near miss. A **near miss** refers to an event that could have caused an incident, outage, security breach, or service degradation — but ultimately did not. Near misses can be a great source of learning, and [reducing near-misses can reduce actual incidents][safety-triangle]. Making them visible can also be an integral part in making your organisation more [resilient][safety-types] to failures.
 
+[safety-types]: {{< relref "2024-11-05_safety-types.md" >}}
 [incident]: {{< relref "2025-12-17_what-is-an-incident.md" >}}
 [safety-triangle]: https://www.ishn.com/articles/109182-the-safety-triangle-a-useful-yet-complicated-theory
 
