@@ -14,8 +14,7 @@ An [incident][incident] framework usually has the concept of an **incident prior
 **Strategic:** To be able to build statistics and see trends in incidents at a company[^1]. Are there more high-priority incidents this quarter than last? Are we getting quicker at coming back to a working state for our high-priority incidents (improved [resilience][safety-types])? Etc.
 
 [safety-types]: {{< relref "2024-11-05_safety-types.md" >}}
-[^1]: Here be devils! Statistics on incidents can be useful, but at worst, [they can be useless][goodhart].
-[goodhart]: https://en.wikipedia.org/wiki/Goodhart's_law
+[^1]: Here be devils! Statistics on incidents can be useful, but at worst, [they can be useless](https://en.wikipedia.org/wiki/Goodhart's_law).
 
 ## Priority levels
 
