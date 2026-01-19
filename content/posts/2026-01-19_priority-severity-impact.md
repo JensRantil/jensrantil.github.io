@@ -77,3 +77,10 @@ Heads up! [I offer consultancy services][services] in this space. Don't hesitate
 
 [services]: {{< relref "/pages/services" >}}
 {{< /notice >}}
+
+## References
+
+Here are some references you can use if you would like to read more about similar models:
+
+* [PagerDuty's Incident Response severities](https://response.pagerduty.com/before/severity_levels/)
+* [Honeycomb arguing against incident severities](https://www.honeycomb.io/blog/against-incident-severities-favor-incident-types)
