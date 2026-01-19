@@ -31,31 +31,28 @@ A common incident priority model I have used is based on **severity** and **impa
 
 <table>
   <tr>
-    <th style="background-color:#f0f0f0;">Impact \ Severity</th>
-    <th style="background-color:#f0f0f0;">Low</th>
-    <th style="background-color:#f0f0f0;">Medium</th>
-    <th style="background-color:#f0f0f0;">High</th>
+    <th style="background-color: #f0f0f0;">Impact \ Severity</th>
+    <th style="background-color: #f0f0f0;">Low</th>
+    <th style="background-color: #f0f0f0;">Medium</th>
+    <th style="background-color: #f0f0f0;">High</th>
   </tr>
-
   <tr>
-    <th style="background-color:#f0f0f0;">Low</th>
-    <td style="background-color:#c6efce; text-align:center;">Priority 3</td>
-    <td style="background-color:#c6efce; text-align:center;">Priority 3</td>
-    <td style="background-color:#ffeb9c; text-align:center;">Priority 2</td>
+    <th style="background-color: #f0f0f0;">Low</th>
+    <td style="background-color: #c6efce; text-align:center;">Priority 3</td>
+    <td style="background-color: #c6efce; text-align:center;">Priority 3</td>
+    <td style="background-color: #ffeb9c; text-align:center;">Priority 2</td>
   </tr>
-
   <tr>
-    <th style="background-color:#f0f0f0;">Medium</th>
-    <td style="background-color:#c6efce; text-align:center;">Priority 3</td>
-    <td style="background-color:#ffeb9c; text-align:center;">Priority 2</td>
-    <td style="background-color:#ffc7ce; text-align:center;">Priority 1</td>
+    <th style="background-color: #f0f0f0;">Medium</th>
+    <td style="background-color: #c6efce; text-align:center;">Priority 3</td>
+    <td style="background-color: #ffeb9c; text-align:center;">Priority 2</td>
+    <td style="background-color: #ffc7ce; text-align:center;">Priority 1</td>
   </tr>
-
   <tr>
-    <th style="background-color:#f0f0f0;">High</th>
-    <td style="background-color:#ffeb9c; text-align:center;">Priority 2</td>
-    <td style="background-color:#ffc7ce; text-align:center;">Priority 1</td>
-    <td style="background-color:#ffc7ce; text-align:center;">Priority 1</td>
+    <th style="background-color: #f0f0f0;">High</th>
+    <td style="background-color: #ffeb9c; text-align:center;">Priority 2</td>
+    <td style="background-color: #ffc7ce; text-align:center;">Priority 1</td>
+    <td style="background-color: #ffc7ce; text-align:center;">Priority 1</td>
   </tr>
 </table>
 
