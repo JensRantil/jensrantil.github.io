@@ -6,7 +6,7 @@ slug = "fast-aggregate-queries-on-dynamic-data"
 +++
 Today I would like to talk about caching strategies for aggregate queries over
 time-based data which is updated often. This is something I spent significant
-brain-cycles on my previous job and I would love to share some of my findings.
+brain-cycles on in my previous job and I would love to share some of my findings.
 
 ## Example data & use case
 
