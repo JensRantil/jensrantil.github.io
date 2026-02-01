@@ -1,11 +1,11 @@
 +++
 date = 2026-02-01T22:05:35+02:00
-title = "A shell dry run trick"
+title = "A shell --dry-run trick"
 description = "Review all shell commands before executing them. Avoid a catastrophe. Profit."
 tags = ["Shell"]
 slug = "a-shell-dry-run-trick"
 +++
-I recently read the blog post ["In Praise of –dry-run"][dry-run-praise]. I love dry-run modes! They are immensely useful. The blog post reminded me of a small terminal trick that I have used for years, but never shared with the Internet:
+I recently read the blog post ["In Praise of –dry-run"][dry-run-praise]. I love `--dry-run` mode! It can be immensely useful to avoid Bad Things:tm: from happening. The blog post reminded me of a small terminal/shell/Bash trick that I have used for years, but never shared with the Internet:
 
 [dry-run-praise]: https://henrikwarne.com/2026/01/31/in-praise-of-dry-run/
 
