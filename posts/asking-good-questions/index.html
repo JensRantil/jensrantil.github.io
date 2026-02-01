@@ -1,0 +1,132 @@
+<!doctype html><html lang=en><head><title>How to ask good questions · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="Asking a good question makes you get your answer faster."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="How to ask good questions"><meta name=twitter:description content="Asking a good question makes you get your answer faster."><meta property="og:url" content="https://jensrantil.github.io/posts/asking-good-questions/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="How to ask good questions"><meta property="og:description" content="Asking a good question makes you get your answer faster."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-10-29T10:01:35+02:00"><meta property="article:modified_time" content="2026-01-15T12:05:33+01:00"><link rel=canonical href=https://jensrantil.github.io/posts/asking-good-questions/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/asking-good-questions/>How to ask good questions</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2023-10-29T10:01:35+02:00>October 29, 2023
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+9-minute read</span></div></div></header><div class=post-content><p>As engineers, we all occasionally need to reach out and ask for help. Asking
+questions is an art! By asking a question in a good way, you will receive the
+answer you are looking for, faster. A well-phrased question is also respectful
+of the intended audience&rsquo;s time - not wasting their time to have to ask
+clarifying questions etc.</p><p>As someone who has been answering questions and mentoring engineers for many
+years, this post is a collection of useful practices to get your questions
+answered quickly, efficiently, and effectively. Most recommendations in this
+post are independent of where the question is asked: Towards a local senior
+engineer in person or over a DM, on IRC for some open source project, on Stack
+Overflow, or in your company Slack, etc.</p><h2 id=first-do-your-research>First, do your research
+<a class=heading-link href=#first-do-your-research><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>When I was in high school, I had a teacher in my programming class who mostly did not know the programming language he was teaching. Our Principal
+had made a mistake in hiring someone to teach C++, when he was later told to teach
+the C programming language. Ignoring the fact that <a href=https://isocpp.org/wiki/faq/c#is-c-a-subset class=external-link target=_blank rel=noopener>C <em>mostly</em> used to be is a subset of
+C++</a> (it&rsquo;s rarely anymore), his immediate response to most questions was:</p><blockquote><p>&ldquo;Have you tried googling for it? That&rsquo;s what all programmers do when they get
+stuck.&rdquo;</p></blockquote><p>The fact that all programmers constantly google for things is so true! By
+asking us to search for the answer ourselves first, he</p><ul><li>made us practice looking for information. This is an invaluable skill!</li><li>offloaded work from himself. If he could make all students find answers to a
+third of their questions, he would have reduced his workload by 33%!</li></ul><p>I am sure most of us have done the &ldquo;Hey, do you know X? &mldr;never mind, I
+figured it out!&rdquo;. That&rsquo;s usually when we fire off a question <em>slightly</em> too
+fast and bother someone prematurely.</p><p>Looking for your answer is quite dependent on what you are trying to figure
+out, some sources could be:</p><ul><li>A <code>README</code> file.</li><li>Your company&rsquo;s<ul><li>intraweb/wiki.</li><li>source code.</li><li>mailing lists.</li></ul></li><li>Searching for similar questions/discussions in your chat system (Slack,
+Discord, etc.).</li><li>Stack Overflow</li><li>Google. :)</li><li>Community spaces for your programming language, or the library you are
+trying to use. Most of them have <a href=https://cwiki.apache.org/confluence/display/CASSANDRA2/IRC class=external-link target=_blank rel=noopener>an IRC channel</a> or
+<a href=https://invite.slack.golangbridge.org/ class=external-link target=_blank rel=noopener>Slack</a> etc.</li><li>A third party library&rsquo;s source code. I have learned <em>so</em> much by doing this.
+Highly recommended!</li></ul><p>Don&rsquo;t get stuck doing research, though! It&rsquo;s better to get an answer to a
+question which have been asked before than to get stuck looking for an answer
+that doesn&rsquo;t exist. Timeboxing for 5-30 minutes to look for a solution can
+avoid putting unnecessary load on your organisation, on your team, or fellow
+programmers. It also has a benefit prepping you to understand an answer if you
+<em>do</em> need to ask your question!</p><h2 id=communicate-well>Communicate well
+<a class=heading-link href=#communicate-well><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Phrasing a question is about communication. Here are some recommendations:</p><h3 id=write-the-question-in-one-message>Write the question in one message
+<a class=heading-link href=#write-the-question-in-one-message><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Try to include as much information in <em>one</em> message. This avoids the <a href=https://dontasktoask.com class=external-link target=_blank rel=noopener>&ldquo;Don&rsquo;t
+ask to ask&rdquo;</a> and <a href=https://nohello.net class=external-link target=_blank rel=noopener>&ldquo;Hello.&rdquo;</a> situations. There are
+few as frustrating things as constantly having to do a lot of unnecessary
+back-and-forths when answering questions.</p><h3 id=bundle-all-the-information>Bundle all the information
+<a class=heading-link href=#bundle-all-the-information><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>A well-phrased question includes the following:</p><p><strong>The overall problem you are trying to solve.</strong> Instead of just writing &ldquo;I am
+trying to use this class&rdquo;, you also write &ldquo;I am trying to make my code do Y&rdquo;.
+Or even better, &ldquo;I am trying to make my code do Y, to be able to implement the
+product feature Z.&rdquo;. By doing this, you avoid the <a href=https://xyproblem.info class=external-link target=_blank rel=noopener><em>XY-problem</em></a>.
+Sometimes knowing the context of what you are trying to do leads to the insight
+that it can be done in a much better, different, way.</p><p><strong>The context.</strong> Is this for a specific environment or microservice? Is this
+for one-off solution or a sustainable solution? For former hints that someone
+could share a one-off hack or workaround.</p><p><strong>The urgency of you question.</strong> Are you stuck solving an incident? Let people
+know! Have you found a workaround? Let people know as it signals it&rsquo;s less
+urgent. Further, let people know if you are blocked or not - and when you would
+love to have an answer (ie. &ldquo;I would appreciate if someone could give me some
+input on this before the end of the day! 🙏&rdquo;).</p><p><strong>What you have tried, what you expected, and what happened instead.</strong> This is
+the classical information included in a good bug report. Make sure that the
+reader can somehow access the <em>exact</em> error message & log output if there is
+such. Add links to other systems (CI/CD) etc., if possible.</p><p><strong>Your research.</strong> Please include what you found when you did your research.
+Was there anything in particular that showed up? Something that hinted you
+could solve your problem in a specific way? Why did that solution not work?</p><p><strong>Additional information</strong> such as whether this worked before or not, or if you
+have a suspicion what might be wrong.</p><p><strong>References.</strong> Links to a Jira ticket, pull requests, CI/CD builds, commit
+SHAs, logs etc.</p><p>Also, don&rsquo;t be hard on yourself if you realize that you forgot to attach some
+needed information to your question. See it as a learning opportunity for your
+next question. ✨</p><h3 id=start-with-the-most-important-ask>Start with the most important ask
+<a class=heading-link href=#start-with-the-most-important-ask><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>I used to work with a colleague who would ask their question in the completely
+wrong order:</p><blockquote><p>In the production environment, I got this error message. I typed in X. Google
+gave me <a href=https://example.com/ class=external-link target=_blank rel=noopener>this</a>, but I don&rsquo;t think it helps. I am trying to
+achieve Y.</p></blockquote><p>This meant that every time they asked me, I had to buffer <em>all</em> the information
+in my head until I could answer.</p><p><a href=https://untools.co/minto-pyramid class=external-link target=_blank rel=noopener>The Minto Pyramid</a> is a communication framework which helps to simplify
+communication. In short, it is about splitting your message into Conclusion
+(the most important thing), Key Arguments (the main takeaway), followed by
+Details (optional, but useful info). Using the Minto pyramid can be highly
+useful when phrasing a question!</p><p><strong>Conclusion:</strong></p><blockquote><p>Does anyone know how to do X in Y?</p></blockquote><p><strong>Key points:</strong></p><blockquote><p>I am trying to achieve Z in our production environment. I have tried A and
+was expecting B to happen, but it fails with C&mldr; <a href=https://example.com/ class=external-link target=_blank rel=noopener>The reference
+documentation</a> hints it should work. I am currently able to
+work around this, and I don&rsquo;t think this ever worked before (based on searching
+in Slack).</p></blockquote><p><strong>Detailed information:</strong></p><blockquote><p>I tried googling for this. It brings up <a href=https://example.com/ class=external-link target=_blank rel=noopener>this link</a> which
+doesn&rsquo;t really make sense in this case&mldr; <a href=https://example.com/ class=external-link target=_blank rel=noopener>This pull request</a>
+on Github <em>might</em> have tried to achieve something similar back in the day don&rsquo;t
+know. You can find the logs for my error message <a href=https://example.com/ class=external-link target=_blank rel=noopener>here</a>.</p></blockquote><p>Notice how I preferred to use links to things instead of pasting large bodies
+of logs into my message above. Inlining a lot of information in a message can
+make a reader overwhelmed. If you <em>do</em> need to do it, many collaboration tools
+(Slack/Discord/&mldr;) support <a href=https://slack.com/intl/en-se/slack-tips/share-code-snippets class=external-link target=_blank rel=noopener>uploading code snippets which can be
+collapsed/expanded</a>. E-mail supports file attachments.</p><p>Finally, use paragraphs or bullets for long messages! This makes it much easier
+to digest your message. Most collaboration tools (such as Slack) can add new
+lines <code>shift+return</code> to split into multiple paragraphs.</p><h3 id=read-the-room>Read the room
+<a class=heading-link href=#read-the-room><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Asking good questions also means reading the room. This is where company
+culture partially comes in! Some examples:</p><ul><li>If you are at a company where working on weekends/evenings is frowned upon,
+maybe you could write your question during office hours instead? Slack has a
+feature to schedule messages which is useful here.</li><li>Be careful with cross-posting your question in multiple chat rooms. It might
+be frowned upon and has a risk of DDoSing your community. If you cross-post,
+prefer to direct people to the place where you would like the answer to
+avoid parallel threads on the topic.</li><li>If there is an ongoing incident, maybe you could hold off with asking your
+question.</li><li>Avoid <code>@channel</code> ping in Slack to disturb everyone (unless it&rsquo;s a really
+urgent question).</li><li>Asking too many questions in public Slack channels has a risk of giving you
+a bad reputation. Ask for feedback by someone in your community if you are
+worried about this! One way to combat this, is to send of questions to
+specific people. That said, read about load-balancing below!</li></ul><h2 id=load-balance-your-questions>Load-balance your questions
+<a class=heading-link href=#load-balance-your-questions><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>As a domain expert, it&rsquo;s easy to get bogged down in answering questions all
+day. If you can, try to spread your questions to multiple people. The easiest
+way to do this is to ask your question in a public space (public chat room,
+etc.) where multiple people can pitch in to answer. This also gives other
+benefits:</p><ul><li>Other people other people can read the answers and learn something, too.</li><li>You give less experienced engineers an opportunity to shine, celebrate, and
+show that they also know answers to things.</li></ul><h2 id=follow-up-when-you-have-an-answer>Follow up when you have an answer
+<a class=heading-link href=#follow-up-when-you-have-an-answer><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>If you find the answer to your question, share it! This signals to others that
+they can stop looking for an answer. But it also means you enable others to
+avoid ending up in the same situation as you in the future.</p><p>Did someone help you solve the problem? Give them credit and thank them. ❤️ That
+will increase the chance for you to get help in the future!</p><h2 id=conclusion>Conclusion
+<a class=heading-link href=#conclusion><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>By following these recommendations you will make your colleagues happier,
+improve communication, and - most importantly - get your answers quicker.</p><p>Finally, whenever you have learned something new, remember that it&rsquo;s now your
+responsibility to share this knowledge with other people if they ever happen to
+have the same question!</p><p><em>Did you find this article useful? Have a look at my more recent blog post on
+<a href=/posts/a-good-answer/>how to write good answers</a>.</em></p><h2 id=references>References
+<a class=heading-link href=#references><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>I am by no means the first to write down how to ask questions. If you are
+interested in learning more, here are a couple of additional sources:</p><ul><li><a href=http://www.sabi.co.uk/Notes/linuxHelpAsk.html class=external-link target=_blank rel=noopener>How to ask questions in Linux IRC help channels</a>. It
+focuses more asking questions in public IRC, than in private company
+settings.</li><li><a href=http://www.catb.org/~esr/faqs/smart-questions.html class=external-link target=_blank rel=noopener>How To Ask Questions The Smart Way</a> by Eric S.
+Raymond</li><li><a href=https://zellwk.com/blog/asking-questions/ class=external-link target=_blank rel=noopener>How to Ask Good Coding Questions That Get Great Answers</a>
+by Zell Liew. This post is a bit more opinionated, but Zell&rsquo;s post is a
+great one!</li></ul></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/899bfa7d603343760d9a0e4631c23628f1cd8968 target=_blank rel=noopener>899bfa7</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>
