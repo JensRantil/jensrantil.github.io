@@ -5,7 +5,7 @@ description = "We have been measuring Time to Recovery the wrong way all along."
 tags = ["statistics"]
 slug = "mttr-is-the-wrong-metric"
 +++
-{{< tweet user="JensRantil" id="1369762301293781002" >}}
+{{< x user="JensRantil" id="1369762301293781002" >}}
 
 Today I would like to talk about why Mean Time To Recovery (MTTR) is a wrong
 metric to look at.

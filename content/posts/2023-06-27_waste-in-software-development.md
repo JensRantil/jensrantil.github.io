@@ -78,7 +78,7 @@ someone else to review your code. A solution can be pair or mob programming as
 it usually reduces lead time because review happens by someone else in parallel
 while typing out the code.
 
-{{< tweet user="JensRantil" id="1182325832578150401" >}}
+{{< x user="JensRantil" id="1182325832578150401" >}}
 
 If you need additional review steps to deploy to production (code review to
 merge into a “production” branch), it also adds to this type of waste. If
@@ -97,7 +97,7 @@ a development machine.
 
 Not to mention waiting on Jira’s user interface to load…
 
-{{< tweet user="JensRantil" id="1380065758596759553" >}}
+{{< x user="JensRantil" id="1380065758596759553" >}}
 
 **Waste of transportation.** I usually think of “code refactoring” here. Ohno
 defined [two types of waste][types-of-waste]:

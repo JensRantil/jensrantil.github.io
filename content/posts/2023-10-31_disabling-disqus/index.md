@@ -6,7 +6,7 @@ tags = []
 slug = "goodbye-disqus"
 +++
 
-{{< tweet user="JensRantil" id="1712388686363386141" >}}
+{{< x user="JensRantil" id="1712388686363386141" >}}
 
 I just disabled blog post commenting on this blog after [Disqus][disqus], my
 former blog post comment system, rolled out a pretty horrible (or shall I
