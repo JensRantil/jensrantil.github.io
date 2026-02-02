@@ -19,7 +19,7 @@ Every time I go on [LinkedIn][linkedin], this is the feeling I get -- a place wh
 
 [linkedin]: https://www.linkedin.com
 
-Don't get me wrong, I _love_ micro celebrations. But there are diminishing returns. And to be frank, the information density in the "yays" & high fives" is not that high. If the largest global community of business professionals only are celebrating progress, I think we are wasting everyone's time.
+Don't get me wrong, I _love_ micro celebrations. But there are diminishing returns. And to be frank, the information density in the "yays & high fives" is not that high. If the largest global community of business professionals only are celebrating progress, I think we are wasting everyone's time.
 
 I don't think LinkedIn necessarily should turn into a hate-speech corner of the Internet (ahem, X & Truth Social), but I would love to see LinkedIn having more complex conversations, where there are no right or wrong. Where are the posts about company ethics? Or why certain companies find it hard to reach net-zero climate emissions? What are your struggles? Where are the learnings from failure? Why not discuss how you were let go?
 
