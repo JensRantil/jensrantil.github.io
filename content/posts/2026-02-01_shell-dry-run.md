@@ -74,6 +74,12 @@ $ cat images.csv | tail -n +2 | head -n 1 \
 curl --fail --show-error --silent -o peter.png 'https://images.example-cdn.io/gallery/pt.png'
 ```
 
+{{< notice tip >}}
+For an even better CSV parsing, supporting commas in the URL, have a look at the excellent [`csvquote`][csvquote].
+
+[csvquote]: https://github.com/dbro/csvquote
+{{< /notice >}}
+
 [^1]: I am well aware of other escape attack vectors here, but let's assume the file came from a trusted source!
 
 Removing `head -n 1`, I would now have all the commands needed to download the images:
