@@ -212,7 +212,7 @@ time.
 
 Waste of making defective products is what we mostly call _bugs_, but
 it can also include bad UX experiences. Many people think of these defects
-primarily as immediate customer impact. They are, but there is also the
+primarily as an immediate customer impact. They are, but there is also the
 secondary impact on velocity - constantly going back to fix bugs [can have a
 detrimental impact on velocity][bug-velocity].
 
@@ -224,6 +224,6 @@ take initiative or have a shared ownership of the product backlog can have
 detrimental effects on product innovation or product development effectiveness.
 
 Underutilizing workers is a good example of where an organization’s culture can
-come into place. Generally, reducing waste in software development is a
+come into play. Generally, reducing waste in software development is a
 socio-technical problem needing to work within the spheres of improving
 processes, people management, and tech.
