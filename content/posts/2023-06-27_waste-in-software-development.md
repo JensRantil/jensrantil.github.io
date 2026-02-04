@@ -63,7 +63,9 @@ surprisingly fruitful analogy to understand where waste happens when making
 software. Let's go through each type of waste and see what this means for
 software:
 
-**Waste of overproduction.** This includes usually "producing" too many
+### Waste of overproduction
+
+Waste of overproduction includes usually "producing" too many
 features/changes until we deploy to production. In other words, batching up too
 many changes into a deployment. This leads to slower feedback cycles and
 usually higher defects. 
@@ -73,7 +75,9 @@ overproduction.
 
 [dora]: https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance
 
-**Waste of time on hand (waiting).** This includes things like waiting for
+### Waste of time on hand (waiting)
+
+Waste of time on hand (waiting) includes things like waiting for
 someone else to review your code. A solution can be pair or mob programming as
 it usually reduces lead time because review happens by someone else in parallel
 while typing out the code.
@@ -99,7 +103,9 @@ Not to mention waiting on Jira’s user interface to load…
 
 {{< x user="JensRantil" id="1380065758596759553" >}}
 
-**Waste of transportation.** I usually think of “code refactoring” here. Ohno
+### Waste of transportation
+
+I usually think of “code refactoring” here. Ohno
 defined [two types of waste][types-of-waste]:
 
 [types-of-waste]: https://en.wikipedia.org/wiki/Muda_(Japanese_term)
@@ -116,7 +122,9 @@ able to…” (type I) is important.
 I also think managerial tasks such as “filling out quarterly reports in
 spreadsheets for management” can end up in this category.
 
-**Waste of processing itself** includes building a feature that the customer
+### Waste of processing itself
+
+Waste of processing itself includes building a feature that the customer
 doesn't want. Quick feedback loops help here!
 
 Kent Beck once stated:
@@ -128,7 +136,9 @@ Kent Beck once stated:
 Making something maintainable is an example of waste if the solution doesn’t
 work. Making it performant is usually a waste if it is not maintainable.
 
-**Waste of excess inventory.** This makes me think of “inventory” as code or
+### Waste of excess inventory
+
+Waste of excess inventory makes me think of “inventory” as code or
 managing issues:
 
 All code is a liability and needs maintenance. Refactorings become more tedious
@@ -141,8 +151,9 @@ Managing issues/tickets (in Jira etc.) does not add any immediate customer
 value. The more tickets you have, the more time you spend labeling, sorting
 them, updating descriptions to tickets that might never happen, etc.
 
-**Waste of movement.** In terms of software development, I think of this waste
-as a “waste of switching context”. This is a big one!
+### Waste of movement
+
+In terms of software development, I think of _waste of movement_ as a “waste of switching context”. This is a big one!
 
 Having to switch between _ways of communication_ can have a detrimental impact
 on productivity: Slack, e-mail, issue-tracking systems such as Jira, Github
@@ -197,7 +208,9 @@ steps. In other words, “Lead Time for Changes” variability is usually more
 important to reduce first before you take a stab at reducing the actual lead
 time.
 
-**Waste of making defective products.** This is what we mostly call bugs, but
+### Waste of making defective products
+
+Waste of making defective products is what we mostly call _bugs_, but
 it can also include bad UX experiences. Many people think of these defects
 primarily as immediate customer impact. They are, but there is also the
 secondary impact on velocity - constantly going back to fix bugs [can have a
