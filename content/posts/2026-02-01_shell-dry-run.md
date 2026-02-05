@@ -67,7 +67,9 @@ $ cat images.csv | tail -n +2 | head -n 1 \
   | awk -F, '{print "curl --fail --show-error --silent -o", $1 ".png", $2;}'
 curl --fail --show-error --silent -o peter.png https://images.example-cdn.io/gallery/pt.png
 ```
-Notice how this would _not_ execute anything. It would simply output what the shell command would look like. Dry-run, FTW! To reduce the likelihood of any weird escape sequences[^1], I would probably also wrap the URL in single quotes:
+Notice how this would _not_ execute anything. It would simply output what the shell command would look like. Dry-run, FTW!
+
+To reduce the likelihood of any weird escape sequences[^1], I would probably also wrap the URL in single quotes:
 ```sh
 $ cat images.csv | tail -n +2 | head -n 1 \
   | awk -F, '{print "curl --fail --show-error --silent -o", $1 ".png", "'\''" $2 "'\''" ;}'
