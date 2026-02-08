@@ -1,0 +1,171 @@
+<!doctype html><html lang=en><head><title>CQRS+Event Sourcing Messaging Patterns · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="Designing a decoupled, message based, system based on the CQRS pattern
+together with event sourcing require some thought. Since I've been thinking
+about it for a while now, I thought I'd share some thoughts so far.
+"><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="CQRS+Event Sourcing Messaging Patterns"><meta name=twitter:description content="Designing a decoupled, message based, system based on the CQRS pattern
+together with event sourcing require some thought. Since I've been thinking
+about it for a while now, I thought I'd share some thoughts so far."><meta property="og:url" content="https://jensrantil.github.io/posts/cqrs-event-sourcing-messaging-patterns/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="CQRS+Event Sourcing Messaging Patterns"><meta property="og:description" content="Designing a decoupled, message based, system based on the CQRS pattern
+together with event sourcing require some thought. Since I've been thinking
+about it for a while now, I thought I'd share some thoughts so far."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2013-05-26T00:00:00+00:00"><meta property="article:modified_time" content="2025-01-10T13:33:12+01:00"><meta property="article:tag" content="CQRS"><meta property="article:tag" content="Event Sourcing"><meta property="article:tag" content="Distributed Architecture"><link rel=canonical href=https://jensrantil.github.io/posts/cqrs-event-sourcing-messaging-patterns/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/cqrs-event-sourcing-messaging-patterns/>CQRS+Event Sourcing Messaging Patterns</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2013-05-26T00:00:00Z>May 26, 2013
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+9-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/cqrs/>CQRS</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/event-sourcing/>Event Sourcing</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/distributed-architecture/>Distributed Architecture</a></span></div></div></header><div class=post-content><p>This post is partially related to my <a href=%7cfilename%7cCQRS-time-to-rewind.rst>previous blog
+post</a> about
+<a href=http://www.github.com/JensRantil/rewind class=external-link target=_blank rel=noopener>Rewind</a> and
+<a href=http://www.github.com/JensRantil/gorewind class=external-link target=_blank rel=noopener>Gorewind</a>.</p><p>Designing a decoupled, message based, system based on the
+<a href=http://martinfowler.com/bliki/CQRS.html class=external-link target=_blank rel=noopener>CQRS</a> pattern together with
+<a href=http://martinfowler.com/eaaDev/EventSourcing.html class=external-link target=_blank rel=noopener>event sourcing</a>
+require some thought. Since I&rsquo;ve been thinking about it for a while now,
+I thought I&rsquo;d share some thoughts so far.</p><h2 id=cqrs>CQRS
+<a class=heading-link href=#cqrs><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>First let&rsquo;s think about the way information conceptually flows in a CQRS
+system:</p><blockquote><p>Client issuing a command -> Command -> Command Handler ->
+Event -> Event Listeners/Projections</p></blockquote><p>For now, we are not dealing with event sourcing and an event store.</p><p>Some definitions that will bring this blog post forward:</p><dl><dt>Command</dt><dd><p>A data structure instance with a command name in imperative, ex.
+<code>CreateBlogPost</code>. Most certainly it contains additional parameters
+such as URL for the blog post and it&rsquo;s text body.</p></dd><dt>Command Handler</dt><dd><p>The architectural instance that receives commands, checks their
+validitity and converts the command to an <em>event</em>. A command handler
+is optimized for fast validation/writes. If a command is valid, it
+is then published to all the event listeners that are interested in
+the event. It can also publish errors as events. See Asynchronicity
+and feedback loops_. A command handler also guarantees that only a
+single command can modify an <a href=http://en.wikipedia.org/wiki/Domain-driven_design#Building_blocks_of_DDD class=external-link target=_blank rel=noopener>aggregate
+root</a> concurrently.</p></dd><dt>Event</dt><dd><p>Most of the times, an event is the result of a command [1] [2]
+and is named as command, but in past tence. Example:
+<code>BlogPostCreated</code>. It is be debatable whether a single command can
+yield at most one event of it&rsquo;s allowed to yield multiple ones.</p></dd><dt>Event Listener</dt><dd><p>An architectural instance that receives events and does something
+with them. The most common case is to create a projection (for
+example, of blog posts) that quickly can be queried. In terms
+messaging event listeners are usually simply subscribers in a
+pubsub setup.</p></dd></dl><h3 id=asynchronicity-and-feedback-loops>Asynchronicity and feedback loops
+<a class=heading-link href=#asynchronicity-and-feedback-loops><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The information flow above does not show any feedback loop back to
+<em>Client issuing a command</em>. The CQRS pattern leaves that feedback loop
+to the implementer. So the question is <strong>how should a client know
+whether a command succeeded or not?</strong> There are different paths an
+implementer can choose:</p><p><strong>Case 1: Command feedback by synchronous validation.</strong>. The
+command-issuing client sends its command to a command handler. It then
+waits for the command handler to return with &ldquo;Accepted&rdquo; or &ldquo;Failed:
+&lt;Reason>&rdquo;. This solution is probably the simplest and that CQRS
+beginners are most comfortable with since it is similar to how
+validation commonly is done through HTTP API calls. The downside is that
+it is synchronous, pushing commands might take longer time. More so,
+there&rsquo;s the choice of having another dependence or not.</p><p><strong>Case 2: Command feedback by forward event.</strong> The command-issuing
+client sends its command to a command handler. It immediately receives a
+&ldquo;Command received&rdquo; response. The command handler later validates the
+command. If validation passes it generates the expected event(s). If the
+validation fails, an error event (ex. <code>BlogPostCreationFailed</code>) is
+published. The client UI can later decide to poll/query for command
+status, or even have the command state pushed out to it (if possible).</p><p>To be able to query whether a command failed or succeeded the client
+need to have a unique ID for the command. This can be generated either
+by the client or the command handler. The latter obviously will require
+some feedback loop back to client on command invocation. A basic UUID
+will suffice.</p><p><strong>Case 3: Command feedback by silence.</strong> The command-issuing client
+sends its command to a command handler. It immediately receives a
+&ldquo;Command received&rdquo; response. In the case of blog post creation, a new
+blog post will show up when the client queries the system for all blog
+posts. If blog creation failed, a new blog post will obviously not show
+up. The downside of this case is that the client has no idea to know
+<em>what</em> went wrong.</p><p><strong>Case 4: Command feedback through a separate workflow.</strong> In the case of
+using event sourcing, events are persisted. If the command-issuing
+client is one that might trigger a lot of errors, you might not want to
+generate error events in fear of a client generating massive amounts of
+validation errors and filling up the event store. To remedy this, one
+approach would be to create a separate asynchronous pipeline for
+validation errors. An idea would be to populate a cache with validation
+errors and invalidate them with a
+<a href=https://en.wikipedia.org/wiki/Time_to_live class=external-link target=_blank rel=noopener>TTL</a>.</p><p>There is nothing that says the above cases are mutual exclusive. In
+fact, they can be combined, but as always there will be an increase in
+complexity.</p><h3 id=who-is-client-issuing-command>Who is &ldquo;Client issuing command&rdquo;?
+<a class=heading-link href=#who-is-client-issuing-command><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Case 4_ above brings up another question; <strong>who is &ldquo;client issuing
+command&rdquo;?</strong>.</p><p>If the client is a customer that creates issues commands through an API,
+we should probably expect more validation errors. Customers usually
+don&rsquo;t have as much domain knowledge as the upstream systems&rsquo; owner.</p><p>If the client is simply your own web application&rsquo;s reaction to an HTTP
+request, basic validation can be done in the web application that
+catches 99% of all validation errors. The downside of this is that
+validation logic will partially have to be doubly implemented. If a two
+tier validation is implemented, simply dropping invalid commands (case
+3_) might definitely be an option.</p><p>A variation of having a web application is to have a GUI that only
+enables commands that are possible. Maybe the GUI hinders a user to
+change title of a blog post unless a blog is actually selected. If the
+GUI prohibits 99% of the validation errors, case 3_ might again be a
+good candidate.</p><p>A common CQRS question is also how errors immediately are presented when
+a command is issued. The common answer is; They don&rsquo;t. Many CQRS
+proponents argue that 99% of commands will go through, and a GUI should
+simply expect that blog post was published. There are multiple ways to
+later tell the user something went wrong. For web applications, some
+would argue that the user might as well simply reload the webpage to
+update the latest blog posts if something goes wrong. There&rsquo;s a lot to
+say about asynchronous UI, but I think I&rsquo;m going leave it at that for
+now.</p><h2 id=event-sourcing>Event Sourcing
+<a class=heading-link href=#event-sourcing><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Adding event sourcing to a CQRS pipeline makes things look something
+like this:</p><blockquote><p>Client issuing a command -> Command -> Command Handler ->
+Event -> Event Store -> Event Listeners/Projections</p></blockquote><p>where an event store persists all events to disk and makes them
+queryable.</p><p>Most commonly, an event store also handles groups of events so that they
+can be grouped based on <a href=http://en.wikipedia.org/wiki/Domain-driven_design#Building_blocks_of_DDD class=external-link target=_blank rel=noopener>aggregate
+root</a>.
+This makes it possible to quickly get up to speed with a certain
+aggregate root instead of reading through all events historically.</p><p>In Asynchronicity and feedback loops_ we talked about the feedback loop
+of command validation. Event sourcing brings other architectural
+decisions to the table when it comes to feedback loop from the event
+store:</p><h3 id=failing-disk-writes>Failing disk writes
+<a class=heading-link href=#failing-disk-writes><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Previously we&rsquo;ve only dealt with the fact that network could go down.
+Luckily ZeroMQ (or similar technologies) makes sure that either a
+messages delivered once fully, or not at all.</p><p>However, introducing an event store yields a new set of issues; syncing
+an event store to the disk can fail because the disk is full, or because
+it&rsquo;s broken.</p><h3 id=state-inconsistencies-and-life-cycles>State (in)consistencies and life cycles
+<a class=heading-link href=#state-inconsistencies-and-life-cycles><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Before we talk about about feedback loops we need to talk about state in
+a CQRS/event-sourced system. Generally state is stored in the following
+parts:</p><dl><dt>Event handlers/projections</dt><dd><p>Receives events and builds state (performing a left fold of
+the events). This state is used for querying and can be thrown away
+to be rebuilt. This is the most recyclable state there is.</p></dd><dt>Event store</dt><dd><p>Stores all events. Receives events from command handlers.</p></dd><dt>Command handlers</dt><dd><p>Stores state that is required to make fast validation.</p></dd></dl><p>From what I&rsquo;ve understood, an event store is supposed to be the primary
+source of truth for an event sourced system. I&rsquo;ve been fond of this idea
+because it allows for event and command handlers to have short
+lifecycles and come and go by demand, while the central event store can
+sustain long slow lifecycles.</p><p>Interestingly, there is little online documentation on how command
+handler state is handled in an event sourced CQRS system. So, here are
+some of the different design choices that I&rsquo;ve been considering:</p><p><strong>Case 1: No dependence.</strong> Command handlers persists their state fully
+separate from the event store. If anything goes wrong with events being
+persisted, command handler state and event store might become
+inconsistent. This is an inconsistency that might be hard to correct.</p><p>Also, if command handlers in case 1 uses a relational database, we are
+back to where we started with trying to <a href=%7cfilename%7cCQRS-time-to-rewind.rst>avoid heavy schema
+migrations</a> on system upgrade.</p><p><strong>Case 2a: Command handler builds state from event stores published
+events.</strong> Under the assumption that an event store only published events
+that have been persisted, this means that event handler state always
+will be consistent with the event store. It will also allow command
+handlers to easily be upgraded, and easily be sharded if needed.</p><p>There are two downsides with the solution; Firstly, just like with case
+3_ no error will be published by the event store in case something
+failed. Choosing a good timeout will be hard. Secondly, a command
+handler will have to incorporate locking strategies to not allow two
+commands to pass through before the first command&rsquo;s equivalent event
+comes back, essentially making it synchronous with respect to event
+store writes.</p><p><strong>Case 2b: Command handler builds state from their generated events.</strong>
+This, too, assures command handler and event store will be consistent,
+are easily upgraded and sharded if needed. If combined with synchronous
+write commands to the event store, the event store can respond with
+&ldquo;written&rdquo; or &ldquo;error&rdquo;. This makes it possible for the command handler to
+know whether it should apply the event to its internal state or not.</p><h3 id=gorewinds-implementation>(Go)Rewind&rsquo;s implementation
+<a class=heading-link href=#gorewinds-implementation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p><a href=https://twitter.com/abdullin class=external-link target=_blank rel=noopener>Rinat Abdullin</a>, a big CQRS proponent,
+<a href=https://twitter.com/abdullin/status/291827247210459136 class=external-link target=_blank rel=noopener>hinted</a> that
+most his code uses async communication as much as possible. Still, I
+decided to stick to synchronous writes (case 2b_) to the event store
+for simplicity. Asynchronicity could be added to the write client within
+if needed, I thought.</p><p><em>Heck, rereading this blog post I notice it&rsquo;s a bit unstructured. I hope
+you get the point, though! Feel free to make comments below. I&rsquo;d love to
+hear you input on this.</em></p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/db44097cbe38b90dcba91458a4ce1c1b1e9fa396 target=_blank rel=noopener>db44097</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

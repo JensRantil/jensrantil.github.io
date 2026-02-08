@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Simplicity on Jens Rantil</title><link>https://jensrantil.github.io/tags/simplicity/</link><description>Recent content in Simplicity on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 02 Sep 2025 15:06:20 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/simplicity/index.xml" rel="self" type="application/rss+xml"/><item><title>Business contracts are transport agnostic</title><link>https://jensrantil.github.io/posts/simple-contract-testing/</link><pubDate>Sun, 27 Apr 2025 13:40:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/simple-contract-testing/</guid><description>&lt;p>I have never been a big fan of how some people equate &amp;ldquo;contract testing&amp;rdquo; with using something like &lt;a href="https://docs.pact.io" class="external-link" target="_blank" rel="noopener">PACT&lt;/a>. There are other ways of doing contract testing, but a lot of engineers don&amp;rsquo;t seem to know this. Today, I thought I would write something about this.&lt;/p>
+&lt;h2 id="contract-testing">
+ Contract testing?
+ &lt;a class="heading-link" href="#contract-testing">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;em>Contract testing&lt;/em> is about making sure that two pieces of software (usually two services) can communicate correctly with each other, and that they agree on how they should talk.&lt;/p></description></item><item><title>The Dangers of an IDE</title><link>https://jensrantil.github.io/posts/integrated-development-environments-harmful/</link><pubDate>Tue, 11 Mar 2025 10:38:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/integrated-development-environments-harmful/</guid><description>&lt;p>&lt;em>I recently stumbled across the post &lt;a href="https://charlespetzold.com/etc/DoesVisualStudioRotTheMind.html" class="external-link" target="_blank" rel="noopener">&amp;ldquo;Does Visual Studio Rot The Mind?&amp;rdquo;&lt;/a> and I was reminded of a blog post that I read a very long time ago and could not find on the Internet. I thought I would write down the gist of that article here such that I can share links to it later.&lt;/em>&lt;/p>
+&lt;p>There is this theory that the best and most beautiful code was written before the nineties, before the introduction of modern &lt;emph title="Integrated Development Environments">IDEs&lt;/emph> such as VSCode, Eclipse, IntelliJ, Visual Studio, et al. Why? It forced programmers to keep their code in their heads.&lt;/p></description></item><item><title>My simplicity toolkit: Testing</title><link>https://jensrantil.github.io/posts/software-testing-simplicity/</link><pubDate>Sun, 18 Feb 2024 09:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/software-testing-simplicity/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">This post is part of my blog series about &lt;a href="https://jensrantil.github.io/categories/my-simplicity-toolkit/" >&lt;em>My Simplicity
+Toolkit&lt;/em>&lt;/a>. I highly suggest you read &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >the introductory post&lt;/a> before reading this one.&lt;/div>
+&lt;/div>
+
+&lt;p>In &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >my initial post&lt;/a> on this blog post series I wrote about
+the verb &lt;a href="https://www.youtube.com/watch?si=AYiDh-n_KMwCLwl4&amp;amp;t=1895&amp;amp;v=SxdOUGdseq4&amp;amp;feature=youtu.be" class="external-link" target="_blank" rel="noopener">&amp;ldquo;to complect&amp;rdquo;&lt;/a>. It means to braid something together. In
+this article, I am giving examples of things related to testing that tend to be
+unnecessarily complected together.&lt;/p>
+&lt;p>Building up a suite of maintainable tests is all about trying to avoid
+complecting things unless truly necessary. Notice that complecting things
+&lt;em>is&lt;/em> necessary at times, just not always.&lt;/p></description></item><item><title>My simplicity toolkit: Programming (part 2)</title><link>https://jensrantil.github.io/posts/programming-simplicity-part-2/</link><pubDate>Tue, 14 Nov 2023 23:00:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/programming-simplicity-part-2/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">&lt;p>This is the second part of two talking about my simplicity toolkit when
+programming. If you have not read &lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-1/" >the previous post&lt;/a> I highly
+encourage you to do so first.&lt;/p>
+&lt;p>This post is part of my blog series about &lt;a href="https://jensrantil.github.io/categories/my-simplicity-toolkit/" >&lt;em>My Simplicity
+Toolkit&lt;/em>&lt;/a>.&lt;/p>&lt;/div>
+&lt;/div>
+
+&lt;p>At the beginning of &lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-1/" >my previous post&lt;/a> about simplicity within
+programming, I talked about the numerous benefits that bringing simplicity to
+&lt;a href="programming" >programming&lt;/a> can be: Easy to understand, use, debug, etc.&lt;/p></description></item><item><title>My simplicity toolkit: Programming (part 1)</title><link>https://jensrantil.github.io/posts/programming-simplicity-part-1/</link><pubDate>Tue, 07 Nov 2023 07:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/programming-simplicity-part-1/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">This post is part of my blog series about &lt;a href="https://jensrantil.github.io/categories/my-simplicity-toolkit/" >&lt;em>My Simplicity
+Toolkit&lt;/em>&lt;/a>. I suggest you read &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >the initial
+post&lt;/a> before reading this post.&lt;/div>
+&lt;/div>
+
+&lt;p>In &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >the previous post&lt;/a> I talked about the difference
+between simple and easy. From the perspective of programming and writing code,
+simple code/functions/methods/objects are not trying to do multiple things
+(&lt;a href="https://youtu.be/SxdOUGdseq4?si=AYiDh-n_KMwCLwl4&amp;amp;t=1895" class="external-link" target="_blank" rel="noopener">&amp;ldquo;complect&amp;rdquo;&lt;/a>) unless needed. Some of the benefits that come
+naturally with simplicity are the following:&lt;/p></description></item><item><title>My simplicity toolkit: Intro</title><link>https://jensrantil.github.io/posts/my-simplicity-toolkit/</link><pubDate>Mon, 06 Nov 2023 19:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/my-simplicity-toolkit/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">&lt;p>Blog series:&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="." >My simplicity toolkit: Intro (this page)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-1/" >My simplicity toolkit: Programming (part 1)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-2/" >My simplicity toolkit: Programming (part 2)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jensrantil.github.io/posts/software-testing-simplicity/" >My simplicity toolkit: Testing&lt;/a>&lt;/li>
+&lt;li>My simplicity toolkit: Architecture&lt;/li>
+&lt;li>My simplicity toolkit: Patterns&lt;/li>
+&lt;/ol>&lt;/div>
+&lt;/div>
+
+&lt;blockquote>
+&lt;p>“Perfection is Achieved Not When There Is Nothing More to Add, But When There
+Is Nothing Left to Take Away”&lt;/p>
+&lt;p>Antoine de Saint-Exupery&lt;/p>
+&lt;/blockquote>
+&lt;p>When it comes to software engineering, I have increasingly come to value
+&lt;em>simplicity&lt;/em> and going back to basics. I have been coding for ~25+ years (~15
+years professionally) and have truly gone through &lt;a href="https://medium.com/@webseanhickey/the-evolution-of-a-software-engineer-db854689243" class="external-link" target="_blank" rel="noopener">The Evolution of a Software
+Engineer&lt;/a>. Throughout my career I have grown increasingly
+worried about the growing &lt;a href="https://en.wikipedia.org/wiki/Cargo_cult_programming" class="external-link" target="_blank" rel="noopener">cargo culted&lt;/a> complexity in our
+industry.&lt;/p></description></item><item><title>Autoscaling is not a panacea</title><link>https://jensrantil.github.io/posts/autoscaling-not-a-panacea/</link><pubDate>Mon, 06 Nov 2023 17:25:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/autoscaling-not-a-panacea/</guid><description>&lt;p>Back in the day when The Cloud (AWS) was The New Hot Thing&amp;#x2122;&amp;#xfe0f;, I thought
+autoscaling would solve most of our problems related to costs, availability,
+performance, and scalability. Over the years, I have learned that autoscaling
+has a high maintenance cost, adds complexity, and &lt;a href="https://en.wikipedia.org/wiki/Ironies_of_Automation" class="external-link" target="_blank" rel="noopener">doesn&amp;rsquo;t solve all those
+problems I initially thought it would&lt;/a>. In this article I
+will give examples of incorrect assumptions I made when it came to autoscaling:&lt;/p></description></item><item><title>Microretros</title><link>https://jensrantil.github.io/posts/microretros/</link><pubDate>Tue, 03 Oct 2023 21:10:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/microretros/</guid><description>&lt;p>I tend to love a &amp;ldquo;quick feedback&amp;rdquo;. Usually, this applies to software
+development: Unit tests should execute fast, CI/CD should fail fast, and
+minimum bureaucracy between coding and deploying, quick deployments, automated
+alerts when something fails, etc.&lt;/p>
+&lt;p>Usually what many people think about when talking about &amp;ldquo;quick feedback&amp;rdquo; are
+the above engineering practices. But the softer side of being an engineer also
+benefits from quick feedback. That&amp;rsquo;s why I would like to talk about
+&lt;em>microretros&lt;/em> today.&lt;/p></description></item><item><title>The downsides of batch APIs</title><link>https://jensrantil.github.io/posts/downsides-of-batch-apis/</link><pubDate>Wed, 03 May 2023 12:50:41 +0200</pubDate><guid>https://jensrantil.github.io/posts/downsides-of-batch-apis/</guid><description>&lt;p>When an HTTP API is too slow to call repeatedly I have seen engineers
+immediately turn to making the API &lt;em>do more in one unit of work&lt;/em>. I think this
+pattern can be very harmful and have many battle scars from this. So I thought
+I would write a post about it.&lt;/p>
+&lt;h2 id="an-example">
+ An example
+ &lt;a class="heading-link" href="#an-example">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Let&amp;rsquo;s start with an example: You have a web service that stores TODO items. It
+has an API endpoint, &lt;code>POST /todo&lt;/code>, which gets called to add a new TODO item.
+Here is an example request/response:&lt;/p></description></item><item><title>On narrow integration tests</title><link>https://jensrantil.github.io/posts/narrow-integration-tests/</link><pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/narrow-integration-tests/</guid><description>&lt;p>&lt;em>Narrow integration tests&lt;/em> are tests that only involve very few components,
+mostly relying on &lt;a href="https://martinfowler.com/articles/mocksArentStubs.html" class="external-link" target="_blank" rel="noopener">test
+doubles&lt;/a> to simulate
+external dependencies. As always, we have Martin Fowler to thank for yet
+another excellent
+&lt;a href="https://martinfowler.com/bliki/IntegrationTest.html" class="external-link" target="_blank" rel="noopener">article&lt;/a> on integration
+tests so I&amp;rsquo;ll simply refer to that for the details of what a narrow integration
+test is.&lt;/p>
+&lt;p>That said, during 2019 I have grown increasingly convinced that the distinction
+between a narrow and wide integration (also know as &lt;em>system tests&lt;/em> or &lt;em>end-to-end tests&lt;/em>) is an important one, for two reasons:&lt;/p></description></item><item><title>I'm a State Engineer. Are you, too?</title><link>https://jensrantil.github.io/posts/lifecycles-and-states/</link><pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/lifecycles-and-states/</guid><description>&lt;p>TL;DR: We need to have a more thorough discussion about state and
+lifecycles in our industry.&lt;/p>
+&lt;p>I recently revisited &lt;a href="http://12factor.net" class="external-link" target="_blank" rel="noopener">The Twelve-Factor App&lt;/a> by
+&lt;a href="https://www.heroku.com" class="external-link" target="_blank" rel="noopener">Heroku&lt;/a>. It&amp;rsquo;s a great read if you are deploying
+your own application, are interested in (organizational and/or
+technincal) scaling or curious of best practices when it comes to
+deployment.&lt;/p>
+&lt;p>As I was reading the manifest it struck me that there are two words that
+I hear all too infrequently in our industry, namely &lt;em>state&lt;/em> and
+&lt;em>lifecycle&lt;/em>. The words have different meaning, yet they are related in
+so many ways. All state has a lifecycle, otherwise the state would not
+be worth thinking of.&lt;/p></description></item></channel></rss>

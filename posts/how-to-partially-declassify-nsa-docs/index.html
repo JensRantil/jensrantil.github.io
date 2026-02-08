@@ -1,0 +1,111 @@
+<!doctype html><html lang=en><head><title>How to (partially) declassify NSA documents · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="The day before Christmas Eve, the (American) NSA published a bunch of
+declassified
+reports
+that have been handed to the President&rsquo;s Intelligence Oversight Board
+(IOD) for the past 10 years or so. I quickly scrolled through a couple
+of documents to find a lot of heavily redacted text:
+
+
+  The idea
+  
+    
+    Link to heading
+  
+
+What struck me was that what most of the redacted text that I think the
+public (and me) are interested in is the magnitude of NSA surveillance,
+namely how large the redacted numbers are. I started asking myself,
+can the space that the redacted numbers take up on a document tell us
+anything about what&rsquo;s redacted behind the white boxes? I think the
+answer is fairly obvious - yes - the number &ldquo;1000000&rdquo; definitely does
+not fit into most boxes, so we can conclude that targetted surveillance
+is less than that. But can we do better?"><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="How to (partially) declassify NSA documents"><meta name=twitter:description content="The day before Christmas Eve, the (American) NSA published a bunch of declassified reports that have been handed to the President’s Intelligence Oversight Board (IOD) for the past 10 years or so. I quickly scrolled through a couple of documents to find a lot of heavily redacted text:
+The idea Link to heading What struck me was that what most of the redacted text that I think the public (and me) are interested in is the magnitude of NSA surveillance, namely how large the redacted numbers are. I started asking myself, can the space that the redacted numbers take up on a document tell us anything about what’s redacted behind the white boxes? I think the answer is fairly obvious - yes - the number “1000000” definitely does not fit into most boxes, so we can conclude that targetted surveillance is less than that. But can we do better?"><meta property="og:url" content="https://jensrantil.github.io/posts/how-to-partially-declassify-nsa-docs/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="How to (partially) declassify NSA documents"><meta property="og:description" content="The day before Christmas Eve, the (American) NSA published a bunch of declassified reports that have been handed to the President’s Intelligence Oversight Board (IOD) for the past 10 years or so. I quickly scrolled through a couple of documents to find a lot of heavily redacted text:
+The idea Link to heading What struck me was that what most of the redacted text that I think the public (and me) are interested in is the magnitude of NSA surveillance, namely how large the redacted numbers are. I started asking myself, can the space that the redacted numbers take up on a document tell us anything about what’s redacted behind the white boxes? I think the answer is fairly obvious - yes - the number “1000000” definitely does not fit into most boxes, so we can conclude that targetted surveillance is less than that. But can we do better?"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-12-27T00:00:00+00:00"><meta property="article:modified_time" content="2025-12-24T22:58:29+01:00"><meta property="article:tag" content="NSA"><link rel=canonical href=https://jensrantil.github.io/posts/how-to-partially-declassify-nsa-docs/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/how-to-partially-declassify-nsa-docs/>How to (partially) declassify NSA documents</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2014-12-27T00:00:00Z>December 27, 2014
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+5-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/nsa/>NSA</a></span></div></div></header><div class=post-content><p>The day before Christmas Eve, the (American) NSA published a bunch of
+<a href=https://www.nsa.gov/public_info/declass/IntelligenceOversightBoard.shtml class=external-link target=_blank rel=noopener>declassified
+reports</a>
+that have been handed to the President&rsquo;s Intelligence Oversight Board
+(IOD) for the past 10 years or so. I quickly scrolled through a couple
+of documents to find a lot of heavily redacted text:</p><p><img src=/posts/how-to-partially-declassify-nsa-docs/redacted-text.png alt="Redacted text."></p><h2 id=the-idea>The idea
+<a class=heading-link href=#the-idea><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>What struck me was that what most of the redacted text that I think the
+public (and me) are interested in is the magnitude of NSA surveillance,
+namely how large the redacted numbers are. I started asking myself,
+<strong>can the space that the redacted numbers take up on a document tell us
+anything about what&rsquo;s redacted behind the white boxes?</strong> I think the
+answer is fairly obvious - yes - the number &ldquo;1000000&rdquo; definitely does
+not fit into most boxes, so we can conclude that targetted surveillance
+is less than that. But can we do better?</p><p>Before we dig further - how to we know that the content underneath the
+redaction boxes are similarly sized as the numbers they redact? We
+don&rsquo;t. However, we can always be certain of the width of the number plus
+the space to the left and right of it (since it&rsquo;s visible):</p><p><img src=/posts/how-to-partially-declassify-nsa-docs/number-width.png alt="Known width."></p><p>In the NSA case, we also know that</p><ul><li>they are not using justified alignments. This would make spacing
+less deterministic.</li><li>they don&rsquo;t seem to manually add spacing (or zero pad) around their
+non-redacted numbers.</li></ul><p>In information theory Shannon introduced the concept of entropy as a
+measure of information. In layman&rsquo;s terms, the more similar data is, the
+less information is contains. If we make an analogy to the number width
+problem, we are hoping that different numbers in whatever font the NSA
+is using should have as unique width as possible.</p><p>For non-monospaced fonts, there is the chance of digits being different
+in size. Further, there is also a chance that they have different
+<a href=http://en.wikipedia.org/wiki/Kerning class=external-link target=_blank rel=noopener>kerning</a>, which could make number
+width signatures even more unique.</p><h2 id=the-font>The font
+<a class=heading-link href=#the-font><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>By the way, which font are NSA they using? I gave
+<a href=https://www.myfonts.com/WhatTheFont/ class=external-link target=_blank rel=noopener>WhatTheFont</a> a try and it hinted
+that the NSA is using any of the following fonts:</p><ul><li>Esperanto Condensed Bold</li><li>URW Garamonds ExtraNarrow Medium</li><li>Aragon Condensed</li><li>Printed Claude.</li><li>FF Seria Sans Pro Bold Italic</li></ul><p>Looking at those fonts, the only one the it could potentially be would
+be Garamond, which is a fairly popular font. That said, when overlaying
+it with NSA text it didn&rsquo;t match too well. However, a simple guess that
+the NSA was using the good &lsquo;ole Times New Roman looked like a better
+match:</p><p><img src=/posts/how-to-partially-declassify-nsa-docs/overlay-nsa.png alt="Times New Roman overlay"></p><p>The reason it does not match fully is due to a slight different
+<a href=http://en.wikipedia.org/wiki/Kerning class=external-link target=_blank rel=noopener>kerning</a>. A quick Googling
+brought me to
+<a href="https://www.libreoffice.org/bugzilla/show_bug.cgi?id=72546" class=external-link target=_blank rel=noopener>this</a> bug
+report (are NSA using LibreOffice?). Looks like I was not using the
+exact font (or rendered) match.</p><h2 id=test-implementation>Test implementation
+<a class=heading-link href=#test-implementation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>To test my theory I wrote a <a href=https://gist.github.com/JensRantil/7cd230367dbb35027a8a class=external-link target=_blank rel=noopener>small Python
+script</a> to
+generate histograms of the width of numbers. It uses ImageMagick to
+generate test images, crop and output the width of the images.</p><p>Output for &ldquo;Times New Roman&rdquo; with size 16px:</p><p><img src=/posts/how-to-partially-declassify-nsa-docs/number_distributions.png alt="Distribution of number widths with Times New Roman, 16px."></p><p>Output for &ldquo;Times New Roman&rdquo; with size 30px:</p><p><img src=/posts/how-to-partially-declassify-nsa-docs/number_distributions_30px.png alt="Distribution of number widths with Times New Roman, 30px."></p><h2 id=result>Result
+<a class=heading-link href=#result><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Sadly, the results show that different numbers yield fairly similar
+width. It also looks like different font sizes didn&rsquo;t make any
+significant difference in length signature.</p><p>That said, the number of digits yields a unique width so we can
+definitely know the magnitude of the redacted numbers, ie. whether they
+are 10s, 100s or 1000s etc.</p><h2 id=discussion>Discussion
+<a class=heading-link href=#discussion><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>ImageMagick uses the freetype library for font rendering. freetype has
+support for kerning, but kerning could definitely differ in
+implementation. I had a quick look at scripting MS Word, but it looked
+like too much of a hazzle for such a short experiment. Especially on
+MaxOSX. LibreOffice has slightly better scripting support. Scripting a
+fully featured word processor is definitely a future possible
+experiment/improvement.</p><p>The font I am using is the &ldquo;Times new roman&rdquo; font that comes with
+MacOSX. MS Office ships with its own which could have different kerning
+and/or different digit widths. This would probably yield a different
+result from mine.</p><p>For people who are planning to do safe redaction of text in documents,
+think about the following:</p><ul><li>Use a font with preferably no kerning. Monospaced font will do.</li><li>Use font with same-width digits. Monospaced font will do.</li><li>To avoid leaking magnitude of numbers, pad all numbers with fixed,
+or random, spaces.</li></ul><p>That said, it would be a fun thought experiment if NSA, or other
+intelligence organizations, would infiltrate (Times New Roman)
+typesetters to create unique kerning for digits such that one could reverse engineer redacted numbers in declassified
+documents from around the world. Call it a <em>typography backdoor</em> if you
+will.</p><h2 id=conclusion>Conclusion
+<a class=heading-link href=#conclusion><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>This little experiment tested and showed that it&rsquo;s possible to extract
+the magnitude in the redacted numbers in declassified (NSA) documents.
+It could not show that digit width or kerning could help in determining
+the numbers more specifically. However, there is definitely future
+improvements.</p><p>If you are curious about the magnitude of the redacted NSA numbers,
+consider them leaked. I&rsquo;ll let someone else do the hard work of
+extracting them ;-).</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/bff4a39cc5a0d817ec75bf7b7106ded5a5522f33 target=_blank rel=noopener>bff4a39</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>
