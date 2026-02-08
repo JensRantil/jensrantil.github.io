@@ -67,4 +67,4 @@ Once, I have listed all these ideas, I usually map each item up in an [Impact-Ef
 
 ## A tool for brainstorming
 
-As you can see, the Fogg Behavior Model can be really useful when brainstorming how to change people's behavior. I hope it can be a useful tool for you. It certainly has been for me, both in my professional life, as well personally.
+As you can see, the Fogg Behavior Model can be really useful when brainstorming how to change people's behavior. I hope it can be a useful tool for you. It certainly has been for me, both in my professional life, as well as personally.
