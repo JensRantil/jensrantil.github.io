@@ -1,0 +1,178 @@
+<!doctype html><html lang=en><head><title>Bootstrapping: CouchDB as event store · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="Bootstrapping a project that uses event sourcing? Have a look at CouchDB."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Bootstrapping: CouchDB as event store"><meta name=twitter:description content="Bootstrapping a project that uses event sourcing? Have a look at CouchDB."><meta property="og:url" content="https://jensrantil.github.io/posts/couchdb-as-event-store/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Bootstrapping: CouchDB as event store"><meta property="og:description" content="Bootstrapping a project that uses event sourcing? Have a look at CouchDB."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2013-09-02T00:00:00+00:00"><meta property="article:modified_time" content="2025-01-10T13:33:12+01:00"><meta property="article:tag" content="CQRS"><meta property="article:tag" content="Distributed Architecture"><meta property="article:tag" content="CouchDB"><link rel=canonical href=https://jensrantil.github.io/posts/couchdb-as-event-store/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/couchdb-as-event-store/>Bootstrapping: CouchDB as event store</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2013-09-02T00:00:00Z>September 2, 2013
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+8-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/cqrs/>CQRS</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/distributed-architecture/>Distributed Architecture</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/couchdb/>CouchDB</a></span></div></div></header><div class=post-content><p>I&rsquo;ve previously written about <a href=%7cfilename%7cCQRS-time-to-rewind.rst>what event sourcing
+is</a>. Reading about it, you might
+think &ldquo;heck, sounds great! But how do I get started?&rdquo;. This blog post
+will propose a simple way.</p><h2 id=a-minimum-viable-product>A Minimum Viable Product
+<a class=heading-link href=#a-minimum-viable-product><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The concept of a <a href=http://en.wikipedia.org/wiki/Minimum_viable_product class=external-link target=_blank rel=noopener>minimum viable
+product</a> states
+that you shouldn&rsquo;t do more than absolutely necessary before releasing a
+product. You need to release it when it&rsquo;s just good enough. If it&rsquo;s
+received badly, you haven&rsquo;t invested too much time or energy into it.</p><p>So, how can you get started with event sourcing quickly and without
+spending a lot of time coding an event store? Here are a couple of
+options:</p><ul><li>Use an append-only log file for the events. This has the advantage
+of being simple. The downside is that querying it slow (requires
+seeking it) and code to build state need to be handled
+fairly manually. It also means that you would have to handle
+checksumming and backup of data etc. yourself.</li><li>Have a look at <a href=http://www.geteventstore.com class=external-link target=_blank rel=noopener>EventStore</a>. It&rsquo;s a
+.NET event store that has both a hosted commercial as well as an
+open source implementation.</li><li>Consider using an RDBMS. RDBMSes do not, in general, have any type
+of notification framework for database changes/events. So either, it
+would be up to you to poll the database, or you would have to use
+some external notification framework (RabbitMQ etc.).</li></ul><p>Recently I&rsquo;ve been curious to see whether
+<a href=http://couchdb.apache.org class=external-link target=_blank rel=noopener>CouchDB</a> holds true as a viable event store
+database. Event sourcing involves creating projections from events and
+CouchDB&rsquo;s incremental map/reduce <em>views</em> sounded like a natural fit for
+this.</p><h2 id=requirements>Requirements
+<a class=heading-link href=#requirements><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The following were my requirements:</p><ol><li><p>Be able to store events as <strong>incremental</strong> state changes f various
+aggregate roots.</p></li><li><p>Be able to store events as <strong>unstructured data</strong>. By that I mean
+they need to support various fields depending on event type.</p></li><li><p>Query capabilities:</p><p>I. Be able to easily <strong>query event chronologically grouped by
+aggregate root</strong>. This would make it possible to create various
+timelines on an aggregate root basis.
+II. Be able to easily <strong>query events chronologically independently
+of aggregate roots</strong>. Together with &ldquo;Listen to database changes&rdquo;
+below, this would make it possible to build up complex states in
+external systems.
+III. Quickly create <strong>prototypical projections</strong>. This would make it
+possible to quickly query current state based on
+previous events.</p><dl><dt>IV. <strong>Listen for database changes.</strong> This would enable me to push</dt><dd><p>changes out to interested parties, as opposed to needing
+to poll.</p></dd></dl></li><li><p>Support <strong>atomic writes</strong>. This is important to make sure that among
+concurrent writes of events, always only one will win.</p></li></ol><h2 id=a-tentative-implementation>A tentative implementation
+<a class=heading-link href=#a-tentative-implementation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>So far I&rsquo;ve been able to come up with an implementation that supports
+all of the above requirements using CouchDB.</p><p>Let&rsquo;s look at three possible events for a simple adressbook:</p><script src=https://gist.github.com/JensRantil/6416970.js></script><h3 id=atomic-writes-and-unique-indexes-in-couchdb>Atomic writes and unique indexes in CouchDB
+<a class=heading-link href=#atomic-writes-and-unique-indexes-in-couchdb><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Consider the top level event properties:</p><h4 id=_id-and-aggregatetype>_id and aggregateType
+<a class=heading-link href=#_id-and-aggregatetype><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p><code>_id</code> contains three pieces of information separated by a colon (<code>:</code>).</p><ul><li>Aggregate root type.</li><li>Aggregate root identifier.</li><li>Aggregate root version.</li></ul><p>Let&rsquo;s look about them individually. To simplify, I&rsquo;ll start with the
+version:</p><p>In event sourcing, an aggregate root moves from one version to another.
+Each event increases the version of the aggregate root. While <em>type</em> and
+<em>identifier</em> are immutable throughout the life cycle of an aggregate
+root, version numbering is incremented. This means that concurrent
+writes to a database can be done optimistically, failing only if a write
+with the same <code>_id</code> was done previously.</p><p>The aggregate version is put at the end for increased readability of
+<code>_id</code>.</p><p>If you intend to use CouchDB views to create projections of your events,
+each event need to be specific to an aggregate type. There are multiple
+ways of doing this:</p><ul><li><strong>using an aggregate type field.</strong> Simply setting
+<code>doc.aggregateType='contact'</code> for every event. This is a bit
+cumbersome and makes it harder to see what type an event
+happened to. The good thing is that a lot of disk space can be saved
+on this.</li><li><strong>prepending the aggregate root with a type, like in the
+example above.</strong> While this would increase readability what the
+aggregate type the event is all about, it would increase the
+database size a fair amount. I have seen recommendations on the web
+to try to keep the <code>_id</code> small.</li><li><strong>make sure that every <code>doc.event.type</code> has a unique mapping to an
+aggregate type.</strong> The event type <code>contactCreated</code> would obviously
+map to a contact. This solution would probably backfire eventually.
+I&rsquo;d rather have an event type called <code>cescriptionChanged</code> instead of
+<code>contactDescriptionChanged</code>.</li><li><strong>having a single CouchDB-database for every aggregate type.</strong> To
+keep the database in sync, I strongly suggest against this.</li></ul><p>The aggregate type is put as the first part to easily distinguish what
+event type we are working with when looking at events.</p><p>Inbetween the aggregate type and the version specifier, a unique
+identifier is stored. It is unique throughout the lifetime of the
+aggregate root.</p><h4 id=globalid>globalId
+<a class=heading-link href=#globalid><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>globalId is an orderable ID that makes it possible to traverse through
+the global order of events. In my examples I&rsquo;ve used <a href=http://docs.python.org/2/library/uuid.html#uuid.uuid1 class=external-link target=_blank rel=noopener>type 1
+UUIDs</a>.</p><h4 id=event>event
+<a class=heading-link href=#event><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>Holds the data that describes the event. event.type also contains a
+string describing what type of event it is.</p><h4 id=meta>meta
+<a class=heading-link href=#meta><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>This is a property not strictly related to the specific event, but
+information that can be used for debugability. Examples are timestamps,
+which client published the event, which user did it etc. The latter is
+great information to create a highly auditable system.</p><h3 id=event-projection-views>Event projection views
+<a class=heading-link href=#event-projection-views><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Using the previously described event schema, CouchDB&rsquo;s map/reduced based
+views can be used to create most simple cases of projections:</p><p>Here&rsquo;s a design document that keeps track of the description of a
+person:</p><script src=https://gist.github.com/JensRantil/6417018.js></script><p>The secret sauce here is to use the aggregate root to to decide whether
+to update the reduce state or not.</p><p>What a view cannot do is keep track of older versions of an aggregate
+root. This requires building state in an external application that
+tracks database changes. Good news is that this is fairly easy to do as
+CouchDB ships with a <a href=http://guide.couchdb.org/draft/notifications.html class=external-link target=_blank rel=noopener>changes
+API</a>. This makes it
+easy for an external application to easily track state as events are
+being published.</p><h3 id=handling-replication-conflicts>Handling replication conflicts
+<a class=heading-link href=#handling-replication-conflicts><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>One of CouchDB&rsquo;s unique selling points is <em>master-to-master
+replication</em>. There&rsquo;s some cool stuff that this enables you to do. For
+example you can easily implement syncing clients using libraries such as
+<a href=http://pouchdb.com class=external-link target=_blank rel=noopener>PouchDB</a> and
+<a href=http://labs.couchbase.com/TouchDB-iOS/ class=external-link target=_blank rel=noopener>TouchDB</a>.</p><p>Sadly, master-master replication comes with a cost; namely the fact that
+it&rsquo;s possible that there can be replication conflicts if two or more
+CouchDB instances changes a document and then sync. CouchDB uses
+<a href=https://en.wikipedia.org/wiki/Multiversion_concurrency_control class=external-link target=_blank rel=noopener>MVCC</a>
+and automagically chooses a winner. Sometimes this might not be the
+right winner. This happens you can <a href=http://guide.couchdb.org/draft/conflicts.html class=external-link target=_blank rel=noopener>tell CouchDB that you prefer another
+winner</a>.</p><p>My example implementation above would not handle write conflicts very
+well. It would be able to fix a basic conflict like this:</p><pre><code>1 -&gt; 2 --&gt; 3a
+       \
+        -&gt; 3b
+</code></pre><p>However, if a series of multiple events would conflict, it would be
+impossible to recreate the different event history paths that might have
+occured. The following conflicting events:</p><pre><code>1 -&gt; 2 --&gt; 3a -&gt; 4a
+       \
+        -&gt; 3b -&gt; 4b
+</code></pre><p>could mean either of these histories:</p><pre><code>1 -&gt; 2 -&gt; 3a -&gt; 4a
+1 -&gt; 2 -&gt; 3a -&gt; 4b
+1 -&gt; 2 -&gt; 3b -&gt; 4a
+1 -&gt; 2 -&gt; 3b -&gt; 4b
+</code></pre><p>This could be problematic, as CouchDB could choose a corrupt event
+history. Picking one event from one CouchDB source, and another event
+from another CouchDB instance&rsquo;s line of history.</p><p>To remedy this, I would incorporate a <code>prevRevision</code> property for every
+event. Every version of a CouchDB document would have a revision that
+changes every time the document changes. By always refering to the
+previous revision you would essentially have a single-linked history,
+similar to the way <a href=http://git-scm.com class=external-link target=_blank rel=noopener>GIT</a> works with its SHA-1&rsquo;s.</p><h2 id=other-advantages-of-couchdb>Other advantages of CouchDB
+<a class=heading-link href=#other-advantages-of-couchdb><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>I&rsquo;ve always been fond of CouchDB&rsquo;s different approach to dealing with
+things as opposed to other databases. Here are a couple of other things
+that are worthwhile to know about:</p><ul><li><strong>Crash friendliness.</strong> CouchDB uses an append-only file for
+it&rsquo;s data. To restore used up space a <em>compaction</em> need to
+take place. It&rsquo;s up the database maintainer to decide when a
+compaction happens. This append-only architecture means that CouchDB
+can crash at any time. In fact, the normal way to shut down CouchDB
+is simply to kill it.</li><li><strong>BigCouch.</strong> BigCouch is a CouchDB proxy that sits in front of
+multiple CouchDB instances. It mirrors the CouchDB REST API as close
+as possible, but transparently uses real CouchDB instances
+as backends. This makes it possible to store huge amounts of data
+in CouchDB. The flipside is that
+<a href=https://wiki.apache.org/couchdb/Introduction_to_CouchDB_views#Reduce_vs_rereduce class=external-link target=_blank rel=noopener>rereduce</a>
+steps in a view always need to take place in in BigCouch (which is
+usually not a problem).</li><li><strong>Commercial solutions</strong>, such as
+<a href=http://www.cloudant.com class=external-link target=_blank rel=noopener>Cloudant</a> and
+<a href=http://www.iriscouch.com class=external-link target=_blank rel=noopener>IrisCouch</a>.</li></ul><h2 id=an-implementation>An implementation
+<a class=heading-link href=#an-implementation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>I&rsquo;ve started on an implementation of all of this, but I&rsquo;m still trying
+to figure out if it&rsquo;s too over-engineered or not :). Until then, I&rsquo;ll
+keep it unpublished. Keep a lookout of <a href=http://www.github.com/JensRantil class=external-link target=_blank rel=noopener>my Github
+account</a> to see when it shows up!</p><h2 id=future-improvements>Future improvements
+<a class=heading-link href=#future-improvements><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>CouchDB has claimed to be &ldquo;a a database for the web&rdquo;. It talks HTTP and
+there&rsquo;s been numerous libraries that makes it possible to host a full
+web application in a CouchDB instance. The means that CouchDB would
+fully replace the classical web server (Apache, nginx etc.) setup.</p><p>Recently I&rsquo;ve been trying to wrap my head around how <a href=http://blog.mattwoodward.com/2012/03/definitive-guide-to-couchdb.html class=external-link target=_blank rel=noopener>authorization
+works in
+CouchDB</a>,
+especially when it comes to dealing with design documents. I&rsquo;m not
+entirely sure it would be possible to expose the whole event store
+directly to the Internet. However, if this would be doable with correct
+authorization it would allow some cool stuff such as fully hosting event
+stored applications in CouchDB, possibly together with
+<a href=http://pouchdb.com class=external-link target=_blank rel=noopener>PouchDB</a>.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/db44097cbe38b90dcba91458a4ce1c1b1e9fa396 target=_blank rel=noopener>db44097</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>
