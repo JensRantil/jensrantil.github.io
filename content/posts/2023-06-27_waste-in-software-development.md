@@ -9,8 +9,8 @@ slug = "waste-in-software-development"
 +++
 ## The Toyota Production System
 
-It was  around ~2011 when I first read _[The Toyota Way][ttw]_ book. This book
-introduced me to _[The Toyota Way principles][ttwp]_ and [the Toyota Production
+It was  around ~2011 when I first read [The Toyota Way][ttw] book. This book
+introduced me to [The Toyota Way principles][ttwp] and [the Toyota Production
 System][tps] (TPS). It laid the foundation for me to understand [the Continuous
 Delivery book][cont-delivery-book] which I later read.
 
