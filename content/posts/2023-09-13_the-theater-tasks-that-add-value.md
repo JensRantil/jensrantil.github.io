@@ -25,7 +25,7 @@ Sometimes I have had work delegated to me that is presented or looks like
 "customer-impacting", but when poking around to understand the objective of the
 initiative, I struggle to see the immediate customer benefit. It's made me
 question why we are doing the work - making it feel like it's a waste of our
-time. The problem is I have been equating "stakeholder" with "customer" when
+time. The problem is, I have been equating "stakeholder" with "customer" when
 the real stakeholder has not been clearly communicated.
 
 I suspect this has to do with customer-first organizations implicitly
