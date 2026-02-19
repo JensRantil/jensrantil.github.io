@@ -5,6 +5,10 @@ description = "The cost-benefit ratio for your staging environment is probably h
 tags = ["staging environment", "testing"]
 slug = "on-staging-environments"
 +++
+{{< notice info >}}
+This article is about staging environments, but it almost equally applies to the concept of single-tenant environments.
+{{< /notice >}}
+
 > The ultimate quality assurance is when customers get their hands on your
 > software and actually try it. _That's_ when you know if your software does what
 > it's supposed to do or not. This happens in production.
