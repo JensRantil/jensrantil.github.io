@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Statistics on Jens Rantil</title><link>https://jensrantil.github.io/tags/statistics/</link><description>Recent content in Statistics on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 02 Feb 2026 22:02:28 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/statistics/index.xml" rel="self" type="application/rss+xml"/><item><title>MTTR is the wrong metric</title><link>https://jensrantil.github.io/posts/mttr-is-the-wrong-metric/</link><pubDate>Wed, 04 Oct 2023 08:01:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/mttr-is-the-wrong-metric/</guid><description>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Shower thought: Why do we talk about MTTR (Mean Time To Resolution), when it’s a latency? Wouldn’t it make more sense to talk about P99TTR (99th percentile Time To Resolution) given that latencies usually have a long tail? 🤔 &lt;a href="https://twitter.com/hashtag/MTTR?src=hash&amp;amp;ref_src=twsrc%5Etfw">#MTTR&lt;/a> &lt;a href="https://twitter.com/hashtag/SRE?src=hash&amp;amp;ref_src=twsrc%5Etfw">#SRE&lt;/a> &lt;a href="https://twitter.com/hashtag/DevOps?src=hash&amp;amp;ref_src=twsrc%5Etfw">#DevOps&lt;/a>&lt;/p>&amp;mdash; Jens Rantil (@JensRantil) &lt;a href="https://twitter.com/JensRantil/status/1369762301293781002?ref_src=twsrc%5Etfw">March 10, 2021&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+
+
+&lt;p>Today I would like to talk about why Mean Time To Recovery (MTTR) is a wrong
+metric to look at.&lt;/p>
+&lt;p>For the past few years many software engineers have been using &lt;a href="https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance" class="external-link" target="_blank" rel="noopener">the DORA
+metrics&lt;/a> to track the performance of software delivery. One of the DORA
+metrics is &amp;ldquo;Time to Restore Service&amp;rdquo;, also known as &amp;ldquo;Mean Time To Recovery
+(MTTR)&amp;rdquo;. A couple of years ago Courtney Nash wrote &lt;a href="https://www.verica.io/blog/mttr-is-a-misleading-metric-now-what/" class="external-link" target="_blank" rel="noopener">&amp;ldquo;MTTR is a Misleading
+Metric—Now What?&amp;rdquo;&lt;/a> where she criticized that the MTTR concept is too
+simplistic. I could not agree more.&lt;/p></description></item><item><title>Mean vs. median</title><link>https://jensrantil.github.io/posts/mean-vs-median/</link><pubDate>Tue, 03 Oct 2023 22:22:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/mean-vs-median/</guid><description>&lt;p>Over the years, I have heard many people say something like&lt;/p>
+&lt;blockquote>
+&lt;p>Over 50% of people think they are better than the average car driver.&lt;/p>
+&lt;/blockquote>
+&lt;p>They say this as if it&amp;rsquo;s funny or sounds smart. But the fact is that actually
+could be true, and the reason is because &lt;em>mean and median are not the same
+thing&lt;/em>.&lt;/p>
+&lt;p>When people take a basic course in statistics, they are likely to come out of
+it thinking that the world mostly consists of normal distributions. That is not
+surprising, given that the &lt;a href="https://en.wikipedia.org/wiki/Central_limit_theorem" class="external-link" target="_blank" rel="noopener">Central Limit Theorem&lt;/a> states that many
+independent variables with the same distribution converges to a normal
+distribution. This does not apply everywhere. The Central Limit Theorem means
+students leave Statistics 101 having a visual representation of a statistical
+distribution of a bell curve. I believe this has created a lot of confusion.&lt;/p></description></item></channel></rss>

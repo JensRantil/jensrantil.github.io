@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JavaScript on Jens Rantil</title><link>https://jensrantil.github.io/tags/javascript/</link><description>Recent content in JavaScript on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 22 Aug 2023 00:13:45 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>AngularJS events on initialization</title><link>https://jensrantil.github.io/posts/angularjs-events-triggered-on-initialization/</link><pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/angularjs-events-triggered-on-initialization/</guid><description>&lt;p>In my &lt;a href="%7cfilename%7crefreshable-angularjs-service.rst" >previous post&lt;/a> I was
+giving an example of using &lt;a href="http://angularjs.org" class="external-link" target="_blank" rel="noopener">AngularJS&lt;/a>
+&lt;a href="http://docs.angularjs.org/api/ng.$rootScope.Scope#$emit" class="external-link" target="_blank" rel="noopener">events&lt;/a>.&lt;/p>
+&lt;p>I stumbled across a corner case that might be worth noting; If a service
+is triggering an event on initialization, no controllers will get
+notified of it. Here&amp;rsquo;s an example:&lt;/p>
+&lt;iframe width="100%" height="250"
+src="http://jsfiddle.net/Ztyx/TdykU/2/embedded/"
+allowfullscreen="allowfullscreen" frameborder="0">&lt;/iframe>
+The reason why this is happening is simply because the controller have
+not been instantiated. Setting a timer before emitting the event can be
+done as a workaround:
+&lt;iframe width="100%" height="250"
+src="http://jsfiddle.net/Ztyx/TdykU/3/embedded/"
+allowfullscreen="allowfullscreen" frameborder="0">&lt;/iframe>
+Now you know!</description></item><item><title>Refreshable AngularJS service</title><link>https://jensrantil.github.io/posts/refreshable-angularjs-service/</link><pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/refreshable-angularjs-service/</guid><description>&lt;p>Lately I&amp;rsquo;ve been working a lot in &lt;a href="http://angularjs.org" class="external-link" target="_blank" rel="noopener">AngularJS&lt;/a>.
+This is my second project with the framework, and the more time I spend
+in it, the more I like it.&lt;/p>
+&lt;p>But as with most things, AngularJS has some rough corners. Its
+&lt;a href="http://docs.angularjs.org/" class="external-link" target="_blank" rel="noopener">documentation&lt;/a> still has a long way to go,
+although it has improved since last time I used it over a year ago.
+Common use cases and &amp;ldquo;Angular-y&amp;rdquo; was of doing things is another thing
+that I also feel is lacking out there. I guess it could be considered
+documentation depending on how you look at it.&lt;/p></description></item></channel></rss>

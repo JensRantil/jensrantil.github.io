@@ -1,0 +1,58 @@
+<!doctype html><html lang=en><head><title>Security is just one part of risk · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="What are we trading when improving security?"><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Security is just one part of risk"><meta name=twitter:description content="What are we trading when improving security?"><meta property="og:url" content="https://jensrantil.github.io/posts/security-and-risk/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Security is just one part of risk"><meta property="og:description" content="What are we trading when improving security?"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-05-12T10:28:35+02:00"><meta property="article:modified_time" content="2024-11-04T15:03:38+01:00"><meta property="article:tag" content="Security"><meta property="article:tag" content="Risk"><link rel=canonical href=https://jensrantil.github.io/posts/security-and-risk/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/security-and-risk/>Security is just one part of risk</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2024-05-12T10:28:35+02:00>May 12, 2024
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+3-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/security/>Security</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/risk/>Risk</a></span></div></div></header><div class=post-content><p>I think our software industry sometimes is blindsided when it comes to
+security. Don&rsquo;t get me wrong, I am of course in favor of good security
+practices. But I think we could get better at understanding the trade-offs when
+improving security.</p><h2 id=a-story>A story
+<a class=heading-link href=#a-story><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>At a previous employer, we partnered with a big bank. They were using our
+SaaS&rsquo;s REST API over the Internet. For security they used</p><ul><li><strong>TLS</strong> for encryption to make sure no one was eavesdropping over the
+Internet.</li><li>a <strong>static API token</strong> to authorize with us.</li><li><strong><a href=https://sv.wikipedia.org/wiki/Certificate_pinning class=external-link target=_blank rel=noopener>certificate pinning</a></strong> to make sure they were
+talking to us over the Internet (and not Eve-the-evil-hacker).</li></ul><p>The <abbr title="Chief Information Security Office">CISO</abbr> department of
+this particular bank reached out to us and required us to to use <a href=https://en.wikipedia.org/wiki/Mutual_authentication#mTLS class=external-link target=_blank rel=noopener>Mutual
+TLS</a> (mTLS) since it was &ldquo;more secure&rdquo;. I thought their request was
+<a href=/posts/the-theater-tasks-that-add-value/>security theatre</a>; it would not improve our security in any
+particular way. Also, we had used TLS+pinning+token for many years, it worked
+well, had good processes in place for this, and knew how it worked.</p><p>Ever tried to argue against a bank? I tried to explain that we already covered
+all their <em>actual</em> requirements:</p><ul><li>No one could eavesdrop.</li><li>We knew they were the ones making API calls to us.</li><li>They knew they were making API calls to us and not someone else.</li></ul><p>Further, I knew that mTLS would require authentication on a different network
+layer. It would add more technical complexity for us. Also, we did not want to
+become a <abbr title="Certificate Authority">CA</abbr> and start doing
+complicated <abbr title="Certificate signing requests">CSRs</abbr>. Still, the
+customer keps pushing for this.</p><p>The pushback felt hopeless, but one day I had a breakthrough! I explained to
+the customer that their solution had <strong>&ldquo;operational risk&rdquo;</strong>, particularly
+around certificate expiration and renewal. The term &ldquo;operational risk&rdquo; was like
+a magic password that opened up new doors in the conversation. The CISO
+representative responded with:</p><blockquote><p>&ldquo;Oh, operational risk you say? That makes a lot of sense. Our department not
+only works with security but with all types of risks. We weigh different types of
+risks against each other. We will consider your operational risk!&rdquo;</p></blockquote><p>With that, I never heard from them again. I won my argument!</p><p>My biggest learning from this was how useful it is for <strong>a security department
+to take a more <a href="https://www.philvenables.com/post/crucial-questions-from-cios-and-ctos#:~:text=cybersecurity%20isn%E2%80%99t%20necessarily%20the%20only%20or%20even%20the%20major%20technology%20risk%20in%20most%20organizations." class=external-link target=_blank rel=noopener>holistic approach to risk</a></strong>. Without this, you are missing what
+you are trading for &ldquo;higher security&rdquo;.</p><h2 id=other-types-of-risk>Other types of risk
+<a class=heading-link href=#other-types-of-risk><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Here are some examples of &ldquo;operational risk&rdquo; that I have seen/heard being
+down-prioritized at various companies:</p><ul><li><strong>Systems stability.</strong> My example above is a good example of this. We risked
+downtime if certificates would expire.</li><li><strong>Reduced speed of development.</strong> For some companies, innovation might be
+more important than security.</li><li><strong>Human error.</strong> Certain security controls add more manual work and
+increases the risk of making mistakes.</li><li><strong>Cost increases.</strong> There are plenty of SaaS and AWS services to
+improve security, but they add costs. If you are a company low on
+budget, enabling every security service out there will add costs.
+Not to mention that the salary for engineers implementing security controls also
+is a thing.</li></ul><p>The above list is likely not exhaustive.</p><h2 id=closing-thoughts>Closing thoughts
+<a class=heading-link href=#closing-thoughts><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>I have heard people refer to companies as having &ldquo;an unhealthy security
+culture&rdquo; if they don&rsquo;t have the right controls in place. Similarly, I would say
+that companies that focus <em>too much</em> on security can have an unhealthy security
+culture.</p><p>It&rsquo;s okay to say no to adding additional security control. My personal approach
+to security is to take an iterative approach, focusing on the highest security
+risks, but weighing the controls against other types of risk.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/34f169e3a2b56a50a35e8e0578a9566e272fa5c9 target=_blank rel=noopener>34f169e</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

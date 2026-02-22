@@ -1,0 +1,140 @@
+<!doctype html><html lang=en><head><title>Waste in software development · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="
+  The Toyota Production System
+  
+    
+    Link to heading
+  
+
+It was  around ~2011 when I first read The Toyota Way book. This book
+introduced me to The Toyota Way principles and the Toyota Production
+System (TPS). It laid the foundation for me to understand the Continuous
+Delivery book which I later read.
+The Toyota Way also lay the groundwork for me to understand the inter-related
+Lean Manufacturing, particularly Lean services
+(which applies the Lean concept to the service industry). However, since there
+has been a lot of confusion about how various Lean concepts interrelate with
+TPS, I will just stick to TPS for the sake of the rest of this
+article."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Waste in software development"><meta name=twitter:description content="The Toyota Production System Link to heading It was around ~2011 when I first read The Toyota Way book. This book introduced me to The Toyota Way principles and the Toyota Production System (TPS). It laid the foundation for me to understand the Continuous Delivery book which I later read.
+The Toyota Way also lay the groundwork for me to understand the inter-related Lean Manufacturing, particularly Lean services (which applies the Lean concept to the service industry). However, since there has been a lot of confusion about how various Lean concepts interrelate with TPS, I will just stick to TPS for the sake of the rest of this article."><meta property="og:url" content="https://jensrantil.github.io/posts/waste-in-software-development/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Waste in software development"><meta property="og:description" content="The Toyota Production System Link to heading It was around ~2011 when I first read The Toyota Way book. This book introduced me to The Toyota Way principles and the Toyota Production System (TPS). It laid the foundation for me to understand the Continuous Delivery book which I later read.
+The Toyota Way also lay the groundwork for me to understand the inter-related Lean Manufacturing, particularly Lean services (which applies the Lean concept to the service industry). However, since there has been a lot of confusion about how various Lean concepts interrelate with TPS, I will just stick to TPS for the sake of the rest of this article."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-06-27T23:54:21+02:00"><meta property="article:modified_time" content="2026-02-18T15:30:21+01:00"><link rel=canonical href=https://jensrantil.github.io/posts/waste-in-software-development/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/waste-in-software-development/>Waste in software development</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2023-06-27T23:54:21+02:00>June 27, 2023
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+8-minute read</span></div></div></header><div class=post-content><h2 id=the-toyota-production-system>The Toyota Production System
+<a class=heading-link href=#the-toyota-production-system><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>It was around ~2011 when I first read <a href=https://www.amazon.com/Toyota-Way-Management-Principles-Manufacturer/dp/0071392319 class=external-link target=_blank rel=noopener>The Toyota Way</a> book. This book
+introduced me to <a href=https://en.wikipedia.org/wiki/The_Toyota_Way class=external-link target=_blank rel=noopener>The Toyota Way principles</a> and <a href=https://en.wikipedia.org/wiki/Toyota_Production_System class=external-link target=_blank rel=noopener>the Toyota Production
+System</a> (TPS). It laid the foundation for me to understand <a href=https://www.amazon.se/-/en/Humble-Jez/dp/0321601912 class=external-link target=_blank rel=noopener>the Continuous
+Delivery book</a> which I later read.</p><p>The Toyota Way also lay the groundwork for me to understand the inter-related
+<a href=https://en.wikipedia.org/wiki/Lean_manufacturing class=external-link target=_blank rel=noopener>Lean Manufacturing</a>, particularly <a href=https://en.wikipedia.org/wiki/Lean_services class=external-link target=_blank rel=noopener>Lean services</a>
+(which applies the Lean concept to the service industry). However, since <a href=https://bobemiliani.com/comparing-tps-and-lean/ class=external-link target=_blank rel=noopener>there
+has been a lot of confusion about how various Lean concepts interrelate with
+TPS</a>, I will just stick to TPS for the sake of the rest of this
+article.</p><h2 id=waste-in-tps>Waste in TPS
+<a class=heading-link href=#waste-in-tps><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Taiichi Ohno, the father of TPS, introduced the concept of “muda” at Toyota.
+Muda in Japanese means “waste”. Wasteful tasks don&rsquo;t add any immediate value
+to the customers. There are eight types of waste within the Toyota Production
+System:</p><ol><li><strong>Waste of overproduction (largest waste).</strong> Production ahead of demand.</li><li><strong>Waste of time on hand (waiting).</strong> Waiting for the next production stage.</li><li><strong>Waste of transportation.</strong> Moving products that are not required to
+perform the processing.</li><li><strong>Waste of processing itself.</strong> Resulting from poor tool or product
+design-creating activity.</li><li><strong>Waste of excess inventory.</strong> All components, work-in-process, and finished
+products are not being processed.</li><li><strong>Waste of movement.</strong> People or equipment moving or walking more than is
+required to perform the processing.</li><li><strong>Waste of making defective products.</strong> The effort in inspecting for and
+fixing defects.</li><li><strong>Waste of underutilized workers.</strong> Underutilizing people’s talents, skills,
+and knowledge.</li></ol><h2 id=software-development-waste>Software development waste
+<a class=heading-link href=#software-development-waste><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Software development is not like making cars (as opposed to Toyota). For
+example, while car manufacturing deals with the transportation of physical
+items (waste no 3 above), software development rarely does. But that does not
+mean that waste cannot be found in software development. If we squint our eyes
+a little, using Toyota Production System’s definition of waste can be a
+surprisingly fruitful analogy to understand where waste happens when making
+software. Let&rsquo;s go through each type of waste and see what this means for
+software:</p><h3 id=waste-of-overproduction>Waste of overproduction
+<a class=heading-link href=#waste-of-overproduction><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Waste of overproduction includes usually &ldquo;producing&rdquo; too many
+features/changes until we deploy to production. In other words, batching up too
+many changes into a deployment. This leads to slower feedback cycles and
+usually higher defects.</p><p>Reducing the <a href=https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance class=external-link target=_blank rel=noopener>DORA</a> metric “Lead Time for Changes” reduces this type of
+overproduction.</p><h3 id=waste-of-time-on-hand-waiting>Waste of time on hand (waiting)
+<a class=heading-link href=#waste-of-time-on-hand-waiting><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Waste of time on hand (waiting) includes things like waiting for
+someone else to review your code. A solution can be pair or mob programming as
+it usually reduces lead time because review happens by someone else in parallel
+while typing out the code.</p><blockquote class=twitter-tweet><p lang=en dir=ltr>Just extracted some stats from code reviews at <a href="https://twitter.com/tink?ref_src=twsrc%5Etfw">@tink</a> using <a href=https://t.co/12cWRJp3o6>https://t.co/12cWRJp3o6</a>. (The data for the rightmost bar consists of two samples, so let's ignore that one for now :-P) <a href=https://t.co/TLYncFZDfU>pic.twitter.com/TLYncFZDfU</a></p>&mdash; Jens Rantil (@JensRantil) <a href="https://twitter.com/JensRantil/status/1182325832578150401?ref_src=twsrc%5Etfw">October 10, 2019</a></blockquote><script async src=https://platform.twitter.com/widgets.js></script><p>If you need additional review steps to deploy to production (code review to
+merge into a “production” branch), it also adds to this type of waste. If
+you’ve ever worked with this type of workflow, I’m sure you’ve come across
+hearing something like</p><blockquote><p>&ldquo;I think maybe Noah modified something so we need to check with her before
+deploying.&rdquo;</p></blockquote><p>Another related waste could happen if you are working with multiple source code
+repositories and must wait on code review in one repository before someone can
+review/merge code in another repository.</p><p>Waiting time also involves compilation times and times to run tests locally on
+a development machine.</p><p>Not to mention waiting on Jira’s user interface to load…</p><blockquote class=twitter-tweet><p lang=en dir=ltr>Atlassian claims they have 180.000 <a href="https://twitter.com/hashtag/Jira?src=hash&amp;ref_src=twsrc%5Etfw">#Jira</a> customers (<a href=https://t.co/6O9Md54uVX>https://t.co/6O9Md54uVX</a>.). Assuming an average of 25 users per customer, each user make 30 clicks in Jira every day and Jira's incredibly slow UI takes 5 seconds per operation, that's more than 21 man-years wasted per day.</p>&mdash; Jens Rantil (@JensRantil) <a href="https://twitter.com/JensRantil/status/1380065758596759553?ref_src=twsrc%5Etfw">April 8, 2021</a></blockquote><script async src=https://platform.twitter.com/widgets.js></script><h3 id=waste-of-transportation>Waste of transportation
+<a class=heading-link href=#waste-of-transportation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>I usually think of “code refactoring” here. Ohno
+defined <a href=https://en.wikipedia.org/wiki/Muda_%28Japanese_term%29 class=external-link target=_blank rel=noopener>two types of waste</a>:</p><ul><li><em>Muda Type I:</em> non-value-adding, but necessary for end-customers.</li><li><em>Muda Type II:</em> non-value-adding and unnecessary for end-customers.</li></ul><p>Some refactorings are needed to build a new feature (type I), while other
+refactorings are not needed at all (type II). Type II refactorings are usually
+when engineers struggle to describe why a change is needed from the customer&rsquo;s
+perspective. This is why I think encouraging sentences like “Refactoring to be
+able to…” (type I) is important.</p><p>I also think managerial tasks such as “filling out quarterly reports in
+spreadsheets for management” can end up in this category.</p><h3 id=waste-of-processing-itself>Waste of processing itself
+<a class=heading-link href=#waste-of-processing-itself><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Waste of processing itself includes building a feature that the customer
+doesn&rsquo;t want. Quick feedback loops help here!</p><p>Kent Beck once stated:</p><blockquote><p>“Make It Work, Make It Right, Make It Fast” (<a href=https://keyholesoftware.com/2023/03/23/writing-quality-code-practicing-make-it-work-make-it-right-make-it-fast/ class=external-link target=_blank rel=noopener>ref</a>)</p></blockquote><p>Making something maintainable is an example of waste if the solution doesn’t
+work. Making it performant is usually a waste if it is not maintainable.</p><h3 id=waste-of-excess-inventory>Waste of excess inventory
+<a class=heading-link href=#waste-of-excess-inventory><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Waste of excess inventory makes me think of “inventory” as code or
+managing issues:</p><p>All code is a liability and needs maintenance. Refactorings become more tedious
+the more code you have. Also, every single line you add to an application adds
+complexity. Removing code is a great way to remove bugs.</p><blockquote><p>An issue-tracking system is where feature ideas go to die.</p></blockquote><p>Managing issues/tickets (in Jira etc.) does not add any immediate customer
+value. The more tickets you have, the more time you spend labeling, sorting
+them, updating descriptions to tickets that might never happen, etc.</p><h3 id=waste-of-movement>Waste of movement
+<a class=heading-link href=#waste-of-movement><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>In terms of software development, I think of <em>waste of movement</em> as a “waste of switching context”. This is a big one!</p><p>Having to switch between <em>ways of communication</em> can have a detrimental impact
+on productivity: Slack, e-mail, issue-tracking systems such as Jira, Github
+issues, wikis, Miro boards, document systems (Office365, Google Docs) &
+meetings. On an organizational level, I haven’t seen many companies trying to
+reduce these.</p><p><em>Unnecessary meetings</em> are another form of unnecessary movement. If
+a meeting can happen through async communication, you don&rsquo;t have to context
+switch as much.</p><p>Having a <em>diverse set of technology</em> can lead to a lot of context switching;
+switching between different frameworks, libraries, and infrastructure
+components. All of them with their different caveats and documentation. I could
+write a lot about this, but for now, I will simply refer to <a href=https://www.radicalsimpli.city/ class=external-link target=_blank rel=noopener>Radical
+Simplicity</a>, <a href=https://boringtechnology.club/ class=external-link target=_blank rel=noopener>Choosing Boring Tech</a>, and reminding
+us to <a href=https://www.bitecode.dev/p/hype-cycles class=external-link target=_blank rel=noopener>be aware of hype-driven development</a>. The first Google SRE
+book also has a good <a href=https://sre.google/sre-book/simplicity/ class=external-link target=_blank rel=noopener>chapter on simplicity</a> in terms of
+reliability.</p><p>Many companies require <em>a lot of movement in the process of developing
+software</em>. Here are some:</p><ul><li>Switching between a ticketing system, Github, terminal, and code editor.</li><li>Always having to create a ticket for <em>every</em> pull request.</li><li>Having to often switch between source code repositories. A monorepo can
+reduce or avoid this.</li><li>Needing to jump into a database to change things.</li><li>Needing to jump around in many different files to create a new
+package/microservice/API endpoint.</li><li>Releasing/packaging a library and then jumping to another place to start
+using it. I’m looking at you NPM, Maven, Gradle, et al… This is where a
+monorepo can shine.</li></ul><p>Finally, certain companies require lots of movement to <em>make a release to
+customers</em>; making a release in one place and writing release notes in Slack or
+Jira, going through required checklists, making a second pull request to merge
+in production, clicking an extra button and waiting (waste!) to deploy to
+production&mldr; The more often you do something, the less movement you should
+strive for. It adds up over time…</p><p>Generally, a higher standardized set of movements to perform a task is usually
+better than constantly having to figure out which movements are needed to
+perform a task. For example, once you have standardized which steps are needed
+to create a microservice, you can take a more structured approach to reduce the
+steps. In other words, “Lead Time for Changes” variability is usually more
+important to reduce first before you take a stab at reducing the actual lead
+time.</p><h3 id=waste-of-making-defective-products>Waste of making defective products
+<a class=heading-link href=#waste-of-making-defective-products><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Waste of making defective products is what we mostly call <em>bugs</em>, but
+it can also include bad UX experiences. Many people think of these defects
+primarily as an immediate customer impact. They are, but there is also the
+secondary impact on velocity - constantly going back to fix bugs <a href=https://www.infoq.com/news/2011/09/bug-fixes-velocity/ class=external-link target=_blank rel=noopener>can have a
+detrimental impact on velocity</a>.</p><p><strong>Waste of underutilized workers.</strong> Not utilizing or growing engineering talent
+is also a waste. Making engineers ticket machines by not allowing them to
+take initiative or have a shared ownership of the product backlog can have
+detrimental effects on product innovation or product development effectiveness.</p><p>Underutilizing workers is a good example of where an organization’s culture can
+come into play. Generally, reducing waste in software development is a
+socio-technical problem needing to work within the spheres of improving
+processes, people management, and tech.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/bf64be9302c1f52090e3e845217b71af1d22a367 target=_blank rel=noopener>bf64be9</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

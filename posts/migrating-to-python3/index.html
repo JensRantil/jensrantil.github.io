@@ -1,0 +1,69 @@
+<!doctype html><html lang=en><head><title>Migrating to Python 3 · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="This post is partially related to my previous blog
+post about
+Rewind.
+I initially started the implementation of Rewind in Python 2.7. I
+constantly kept test coverage to 100%, and I tried to stick to
+TDD as much as
+possible. The Python testing tool
+Nose proved to be very
+valuable, as did Travis CI.
+After some time I thought &ldquo;Hey, why work in Python 2 when Python 3 seems
+around corner?&rdquo;. I installed Python 3.2 on my laptop and started
+executing those tests. Travis CI helped a lot here to always make sure
+that Rewind was backward compatible with Python 2.7. Ever nervous about
+a test failing? Make pull request on Github and
+Travis CI will tell you whether the pull request broke something or not.
+Highly convenient. Migration to Python 3 can be summarized in three
+paragraphs:"><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Migrating to Python 3"><meta name=twitter:description content="This post is partially related to my previous blog post about Rewind.
+I initially started the implementation of Rewind in Python 2.7. I constantly kept test coverage to 100%, and I tried to stick to TDD as much as possible. The Python testing tool Nose proved to be very valuable, as did Travis CI.
+After some time I thought “Hey, why work in Python 2 when Python 3 seems around corner?”. I installed Python 3.2 on my laptop and started executing those tests. Travis CI helped a lot here to always make sure that Rewind was backward compatible with Python 2.7. Ever nervous about a test failing? Make pull request on Github and Travis CI will tell you whether the pull request broke something or not. Highly convenient. Migration to Python 3 can be summarized in three paragraphs:"><meta property="og:url" content="https://jensrantil.github.io/posts/migrating-to-python3/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Migrating to Python 3"><meta property="og:description" content="This post is partially related to my previous blog post about Rewind.
+I initially started the implementation of Rewind in Python 2.7. I constantly kept test coverage to 100%, and I tried to stick to TDD as much as possible. The Python testing tool Nose proved to be very valuable, as did Travis CI.
+After some time I thought “Hey, why work in Python 2 when Python 3 seems around corner?”. I installed Python 3.2 on my laptop and started executing those tests. Travis CI helped a lot here to always make sure that Rewind was backward compatible with Python 2.7. Ever nervous about a test failing? Make pull request on Github and Travis CI will tell you whether the pull request broke something or not. Highly convenient. Migration to Python 3 can be summarized in three paragraphs:"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2013-05-19T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-22T00:13:45+02:00"><meta property="article:tag" content="Python"><link rel=canonical href=https://jensrantil.github.io/posts/migrating-to-python3/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/migrating-to-python3/>Migrating to Python 3</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2013-05-19T00:00:00Z>May 19, 2013
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+2-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/python/>Python</a></span></div></div></header><div class=post-content><p>This post is partially related to my <a href=%7cfilename%7cCQRS-time-to-rewind.rst>previous blog
+post</a> about
+<a href=http://www.github.com/JensRantil/rewind class=external-link target=_blank rel=noopener>Rewind</a>.</p><p>I initially started the implementation of Rewind in Python 2.7. I
+constantly kept test coverage to 100%, and I tried to stick to
+<a href=http://en.wikipedia.org/wiki/Test-driven_development class=external-link target=_blank rel=noopener>TDD</a> as much as
+possible. The Python testing tool
+<a href=https://nose.readthedocs.org/en/latest/ class=external-link target=_blank rel=noopener>Nose</a> proved to be very
+valuable, as did <a href=https://travis-ci.org/JensRantil/rewind class=external-link target=_blank rel=noopener>Travis CI</a>.</p><p>After some time I thought &ldquo;Hey, why work in Python 2 when Python 3 seems
+around corner?&rdquo;. I installed Python 3.2 on my laptop and started
+executing those tests. Travis CI helped a lot here to always make sure
+that Rewind was backward compatible with Python 2.7. Ever nervous about
+a test failing? Make pull request on <a href=http://www.github.com class=external-link target=_blank rel=noopener>Github</a> and
+Travis CI will tell you whether the pull request broke something or not.
+Highly convenient. Migration to Python 3 can be summarized in three
+paragraphs:</p><p><strong>Migrate from lists to iterators.</strong> In many ways I like the changes to
+the built-in functions <code>map</code> and <code>reduce</code>. Working with iterators are in
+many ways a higher abstraction. I did have some code that expected these
+functions to return lists. The flip side was that I sometimes had to
+wrap in list:</p><pre tabindex=0><code>variable = list(map(func, someiter))
+</code></pre><p>In hindsight, I probably should have used <a href=http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions class=external-link target=_blank rel=noopener>list
+comprehensions</a>
+for many of those cases as they are more readable&mldr;</p><p><strong>Use the &lsquo;bytes&rsquo; type instead of &lsquo;string&rsquo; where appropriate.</strong> <code>bytes</code>
+was introduced as a new type in Python 3. In the Rewind case, this
+mostly involved ZeroMQ message frames handling, that takes <code>bytes</code>. This
+also involved some conversion to and/or from <code>bytes</code> and <code>string</code>. I
+tried to stick to <code>UTF-8</code> for this.</p><p><strong>Use &lsquo;string.format(&mldr;)&rsquo; instead of &lsquo;string % &mldr;&rsquo; pattern.</strong> Nuff
+said.</p><h2 id=looking-back>Looking back
+<a class=heading-link href=#looking-back><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>In general, Python 3 is very backwards compatible (but Python 2 is not
+forward compatible). As far as I can recollect, the only conditionals I
+needed to make Python3 were aliasing of imports:</p><pre tabindex=0><code>try:
+    # Python &lt; 3
+    import ConfigParser as configparser
+except ImportError:
+    # Python &gt;= 3
+    import configparser
+</code></pre></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/cba53b20c33afbbecaa6fd8cc3149dd381e636f7 target=_blank rel=noopener>cba53b2</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

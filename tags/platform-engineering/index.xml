@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Platform Engineering on Jens Rantil</title><link>https://jensrantil.github.io/tags/platform-engineering/</link><description>Recent content in Platform Engineering on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 13 Jan 2026 15:12:41 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/platform-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Code as a self-serve experience</title><link>https://jensrantil.github.io/posts/code-as-self-serve-experience/</link><pubDate>Tue, 09 May 2023 08:24:19 +0200</pubDate><guid>https://jensrantil.github.io/posts/code-as-self-serve-experience/</guid><description>&lt;p>Using &amp;ldquo;code as self-serve&amp;rdquo;, such as Terraform or Kubernetes, in Platform
+Engineering is a rather bad idea. Let me explain why:&lt;/p>
+&lt;p>These days &lt;a href="https://www.honeycomb.io/blog/future-ops-platform-engineering" class="external-link" target="_blank" rel="noopener">there is all the rage around Platform Engineering&lt;/a>,
+and in fact I spent my last few years at &lt;code>$previousEmployer&lt;/code> doing exactly
+this.&lt;/p>
+&lt;p>One of the core tenets of &amp;ldquo;Platform Engineering&amp;rdquo; is the concept of
+&lt;a href="https://blog.cycloid.io/user-friendly-developer-self-service-the-key-to-platform-engineering" class="external-link" target="_blank" rel="noopener">&amp;ldquo;self-serve&amp;rdquo;&lt;/a>. That is, instead of a Platform team acting as a
+blocker, you instead make sure to build a developer experience (DevEx) that
+enables engineers to do something themselves exactly when they need it. Just In
+Time! For example, if developers need a database they shouldn&amp;rsquo;t need to reach
+out to the Platform Engineering team and ask for one. Instead, they should
+simply be able to easily fire up a new database themselves within a few
+minutes.&lt;/p></description></item></channel></rss>

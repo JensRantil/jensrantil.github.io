@@ -1,0 +1,124 @@
+<!doctype html><html lang=en><head><title>The downsides of batch APIs · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="Many small API calls are usually better than one large one."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="The downsides of batch APIs"><meta name=twitter:description content="Many small API calls are usually better than one large one."><meta property="og:url" content="https://jensrantil.github.io/posts/downsides-of-batch-apis/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="The downsides of batch APIs"><meta property="og:description" content="Many small API calls are usually better than one large one."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-05-03T12:50:41+02:00"><meta property="article:modified_time" content="2024-03-09T08:30:43+01:00"><meta property="article:tag" content="Architecture"><meta property="article:tag" content="Api"><meta property="article:tag" content="Simplicity"><link rel=canonical href=https://jensrantil.github.io/posts/downsides-of-batch-apis/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/downsides-of-batch-apis/>The downsides of batch APIs</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2023-05-03T12:50:41+02:00>May 3, 2023
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+7-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/architecture/>Architecture</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/api/>Api</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/simplicity/>Simplicity</a></span></div></div></header><div class=post-content><p>When an HTTP API is too slow to call repeatedly I have seen engineers
+immediately turn to making the API <em>do more in one unit of work</em>. I think this
+pattern can be very harmful and have many battle scars from this. So I thought
+I would write a post about it.</p><h2 id=an-example>An example
+<a class=heading-link href=#an-example><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Let&rsquo;s start with an example: You have a web service that stores TODO items. It
+has an API endpoint, <code>POST /todo</code>, which gets called to add a new TODO item.
+Here is an example request/response:</p><pre tabindex=0><code>POST /todo
+{text: &#34;Do laundry&#34;, &#34;completed&#34;: false}
+
+200
+{&#34;msg&#34;: &#34;Saved TODO!&#34;}
+</code></pre><p>(300 ms)</p><h2 id=a-throughput-bottleneck-enters-the-stage>A throughput bottleneck enters the stage
+<a class=heading-link href=#a-throughput-bottleneck-enters-the-stage><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The API works great until your TODO service has turned into a hugely successful
+TODO SaaS which allows users to import their TODOs from their previous TODO
+platforms. With the click of a button, we now want users to be able to import
+10,000 TODOs from the competitor. The immediate problem? Importing them would take</p><pre><code>10,000x300ms = 3,000,000 ms = 3,000 seconds = 50 minutes
+</code></pre><p>. 50 minutes is a long time!</p><h2 id=the-batching-solution>The batching solution
+<a class=heading-link href=#the-batching-solution><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The go-to solution by many is to modify the API endpoint above (or
+introduce a new &ldquo;ingest API endpoint&rdquo;) such that it has a larger unit of work.
+In this case, we modify it to take a <em>list</em> of TODOs instead:</p><pre tabindex=0><code>POST /todo
+[
+    {&#34;text&#34;: &#34;Do laundry&#34;, &#34;completed&#34;: true},
+    {&#34;text&#34;: &#34;Fix flat tire&#34;, &#34;completed&#34;: true},
+    {&#34;text&#34;: &#34;Write that love letter to Rita&#34;, &#34;completed&#34;: true},
+    {&#34;text&#34;: &#34;Call my best buddy Brad&#34;, &#34;completed&#34;: true},
+    {&#34;text&#34;: &#34;Do the dishes&#34;, &#34;completed&#34;: true}
+]
+
+200
+{&#34;msg&#34;: &#34;Saved 5 TODOs!&#34;}
+</code></pre><p>(500 ms)</p><p>The assumption here is that the API roundtrip is the problem - so doing a
+single API roundtrip (and usually a single roundtrip to the underlying
+database), we sped up the API endpoint a <em>lot</em>.</p><p>At a glance, this solves the problem in a seemingly simple way! Suddenly we
+have one roundtrip to the API instead of 10k. Sure, the time takes a little
+longer, but that&rsquo;s expected since we <em>are</em> storing more activities than a
+single.</p><h2 id=the-costs>The Costs
+<a class=heading-link href=#the-costs><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>However, contrary to common beliefs, the above-described solution has many
+hidden downsides that incur future implementation, maintenance, and operational
+costs:</p><p><strong>Validation semantics complexity</strong> (implementation). Every time you make an
+API call and validation fails, you likely need to start returning a <em>list</em> of
+validation errors including <em>which</em> (list index) item failed validation and
+how. This turns into one additional thing the API caller must handle.</p><p><strong>Atomicity confusion</strong> (implementation). The API caller will need to
+read the documentation (if there is some!) to see what happens if <em>one</em> of the
+TODOs aren&rsquo;t passing validation. Is it storing all other TODOs? Or are none of
+them stored?</p><p><strong>Debuggability and understandability</strong> (maintenance). Generally, if something
+goes wrong (weird HTTP response code returned), the caller will spend a
+significant amount of time trying to figure out <em>which</em> of the TODOs, if any,
+was faulty. Mapping a single TODO to a single API call makes debuggability and
+understandability much easier.</p><p><strong>Code complexity</strong> (maintenance). This is a minor one, but from now on we need
+to iterate over a list of TODOs in our API endpoint source code everywhere;
+validation, storing, logging, counting, etc.</p><p><strong>Memory/CPU bottlenecks</strong> (operational). There is a risk that you have some
+user who decides to import 100 million TODOs. Suddenly, your application runs
+out of memory and starts crashing - impacting your other users. You can of
+course set upper limits on request body size and/or number of TODOs (best
+practice!). Now you need to incur the cost of maintaining documentation of that
+limit&mldr;</p><p><strong>Worse observability</strong> (operational). Your latency metrics can&rsquo;t be trusted as
+much anymore. A key thing when working with performance is to reduce the
+variability/variance of API call latencies. Without that, you will not be able
+to trust your latency metrics. With the batching solution above, you will have
+no idea if latencies spiked because your service was overloaded - or someone
+simply decided to import 1 million TODOs in one giant API call.</p><p>At <code>$previousJob</code>, I had to bucket my latency metrics by list size to get a
+better feel for whether our systems were having issues, or users simply
+submitted larger units of work. Unnecessary complexity!</p><p><strong>Horisontal scalability issues (operational).</strong> The idea with horizontal
+scalability is that you can throw more machines/service instances at a problem
+to increase throughput. Generally one uses a load balancer for this. If you are
+working with large requests, the work will not be spread evenly.</p><p>(<a href="https://www.youtube.com/watch?v=FC0DARpayhw" class=external-link target=_blank rel=noopener>Even distribution of load</a>, particularly for uneven unit of
+work is a classically <em>hard</em> distributed systems engineering problem - let&rsquo;s
+not go there&mldr;)</p><p><strong>Limit creep</strong> (maintenance). Strictly this isn&rsquo;t a problem (and possibly this
+is <a href=https://en.wikipedia.org/wiki/Slippery_slope class=external-link target=_blank rel=noopener>slippery slope</a>), but I can&rsquo;t help to mention that once
+you&rsquo;ve opened up the can of worms of working with list/request limits, there is
+a strong risk you will simply start bumping the limit over and over again until
+the above issues grow in magnitude. You are essentially shooting yourself in
+the foot slowly over time. Saying no to batching from the start is one way to
+avoid this.</p><p><strong>Virality of batching</strong> (maintenance & operational). Finally, what I have
+observed is that once you start doing a larger unit of work in your public API,
+a larger unit of work also starts creeping into every corner of your backend
+systems. Your API perimeter team will start asking all internal services to
+support batching. Suddenly you have the above-mentioned issues all over your
+backend and not just at the perimeter.</p><p><strong>Rate-limiting complexity (maintenance & operational).</strong> Rate-limiting is far
+less useful for API endpoints if you do batching. This is because each API
+call can either be a heavy (1000 items) or lightweight (1 item) one. If you
+want to put rate-limiting in place for your batch API properly, you will need
+custom rate-limiting based on the number of items being sent in each API call.
+Now the question of atomicity comes into play - should certain items be stored
+but not others? Do you <em>really</em> want the client to deal with that?</p><h2 id=an-alternative>An alternative
+<a class=heading-link href=#an-alternative><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Really, the problem we have here is one of <a href=https://en.wikipedia.org/wiki/Queueing_theory class=external-link target=_blank rel=noopener>queueing theory</a> and <a href=https://en.wikipedia.org/wiki/Amdahl%27s_law class=external-link target=_blank rel=noopener>Amdahl&rsquo;s
+law</a>. There are two routes we can take to solve our slow ingestion:</p><ul><li><strong>Improve the unit of work.</strong> This is what we did above!</li><li><strong>Parallellize the work.</strong> This is what I am proposing to do below.</li></ul><p>The latter usually comes with none of the above costs and pushes complexity to
+the calling client. Instead of making <em>one API call with 10k TODOs</em> we make
+<em>10k API calls, each with a single TODO</em>.</p><p>There is a problem with the above, though; An API rarely supports 10k
+concurrent API calls, particularly until it has scaled up (using auto-scaling,
+which you have in place, right? 😉). There are ways to combat this:</p><ul><li><strong>Putting a limit on concurrent API calls in the client.</strong> A <a href=https://www.guru99.com/semaphore-in-operating-system.html class=external-link target=_blank rel=noopener>counting
+semaphore</a> is one way of doing this. A group of threads/coroutines
+popping from a queue is another.</li><li><strong>Making API calls <a href=https://en.wikipedia.org/wiki/Idempotence class=external-link target=_blank rel=noopener>idempotent</a> and implement retries.</strong> Make a
+timed out, or failed, request retried without having duplicates. Usually,
+this is done by the client submitting the identifier of the TODO to avoid
+duplicates. This has the added benefit of adding resiliency - if your
+service has a general hiccup, this might save you big time!</li><li>Adding <strong>rate-limiting</strong> to the server to make sure it doesn&rsquo;t get
+overwhelmed by many API calls.</li></ul><h2 id=when-is-batching-a-good-idea-then>When is batching a good idea, then?
+<a class=heading-link href=#when-is-batching-a-good-idea-then><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Batching <em>can</em> be useful if you want to make sure that all TODOs are
+added <a href=https://en.wikipedia.org/wiki/Atomicity_%28database_systems%29 class=external-link target=_blank rel=noopener>atomically</a>. I.e. &ldquo;either zero or all TODOs were added&rdquo;.</p><p>However, there is a way to do this in a different way by using a transactions
+API similar to database transactions:</p><ol><li><code>POST /todo/start?transactionId=abc123</code></li><li><code>POST /todo?transactionId=abc123</code></li><li><code>POST /todo?transactionId=abc123</code></li><li>&mldr;</li><li><code>POST /todo?transactionId=abc123</code></li><li><code>POST /todo/end?transactionId=abc123</code></li></ol><p>This does not avoid <em>all</em> problems above, but some. But I would first start
+challenging the requirement if atomicity is truly needed and worth it&mldr;</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/baa94dbb50e20087e7863075fbd1fe1ab0ea426c target=_blank rel=noopener>baa94db</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

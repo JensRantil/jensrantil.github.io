@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software on Jens Rantil</title><link>https://jensrantil.github.io/tags/software/</link><description>Recent content in Software on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 22 Aug 2023 00:13:45 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/software/index.xml" rel="self" type="application/rss+xml"/><item><title>Bootstrapping software projects</title><link>https://jensrantil.github.io/posts/bootstrapping-software-projects/</link><pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/bootstrapping-software-projects/</guid><description>&lt;p>This post is partially related to my &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >previous blog
+post&lt;/a> about
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a> and
+&lt;a href="http://www.github.com/JensRantil/gorewind" class="external-link" target="_blank" rel="noopener">GoRewind&lt;/a>.&lt;/p>
+&lt;p>Even though I&amp;rsquo;ve been working as a full-time developer for the past 4-5
+years, it still hits me how much boiler plate is required to create a
+proper software project. In fact, I&amp;rsquo;ve seen so many times how extra
+functionality is bundled into applications just because the alternative
+would require many hours of setting things up. This despite the fact
+that functionality is orthogonal and has totally different life cycles.&lt;/p></description></item></channel></rss>

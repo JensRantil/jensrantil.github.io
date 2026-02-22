@@ -1,0 +1,119 @@
+<!doctype html><html lang=en><head><title>Why the Web is so Slow · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="I just read the blog post Why is the web so
+slow? by
+Stoyan Stefanov. This gave me the idea to give
+some common reasons for the web to be slow. I&rsquo;ve been using &ldquo;web
+application&rdquo; fairly sloppy here. It could also mean &ldquo;website&rdquo; etc. Here
+they are:
+
+Because of actual distance from your computer to the webserver. The
+upper limit is the speed of light. This means that it is an
+impossibility for information to travel from Sydney to London in
+less than ~0.056 seconds (17009 kilometers).
+Fetching a webpage requires a roundtrip of information; a request
+and response. This effectively nearly doubles the time to
+fetch something.
+Websites generally has a bunch of static files (images,
+javascript, CSS). The web browser has a
+limit
+on the number of files that can be fetched in parallel. Similar
+images can be assembled into
+sprites, JavaScript and CSS
+can be combined and compressed.
+The HTTP
+protocol
+does not support a single connection fetching multiple static assets
+in parallel.
+SSL requires a longer complicated handshake and extra CPU when
+sending and receiving data.
+Because of unnecessary synchronicity in dynamic applications.
+Historically it&rsquo;s been possible for developers to only update the
+portions of a website that needs update. However, the tools have not
+really been up to speed. This has changed. Many modern JavaScript
+frameworks has created new opportunities here. Yes, I&rsquo;m thinking of
+you AngularJS.
+Because of sloppy considerations of caching. Getting up to speed
+with a web application is pretty easy. Getting HTTP caching right
+requires some thought.
+Because many web applications have not migrated to use a
+CDN. If we
+come together and all use CDNs, our visitors would be way more
+likely to have the common static files cached.
+Because of complex rendering of websites. The implications of
+complex HTML structure and CSS selectors is that rendering of a
+website is slow. KISS = Keep It Simple, Stupid.
+Because many web servers today are still not delivering compressed
+HTTP responses, such as GZip.
+Because many webdevelopers don&rsquo;t understand the implications of
+using slow third party assets. Yes, I&rsquo;m looking at you Analytics and
+Ad Companies! Slow assets gives website visitors the feeling that
+the website is not done loading when 99% of the assets really are.
+Because many webdevelopers still are using JavaScript when they
+don&rsquo;t have to. CSS3 can animate and allow for simple logic
+without JavaScript.
+Because we are sending cookies for a lot of content that does not
+require cookes.
+Because HTML is larger that it needs to be. Reusing CSS classes
+reduces the size of HTML to be fetched.
+Because images are sent when they really could be emulated
+using CSS. This is a thing of the past that still bugs me.
+
+Google&rsquo;s networking protocol SPDY
+aims to solve some of these issues and make the web faster."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Why the Web is so Slow"><meta name=twitter:description content="I just read the blog post Why is the web so slow? by Stoyan Stefanov. This gave me the idea to give some common reasons for the web to be slow. I’ve been using “web application” fairly sloppy here. It could also mean “website” etc. Here they are:
+Because of actual distance from your computer to the webserver. The upper limit is the speed of light. This means that it is an impossibility for information to travel from Sydney to London in less than ~0.056 seconds (17009 kilometers). Fetching a webpage requires a roundtrip of information; a request and response. This effectively nearly doubles the time to fetch something. Websites generally has a bunch of static files (images, javascript, CSS). The web browser has a limit on the number of files that can be fetched in parallel. Similar images can be assembled into sprites, JavaScript and CSS can be combined and compressed. The HTTP protocol does not support a single connection fetching multiple static assets in parallel. SSL requires a longer complicated handshake and extra CPU when sending and receiving data. Because of unnecessary synchronicity in dynamic applications. Historically it’s been possible for developers to only update the portions of a website that needs update. However, the tools have not really been up to speed. This has changed. Many modern JavaScript frameworks has created new opportunities here. Yes, I’m thinking of you AngularJS. Because of sloppy considerations of caching. Getting up to speed with a web application is pretty easy. Getting HTTP caching right requires some thought. Because many web applications have not migrated to use a CDN. If we come together and all use CDNs, our visitors would be way more likely to have the common static files cached. Because of complex rendering of websites. The implications of complex HTML structure and CSS selectors is that rendering of a website is slow. KISS = Keep It Simple, Stupid. Because many web servers today are still not delivering compressed HTTP responses, such as GZip. Because many webdevelopers don’t understand the implications of using slow third party assets. Yes, I’m looking at you Analytics and Ad Companies! Slow assets gives website visitors the feeling that the website is not done loading when 99% of the assets really are. Because many webdevelopers still are using JavaScript when they don’t have to. CSS3 can animate and allow for simple logic without JavaScript. Because we are sending cookies for a lot of content that does not require cookes. Because HTML is larger that it needs to be. Reusing CSS classes reduces the size of HTML to be fetched. Because images are sent when they really could be emulated using CSS. This is a thing of the past that still bugs me. Google’s networking protocol SPDY aims to solve some of these issues and make the web faster."><meta property="og:url" content="https://jensrantil.github.io/posts/why-the-web-is-so-slow/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Why the Web is so Slow"><meta property="og:description" content="I just read the blog post Why is the web so slow? by Stoyan Stefanov. This gave me the idea to give some common reasons for the web to be slow. I’ve been using “web application” fairly sloppy here. It could also mean “website” etc. Here they are:
+Because of actual distance from your computer to the webserver. The upper limit is the speed of light. This means that it is an impossibility for information to travel from Sydney to London in less than ~0.056 seconds (17009 kilometers). Fetching a webpage requires a roundtrip of information; a request and response. This effectively nearly doubles the time to fetch something. Websites generally has a bunch of static files (images, javascript, CSS). The web browser has a limit on the number of files that can be fetched in parallel. Similar images can be assembled into sprites, JavaScript and CSS can be combined and compressed. The HTTP protocol does not support a single connection fetching multiple static assets in parallel. SSL requires a longer complicated handshake and extra CPU when sending and receiving data. Because of unnecessary synchronicity in dynamic applications. Historically it’s been possible for developers to only update the portions of a website that needs update. However, the tools have not really been up to speed. This has changed. Many modern JavaScript frameworks has created new opportunities here. Yes, I’m thinking of you AngularJS. Because of sloppy considerations of caching. Getting up to speed with a web application is pretty easy. Getting HTTP caching right requires some thought. Because many web applications have not migrated to use a CDN. If we come together and all use CDNs, our visitors would be way more likely to have the common static files cached. Because of complex rendering of websites. The implications of complex HTML structure and CSS selectors is that rendering of a website is slow. KISS = Keep It Simple, Stupid. Because many web servers today are still not delivering compressed HTTP responses, such as GZip. Because many webdevelopers don’t understand the implications of using slow third party assets. Yes, I’m looking at you Analytics and Ad Companies! Slow assets gives website visitors the feeling that the website is not done loading when 99% of the assets really are. Because many webdevelopers still are using JavaScript when they don’t have to. CSS3 can animate and allow for simple logic without JavaScript. Because we are sending cookies for a lot of content that does not require cookes. Because HTML is larger that it needs to be. Reusing CSS classes reduces the size of HTML to be fetched. Because images are sent when they really could be emulated using CSS. This is a thing of the past that still bugs me. Google’s networking protocol SPDY aims to solve some of these issues and make the web faster."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2013-12-02T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-22T00:13:45+02:00"><meta property="article:tag" content="Web"><meta property="article:tag" content="HTTP"><link rel=canonical href=https://jensrantil.github.io/posts/why-the-web-is-so-slow/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/why-the-web-is-so-slow/>Why the Web is so Slow</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2013-12-02T00:00:00Z>December 2, 2013
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+3-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/web/>Web</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/http/>HTTP</a></span></div></div></header><div class=post-content><p>I just read the blog post <a href=http://calendar.perfplanet.com/2013/why-is-the-web-so-slow/ class=external-link target=_blank rel=noopener>Why is the web so
+slow?</a> by
+<a href=http://www.phpied.com/ class=external-link target=_blank rel=noopener>Stoyan Stefanov</a>. This gave me the idea to give
+some common reasons for the web to be slow. I&rsquo;ve been using &ldquo;web
+application&rdquo; fairly sloppy here. It could also mean &ldquo;website&rdquo; etc. Here
+they are:</p><ul><li>Because of actual distance from your computer to the webserver. The
+upper limit is the speed of light. This means that it is an
+impossibility for information to travel from Sydney to London in
+less than ~0.056 seconds (17009 kilometers).</li><li>Fetching a webpage requires a roundtrip of information; a request
+and response. This effectively nearly doubles the time to
+fetch something.</li><li>Websites generally has a bunch of static files (images,
+javascript, CSS). The web browser has a
+<a href=http://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser class=external-link target=_blank rel=noopener>limit</a>
+on the number of files that can be fetched in parallel. Similar
+images can be assembled into
+<a href=http://css-tricks.com/css-sprites/ class=external-link target=_blank rel=noopener>sprites</a>, JavaScript and CSS
+can be <a href=https://code.google.com/p/minify/ class=external-link target=_blank rel=noopener>combined and compressed</a>.</li><li>The <a href=https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol class=external-link target=_blank rel=noopener>HTTP
+protocol</a>
+does not support a single connection fetching multiple static assets
+in parallel.</li><li>SSL requires a longer complicated handshake and extra CPU when
+sending and receiving data.</li><li>Because of unnecessary synchronicity in dynamic applications.
+Historically it&rsquo;s been possible for developers to only update the
+portions of a website that needs update. However, the tools have not
+really been up to speed. This has changed. Many modern JavaScript
+frameworks has created new opportunities here. Yes, I&rsquo;m thinking of
+you <a href=http://angularjs.org/ class=external-link target=_blank rel=noopener>AngularJS</a>.</li><li>Because of sloppy considerations of caching. Getting up to speed
+with a web application is pretty easy. Getting HTTP caching right
+requires some thought.</li><li>Because many web applications have not migrated to use a
+<a href=https://en.wikipedia.org/wiki/Content_delivery_network class=external-link target=_blank rel=noopener>CDN</a>. If we
+come together and all use CDNs, our visitors would be way more
+likely to have the common static files cached.</li><li>Because of complex rendering of websites. The implications of
+complex HTML structure and CSS selectors is that rendering of a
+website is slow. KISS = Keep It Simple, Stupid.</li><li>Because many web servers today are still not delivering compressed
+HTTP responses, such as GZip.</li><li>Because many webdevelopers don&rsquo;t understand the implications of
+using slow third party assets. Yes, I&rsquo;m looking at you Analytics and
+Ad Companies! Slow assets gives website visitors the feeling that
+the website is not done loading when 99% of the assets really are.</li><li>Because many webdevelopers still are using JavaScript when they
+don&rsquo;t have to. CSS3 can animate and allow for simple logic
+without JavaScript.</li><li>Because we are sending cookies for a lot of content that does not
+require cookes.</li><li>Because HTML is larger that it needs to be. Reusing CSS classes
+reduces the size of HTML to be fetched.</li><li>Because images are sent when they really could be emulated
+using CSS. This is a thing of the past that still bugs me.</li></ul><p>Google&rsquo;s networking protocol <a href=https://en.wikipedia.org/wiki/SPDY class=external-link target=_blank rel=noopener>SPDY</a>
+aims to solve some of these issues and make the web faster.</p><p>Did I miss something? Feel free to comment below!</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/cba53b20c33afbbecaa6fd8cc3149dd381e636f7 target=_blank rel=noopener>cba53b2</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

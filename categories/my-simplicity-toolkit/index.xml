@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My Simplicity Toolkit on Jens Rantil</title><link>https://jensrantil.github.io/categories/my-simplicity-toolkit/</link><description>Recent content in My Simplicity Toolkit on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 02 Sep 2025 15:06:20 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/categories/my-simplicity-toolkit/index.xml" rel="self" type="application/rss+xml"/><item><title>My simplicity toolkit: Testing</title><link>https://jensrantil.github.io/posts/software-testing-simplicity/</link><pubDate>Sun, 18 Feb 2024 09:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/software-testing-simplicity/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">This post is part of my blog series about &lt;a href="https://jensrantil.github.io/categories/my-simplicity-toolkit/" >&lt;em>My Simplicity
+Toolkit&lt;/em>&lt;/a>. I highly suggest you read &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >the introductory post&lt;/a> before reading this one.&lt;/div>
+&lt;/div>
+
+&lt;p>In &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >my initial post&lt;/a> on this blog post series I wrote about
+the verb &lt;a href="https://www.youtube.com/watch?si=AYiDh-n_KMwCLwl4&amp;amp;t=1895&amp;amp;v=SxdOUGdseq4&amp;amp;feature=youtu.be" class="external-link" target="_blank" rel="noopener">&amp;ldquo;to complect&amp;rdquo;&lt;/a>. It means to braid something together. In
+this article, I am giving examples of things related to testing that tend to be
+unnecessarily complected together.&lt;/p>
+&lt;p>Building up a suite of maintainable tests is all about trying to avoid
+complecting things unless truly necessary. Notice that complecting things
+&lt;em>is&lt;/em> necessary at times, just not always.&lt;/p></description></item><item><title>My simplicity toolkit: Programming (part 2)</title><link>https://jensrantil.github.io/posts/programming-simplicity-part-2/</link><pubDate>Tue, 14 Nov 2023 23:00:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/programming-simplicity-part-2/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">&lt;p>This is the second part of two talking about my simplicity toolkit when
+programming. If you have not read &lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-1/" >the previous post&lt;/a> I highly
+encourage you to do so first.&lt;/p>
+&lt;p>This post is part of my blog series about &lt;a href="https://jensrantil.github.io/categories/my-simplicity-toolkit/" >&lt;em>My Simplicity
+Toolkit&lt;/em>&lt;/a>.&lt;/p>&lt;/div>
+&lt;/div>
+
+&lt;p>At the beginning of &lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-1/" >my previous post&lt;/a> about simplicity within
+programming, I talked about the numerous benefits that bringing simplicity to
+&lt;a href="programming" >programming&lt;/a> can be: Easy to understand, use, debug, etc.&lt;/p></description></item><item><title>My simplicity toolkit: Programming (part 1)</title><link>https://jensrantil.github.io/posts/programming-simplicity-part-1/</link><pubDate>Tue, 07 Nov 2023 07:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/programming-simplicity-part-1/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">This post is part of my blog series about &lt;a href="https://jensrantil.github.io/categories/my-simplicity-toolkit/" >&lt;em>My Simplicity
+Toolkit&lt;/em>&lt;/a>. I suggest you read &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >the initial
+post&lt;/a> before reading this post.&lt;/div>
+&lt;/div>
+
+&lt;p>In &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >the previous post&lt;/a> I talked about the difference
+between simple and easy. From the perspective of programming and writing code,
+simple code/functions/methods/objects are not trying to do multiple things
+(&lt;a href="https://youtu.be/SxdOUGdseq4?si=AYiDh-n_KMwCLwl4&amp;amp;t=1895" class="external-link" target="_blank" rel="noopener">&amp;ldquo;complect&amp;rdquo;&lt;/a>) unless needed. Some of the benefits that come
+naturally with simplicity are the following:&lt;/p></description></item><item><title>My simplicity toolkit: Intro</title><link>https://jensrantil.github.io/posts/my-simplicity-toolkit/</link><pubDate>Mon, 06 Nov 2023 19:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/my-simplicity-toolkit/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">&lt;p>Blog series:&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="." >My simplicity toolkit: Intro (this page)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-1/" >My simplicity toolkit: Programming (part 1)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-2/" >My simplicity toolkit: Programming (part 2)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jensrantil.github.io/posts/software-testing-simplicity/" >My simplicity toolkit: Testing&lt;/a>&lt;/li>
+&lt;li>My simplicity toolkit: Architecture&lt;/li>
+&lt;li>My simplicity toolkit: Patterns&lt;/li>
+&lt;/ol>&lt;/div>
+&lt;/div>
+
+&lt;blockquote>
+&lt;p>“Perfection is Achieved Not When There Is Nothing More to Add, But When There
+Is Nothing Left to Take Away”&lt;/p>
+&lt;p>Antoine de Saint-Exupery&lt;/p>
+&lt;/blockquote>
+&lt;p>When it comes to software engineering, I have increasingly come to value
+&lt;em>simplicity&lt;/em> and going back to basics. I have been coding for ~25+ years (~15
+years professionally) and have truly gone through &lt;a href="https://medium.com/@webseanhickey/the-evolution-of-a-software-engineer-db854689243" class="external-link" target="_blank" rel="noopener">The Evolution of a Software
+Engineer&lt;/a>. Throughout my career I have grown increasingly
+worried about the growing &lt;a href="https://en.wikipedia.org/wiki/Cargo_cult_programming" class="external-link" target="_blank" rel="noopener">cargo culted&lt;/a> complexity in our
+industry.&lt;/p></description></item></channel></rss>

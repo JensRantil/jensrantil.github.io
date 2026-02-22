@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Risk on Jens Rantil</title><link>https://jensrantil.github.io/tags/risk/</link><description>Recent content in Risk on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 01 Mar 2025 23:30:46 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/risk/index.xml" rel="self" type="application/rss+xml"/><item><title>CrowdStrike: Risk assessment is better off at the sharp end</title><link>https://jensrantil.github.io/posts/centralised-risk-management/</link><pubDate>Wed, 31 Jul 2024 17:36:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/centralised-risk-management/</guid><description>&lt;p>Today I wanted to write something about &lt;a href="https://en.wikipedia.org/wiki/2024_CrowdStrike_incident" class="external-link" target="_blank" rel="noopener">the recent CrowdStrike Falcon incident&lt;/a> and about one contributing factor, namely &lt;em>centralised risk management&lt;/em>.&lt;/p>
+&lt;h2 id="the-importance-of-local-risk-assessment">
+ The importance of local risk assessment
+ &lt;a class="heading-link" href="#the-importance-of-local-risk-assessment">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>I recently watched &lt;a href="https://www.youtube.com/watch?v=IEYN38nir_w" class="external-link" target="_blank" rel="noopener">the trailer&lt;/a> for the movie &lt;a href="https://www.youtube.com/watch?v=EeIucLnEa24" class="external-link" target="_blank" rel="noopener">&amp;ldquo;Safety Differently&amp;rdquo;&lt;/a> by Sidney Dekker. One of the things it talks about is that &lt;strong>the farther you are from a system, the less effective your risk management is likely to be&lt;/strong>. This includes assessing risks and putting controls in place to mitigate those risks. Or to put it another way, the operators of a system &lt;em>at the edge&lt;/em> are usually the best people to do risk assessment, come up with controls, and defend against catastrophes.&lt;/p></description></item><item><title>Security is just one part of risk</title><link>https://jensrantil.github.io/posts/security-and-risk/</link><pubDate>Sun, 12 May 2024 10:28:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/security-and-risk/</guid><description>&lt;p>I think our software industry sometimes is blindsided when it comes to
+security. Don&amp;rsquo;t get me wrong, I am of course in favor of good security
+practices. But I think we could get better at understanding the trade-offs when
+improving security.&lt;/p>
+&lt;h2 id="a-story">
+ A story
+ &lt;a class="heading-link" href="#a-story">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>At a previous employer, we partnered with a big bank. They were using our
+SaaS&amp;rsquo;s REST API over the Internet. For security they used&lt;/p></description></item></channel></rss>

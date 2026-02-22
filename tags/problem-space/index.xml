@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Problem Space on Jens Rantil</title><link>https://jensrantil.github.io/tags/problem-space/</link><description>Recent content in Problem Space on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 03 May 2025 17:14:54 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/problem-space/index.xml" rel="self" type="application/rss+xml"/><item><title>Natural solutions</title><link>https://jensrantil.github.io/posts/natural-solutions/</link><pubDate>Thu, 08 Aug 2024 20:55:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/natural-solutions/</guid><description>&lt;p>I recently wrote about &lt;a href="https://jensrantil.github.io/posts/the-problem-domain/" >the solution vs. problem space&lt;/a>. For years I have had this belief that &lt;strong>given a problem that is well-defined enough, a solution will naturally unfold&lt;/strong>. In other words, &lt;em>solutions are the natural fallout of well-defined problems&lt;/em>.&lt;/p>
+&lt;p>But what is &amp;ldquo;a well-defined problem&amp;rdquo; anyway? It means having the answer to the following:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Problem you are trying to solve.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Scope of the solution.&lt;/strong> Where to draw the boundary of what should be solved and what should not, when a solution must be ready, etc.&lt;/li>
+&lt;li>&lt;strong>Our requirements &amp;amp; non-requirements.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Knowing our &lt;a href="https://spinemodel.info" class="external-link" target="_blank" rel="noopener">&lt;em>needs, values, principles, practices &amp;amp; tools&lt;/em>&lt;/a>.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>A common misunderstanding is that the list above must be known before starting a solution, leading to a waterfall process. This is not the case! One of the biggest shifts I have had as an engineering leader is being able to move more freely from solution to problem space &lt;em>and back again&lt;/em>. Solving a problem usually involves an iterative process of moving back and forth between problem and solution space. For example, it can go something like this:&lt;/p></description></item><item><title>The Problem Space</title><link>https://jensrantil.github.io/posts/the-problem-domain/</link><pubDate>Sat, 06 Jul 2024 17:12:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/the-problem-domain/</guid><description>&lt;p>As engineers, we are great at solving problems and working in the &amp;ldquo;solution
+space&amp;rdquo;. But, unfortunately, many engineers are quite bad at defining the
+problem(s) we are trying to solve in the &amp;ldquo;problem space&amp;rdquo;. Let me explain!&lt;/p>
+&lt;p>Working in the &lt;strong>solution space&lt;/strong> involves things such as designing, coding,
+drawing, improving performance, or refactoring. It&amp;rsquo;s usually what many
+engineers would describe as &amp;ldquo;work&amp;rdquo;.&lt;/p>
+&lt;p>The &lt;strong>problem space&lt;/strong>, on the other hand, involves things like defining the
+objective of a task, what the requirements are, what is in scope, what is out
+of scope, and attending workshops. It also includes prioritizing what is the
+most important thing to solve now, and which things can be done later. The
+problem domain also includes &lt;em>understanding your customers and the problems
+they are facing&lt;/em>.&lt;/p></description></item></channel></rss>

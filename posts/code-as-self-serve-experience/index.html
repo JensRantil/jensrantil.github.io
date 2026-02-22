@@ -1,0 +1,60 @@
+<!doctype html><html lang=en><head><title>Code as a self-serve experience · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="Code such as Terraform & Kubernetes is generally a horrible self-serve experience."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Code as a self-serve experience"><meta name=twitter:description content="Code such as Terraform & Kubernetes is generally a horrible self-serve experience."><meta property="og:url" content="https://jensrantil.github.io/posts/code-as-self-serve-experience/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Code as a self-serve experience"><meta property="og:description" content="Code such as Terraform & Kubernetes is generally a horrible self-serve experience."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-05-09T08:24:19+02:00"><meta property="article:modified_time" content="2026-01-13T15:12:41+01:00"><meta property="article:tag" content="Platform Engineering"><meta property="article:tag" content="Terraform"><link rel=canonical href=https://jensrantil.github.io/posts/code-as-self-serve-experience/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/code-as-self-serve-experience/>Code as a self-serve experience</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2023-05-09T08:24:19+02:00>May 9, 2023
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+4-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/platform-engineering/>Platform Engineering</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/terraform/>Terraform</a></span></div></div></header><div class=post-content><p>Using &ldquo;code as self-serve&rdquo;, such as Terraform or Kubernetes, in Platform
+Engineering is a rather bad idea. Let me explain why:</p><p>These days <a href=https://www.honeycomb.io/blog/future-ops-platform-engineering class=external-link target=_blank rel=noopener>there is all the rage around Platform Engineering</a>,
+and in fact I spent my last few years at <code>$previousEmployer</code> doing exactly
+this.</p><p>One of the core tenets of &ldquo;Platform Engineering&rdquo; is the concept of
+<a href=https://blog.cycloid.io/user-friendly-developer-self-service-the-key-to-platform-engineering class=external-link target=_blank rel=noopener>&ldquo;self-serve&rdquo;</a>. That is, instead of a Platform team acting as a
+blocker, you instead make sure to build a developer experience (DevEx) that
+enables engineers to do something themselves exactly when they need it. Just In
+Time! For example, if developers need a database they shouldn&rsquo;t need to reach
+out to the Platform Engineering team and ask for one. Instead, they should
+simply be able to easily fire up a new database themselves within a few
+minutes.</p><p>A common thing I have seen multiple Platform Engineering teams do is to use
+(declarative) &ldquo;code as self-serve&rdquo;, for example using Terraform or Kubernetes
+(K8s). I don&rsquo;t know how many times I&rsquo;ve heard a Platform team say</p><blockquote><p>&ldquo;No problem, we have a self-serve experience - the developers can just submit
+a pull request to our Terraform/Kubernetes code to create their new database.
+We will review it and merge it for them.&rdquo;</p></blockquote><p>For example, if you don&rsquo;t have any kind of <a href=https://helm.sh class=external-link target=_blank rel=noopener>abstraction layer around your
+Kubernetes YAML</a>, writing >300 lines of YAML is <em>not</em> a pleasant
+experience. The same usually applies to Terraform.</p><p>Generally, there are usually a few common problems with &ldquo;code as self-serve&rdquo;:</p><p><strong>It&rsquo;s not beginner friendly.</strong> While many engineers think &ldquo;well, it&rsquo;s just
+code&rdquo;, learning Terraform/K8s/et al. is neither simple, nor easy. Given how hard it
+is to hire senior engineers these days, I think the aim should be to give
+<em>junior</em> engineers an easy self-serve experience. Having to learn Terraform to
+create a database is like crossing the river for water.</p><p><strong>It has slow or hard to find feedback.</strong> If a developer fills out the wrong
+information in code, feedback is usually given through a hard-to-find CI/CD
+output with a cryptic error message.</p><p><strong>Ownership issues.</strong> Usually &ldquo;code as self-serve&rdquo; exists in a centralised
+<abbr title="Version Control System">VCS</abbr> repository owned and maintained
+by the Platform team. This means that there is a big risk that non-platform
+engineers simply see the Platform team as the owners of the resources listed in
+the repository. What you want is, the developers to make sure they feel
+ownership the resources they create. Otherwise we just end up where the
+industry was before DevOps (as a culture) was a thing.</p><p><strong>It can be slow.</strong> Most source code changes requires code review. Having to go
+through a code review for self-serve can make it a really bad experience.
+Waiting a couple of hours for a code review approval is not what you would
+want.</p><p><strong>Lack of change locality.</strong> Creating a new microservices likely requires</p><ul><li>a new git repository.</li><li>a new database.</li><li>a new load balancer</li><li>a skeleton source code containing a <em>Hello World</em> implementation.</li><li>and more&mldr;</li></ul><p>Code as self-serve has a tendency to ask the developer to make these changes in
+<em>multiple</em> places (because Terraform can&rsquo;t generate the source code etc.). A
+nice developer experience in this case would be to trigger the creation of a
+new service in <em>one</em> place, not many.</p><p>Finally, usually self-serve is critical to easily be able to start RnD projects
+such as <a href=https://www.visual-paradigm.com/scrum/what-is-scrum-spike/ class=external-link target=_blank rel=noopener>spikes</a> or <abbr title="Proof of concept">POCs</abbr>. As such,
+a slow and complex self-serve experience can actually have a daunting impact on
+company innovation.</p><p>What are the alternatives? Create a graphical user interface that guides the
+users through the right choices, naming standards etc. Spotify&rsquo;s
+<a href=https://backstage.io/ class=external-link target=_blank rel=noopener>Backstage</a> is one such alternative. Or at least create <a href="https://docs.cloud.google.com/appengine/docs/standard/reference/app-yaml?tab=python" class=external-link target=_blank rel=noopener>a high-level
+abstraction that only requires a simple file to set up a service</a>.</p><p>Above said, I understand the common journey for companies is to start with code
+as self-serve. It&rsquo;s a good start! Just make sure to not get stuck there.
+Platform Engineering involves thinking of developer experience with a product
+mindset. Just like most SaaS companies will not ask their end-customers to
+write YAML over using a GUI, the same applies to the domain of Platform
+Engineering.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/744f41754ab47132106c48fcdb65692ad5978bed target=_blank rel=noopener>744f417</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

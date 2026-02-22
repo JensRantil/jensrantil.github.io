@@ -1,0 +1,54 @@
+<!doctype html><html lang=en><head><title>The Problem Space · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="Many engineers lack skills in the problem space."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="The Problem Space"><meta name=twitter:description content="Many engineers lack skills in the problem space."><meta property="og:url" content="https://jensrantil.github.io/posts/the-problem-domain/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="The Problem Space"><meta property="og:description" content="Many engineers lack skills in the problem space."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-07-06T17:12:35+02:00"><meta property="article:modified_time" content="2024-08-08T21:49:20+02:00"><meta property="article:tag" content="Problem Space"><link rel=canonical href=https://jensrantil.github.io/posts/the-problem-domain/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/the-problem-domain/>The Problem Space</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2024-07-06T17:12:35+02:00>July 6, 2024
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+3-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/problem-space/>Problem Space</a></span></div></div></header><div class=post-content><p>As engineers, we are great at solving problems and working in the &ldquo;solution
+space&rdquo;. But, unfortunately, many engineers are quite bad at defining the
+problem(s) we are trying to solve in the &ldquo;problem space&rdquo;. Let me explain!</p><p>Working in the <strong>solution space</strong> involves things such as designing, coding,
+drawing, improving performance, or refactoring. It&rsquo;s usually what many
+engineers would describe as &ldquo;work&rdquo;.</p><p>The <strong>problem space</strong>, on the other hand, involves things like defining the
+objective of a task, what the requirements are, what is in scope, what is out
+of scope, and attending workshops. It also includes prioritizing what is the
+most important thing to solve now, and which things can be done later. The
+problem domain also includes <em>understanding your customers and the problems
+they are facing</em>.</p><h2 id=engineers-only-work-in-solution-space>&ldquo;Engineers only work in solution space&rdquo;
+<a class=heading-link href=#engineers-only-work-in-solution-space><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>At certain workplaces, there is an expectation that someone <em>else</em> than
+engineers should work in the problem space; Engineers are supposed to get
+well-defined tickets such that they can implement a solution. I don&rsquo;t believe
+in this for a couple of reasons:</p><p>First, just like <a href=/posts/multiscale-architecture/>architecture happens at multiple scales</a>, there
+are problems at multiple scales. And some of those problems are yours and only
+yours to solve. For example, in which order you implement something, how you
+implement a function, or where and when you comment on your code. All of those
+depend on the problem space. If you are coding alone or in a team
+(context/requirement), you likely write code comments (solution) differently.</p><p>Secondly, tickets are rarely complete. When implementing a solution, there are
+most commonly new questions that come up that are not covered in a
+specification; Where should the button exist? Which color and size should it
+have? How should the error be presented if the customer doesn&rsquo;t enter anything
+in the second field? When answering these questions, there are two routes an
+engineer can take: Either you push back the ticket with &ldquo;unclear requirements&rdquo;,
+or the engineer can understand the problem space enough to come up with some
+quick requirements and solve the problem themselves. The former will make
+implementation <em>slow</em> and very <a href=https://www.atlassian.com/agile/project-management/waterfall-methodology class=external-link target=_blank rel=noopener>waterfally</a>. The latter will make
+you progress without getting blocked.</p><h2 id=moving-between-domains>Moving between domains
+<a class=heading-link href=#moving-between-domains><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The best engineers I have ever worked with are the ones who can fluidly move
+between the problem and solution space. By doing so, they</p><ul><li>understand their customers and the problem they face which allow them to
+understand more holistically <em>why</em> something must be implemented the way it
+is.</li><li>can quickly fill in the gaps in missing requirements. For example, how long
+will the solution live? How well-designed does this feature need to be? Will
+we need to solve this for all microservices or just one for now?</li><li>can take initiative to solve problems, and implement new features, without
+needing to wait for someone else to tell them what to do.</li></ul><p>Having these skills can be a very effective way to get promoted (if you are not
+working in an organization with role silos).</p><p>Finally, I believe working in the problem space is part of what I would define
+as engineering <em>work</em>. Once I had that epiphany, I no longer felt frustrated
+spending my days writing RFCs, being in workshops, or doing product workshops.
+It&rsquo;s just as much &ldquo;work&rdquo; as building something. As long as it&rsquo;s not
+<a href=/posts/waste-in-software-development/>waste</a>, of course.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/812dfaf26cb8f7a25f087ec79ca8f4a7f2906b75 target=_blank rel=noopener>812dfaf</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

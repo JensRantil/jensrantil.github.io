@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Jens Rantil</title><link>https://jensrantil.github.io/posts/</link><description>Recent content in Posts on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 20 Feb 2026 23:04:10 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>AI is nothing new, LLMs are</title><link>https://jensrantil.github.io/posts/ai-is-nothing-new/</link><pubDate>Fri, 20 Feb 2026 19:35:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/ai-is-nothing-new/</guid><description>&lt;p>The term &lt;abbr title="Articifial Intelligence">&lt;strong>&lt;em>AI&lt;/em>&lt;/strong>&lt;/abbr> is everywhere these days. Suddenly, it feels like &lt;em>every&lt;/em> single company frontpage on the Internet says it is either &amp;ldquo;an AI company&amp;rdquo; or &amp;ldquo;using AI to do X&amp;rdquo;. It is as if the whole world has discovered that computers can do smart things.&lt;/p>
+&lt;p>But let me tell you what feels like a little secret these days: &lt;a href="https://en.wikipedia.org/wiki/History_of_artificial_intelligence" class="external-link" target="_blank" rel="noopener">AI has been around since the 1950s&lt;/a>. In 1950, Alan Turing published “Computing Machinery and Intelligence”, introducing the Turing Test and seriously framing the question of whether machines can think. The term &amp;ldquo;AI&amp;rdquo; was coined in 1956 by John McCarthy and is widely considered to mark the birth of AI as an academic discipline.&lt;/p></description></item><item><title>A shell --dry-run trick</title><link>https://jensrantil.github.io/posts/a-shell-dry-run-trick/</link><pubDate>Sun, 01 Feb 2026 22:05:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/a-shell-dry-run-trick/</guid><description>&lt;p>I recently read the blog post &lt;a href="https://henrikwarne.com/2026/01/31/in-praise-of-dry-run/" class="external-link" target="_blank" rel="noopener">&amp;ldquo;In Praise of –dry-run&amp;rdquo;&lt;/a>. I love &lt;code>--dry-run&lt;/code> mode! It can be immensely useful to avoid Bad Things&amp;#x2122;&amp;#xfe0f; from happening. The blog post reminded me of a small terminal/shell/Bash trick that I have used for years, but never shared with the Internet:&lt;/p>
+&lt;h2 id="an-example">
+ An example
+ &lt;a class="heading-link" href="#an-example">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Imagine you want to download many profile pictures from the Internet. All the images are stored in a &lt;abbr title="Comma-separated values">CSV&lt;/abbr> file containing 1) the name of the person and 2) a URL to the image. Something like this:&lt;/p></description></item><item><title>The missed incident priority: The Near Miss</title><link>https://jensrantil.github.io/posts/near-miss-incidents/</link><pubDate>Mon, 19 Jan 2026 16:48:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/near-miss-incidents/</guid><description>&lt;blockquote>
+&lt;p>If a tree falls in a forest and no one is around to hear it, does it make a sound?&lt;/p>
+&lt;/blockquote>
+&lt;p>In my &lt;a href="https://jensrantil.github.io/posts/what-is-an-incident/" >article about incidents&lt;/a>, I wrote:&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Raise an incident when you think a postmortem would be useful for what you are seeing.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This also includes raising an incident for a near miss. A &lt;strong>near miss&lt;/strong> refers to an event that could have caused an incident, outage, security breach, or service degradation — but ultimately did not. Near misses can be a great source of learning, and &lt;a href="https://www.ishn.com/articles/109182-the-safety-triangle-a-useful-yet-complicated-theory" class="external-link" target="_blank" rel="noopener">reducing near-misses can reduce actual incidents&lt;/a>. Making them visible can also be an integral part in making your organisation more &lt;a href="https://jensrantil.github.io/posts/safety-type-1-and-2/" >resilient&lt;/a> to failures.&lt;/p></description></item><item><title>Incident priority, severity &amp; impact</title><link>https://jensrantil.github.io/posts/incident-priority-severity-impact/</link><pubDate>Mon, 19 Jan 2026 16:14:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/incident-priority-severity-impact/</guid><description>&lt;p>An &lt;a href="https://jensrantil.github.io/posts/what-is-an-incident/" >incident&lt;/a> framework usually has the concept of an &lt;strong>incident priority&lt;/strong>: priority 1 (&amp;ldquo;Systems are DOWN!&amp;rdquo;), priority 2 (&amp;ldquo;I can log in, but there is a bug.&amp;rdquo;), etc. Incident priorities are mostly used for two things:&lt;/p>
+&lt;p>&lt;strong>Operational:&lt;/strong> To help operators and on-callers quickly guide them on how serious an ongoing incident is and help them prioritize their work. A low-priority (priority 3) incident can wait until after the weekend. For example, a high-priority (priority 1) incident means &amp;ldquo;all hands on deck&amp;rdquo; and possibly waking up your colleagues in the middle of the night.&lt;/p></description></item><item><title>What is an incident, anyway?</title><link>https://jensrantil.github.io/posts/what-is-an-incident/</link><pubDate>Wed, 17 Dec 2025 16:57:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/what-is-an-incident/</guid><description>&lt;h1 id="incident-process">
+ Incident process?
+ &lt;a class="heading-link" href="#incident-process">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;p>Many companies have an incident process. An incident process (often called an incident management process) is a defined set of steps an organization follows to detect, respond to, manage, resolve, and learn from incidents that disrupt normal operations or pose a risk.&lt;/p>
+&lt;figure>
+&lt;div class="mermaid">
+flowchart LR
+ A[Incident detected] --> B
+ B[Incident declared] --> C
+ C[Mitigation in place] --> D
+ D[Incident resolved] --> E
+ E[Incident review] --> F
+ F[Corrective / Preventive Actions] --> G[Incident closed]
+
+&lt;/div>
+
+&lt;caption>A common incident process.&lt;/caption>
+&lt;/figure>
+&lt;p>The exact meaning depends a bit on the field, but the core idea is the same: handle unexpected problems in a structured, repeatable way.&lt;/p></description></item><item><title>LinkedIn and Toxic Positivity</title><link>https://jensrantil.github.io/posts/linked-and-toxic-positivity/</link><pubDate>Fri, 05 Sep 2025 14:30:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/linked-and-toxic-positivity/</guid><description>&lt;blockquote>
+&lt;p>&lt;strong>Toxic positivity&lt;/strong> (excessive positivity or positive toxicity) is dysfunctional emotional management without the full acknowledgment of negative emotions [&amp;hellip;]&lt;/p>
+&lt;p>(&lt;a href="https://en.wikipedia.org/wiki/Toxic_positivity" class="external-link" target="_blank" rel="noopener">Wikipedia&lt;/a>)&lt;/p>
+&lt;/blockquote>
+&lt;p>I rarely rant on this blog. But for a change, now is the time!&lt;/p>
+&lt;p>In Swedish, there is the expression &amp;ldquo;Axelklapparklubben&amp;rdquo; which literally translates to &amp;ldquo;The Back-patting club&amp;rdquo;. It&amp;rsquo;s a mutual admiration society, an expression that is used to describe a setting where every participant is only telling each other how great they are.&lt;/p></description></item><item><title>Business contracts are transport agnostic</title><link>https://jensrantil.github.io/posts/simple-contract-testing/</link><pubDate>Sun, 27 Apr 2025 13:40:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/simple-contract-testing/</guid><description>&lt;p>I have never been a big fan of how some people equate &amp;ldquo;contract testing&amp;rdquo; with using something like &lt;a href="https://docs.pact.io" class="external-link" target="_blank" rel="noopener">PACT&lt;/a>. There are other ways of doing contract testing, but a lot of engineers don&amp;rsquo;t seem to know this. Today, I thought I would write something about this.&lt;/p>
+&lt;h2 id="contract-testing">
+ Contract testing?
+ &lt;a class="heading-link" href="#contract-testing">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;em>Contract testing&lt;/em> is about making sure that two pieces of software (usually two services) can communicate correctly with each other, and that they agree on how they should talk.&lt;/p></description></item><item><title>Work Charades and Values</title><link>https://jensrantil.github.io/posts/work-charades/</link><pubDate>Sat, 12 Apr 2025 23:10:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/work-charades/</guid><description>&lt;blockquote>
+&lt;p>&lt;strong>Charade.&lt;/strong> A pretense or false show — something that’s meant to look real or sincere but is actually fake or deceptive. Like a theater.&lt;/p>
+&lt;/blockquote>
+&lt;p>Sometimes, I have felt like work &amp;ndash; the professional domain &amp;ndash; is like a real-life role-playing game. Stepping into an office has occasionally been like stepping into an improv theater where rules apply that don&amp;rsquo;t otherwise:&lt;/p>
+&lt;p>&lt;a href="https://www.forbes.com/councils/theyec/2019/12/03/feelings-and-their-place-at-work/" class="external-link" target="_blank" rel="noopener">&lt;strong>Feelings should be left outside the office&lt;/strong>&lt;/a>, despite all of us &lt;em>are&lt;/em> human beings with feelings. There is strong evidence that gut feel and feelings play a major role in making the right decisions, including business decisions. Yet, there are work places that do not tap into that.&lt;/p></description></item><item><title>The Dangers of an IDE</title><link>https://jensrantil.github.io/posts/integrated-development-environments-harmful/</link><pubDate>Tue, 11 Mar 2025 10:38:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/integrated-development-environments-harmful/</guid><description>&lt;p>&lt;em>I recently stumbled across the post &lt;a href="https://charlespetzold.com/etc/DoesVisualStudioRotTheMind.html" class="external-link" target="_blank" rel="noopener">&amp;ldquo;Does Visual Studio Rot The Mind?&amp;rdquo;&lt;/a> and I was reminded of a blog post that I read a very long time ago and could not find on the Internet. I thought I would write down the gist of that article here such that I can share links to it later.&lt;/em>&lt;/p>
+&lt;p>There is this theory that the best and most beautiful code was written before the nineties, before the introduction of modern &lt;emph title="Integrated Development Environments">IDEs&lt;/emph> such as VSCode, Eclipse, IntelliJ, Visual Studio, et al. Why? It forced programmers to keep their code in their heads.&lt;/p></description></item><item><title>Apache Kafka in 15 minutes</title><link>https://jensrantil.github.io/posts/apache-kafka-architecture/</link><pubDate>Sat, 22 Feb 2025 20:23:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/apache-kafka-architecture/</guid><description>&lt;p>This post will be the first in a series of blog posts where I will be talking about the limitations of &lt;a href="https://kafka.apache.org" class="external-link" target="_blank" rel="noopener">Apache Kafka&lt;/a> as a task queue and how we overcame these limitations at a previous employer where I managed tens of fairly high-throughput Apache Kafka clusters. This post will lay the groundwork for explaining how Apache Kafka works, such that the rest of the posts are easy to follow.&lt;/p>
+&lt;p>Hopefully, these articles will avoid future battle scars for people who dabble with Apache Kafka. &amp;#x2764;&amp;#xfe0f; &amp;#x1f915;&lt;/p></description></item><item><title>A one-on-one template</title><link>https://jensrantil.github.io/posts/one-on-one-template/</link><pubDate>Thu, 16 Jan 2025 18:16:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/one-on-one-template/</guid><description>&lt;p>I have used the same &lt;a href="https://docs.google.com/document/d/1Det7O1UQxIFgUywivldqTejmhyyeQ-YD1CNxXcGTPV0/edit?usp=sharing" class="external-link" target="_blank" rel="noopener">one-on-one template&lt;/a> with my last six managers, including other regular check-ins. I am very happy with it! A recent conversation with a friend made me realize I better share the template with the world. If nothing else, I should share it for my own sake - in case I need it again in the future.&lt;/p>
+&lt;p>The template has given me a lot of structure to my one-on-ones which I previously never had. It has also guided my one-on-ones toward more actionable meetings, focusing on what needs to happen next.&lt;/p></description></item><item><title>Raise and Release</title><link>https://jensrantil.github.io/posts/raise-and-release/</link><pubDate>Fri, 10 Jan 2025 13:26:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/raise-and-release/</guid><description>&lt;p>Amazon&amp;rsquo;s founder Jeff Besos is famous for his &amp;ldquo;disagree and commit&amp;rdquo; management principle used in leadership. &lt;a href="https://en.wikipedia.org/wiki/Disagree_and_commit" class="external-link" target="_blank" rel="noopener">According to Wikipedia&lt;/a>, it means &amp;ldquo;that individuals are allowed to disagree while a decision is being made, but that once a decision has been made, everybody must commit to implementing the decision&amp;rdquo;.&lt;/p>
+&lt;p>I have a slight variation on this which I call &amp;ldquo;Raise and Release&amp;rdquo;, which happens &lt;em>before&lt;/em> a decision has been made. I use this principle particularly when someone proposes something I strongly disagree with &amp;ndash; or know will fail &amp;ndash; but for cases where I can&amp;rsquo;t affect the actual decision. Usually, it is for cases where I am &amp;ldquo;consulted&amp;rdquo; or &amp;ldquo;informed&amp;rdquo; in the &lt;a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix" class="external-link" target="_blank" rel="noopener">RACI&lt;/a> sense.&lt;/p></description></item><item><title>Pair and mob sessions</title><link>https://jensrantil.github.io/posts/pair-mob-sessions/</link><pubDate>Thu, 19 Dec 2024 13:26:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/pair-mob-sessions/</guid><description>&lt;p>Many people believe pair programming has to be a session where coding is the only action. I don&amp;rsquo;t think so. Pair programming is a session that involves things like knowledge transfer, discussions, debugging, &lt;em>and&lt;/em> coding.&lt;/p>
+&lt;p>I see similarities between this flawed mindset and people thinking that typing faster on a keyboard makes you a more efficient programmer. Creating software is not just typing out code. It also includes things like thinking, collaborating, exploring, and iterating.&lt;/p></description></item><item><title>Good process is invisible</title><link>https://jensrantil.github.io/posts/good-process-is-invisible/</link><pubDate>Fri, 06 Dec 2024 22:10:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/good-process-is-invisible/</guid><description>&lt;p>Throughout my career I have heard &lt;em>soooo&lt;/em> many people complain about the general concept of &lt;em>process&lt;/em> - the standardized series of steps needed to perform a task. Saying something like &amp;ldquo;I think we might be helped by coming up with a process for this&amp;rdquo; has given me the looks as if I brought a skunk to a garden party. Nobody wants a process.&lt;/p>
+&lt;p>Processes exist to structure, manage, and optimize tasks, particularly complex multi-step tasks. For example, a process can help reduce mistakes and cognitive overhead.&lt;/p></description></item><item><title>Reliability vs. Resilience</title><link>https://jensrantil.github.io/posts/safety-type-1-and-2/</link><pubDate>Tue, 05 Nov 2024 16:19:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/safety-type-1-and-2/</guid><description>&lt;p>In safety systems engineering (SSE) people talk about &amp;ldquo;safety type 1&amp;rdquo; and &amp;ldquo;safety type 2&amp;rdquo;. The first one is about prevention &amp;amp; &lt;strong>reliability&lt;/strong>, the second is about &lt;strong>resilience&lt;/strong>. Type 1 has been around for a long time, and type 2 is &lt;a href="https://www.england.nhs.uk/signuptosafety/wp-content/uploads/sites/16/2015/10/safety-1-safety-2-whte-papr.pdf" class="external-link" target="_blank" rel="noopener">fairly new&lt;/a>.&lt;/p>
+&lt;h2 id="prevention-will-not-save-us">
+ Prevention will not save us
+ &lt;a class="heading-link" href="#prevention-will-not-save-us">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Software systems (and software companies) are complex. And for complex systems, type 1 safety (prevention) will not save us. Three key reasons:&lt;/p></description></item><item><title>Incident review action items</title><link>https://jensrantil.github.io/posts/incident-action-items/</link><pubDate>Thu, 31 Oct 2024 11:04:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/incident-action-items/</guid><description>&lt;p>I recently read the article &lt;a href="https://surfingcomplexity.blog/2024/09/28/why-i-dont-like-discussing-action-items-during-incident-reviews/" class="external-link" target="_blank" rel="noopener">&amp;ldquo;Why I don’t like discussing action items during incident reviews&amp;rdquo;&lt;/a> by Lorin Hochstein. The article lists a few reasons why action items should not be discussed during incident reviews&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. While I personally think an incident review is a great place to think about possible action items, I &lt;em>am&lt;/em> missing one major reason to not decide on action items in that meeting: &lt;strong>An incident review is &lt;em>not&lt;/em> a planning session.&lt;/strong>&lt;/p></description></item><item><title>A large project, broken up</title><link>https://jensrantil.github.io/posts/large-project-breakup/</link><pubDate>Tue, 29 Oct 2024 10:31:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/large-project-breakup/</guid><description>&lt;p>Earlier this year, I was on a complex multi-team project that was handed to us by our product organization. The project had a lot of dependencies between teams and could have been a disaster. Today I would like to share an approach we took to structure the project into what eventually made it a success.&lt;/p>
+&lt;p>The project was to deliver a new product feature, and the deadline was three months in the future. About 15 engineers were involved in this project, and close to no product owner was included in the project group to guide us.&lt;/p></description></item><item><title>An example of throughput vs. latency</title><link>https://jensrantil.github.io/posts/throughtput-vs-latency-example/</link><pubDate>Sat, 12 Oct 2024 00:41:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/throughtput-vs-latency-example/</guid><description>&lt;p>In software engineering jargon, people often speak of &amp;ldquo;performance&amp;rdquo; without defining specifically what they mean. Improving performance usually involves &amp;ldquo;increasing throughput&amp;rdquo;, or &amp;ldquo;reducing latencies&amp;rdquo;.&lt;/p>
+&lt;p>&lt;em>Throughput&lt;/em> is measured in &amp;ldquo;units over time&amp;rdquo;, for example, &amp;ldquo;bytes per second&amp;rdquo;, or &amp;ldquo;cars passing by every day&amp;rdquo;.&lt;/p>
+&lt;p>&lt;em>Latency&lt;/em>, meaning &amp;ldquo;how long something takes&amp;rdquo;, is measured in &amp;ldquo;time per operation&amp;rdquo;. For example, how long it takes to load a website or send an image.&lt;/p>
+&lt;p>I remember my early days of trying to understand the difference. My breakthrough came when somebody gave the following example:&lt;/p></description></item><item><title>Engineers are not just builders</title><link>https://jensrantil.github.io/posts/not-just-builders/</link><pubDate>Wed, 21 Aug 2024 08:44:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/not-just-builders/</guid><description>&lt;p>In the article &lt;a href="https://jensrantil.github.io/posts/natural-solutions/" >&amp;ldquo;Natural solutions&amp;rdquo;&lt;/a>, I wrote&lt;/p>
+&lt;blockquote>
+&lt;p>[&amp;hellip;] product engineering is equally much about defining the problems we are trying to solve.&lt;/p>
+&lt;/blockquote>
+&lt;p>and I think that statement is somewhat more controversial than first meets the eye. The quote says something about the role of a product engineer and implies things like:&lt;/p>
+&lt;ul>
+&lt;li>Engineers are not just implementors of well-defined tickets and requirements.&lt;/li>
+&lt;li>Engineers should preferably be able to define unclear requirements without involving someone else.&lt;/li>
+&lt;li>Engineers are not just refining preexisting tickets but are also allowed to come up with new product ideas.&lt;/li>
+&lt;/ul>
+&lt;p>This also implies that it is a product owner&amp;rsquo;s job to ensure engineers have enough context to define unclear requirements and develop new product features (and avoid making the product owner a bottleneck).&lt;/p></description></item><item><title>Natural solutions</title><link>https://jensrantil.github.io/posts/natural-solutions/</link><pubDate>Thu, 08 Aug 2024 20:55:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/natural-solutions/</guid><description>&lt;p>I recently wrote about &lt;a href="https://jensrantil.github.io/posts/the-problem-domain/" >the solution vs. problem space&lt;/a>. For years I have had this belief that &lt;strong>given a problem that is well-defined enough, a solution will naturally unfold&lt;/strong>. In other words, &lt;em>solutions are the natural fallout of well-defined problems&lt;/em>.&lt;/p>
+&lt;p>But what is &amp;ldquo;a well-defined problem&amp;rdquo; anyway? It means having the answer to the following:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Problem you are trying to solve.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Scope of the solution.&lt;/strong> Where to draw the boundary of what should be solved and what should not, when a solution must be ready, etc.&lt;/li>
+&lt;li>&lt;strong>Our requirements &amp;amp; non-requirements.&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Knowing our &lt;a href="https://spinemodel.info" class="external-link" target="_blank" rel="noopener">&lt;em>needs, values, principles, practices &amp;amp; tools&lt;/em>&lt;/a>.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>A common misunderstanding is that the list above must be known before starting a solution, leading to a waterfall process. This is not the case! One of the biggest shifts I have had as an engineering leader is being able to move more freely from solution to problem space &lt;em>and back again&lt;/em>. Solving a problem usually involves an iterative process of moving back and forth between problem and solution space. For example, it can go something like this:&lt;/p></description></item><item><title>CrowdStrike: Risk assessment is better off at the sharp end</title><link>https://jensrantil.github.io/posts/centralised-risk-management/</link><pubDate>Wed, 31 Jul 2024 17:36:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/centralised-risk-management/</guid><description>&lt;p>Today I wanted to write something about &lt;a href="https://en.wikipedia.org/wiki/2024_CrowdStrike_incident" class="external-link" target="_blank" rel="noopener">the recent CrowdStrike Falcon incident&lt;/a> and about one contributing factor, namely &lt;em>centralised risk management&lt;/em>.&lt;/p>
+&lt;h2 id="the-importance-of-local-risk-assessment">
+ The importance of local risk assessment
+ &lt;a class="heading-link" href="#the-importance-of-local-risk-assessment">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>I recently watched &lt;a href="https://www.youtube.com/watch?v=IEYN38nir_w" class="external-link" target="_blank" rel="noopener">the trailer&lt;/a> for the movie &lt;a href="https://www.youtube.com/watch?v=EeIucLnEa24" class="external-link" target="_blank" rel="noopener">&amp;ldquo;Safety Differently&amp;rdquo;&lt;/a> by Sidney Dekker. One of the things it talks about is that &lt;strong>the farther you are from a system, the less effective your risk management is likely to be&lt;/strong>. This includes assessing risks and putting controls in place to mitigate those risks. Or to put it another way, the operators of a system &lt;em>at the edge&lt;/em> are usually the best people to do risk assessment, come up with controls, and defend against catastrophes.&lt;/p></description></item><item><title>A common problem with ADR implementations</title><link>https://jensrantil.github.io/posts/the-adr-problem/</link><pubDate>Sun, 07 Jul 2024 00:31:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/the-adr-problem/</guid><description>&lt;p>In the article &lt;a href="https://martinfowler.com/articles/scaling-architecture-conversationally.html" class="external-link" target="_blank" rel="noopener">Scaling the Practice of Architecture,
+Conversationally&lt;/a> by Andrew Harmel-Law he talks about the concept
+of &lt;a href="https://martinfowler.com/articles/scaling-architecture-conversationally.html#adr" class="external-link" target="_blank" rel="noopener">Architectural Decision Records (ADRs)&lt;/a> as a way to align and document
+architectural decisions.&lt;/p>
+&lt;p>In short, an ADR is a record stored in a central &lt;em>log&lt;/em> where architectural
+decisions are documented. Usually, the decision log is checked into version
+control somewhere.&lt;/p>
+&lt;p>A record includes things like what the decision was, what alternatives were
+considered, the consequences of the decision, and the context that led up to
+it. Commonly, an ADR also has a URL that makes it easy to share it in
+conversations.&lt;/p></description></item><item><title>The Problem Space</title><link>https://jensrantil.github.io/posts/the-problem-domain/</link><pubDate>Sat, 06 Jul 2024 17:12:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/the-problem-domain/</guid><description>&lt;p>As engineers, we are great at solving problems and working in the &amp;ldquo;solution
+space&amp;rdquo;. But, unfortunately, many engineers are quite bad at defining the
+problem(s) we are trying to solve in the &amp;ldquo;problem space&amp;rdquo;. Let me explain!&lt;/p>
+&lt;p>Working in the &lt;strong>solution space&lt;/strong> involves things such as designing, coding,
+drawing, improving performance, or refactoring. It&amp;rsquo;s usually what many
+engineers would describe as &amp;ldquo;work&amp;rdquo;.&lt;/p>
+&lt;p>The &lt;strong>problem space&lt;/strong>, on the other hand, involves things like defining the
+objective of a task, what the requirements are, what is in scope, what is out
+of scope, and attending workshops. It also includes prioritizing what is the
+most important thing to solve now, and which things can be done later. The
+problem domain also includes &lt;em>understanding your customers and the problems
+they are facing&lt;/em>.&lt;/p></description></item><item><title>Architecture at multiple scales</title><link>https://jensrantil.github.io/posts/multiscale-architecture/</link><pubDate>Wed, 03 Jul 2024 09:40:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/multiscale-architecture/</guid><description>&lt;p>There is a belief that &amp;ldquo;software architecture&amp;rdquo; only involves designing the &amp;ldquo;big
+picture&amp;rdquo; of how software is built. For example, drawing boxes and arrows how
+microservices integrate, or how larger modules of a code base should be
+organized and coupled together.&lt;/p>
+&lt;p>I beg to differ. I think of architecture simply as &amp;ldquo;how to organize and
+associate technical components&amp;rdquo; where the term &amp;ldquo;technical component&amp;rdquo; is left
+explicitly vague. Just like defined above, a technical component &lt;em>can&lt;/em> be a
+microservice, or a module. But it can equally be how functions call each other,
+or even the order of how sub-components (if conditionals and for loops) in a
+function are written. That is, I think of &lt;em>architecture&lt;/em> as concept that
+applies &lt;em>both at grand scales and micro scales&lt;/em>. Sort of like a
+&lt;a href="https://en.wikipedia.org/wiki/Fractal" class="external-link" target="_blank" rel="noopener">fractal&lt;/a>.&lt;/p></description></item><item><title>Tools for innovation in tech</title><link>https://jensrantil.github.io/posts/tools-for-innovation-in-tech/</link><pubDate>Tue, 28 May 2024 10:57:46 +0200</pubDate><guid>https://jensrantil.github.io/posts/tools-for-innovation-in-tech/</guid><description>&lt;p>Innovation is the skill of going from idea to action. If innovation is low,
+ideas risk getting lost or discarded and you risk missing out on great
+opportunities.&lt;/p>
+&lt;p>&lt;strong>As a tech organization, how do you make sure that you are innovating?&lt;/strong> In my
+opinion, innovation doesn&amp;rsquo;t &amp;ldquo;just happen&amp;rdquo;. It&amp;rsquo;s part of &lt;a href="https://iism.org/article/why-are-ceos-failing-software-engineers-56" class="external-link" target="_blank" rel="noopener">Creative
+Management&lt;/a>. While the dream scenario is that any
+engineers can propose an idea to work on within their team sprint, I have seen
+multiple reasons why this fails:&lt;/p></description></item><item><title>What's in a good answer?</title><link>https://jensrantil.github.io/posts/a-good-answer/</link><pubDate>Sat, 18 May 2024 22:20:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/a-good-answer/</guid><description>&lt;p>&lt;em>This is a follow-up on &lt;a href="https://jensrantil.github.io/posts/asking-good-questions/" >How to Ask Good Questions&lt;/a>.&lt;/em>&lt;/p>
+&lt;p>Just like asking questions is an art form, answering them requires some skill.
+Here are some general recommendations on things to think about when answering a
+question:&lt;/p>
+&lt;h2 id="keep-a-friendly-tone">
+ Keep a friendly tone
+ &lt;a class="heading-link" href="#keep-a-friendly-tone">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>A person asking a question is implicitly in a vulnerable position; They expose
+themselves to not knowing something. I think that makes it extra important to
+treat the person with extra respect for stepping out of their comfort zone.
+This is particularly important with new-hires.&lt;/p></description></item><item><title>On staging environments</title><link>https://jensrantil.github.io/posts/on-staging-environments/</link><pubDate>Sun, 12 May 2024 15:44:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/on-staging-environments/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">This article is about staging environments, but it almost equally applies to the concept of single-tenant environments.&lt;/div>
+&lt;/div>
+
+&lt;blockquote>
+&lt;p>The ultimate quality assurance is when customers get their hands on your
+software and actually try it. &lt;em>That&amp;rsquo;s&lt;/em> when you know if your software does what
+it&amp;rsquo;s supposed to do or not. This happens in production.&lt;/p>
+&lt;/blockquote>
+&lt;p>Every technical decision has a tradeoff, but certain things are
+rarely challenged in our industry. Having a staging environment&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, and having
+every change go through that staging environment, are two of those things.&lt;/p></description></item><item><title>Security is just one part of risk</title><link>https://jensrantil.github.io/posts/security-and-risk/</link><pubDate>Sun, 12 May 2024 10:28:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/security-and-risk/</guid><description>&lt;p>I think our software industry sometimes is blindsided when it comes to
+security. Don&amp;rsquo;t get me wrong, I am of course in favor of good security
+practices. But I think we could get better at understanding the trade-offs when
+improving security.&lt;/p>
+&lt;h2 id="a-story">
+ A story
+ &lt;a class="heading-link" href="#a-story">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>At a previous employer, we partnered with a big bank. They were using our
+SaaS&amp;rsquo;s REST API over the Internet. For security they used&lt;/p></description></item><item><title>A workshop on evolutionary systems design</title><link>https://jensrantil.github.io/posts/evolutionary-systems-design-workshop/</link><pubDate>Thu, 09 May 2024 19:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/evolutionary-systems-design-workshop/</guid><description>&lt;p>The &lt;a href="https://agilemanifesto.org" class="external-link" target="_blank" rel="noopener">Agile Manifesto&lt;/a> states&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Responding to change&lt;/strong> over following a plan&lt;/p>
+&lt;/blockquote>
+&lt;p>This implies that we must design our systems to be malleable to change and
+allow for &lt;em>evolutionary design&lt;/em>.&lt;/p>
+&lt;p>Becoming good at evolutionary systems design requires practice, and sadly,
+programming education doesn&amp;rsquo;t teach this enough! Because of this, I ran a
+workshop at &lt;code>$previousEmployer&lt;/code> to teach how you can arrive at a completely
+different solution if building it up iteratively vs. having all the
+requirements from the start.&lt;/p></description></item><item><title>A Data Structures and Algorithms Self-Study Curriculum</title><link>https://jensrantil.github.io/posts/data-structure-algorithm-curriculum/</link><pubDate>Mon, 26 Feb 2024 23:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/data-structure-algorithm-curriculum/</guid><description>&lt;h2 id="background-story">
+ Background Story
+ &lt;a class="heading-link" href="#background-story">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Imagine you&amp;rsquo;re mentoring an engineer who&amp;rsquo;s eager to brush up on their coding
+skills after a hiatus from programming. This was precisely the scenario I found
+myself in recently. A mentee of mine had been away from coding for quite some
+time and was keen to get back into the swing of things, particularly focusing
+on data structures and algorithms.&lt;/p></description></item><item><title>My first podcast recording</title><link>https://jensrantil.github.io/posts/i-was-on-a-postcast/</link><pubDate>Mon, 26 Feb 2024 22:38:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/i-was-on-a-postcast/</guid><description>&lt;p>I was on &lt;a href="https://evolutionjobs.com/exchange/evo-nordics-475-sre-ownership/" class="external-link" target="_blank" rel="noopener">my first podcast discussing the topic of &amp;ldquo;SRE &amp;amp; Full Ownership&amp;rdquo;&lt;/a>! We recorded it on the 8th of
+December, it was published &amp;amp; &lt;a href="https://www.linkedin.com/posts/georgia-benton-b899ba13b_evo-nordics-475-sre-ownership-activity-7156768373861699584-FClp?utm_source=share&amp;amp;utm_medium=member_desktop" class="external-link" target="_blank" rel="noopener">announced&lt;/a> on the 25th of January, and I finally took the time
+to listen to it fully - and vetted it worthy of sharing. &amp;#x1f605; I
+thought I would write a little bit about the experience.&lt;/p>
+&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">&lt;p>Links to the podcast:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://soundcloud.com/user-333104763/evo-nordics-475-sre-ownership" class="external-link" target="_blank" rel="noopener">Soundcloud&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://open.spotify.com/episode/0tRXkQyDOKUYW29V3KDxFI?si=aKYJSSnrTmq7xPtzwUlBqg" class="external-link" target="_blank" rel="noopener">Spotify&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://podcasts.apple.com/us/podcast/evolution-exchange-nordics-podcast/id1572442468?uo=4" class="external-link" target="_blank" rel="noopener">Apple Podcast&lt;/a>&lt;/li>
+&lt;/ul>&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-it-all-began">
+ How it all began
+ &lt;a class="heading-link" href="#how-it-all-began">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>It all started with me being reached out to by Georgia (the host) at &lt;a href="https://evolutionjobs.com" class="external-link" target="_blank" rel="noopener">Evolution
+Jobs&lt;/a>. Alex, one of the podcast guests that I had met a few weeks
+earlier had recommended me and had an idea for a topic that he thought we all
+would be able to contribute to - &lt;strong>SRE &amp;amp; Full Ownership&lt;/strong>. I accepted. I felt
+this was a topic I would naturally be able to have a conversation around and
+have opinions on; The &amp;ldquo;Full Ownership&amp;rdquo; part was very close to &lt;em>DevOps as a
+Culture&lt;/em> which is something near and dear to me - and I have been working in
+the SRE space for many years.&lt;/p></description></item><item><title>My simplicity toolkit: Testing</title><link>https://jensrantil.github.io/posts/software-testing-simplicity/</link><pubDate>Sun, 18 Feb 2024 09:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/software-testing-simplicity/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">This post is part of my blog series about &lt;a href="https://jensrantil.github.io/categories/my-simplicity-toolkit/" >&lt;em>My Simplicity
+Toolkit&lt;/em>&lt;/a>. I highly suggest you read &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >the introductory post&lt;/a> before reading this one.&lt;/div>
+&lt;/div>
+
+&lt;p>In &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >my initial post&lt;/a> on this blog post series I wrote about
+the verb &lt;a href="https://www.youtube.com/watch?si=AYiDh-n_KMwCLwl4&amp;amp;t=1895&amp;amp;v=SxdOUGdseq4&amp;amp;feature=youtu.be" class="external-link" target="_blank" rel="noopener">&amp;ldquo;to complect&amp;rdquo;&lt;/a>. It means to braid something together. In
+this article, I am giving examples of things related to testing that tend to be
+unnecessarily complected together.&lt;/p>
+&lt;p>Building up a suite of maintainable tests is all about trying to avoid
+complecting things unless truly necessary. Notice that complecting things
+&lt;em>is&lt;/em> necessary at times, just not always.&lt;/p></description></item><item><title>A maturity model for data-driven teams</title><link>https://jensrantil.github.io/posts/a-data-driven-maturity-model/</link><pubDate>Fri, 16 Feb 2024 14:00:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/a-data-driven-maturity-model/</guid><description>&lt;p>I recently read the excellent article &lt;a href="https://www.amorphousdata.com/blog/data-is-not-a-strategy" class="external-link" target="_blank" rel="noopener">Data is not a
+Strategy&lt;/a>. It reminded me that I&amp;rsquo;ve been wanting to share
+some of my own learnings and thoughts when it comes to data-driven teams:&lt;/p>
+&lt;p>I was part of a big push to introduce service levels at my previous job. The
+objective of the project was to make our company data-driven when it came to
+operational excellence. A thing I kept seeing was that many people saw the
+project as a &lt;em>technical&lt;/em> project; gathering metrics, creating tooling for
+defining SLIs/SLOs &amp;amp; dashboards, etc. We did all of that work, but still the
+project did not succeed. Why? I kept reminding people that&lt;/p></description></item><item><title>I once almost burned out</title><link>https://jensrantil.github.io/posts/burnout/</link><pubDate>Fri, 12 Jan 2024 19:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/burnout/</guid><description>&lt;p>I have been very close to burnout two times in my career. At the same employer.
+Both times, the following held:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Tight deadline.&lt;/strong> I had an urgent project on my shoulders with a very very
+tight deadline. In one of the cases, I also had a planned vacation starting
+within a week - and I feared having to cancel the entire sailing trip with
+my friends (it was my boat).&lt;/li>
+&lt;li>&lt;strong>Low capacity.&lt;/strong> I had known the project was coming any day for weeks but
+was unable to start working on it. As such, my mental and emotional capacity
+was already strained.&lt;/li>
+&lt;li>&lt;strong>I was alone.&lt;/strong> I had no one to delegate to and was solely on my own. I was
+the only person who knew the (DevOps) work that needed to be done. Despite
+me flagging for 6-12 months that I needed to offload some responsibilities.
+I felt helpless.&lt;/li>
+&lt;li>&lt;strong>Constant nudging.&lt;/strong> The project was the highest priority project in the
+company. Everyone kept asking me how it was going, requesting status
+updates, or if they could help (they could not - see the previous bullet).&lt;/li>
+&lt;li>I &lt;strong>worked day and night&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;p>Strictly speaking, I was not fully burned out; I was able to get out of bed, but
+my entire body was shaking, I was unable to sleep, was annoyed, body
+temperature was fluctuating between too hot &amp;amp; too cold, and I had anxiety.&lt;/p></description></item><item><title>An AI/ML accuracy tale</title><link>https://jensrantil.github.io/posts/ai-ml-accuracy-tale/</link><pubDate>Sat, 18 Nov 2023 23:55:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/ai-ml-accuracy-tale/</guid><description>&lt;p>I recently read the article &lt;a href="https://shreyans.org/google" class="external-link" target="_blank" rel="noopener">&amp;ldquo;What I learned getting acquired by
+Google&amp;rdquo;&lt;/a> by Shreyans Bhansali. Shreyans wrote&lt;/p>
+&lt;blockquote>
+&lt;p>On the other hand there was the discovery that most Search improvements are
+manually reviewed by engineers through ‘side-by-side’ comparisons between old
+and new results&amp;hellip;on spreadsheets!&lt;/p>
+&lt;/blockquote>
+&lt;p>The above quote reminded of how hard, and often understated, quality assurance
+(QA) in AI/ML systems is. Each change to a model needs to be validated, and
+validation is &lt;em>hard&lt;/em> and &lt;em>cumbersome&lt;/em>. Also, the fact that models can have a
+&lt;em>freshness&lt;/em> does not help - that means that quality assurance must be done
+continuously and treated as a &lt;a href="https://sre.google/sre-book/service-level-objectives/" class="external-link" target="_blank" rel="noopener">service level&lt;/a>.&lt;/p></description></item><item><title>My simplicity toolkit: Programming (part 2)</title><link>https://jensrantil.github.io/posts/programming-simplicity-part-2/</link><pubDate>Tue, 14 Nov 2023 23:00:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/programming-simplicity-part-2/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">&lt;p>This is the second part of two talking about my simplicity toolkit when
+programming. If you have not read &lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-1/" >the previous post&lt;/a> I highly
+encourage you to do so first.&lt;/p>
+&lt;p>This post is part of my blog series about &lt;a href="https://jensrantil.github.io/categories/my-simplicity-toolkit/" >&lt;em>My Simplicity
+Toolkit&lt;/em>&lt;/a>.&lt;/p>&lt;/div>
+&lt;/div>
+
+&lt;p>At the beginning of &lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-1/" >my previous post&lt;/a> about simplicity within
+programming, I talked about the numerous benefits that bringing simplicity to
+&lt;a href="programming" >programming&lt;/a> can be: Easy to understand, use, debug, etc.&lt;/p></description></item><item><title>My simplicity toolkit: Programming (part 1)</title><link>https://jensrantil.github.io/posts/programming-simplicity-part-1/</link><pubDate>Tue, 07 Nov 2023 07:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/programming-simplicity-part-1/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">This post is part of my blog series about &lt;a href="https://jensrantil.github.io/categories/my-simplicity-toolkit/" >&lt;em>My Simplicity
+Toolkit&lt;/em>&lt;/a>. I suggest you read &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >the initial
+post&lt;/a> before reading this post.&lt;/div>
+&lt;/div>
+
+&lt;p>In &lt;a href="https://jensrantil.github.io/posts/my-simplicity-toolkit/" >the previous post&lt;/a> I talked about the difference
+between simple and easy. From the perspective of programming and writing code,
+simple code/functions/methods/objects are not trying to do multiple things
+(&lt;a href="https://youtu.be/SxdOUGdseq4?si=AYiDh-n_KMwCLwl4&amp;amp;t=1895" class="external-link" target="_blank" rel="noopener">&amp;ldquo;complect&amp;rdquo;&lt;/a>) unless needed. Some of the benefits that come
+naturally with simplicity are the following:&lt;/p></description></item><item><title>My simplicity toolkit: Intro</title><link>https://jensrantil.github.io/posts/my-simplicity-toolkit/</link><pubDate>Mon, 06 Nov 2023 19:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/my-simplicity-toolkit/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">&lt;p>Blog series:&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="." >My simplicity toolkit: Intro (this page)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-1/" >My simplicity toolkit: Programming (part 1)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jensrantil.github.io/posts/programming-simplicity-part-2/" >My simplicity toolkit: Programming (part 2)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jensrantil.github.io/posts/software-testing-simplicity/" >My simplicity toolkit: Testing&lt;/a>&lt;/li>
+&lt;li>My simplicity toolkit: Architecture&lt;/li>
+&lt;li>My simplicity toolkit: Patterns&lt;/li>
+&lt;/ol>&lt;/div>
+&lt;/div>
+
+&lt;blockquote>
+&lt;p>“Perfection is Achieved Not When There Is Nothing More to Add, But When There
+Is Nothing Left to Take Away”&lt;/p>
+&lt;p>Antoine de Saint-Exupery&lt;/p>
+&lt;/blockquote>
+&lt;p>When it comes to software engineering, I have increasingly come to value
+&lt;em>simplicity&lt;/em> and going back to basics. I have been coding for ~25+ years (~15
+years professionally) and have truly gone through &lt;a href="https://medium.com/@webseanhickey/the-evolution-of-a-software-engineer-db854689243" class="external-link" target="_blank" rel="noopener">The Evolution of a Software
+Engineer&lt;/a>. Throughout my career I have grown increasingly
+worried about the growing &lt;a href="https://en.wikipedia.org/wiki/Cargo_cult_programming" class="external-link" target="_blank" rel="noopener">cargo culted&lt;/a> complexity in our
+industry.&lt;/p></description></item><item><title>Autoscaling is not a panacea</title><link>https://jensrantil.github.io/posts/autoscaling-not-a-panacea/</link><pubDate>Mon, 06 Nov 2023 17:25:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/autoscaling-not-a-panacea/</guid><description>&lt;p>Back in the day when The Cloud (AWS) was The New Hot Thing&amp;#x2122;&amp;#xfe0f;, I thought
+autoscaling would solve most of our problems related to costs, availability,
+performance, and scalability. Over the years, I have learned that autoscaling
+has a high maintenance cost, adds complexity, and &lt;a href="https://en.wikipedia.org/wiki/Ironies_of_Automation" class="external-link" target="_blank" rel="noopener">doesn&amp;rsquo;t solve all those
+problems I initially thought it would&lt;/a>. In this article I
+will give examples of incorrect assumptions I made when it came to autoscaling:&lt;/p></description></item><item><title>Goodbye Disqus</title><link>https://jensrantil.github.io/posts/goodbye-disqus/</link><pubDate>Tue, 31 Oct 2023 20:47:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/goodbye-disqus/</guid><description>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Enterprise hostage situation: First &lt;a href="https://twitter.com/disqus?ref_src=twsrc%5Etfw">@disqus&lt;/a> roles out ads on all free tiers. A week later they e-mail all customers and offer a deal to remove the ads.&lt;/p>&amp;mdash; Jens Rantil (@JensRantil) &lt;a href="https://twitter.com/JensRantil/status/1712388686363386141?ref_src=twsrc%5Etfw">October 12, 2023&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+
+
+&lt;p>I just disabled blog post commenting on this blog after &lt;a href="https://disqus.com" class="external-link" target="_blank" rel="noopener">Disqus&lt;/a>, my
+former blog post comment system, rolled out a pretty horrible (or shall I
+say&amp;hellip;disqusting?) change.&lt;/p>
+&lt;img src="ads-introduced.png" alt="Screenshot of the mail from Disqus saying they have introduced ads." class="smaller">
+&lt;p>On the 26th of September, Disqus decided to introduce ads without any sort of
+warning. And it wasn&amp;rsquo;t just any kind of ads:&lt;/p></description></item><item><title>How to ask good questions</title><link>https://jensrantil.github.io/posts/asking-good-questions/</link><pubDate>Sun, 29 Oct 2023 10:01:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/asking-good-questions/</guid><description>&lt;p>As engineers, we all occasionally need to reach out and ask for help. Asking
+questions is an art! By asking a question in a good way, you will receive the
+answer you are looking for, faster. A well-phrased question is also respectful
+of the intended audience&amp;rsquo;s time - not wasting their time to have to ask
+clarifying questions etc.&lt;/p>
+&lt;p>As someone who has been answering questions and mentoring engineers for many
+years, this post is a collection of useful practices to get your questions
+answered quickly, efficiently, and effectively. Most recommendations in this
+post are independent of where the question is asked: Towards a local senior
+engineer in person or over a DM, on IRC for some open source project, on Stack
+Overflow, or in your company Slack, etc.&lt;/p></description></item><item><title>MTTR is the wrong metric</title><link>https://jensrantil.github.io/posts/mttr-is-the-wrong-metric/</link><pubDate>Wed, 04 Oct 2023 08:01:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/mttr-is-the-wrong-metric/</guid><description>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Shower thought: Why do we talk about MTTR (Mean Time To Resolution), when it’s a latency? Wouldn’t it make more sense to talk about P99TTR (99th percentile Time To Resolution) given that latencies usually have a long tail? 🤔 &lt;a href="https://twitter.com/hashtag/MTTR?src=hash&amp;amp;ref_src=twsrc%5Etfw">#MTTR&lt;/a> &lt;a href="https://twitter.com/hashtag/SRE?src=hash&amp;amp;ref_src=twsrc%5Etfw">#SRE&lt;/a> &lt;a href="https://twitter.com/hashtag/DevOps?src=hash&amp;amp;ref_src=twsrc%5Etfw">#DevOps&lt;/a>&lt;/p>&amp;mdash; Jens Rantil (@JensRantil) &lt;a href="https://twitter.com/JensRantil/status/1369762301293781002?ref_src=twsrc%5Etfw">March 10, 2021&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+
+
+&lt;p>Today I would like to talk about why Mean Time To Recovery (MTTR) is a wrong
+metric to look at.&lt;/p>
+&lt;p>For the past few years many software engineers have been using &lt;a href="https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance" class="external-link" target="_blank" rel="noopener">the DORA
+metrics&lt;/a> to track the performance of software delivery. One of the DORA
+metrics is &amp;ldquo;Time to Restore Service&amp;rdquo;, also known as &amp;ldquo;Mean Time To Recovery
+(MTTR)&amp;rdquo;. A couple of years ago Courtney Nash wrote &lt;a href="https://www.verica.io/blog/mttr-is-a-misleading-metric-now-what/" class="external-link" target="_blank" rel="noopener">&amp;ldquo;MTTR is a Misleading
+Metric—Now What?&amp;rdquo;&lt;/a> where she criticized that the MTTR concept is too
+simplistic. I could not agree more.&lt;/p></description></item><item><title>Mean vs. median</title><link>https://jensrantil.github.io/posts/mean-vs-median/</link><pubDate>Tue, 03 Oct 2023 22:22:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/mean-vs-median/</guid><description>&lt;p>Over the years, I have heard many people say something like&lt;/p>
+&lt;blockquote>
+&lt;p>Over 50% of people think they are better than the average car driver.&lt;/p>
+&lt;/blockquote>
+&lt;p>They say this as if it&amp;rsquo;s funny or sounds smart. But the fact is that actually
+could be true, and the reason is because &lt;em>mean and median are not the same
+thing&lt;/em>.&lt;/p>
+&lt;p>When people take a basic course in statistics, they are likely to come out of
+it thinking that the world mostly consists of normal distributions. That is not
+surprising, given that the &lt;a href="https://en.wikipedia.org/wiki/Central_limit_theorem" class="external-link" target="_blank" rel="noopener">Central Limit Theorem&lt;/a> states that many
+independent variables with the same distribution converges to a normal
+distribution. This does not apply everywhere. The Central Limit Theorem means
+students leave Statistics 101 having a visual representation of a statistical
+distribution of a bell curve. I believe this has created a lot of confusion.&lt;/p></description></item><item><title>Microretros</title><link>https://jensrantil.github.io/posts/microretros/</link><pubDate>Tue, 03 Oct 2023 21:10:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/microretros/</guid><description>&lt;p>I tend to love a &amp;ldquo;quick feedback&amp;rdquo;. Usually, this applies to software
+development: Unit tests should execute fast, CI/CD should fail fast, and
+minimum bureaucracy between coding and deploying, quick deployments, automated
+alerts when something fails, etc.&lt;/p>
+&lt;p>Usually what many people think about when talking about &amp;ldquo;quick feedback&amp;rdquo; are
+the above engineering practices. But the softer side of being an engineer also
+benefits from quick feedback. That&amp;rsquo;s why I would like to talk about
+&lt;em>microretros&lt;/em> today.&lt;/p></description></item><item><title>The hidden opportunity in feedback</title><link>https://jensrantil.github.io/posts/the-hidden-opportunity-in-feedback/</link><pubDate>Mon, 18 Sep 2023 23:18:33 +0200</pubDate><guid>https://jensrantil.github.io/posts/the-hidden-opportunity-in-feedback/</guid><description>&lt;p>Today I would like to talk about a missed opportunity when giving and receiving
+feedback &amp;ndash; mainly the discussion that happens afterwards. A classical way to
+give feedback is using the &lt;em>observed-perceived&lt;/em> method:&lt;/p>
+&lt;ol>
+&lt;li>Describe the &lt;em>observed behavior&lt;/em> from your point of view. Do it as soon as
+possible about the specific behavior that occurs.&lt;/li>
+&lt;li>Describe the &lt;em>perceived impact&lt;/em> of the observed behavior.&lt;/li>
+&lt;/ol>
+&lt;p>Unfortunately, what commonly follows is that the receiver of the feedback
+explains why the observed behavior was so &amp;ndash; followed by ending the feedback
+session. &amp;ldquo;Thanks for your feedback, Jens! I did that because X, Y, &amp;amp; Z.&amp;rdquo;, then
+walking away thinking&lt;/p></description></item><item><title>The theater tasks that add value</title><link>https://jensrantil.github.io/posts/the-theater-tasks-that-add-value/</link><pubDate>Wed, 13 Sep 2023 12:49:33 +0200</pubDate><guid>https://jensrantil.github.io/posts/the-theater-tasks-that-add-value/</guid><description>&lt;p>Throughout my career I&amp;rsquo;ve been drilled to &amp;ldquo;have a customer-first mindset&amp;rdquo;. I
+have written user stories, done user testing, measured customer impact, and had
+managers challenging me on what the &amp;ldquo;customer value&amp;rdquo; is of what I am working
+on. This has had a very big impact on me and how I approach all technical work;
+I have often asked questions such as &amp;ldquo;How will this impact our customer?&amp;rdquo; and
+&amp;ldquo;How can I put this in the hands of the customer as quickly as possible?&amp;rdquo;.&lt;/p></description></item><item><title>Fine-grained caching strategies of dynamic queries</title><link>https://jensrantil.github.io/posts/fast-aggregate-queries-on-dynamic-data/</link><pubDate>Tue, 12 Sep 2023 21:25:33 +0200</pubDate><guid>https://jensrantil.github.io/posts/fast-aggregate-queries-on-dynamic-data/</guid><description>&lt;p>Today I would like to talk about caching strategies for aggregate queries over
+time-based data which is updated often. This is something I spent significant
+brain-cycles on in my previous job and I would love to share some of my findings.&lt;/p>
+&lt;h2 id="example-data--use-case">
+ Example data &amp;amp; use case
+ &lt;a class="heading-link" href="#example-data--use-case">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>For the sake of the rest of this post, let&amp;rsquo;s say we have a relational database table containing financial transactions:&lt;/p></description></item><item><title>A model for changing behaviors</title><link>https://jensrantil.github.io/posts/a-model-for-changing-behaviors/</link><pubDate>Mon, 04 Sep 2023 22:38:33 +0200</pubDate><guid>https://jensrantil.github.io/posts/a-model-for-changing-behaviors/</guid><description>&lt;p>As you progress more into an engineering leadership role, you not only work with technical
+solutions, but you also need to drive change. And change usually involves
+changing the behavior of people. You might start to notice that&lt;/p>
+&lt;blockquote>
+&lt;p>Tech is not actually the hardest of problems, humans are.&lt;/p>
+&lt;/blockquote>
+&lt;p>For example, let&amp;rsquo;s say that you want your engineers to start writing more unit tests in their day-to-day work. Setting up your programming language&amp;rsquo;s common unit test library usually isn&amp;rsquo;t that hard. But where it gets tricky is how you &lt;em>actually&lt;/em> make engineers start writing those tests. For problems like this, I have found the Fogg Behavior Model very useful.&lt;/p></description></item><item><title>The Knowledge Bottleneck I used to be</title><link>https://jensrantil.github.io/posts/the-knowledge-bottleneck-i-used-to-be/</link><pubDate>Tue, 29 Aug 2023 14:06:33 +0200</pubDate><guid>https://jensrantil.github.io/posts/the-knowledge-bottleneck-i-used-to-be/</guid><description>&lt;h2 id="the-problem">
+ The problem
+ &lt;a class="heading-link" href="#the-problem">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>I was working at a startup and was the only engineer doing SRE &amp;amp;
+operations-related work. This included things like setting sane limits, scaling
+systems, provisioning servers, configuring AWS, CI/CD, as well as a mix of
+various supporting infrastructure such as databases, monitoring &amp;amp; alerting
+tools, and caches. At the time the startup consisted of a team of maybe 20
+engineers or so.&lt;/p></description></item><item><title>The Upside of Impostor Syndrome</title><link>https://jensrantil.github.io/posts/the-upside-of-impostor-syndrome/</link><pubDate>Mon, 28 Aug 2023 22:39:33 +0200</pubDate><guid>https://jensrantil.github.io/posts/the-upside-of-impostor-syndrome/</guid><description>&lt;p>The upside of &lt;a href="https://en.wikipedia.org/wiki/Impostor_syndrome" class="external-link" target="_blank" rel="noopener">Impostor Syndrome&lt;/a> is that it means that you
+have the capability of self-reflection — the possibility to look at yourself
+with critical eyes. This is actually a healthy thing in small doses. I am sure
+most of us have worked with a colleague who said “This is the only way” and “We
+have tried that, it will never work”. These are narrow-minded engineers closed
+off to reconsider alternative solutions and explanations - they lack a healthy
+sense of self-reflection.&lt;/p></description></item><item><title>Avoid the Junior word</title><link>https://jensrantil.github.io/posts/avoid-the-junior-word/</link><pubDate>Mon, 28 Aug 2023 22:15:33 +0200</pubDate><guid>https://jensrantil.github.io/posts/avoid-the-junior-word/</guid><description>&lt;p>I think calling someone, including yourself, a “junior” engineer can have a
+negative effect. Let me explain:&lt;/p>
+&lt;p>The label is very black and white and that’s not how the world works. There is
+a wide range of knowledge involving being an engineer; You are good at some
+things and less good at other things. I am sure that a “junior engineer” is
+much better at some things than a more senior engineer who has worked for a
+long time in the industry. “Junior” implies that you have little knowledge
+about all the things. Instead of saying “[…] as me, who is quite Junior”, say
+something like “[…] as me, who know less about X”. By avoiding calling yourself
+“junior”, you have one less mantra repeating that you know less than most
+people — and you avoid getting stuck there.&lt;/p></description></item><item><title>Waste in software development</title><link>https://jensrantil.github.io/posts/waste-in-software-development/</link><pubDate>Tue, 27 Jun 2023 23:54:21 +0200</pubDate><guid>https://jensrantil.github.io/posts/waste-in-software-development/</guid><description>&lt;h2 id="the-toyota-production-system">
+ The Toyota Production System
+ &lt;a class="heading-link" href="#the-toyota-production-system">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>It was around ~2011 when I first read &lt;a href="https://www.amazon.com/Toyota-Way-Management-Principles-Manufacturer/dp/0071392319" class="external-link" target="_blank" rel="noopener">The Toyota Way&lt;/a> book. This book
+introduced me to &lt;a href="https://en.wikipedia.org/wiki/The_Toyota_Way" class="external-link" target="_blank" rel="noopener">The Toyota Way principles&lt;/a> and &lt;a href="https://en.wikipedia.org/wiki/Toyota_Production_System" class="external-link" target="_blank" rel="noopener">the Toyota Production
+System&lt;/a> (TPS). It laid the foundation for me to understand &lt;a href="https://www.amazon.se/-/en/Humble-Jez/dp/0321601912" class="external-link" target="_blank" rel="noopener">the Continuous
+Delivery book&lt;/a> which I later read.&lt;/p>
+&lt;p>The Toyota Way also lay the groundwork for me to understand the inter-related
+&lt;a href="https://en.wikipedia.org/wiki/Lean_manufacturing" class="external-link" target="_blank" rel="noopener">Lean Manufacturing&lt;/a>, particularly &lt;a href="https://en.wikipedia.org/wiki/Lean_services" class="external-link" target="_blank" rel="noopener">Lean services&lt;/a>
+(which applies the Lean concept to the service industry). However, since &lt;a href="https://bobemiliani.com/comparing-tps-and-lean/" class="external-link" target="_blank" rel="noopener">there
+has been a lot of confusion about how various Lean concepts interrelate with
+TPS&lt;/a>, I will just stick to TPS for the sake of the rest of this
+article.&lt;/p></description></item><item><title>Three categories of teamwork</title><link>https://jensrantil.github.io/posts/three-teamwork-categories/</link><pubDate>Mon, 22 May 2023 19:01:45 +0200</pubDate><guid>https://jensrantil.github.io/posts/three-teamwork-categories/</guid><description>&lt;p>I recently wrote the post &lt;a href="https://jensrantil.github.io/posts/three-buckets-of-my-time/" >&amp;ldquo;The Three Buckets model&amp;rdquo; for my own
+time&lt;/a>. It reminded me of a similar model for how &lt;em>teams&lt;/em> could
+spend their time.&lt;/p>
+&lt;p>Back in the day I had a product owner (PO) for a former team who used to start
+off our sprint planning sessions with&lt;/p>
+&lt;blockquote>
+&lt;p>Here are the key &lt;strong>product asks&lt;/strong> I think we should deliver this sprint. What
+&lt;em>team initiatives&lt;/em> are &lt;em>you&lt;/em> interested in driving?&lt;/p></description></item><item><title>The Three Buckets of my time</title><link>https://jensrantil.github.io/posts/three-buckets-of-my-time/</link><pubDate>Sun, 21 May 2023 23:50:03 +0200</pubDate><guid>https://jensrantil.github.io/posts/three-buckets-of-my-time/</guid><description>&lt;p>I have a small framework for how I carve out my professional time. I think of
+my working hours spent into three buckets:&lt;/p>
+&lt;ul>
+&lt;li>Teamwork (&amp;ldquo;team bucket&amp;rdquo;)&lt;/li>
+&lt;li>Company-wide work (&amp;ldquo;company bucket&amp;rdquo;)&lt;/li>
+&lt;li>My own initiatives (&amp;ldquo;me bucket&amp;rdquo;)&lt;/li>
+&lt;/ul>
+&lt;p>Let&amp;rsquo;s go through them one by one:&lt;/p>
+&lt;h2 id="teamwork-team-bucket">
+ Teamwork (&amp;ldquo;team bucket&amp;rdquo;)
+ &lt;a class="heading-link" href="#teamwork-team-bucket">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Time spent in the &amp;ldquo;teamwork&amp;rdquo; bucket is time I spend on tasks related to the
+local team I am primarily working with. Usually these tasks are tied to issues
+in a ticketing system, but it also includes team ceremonies (retros or planning
+etc.).&lt;/p></description></item><item><title>Code as a self-serve experience</title><link>https://jensrantil.github.io/posts/code-as-self-serve-experience/</link><pubDate>Tue, 09 May 2023 08:24:19 +0200</pubDate><guid>https://jensrantil.github.io/posts/code-as-self-serve-experience/</guid><description>&lt;p>Using &amp;ldquo;code as self-serve&amp;rdquo;, such as Terraform or Kubernetes, in Platform
+Engineering is a rather bad idea. Let me explain why:&lt;/p>
+&lt;p>These days &lt;a href="https://www.honeycomb.io/blog/future-ops-platform-engineering" class="external-link" target="_blank" rel="noopener">there is all the rage around Platform Engineering&lt;/a>,
+and in fact I spent my last few years at &lt;code>$previousEmployer&lt;/code> doing exactly
+this.&lt;/p>
+&lt;p>One of the core tenets of &amp;ldquo;Platform Engineering&amp;rdquo; is the concept of
+&lt;a href="https://blog.cycloid.io/user-friendly-developer-self-service-the-key-to-platform-engineering" class="external-link" target="_blank" rel="noopener">&amp;ldquo;self-serve&amp;rdquo;&lt;/a>. That is, instead of a Platform team acting as a
+blocker, you instead make sure to build a developer experience (DevEx) that
+enables engineers to do something themselves exactly when they need it. Just In
+Time! For example, if developers need a database they shouldn&amp;rsquo;t need to reach
+out to the Platform Engineering team and ask for one. Instead, they should
+simply be able to easily fire up a new database themselves within a few
+minutes.&lt;/p></description></item><item><title>The downsides of batch APIs</title><link>https://jensrantil.github.io/posts/downsides-of-batch-apis/</link><pubDate>Wed, 03 May 2023 12:50:41 +0200</pubDate><guid>https://jensrantil.github.io/posts/downsides-of-batch-apis/</guid><description>&lt;p>When an HTTP API is too slow to call repeatedly I have seen engineers
+immediately turn to making the API &lt;em>do more in one unit of work&lt;/em>. I think this
+pattern can be very harmful and have many battle scars from this. So I thought
+I would write a post about it.&lt;/p>
+&lt;h2 id="an-example">
+ An example
+ &lt;a class="heading-link" href="#an-example">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Let&amp;rsquo;s start with an example: You have a web service that stores TODO items. It
+has an API endpoint, &lt;code>POST /todo&lt;/code>, which gets called to add a new TODO item.
+Here is an example request/response:&lt;/p></description></item><item><title>On narrow integration tests</title><link>https://jensrantil.github.io/posts/narrow-integration-tests/</link><pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/narrow-integration-tests/</guid><description>&lt;p>&lt;em>Narrow integration tests&lt;/em> are tests that only involve very few components,
+mostly relying on &lt;a href="https://martinfowler.com/articles/mocksArentStubs.html" class="external-link" target="_blank" rel="noopener">test
+doubles&lt;/a> to simulate
+external dependencies. As always, we have Martin Fowler to thank for yet
+another excellent
+&lt;a href="https://martinfowler.com/bliki/IntegrationTest.html" class="external-link" target="_blank" rel="noopener">article&lt;/a> on integration
+tests so I&amp;rsquo;ll simply refer to that for the details of what a narrow integration
+test is.&lt;/p>
+&lt;p>That said, during 2019 I have grown increasingly convinced that the distinction
+between a narrow and wide integration (also know as &lt;em>system tests&lt;/em> or &lt;em>end-to-end tests&lt;/em>) is an important one, for two reasons:&lt;/p></description></item><item><title>Testing strategy over time</title><link>https://jensrantil.github.io/posts/testing-strategy-over-time/</link><pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/testing-strategy-over-time/</guid><description>&lt;p>Last year (2019) I spent a fair amount of time thinking about how to grow
+&lt;a href="https://www.tinkapp.com" class="external-link" target="_blank" rel="noopener">Tink&amp;rsquo;s&lt;/a> technical platform; how to organise ourselves
+&amp;ndash; alignment vs. autonomy. What processes, tooling, and policies were needed
+for our teams to build amazing, stable, performant things at a fast pace? Tink
+had essentially doubled in size yearly for four years and the growth had really
+pushed our engineering organization to the limits. We are now around 150
+engineers. We were less than 10 engineers when I started in early 2014.&lt;/p></description></item><item><title>AWS ELBs and Availability</title><link>https://jensrantil.github.io/posts/aws-elbs-and-availability/</link><pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/aws-elbs-and-availability/</guid><description>&lt;p>Recently I was reading the article &lt;a href="https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236" class="external-link" target="_blank" rel="noopener">&amp;ldquo;Introduction to modern network load
+balancing and
+proxying&amp;rdquo;&lt;/a>
+and I was reminded by something that has bothered, and still is bothering me,
+about the AWS Load Balancers (ElasticLoad Balancers, or ELBs). The article
+quotes &lt;a href="https://en.wikipedia.org/wiki/Load_balancing_%28computing%29" class="external-link" target="_blank" rel="noopener">the Wikipedia article about Load
+Balancer&lt;/a> saying&lt;/p>
+&lt;blockquote>
+&lt;p>Using multiple components with load balancing instead of a single component
+may increase reliability and availability through redundancy.&lt;/p>
+&lt;/blockquote>
+&lt;p>I have always assumed that that&amp;rsquo;s one of the major reasons why putting load
+balancers in front of application servers. That&amp;rsquo;s why I was surprised to learn
+that if an AWS ELB make a TCP connection to an application it will &lt;em>not&lt;/em> retry
+another application server. Instead, for HTTP mode, it will return an &lt;a href="https://httpstatuses.com/503" class="external-link" target="_blank" rel="noopener">HTTP
+503&lt;/a>. At &lt;a href="https://www.tink.se/" class="external-link" target="_blank" rel="noopener">Tink&lt;/a>, we learnt
+this the hard way many years ago when a few application servers ran out of
+memory and restarted. On a few servers we also did in-place application
+upgrades which also would yield 503s during the upgrade, &lt;em>even if we were
+draining the applications properly on shutdown&lt;/em>. We noticed that a spike of
+5XXs were being returned to our end-users until the ELBs healthcheck had
+realized the service was down.&lt;/p></description></item><item><title>Blog Update</title><link>https://jensrantil.github.io/posts/blog-update/</link><pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/blog-update/</guid><description>&lt;p>&lt;em>&lt;strong>UPDATE: Since this blog post was written, I have migrated to another theme.
+Have a look at &lt;a href="https://github.com/JensRantil/jensrantil.github.io/" class="external-link" target="_blank" rel="noopener">my blog repo&lt;/a> for how I have set set this up
+today.&lt;/strong>&lt;/em>&lt;/p>
+&lt;p>I&amp;rsquo;m happy to announce I&amp;rsquo;ve finally gotten the time to migrate my blog from
+&lt;a href="https://blog.getpelican.com/" class="external-link" target="_blank" rel="noopener">Pelican&lt;/a> to &lt;a href="https://gohugo.io" class="external-link" target="_blank" rel="noopener">Hugo&lt;/a>! The
+migration started &lt;a href="https://github.com/JensRantil/jensrantil.github.io/commit/01cc978f5d0f5b09fd8203b838c8ef314314f4ac" class="external-link" target="_blank" rel="noopener">way too long
+ago&lt;/a>.
+Life came in the way and last week, I finally got the time to migrate all
+content.&lt;/p>
+&lt;h2 id="what-this-means-for-you-as-a-reader">
+ What this means for you as a reader
+ &lt;a class="heading-link" href="#what-this-means-for-you-as-a-reader">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Given that I&amp;rsquo;ve put &lt;a href="https://github.com/JensRantil/jensrantil.github.io/commit/25ee8f37ca094e666170245ecfc7dfb9b74fee08" class="external-link" target="_blank" rel="noopener">Continuous
+Delivery&lt;/a>
+in place and Hugo doesn&amp;rsquo;t require a virtual Python environment and other bloat
+around it, writing posts will be much easier. So, expect a more continuous flow
+of content!&lt;/p></description></item><item><title>How to (partially) declassify NSA documents</title><link>https://jensrantil.github.io/posts/how-to-partially-declassify-nsa-docs/</link><pubDate>Sat, 27 Dec 2014 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/how-to-partially-declassify-nsa-docs/</guid><description>&lt;p>The day before Christmas Eve, the (American) NSA published a bunch of
+&lt;a href="https://www.nsa.gov/public_info/declass/IntelligenceOversightBoard.shtml" class="external-link" target="_blank" rel="noopener">declassified
+reports&lt;/a>
+that have been handed to the President&amp;rsquo;s Intelligence Oversight Board
+(IOD) for the past 10 years or so. I quickly scrolled through a couple
+of documents to find a lot of heavily redacted text:&lt;/p>
+&lt;p>&lt;img src="https://jensrantil.github.io/posts/how-to-partially-declassify-nsa-docs/redacted-text.png" alt="Redacted text.">&lt;/p>
+&lt;h2 id="the-idea">
+ The idea
+ &lt;a class="heading-link" href="#the-idea">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>What struck me was that what most of the redacted text that I think the
+public (and me) are interested in is the magnitude of NSA surveillance,
+namely how large the redacted numbers are. I started asking myself,
+&lt;strong>can the space that the redacted numbers take up on a document tell us
+anything about what&amp;rsquo;s redacted behind the white boxes?&lt;/strong> I think the
+answer is fairly obvious - yes - the number &amp;ldquo;1000000&amp;rdquo; definitely does
+not fit into most boxes, so we can conclude that targetted surveillance
+is less than that. But can we do better?&lt;/p></description></item><item><title>A follow-up on CouchDB as event store</title><link>https://jensrantil.github.io/posts/follow-up-on-couchdb-as-eventstore/</link><pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/follow-up-on-couchdb-as-eventstore/</guid><description>&lt;p>I &lt;a href="%7cfilename%7ccouchdb-as-event-store.rst" >recently&lt;/a> wrote about using
+CouchDB as an event store. One issue that I mentioned briefly was that
+my proposed solution would not work for a single aggregate root yielding
+multiple key/values in a CouchDB view:&lt;/p>
+&lt;blockquote>
+&lt;p>What a view cannot do is keep track of older versions of an aggregate
+root.&lt;/p>
+&lt;/blockquote>
+&lt;p>Recently I&amp;rsquo;ve been revisiting this problem (because I find it fun to
+think about) and have a slightly different solution to propose, namely
+to store all events for a single aggregate in a single document. That
+is, make the document have a list of events. This will solve all
+previous requirements as well as:&lt;/p></description></item><item><title>Salt vs. Ansible</title><link>https://jensrantil.github.io/posts/salt-vs-ansible/</link><pubDate>Mon, 17 Mar 2014 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/salt-vs-ansible/</guid><description>&lt;p>Some time ago was set to evaluate configuration management systems. I&amp;rsquo;ve
+heard opinions from someone I respect that
+&lt;a href="http://puppetlabs.com" class="external-link" target="_blank" rel="noopener">Puppet&lt;/a> and &lt;a href="http://www.getchef.com" class="external-link" target="_blank" rel="noopener">Chef&lt;/a> were
+complicated beasts to get up and running, and since I am a Python guy
+I&amp;rsquo;ve generally always kept an eye on &lt;a href="http://www.ansible.com" class="external-link" target="_blank" rel="noopener">Ansible&lt;/a>
+and &lt;a href="http://www.saltstack.com" class="external-link" target="_blank" rel="noopener">Salt&lt;/a>. Ruby is so far not my thing, but
+hey let&amp;rsquo;s not start a flamewar about that!&lt;/p>
+&lt;p>Last year I got to spend a good 6 months working with Ansible for
+provisioning of servers. I became very familiar with the tool. In that
+project, Ansible was mostly chosen because it was easy to get started
+and had good documentation. The team I was working with was especially
+fond of the &lt;a href="http://docs.ansible.com/playbooks_best_practices.html" class="external-link" target="_blank" rel="noopener">Best
+Practises&lt;/a>
+documentation which got us started quickly and taught us what structure
+had worked previously.&lt;/p></description></item><item><title>Why the Web is so Slow</title><link>https://jensrantil.github.io/posts/why-the-web-is-so-slow/</link><pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/why-the-web-is-so-slow/</guid><description>&lt;p>I just read the blog post &lt;a href="http://calendar.perfplanet.com/2013/why-is-the-web-so-slow/" class="external-link" target="_blank" rel="noopener">Why is the web so
+slow?&lt;/a> by
+&lt;a href="http://www.phpied.com/" class="external-link" target="_blank" rel="noopener">Stoyan Stefanov&lt;/a>. This gave me the idea to give
+some common reasons for the web to be slow. I&amp;rsquo;ve been using &amp;ldquo;web
+application&amp;rdquo; fairly sloppy here. It could also mean &amp;ldquo;website&amp;rdquo; etc. Here
+they are:&lt;/p>
+&lt;ul>
+&lt;li>Because of actual distance from your computer to the webserver. The
+upper limit is the speed of light. This means that it is an
+impossibility for information to travel from Sydney to London in
+less than ~0.056 seconds (17009 kilometers).&lt;/li>
+&lt;li>Fetching a webpage requires a roundtrip of information; a request
+and response. This effectively nearly doubles the time to
+fetch something.&lt;/li>
+&lt;li>Websites generally has a bunch of static files (images,
+javascript, CSS). The web browser has a
+&lt;a href="http://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser" class="external-link" target="_blank" rel="noopener">limit&lt;/a>
+on the number of files that can be fetched in parallel. Similar
+images can be assembled into
+&lt;a href="http://css-tricks.com/css-sprites/" class="external-link" target="_blank" rel="noopener">sprites&lt;/a>, JavaScript and CSS
+can be &lt;a href="https://code.google.com/p/minify/" class="external-link" target="_blank" rel="noopener">combined and compressed&lt;/a>.&lt;/li>
+&lt;li>The &lt;a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" class="external-link" target="_blank" rel="noopener">HTTP
+protocol&lt;/a>
+does not support a single connection fetching multiple static assets
+in parallel.&lt;/li>
+&lt;li>SSL requires a longer complicated handshake and extra CPU when
+sending and receiving data.&lt;/li>
+&lt;li>Because of unnecessary synchronicity in dynamic applications.
+Historically it&amp;rsquo;s been possible for developers to only update the
+portions of a website that needs update. However, the tools have not
+really been up to speed. This has changed. Many modern JavaScript
+frameworks has created new opportunities here. Yes, I&amp;rsquo;m thinking of
+you &lt;a href="http://angularjs.org/" class="external-link" target="_blank" rel="noopener">AngularJS&lt;/a>.&lt;/li>
+&lt;li>Because of sloppy considerations of caching. Getting up to speed
+with a web application is pretty easy. Getting HTTP caching right
+requires some thought.&lt;/li>
+&lt;li>Because many web applications have not migrated to use a
+&lt;a href="https://en.wikipedia.org/wiki/Content_delivery_network" class="external-link" target="_blank" rel="noopener">CDN&lt;/a>. If we
+come together and all use CDNs, our visitors would be way more
+likely to have the common static files cached.&lt;/li>
+&lt;li>Because of complex rendering of websites. The implications of
+complex HTML structure and CSS selectors is that rendering of a
+website is slow. KISS = Keep It Simple, Stupid.&lt;/li>
+&lt;li>Because many web servers today are still not delivering compressed
+HTTP responses, such as GZip.&lt;/li>
+&lt;li>Because many webdevelopers don&amp;rsquo;t understand the implications of
+using slow third party assets. Yes, I&amp;rsquo;m looking at you Analytics and
+Ad Companies! Slow assets gives website visitors the feeling that
+the website is not done loading when 99% of the assets really are.&lt;/li>
+&lt;li>Because many webdevelopers still are using JavaScript when they
+don&amp;rsquo;t have to. CSS3 can animate and allow for simple logic
+without JavaScript.&lt;/li>
+&lt;li>Because we are sending cookies for a lot of content that does not
+require cookes.&lt;/li>
+&lt;li>Because HTML is larger that it needs to be. Reusing CSS classes
+reduces the size of HTML to be fetched.&lt;/li>
+&lt;li>Because images are sent when they really could be emulated
+using CSS. This is a thing of the past that still bugs me.&lt;/li>
+&lt;/ul>
+&lt;p>Google&amp;rsquo;s networking protocol &lt;a href="https://en.wikipedia.org/wiki/SPDY" class="external-link" target="_blank" rel="noopener">SPDY&lt;/a>
+aims to solve some of these issues and make the web faster.&lt;/p></description></item><item><title>I'm a State Engineer. Are you, too?</title><link>https://jensrantil.github.io/posts/lifecycles-and-states/</link><pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/lifecycles-and-states/</guid><description>&lt;p>TL;DR: We need to have a more thorough discussion about state and
+lifecycles in our industry.&lt;/p>
+&lt;p>I recently revisited &lt;a href="http://12factor.net" class="external-link" target="_blank" rel="noopener">The Twelve-Factor App&lt;/a> by
+&lt;a href="https://www.heroku.com" class="external-link" target="_blank" rel="noopener">Heroku&lt;/a>. It&amp;rsquo;s a great read if you are deploying
+your own application, are interested in (organizational and/or
+technincal) scaling or curious of best practices when it comes to
+deployment.&lt;/p>
+&lt;p>As I was reading the manifest it struck me that there are two words that
+I hear all too infrequently in our industry, namely &lt;em>state&lt;/em> and
+&lt;em>lifecycle&lt;/em>. The words have different meaning, yet they are related in
+so many ways. All state has a lifecycle, otherwise the state would not
+be worth thinking of.&lt;/p></description></item><item><title>New PGP key</title><link>https://jensrantil.github.io/posts/new-pgp-key/</link><pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/new-pgp-key/</guid><description>&lt;p>Just wanted to give you a heads up that I recently generated a &lt;a href="https://dl.dropboxusercontent.com/u/17059539/public.asc" class="external-link" target="_blank" rel="noopener">new PGP
+key&lt;/a>. Its
+fingerprint is &lt;code>4371 E7ED 3A3D DBB4 12B5 C68F BA63 2DB6 91DA 03B8&lt;/code> and
+its bound to &lt;code>jens.rantil@gmail.com&lt;/code>.&lt;/p>
+&lt;p>I&amp;rsquo;ve previously had PGP keys but they are all expired.&lt;/p>
+&lt;p>For people who are learning about PGP I can highly suggest these two
+links on how to do things the right way:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://alexcabal.com/creating-the-perfect-gpg-keypair/" class="external-link" target="_blank" rel="noopener">Creating the perfect GPG
+keypair&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://we.riseup.net/riseuplabs&amp;#43;paow/openpgp-best-practices" class="external-link" target="_blank" rel="noopener">OpenPGP Best
+Practices&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="%7cfilename%7cpages/about-me.rst" >Get in touch with me&lt;/a> if you&amp;rsquo;d like to
+sign my key. I live in south of Sweden (Lund/Malmö area) and
+occasionally visit Stockholm and/or Copenhagen. I&amp;rsquo;m actually thinking
+about hosting a &lt;a href="http://cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html" class="external-link" target="_blank" rel="noopener">key signing
+party&lt;/a>
+in the area. If that happens, I&amp;rsquo;ll put some more info up on it!&lt;/p></description></item><item><title>GIT mirroring using Jenkins</title><link>https://jensrantil.github.io/posts/git-mirroring-using-jenkins/</link><pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/git-mirroring-using-jenkins/</guid><description>&lt;p>For the past couple of weeks I&amp;rsquo;ve been annoyed by the high latency when
+connecting to &lt;a href="https://github.com" class="external-link" target="_blank" rel="noopener">Github&lt;/a> over SSH. While the other GIT
+transports could be an option, I prefer to use keys to authenticate
+against Github.&lt;/p>
+&lt;p>This got me thinking about setting up a local GIT mirror at our office.
+To keep my project future proof, I planned to make this a cron-job-ish
+project; every so often it would checkout all repositories for a certain
+organization.&lt;/p></description></item><item><title>Bootstrapping: CouchDB as event store</title><link>https://jensrantil.github.io/posts/couchdb-as-event-store/</link><pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/couchdb-as-event-store/</guid><description>&lt;p>I&amp;rsquo;ve previously written about &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >what event sourcing
+is&lt;/a>. Reading about it, you might
+think &amp;ldquo;heck, sounds great! But how do I get started?&amp;rdquo;. This blog post
+will propose a simple way.&lt;/p>
+&lt;h2 id="a-minimum-viable-product">
+ A Minimum Viable Product
+ &lt;a class="heading-link" href="#a-minimum-viable-product">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>The concept of a &lt;a href="http://en.wikipedia.org/wiki/Minimum_viable_product" class="external-link" target="_blank" rel="noopener">minimum viable
+product&lt;/a> states
+that you shouldn&amp;rsquo;t do more than absolutely necessary before releasing a
+product. You need to release it when it&amp;rsquo;s just good enough. If it&amp;rsquo;s
+received badly, you haven&amp;rsquo;t invested too much time or energy into it.&lt;/p></description></item><item><title>Java's missing optional keyword and the issues of null</title><link>https://jensrantil.github.io/posts/the-issues-of-null/</link><pubDate>Thu, 22 Aug 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/the-issues-of-null/</guid><description>&lt;p>One of my pet peaves when it comes to the Java programming languages
+[1] is that it does not do enough &lt;a href="https://en.wikipedia.org/wiki/Type_safety" class="external-link" target="_blank" rel="noopener">type
+safety&lt;/a>. The issue is,
+simply, that programmers tend to believe that Java infers more safety
+than it actually does. The biggest reason for this can be summarized in
+one word; &lt;code>null&lt;/code>.&lt;/p>
+&lt;p>Let&amp;rsquo;s face it, we&amp;rsquo;ve all experienced a &lt;code>NullPointerException&lt;/code> or two.
+Why? Because we focus so much on which variable type to use. This makes
+us tend to forget the simple fact that the variable might not have a
+value at all; It can be &lt;code>null&lt;/code>.&lt;/p></description></item><item><title>Writing a server in Python</title><link>https://jensrantil.github.io/posts/python-servers/</link><pubDate>Wed, 21 Aug 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/python-servers/</guid><description>&lt;p>This post is partially related to my &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >previous blog
+post&lt;/a> about
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a>.&lt;/p>
+&lt;p>One of the questions that might hit you is &lt;em>why would you ever write a
+server in Python?&lt;/em>. I&amp;rsquo;ve heard many people being raising their concerns
+when it comes to Python. The biggest ones are obviously concurrency and
+the &lt;a href="http://wiki.python.org/moin/GlobalInterpreterLock" class="external-link" target="_blank" rel="noopener">GIL&lt;/a>. I&amp;rsquo;ve also
+heard arguments related to lack of strict typing, that Java has better
+IDE support (partially due to&amp;hellip;strict typing) and the sheer amount of
+libraries that other languages, such as Java, has.&lt;/p></description></item><item><title>Simpler Cookieless Cookies</title><link>https://jensrantil.github.io/posts/simpler-cookieless-cookies/</link><pubDate>Sun, 18 Aug 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/simpler-cookieless-cookies/</guid><description>&lt;p>I recently read the blog article &amp;ldquo;&lt;a href="http://lucb1e.com/rp/cookielesscookies/" class="external-link" target="_blank" rel="noopener">Cookieless
+Cookies&lt;/a>&amp;rdquo; that talks about
+&lt;a href="https://en.wikipedia.org/wiki/HTTP_ETag#Tracking_using_ETags" class="external-link" target="_blank" rel="noopener">using ETag for tracking
+users&lt;/a>.
+Smart. This is the second article I read about obscure ways to store
+tracking information of a user. The first one was about &lt;a href="https://epic.org/privacy/cookies/flash.html" class="external-link" target="_blank" rel="noopener">storing Cookie
+information using Flash&lt;/a>.&lt;/p>
+&lt;p>Using cookieless tracking is not really something new. While it can be
+fun to read about various advanced way of tracking users, there&amp;rsquo;s been a
+way of doing that without cookies for a long time.&lt;/p></description></item><item><title>Privacy and Logging</title><link>https://jensrantil.github.io/posts/privacy-and-logging/</link><pubDate>Mon, 17 Jun 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/privacy-and-logging/</guid><description>&lt;p>Privacy seem to be a &lt;a href="http://www.guardian.co.uk/world/the-nsa-files" class="external-link" target="_blank" rel="noopener">popular discussion these
+days&lt;/a>. While I do think
+it&amp;rsquo;s a very very important topic to discuss, I sometimes feel there&amp;rsquo;s
+not enough people who stand up and argue for cases when there&amp;rsquo;s a reason
+to store data.&lt;/p>
+&lt;p>Let me give you an example; Log data. I&amp;rsquo;m sure many computer users find
+it scary with logs. Sometimes I do too. Especially if logs are stored
+for eternity and data mined. Worse so, if they are aggregated from many
+sources on the web. But the truth is, logs are great for many reasons:&lt;/p></description></item><item><title>Line styles in matplotlib</title><link>https://jensrantil.github.io/posts/line-styles-in-matplotlib/</link><pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/line-styles-in-matplotlib/</guid><description>&lt;p>I&amp;rsquo;m a big fan of &lt;a href="http://matplotlib.org/" class="external-link" target="_blank" rel="noopener">matplotlib&lt;/a> and tend to use it
+every time I&amp;rsquo;d like to plot something. A while ago I had a line plot
+with many lines and ran out of default colors. When that happens,
+matplotlib will reuse the previously used colors.&lt;/p>
+&lt;p>I used Python&amp;rsquo;s
+&lt;a href="http://docs.python.org/2/library/itertools.html" class="external-link" target="_blank" rel="noopener">itertools&lt;/a> overcome
+this:&lt;/p>
+&lt;pre tabindex="0">&lt;code>import itertools
+import pylab as p}
+look = itertools.cycle(itertools.product([&amp;#39;-&amp;#39;, &amp;#39;--&amp;#39;, &amp;#39;.-&amp;#39;, &amp;#39;:&amp;#39;, &amp;#39;,&amp;#39;], &amp;#39;bgrcmykw&amp;#39;))
+look = it.imap(lambda x: string.join(x, &amp;#39;&amp;#39;), look)
+for item in data.items():
+ p.plot(item.X, item.Y, next(look), label=item.label)
+&lt;/code>&lt;/pre>&lt;p>I hope this little piece of code will come in handy for someone else!&lt;/p></description></item><item><title>CQRS+Event Sourcing Messaging Patterns</title><link>https://jensrantil.github.io/posts/cqrs-event-sourcing-messaging-patterns/</link><pubDate>Sun, 26 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/cqrs-event-sourcing-messaging-patterns/</guid><description>&lt;p>This post is partially related to my &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >previous blog
+post&lt;/a> about
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a> and
+&lt;a href="http://www.github.com/JensRantil/gorewind" class="external-link" target="_blank" rel="noopener">Gorewind&lt;/a>.&lt;/p>
+&lt;p>Designing a decoupled, message based, system based on the
+&lt;a href="http://martinfowler.com/bliki/CQRS.html" class="external-link" target="_blank" rel="noopener">CQRS&lt;/a> pattern together with
+&lt;a href="http://martinfowler.com/eaaDev/EventSourcing.html" class="external-link" target="_blank" rel="noopener">event sourcing&lt;/a>
+require some thought. Since I&amp;rsquo;ve been thinking about it for a while now,
+I thought I&amp;rsquo;d share some thoughts so far.&lt;/p>
+&lt;h2 id="cqrs">
+ CQRS
+ &lt;a class="heading-link" href="#cqrs">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>First let&amp;rsquo;s think about the way information conceptually flows in a CQRS
+system:&lt;/p>
+&lt;blockquote>
+&lt;p>Client issuing a command -&amp;gt; Command -&amp;gt; Command Handler -&amp;gt;
+Event -&amp;gt; Event Listeners/Projections&lt;/p></description></item><item><title>AngularJS events on initialization</title><link>https://jensrantil.github.io/posts/angularjs-events-triggered-on-initialization/</link><pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/angularjs-events-triggered-on-initialization/</guid><description>&lt;p>In my &lt;a href="%7cfilename%7crefreshable-angularjs-service.rst" >previous post&lt;/a> I was
+giving an example of using &lt;a href="http://angularjs.org" class="external-link" target="_blank" rel="noopener">AngularJS&lt;/a>
+&lt;a href="http://docs.angularjs.org/api/ng.$rootScope.Scope#$emit" class="external-link" target="_blank" rel="noopener">events&lt;/a>.&lt;/p>
+&lt;p>I stumbled across a corner case that might be worth noting; If a service
+is triggering an event on initialization, no controllers will get
+notified of it. Here&amp;rsquo;s an example:&lt;/p>
+&lt;iframe width="100%" height="250"
+src="http://jsfiddle.net/Ztyx/TdykU/2/embedded/"
+allowfullscreen="allowfullscreen" frameborder="0">&lt;/iframe>
+The reason why this is happening is simply because the controller have
+not been instantiated. Setting a timer before emitting the event can be
+done as a workaround:
+&lt;iframe width="100%" height="250"
+src="http://jsfiddle.net/Ztyx/TdykU/3/embedded/"
+allowfullscreen="allowfullscreen" frameborder="0">&lt;/iframe>
+Now you know!</description></item><item><title>Refreshable AngularJS service</title><link>https://jensrantil.github.io/posts/refreshable-angularjs-service/</link><pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/refreshable-angularjs-service/</guid><description>&lt;p>Lately I&amp;rsquo;ve been working a lot in &lt;a href="http://angularjs.org" class="external-link" target="_blank" rel="noopener">AngularJS&lt;/a>.
+This is my second project with the framework, and the more time I spend
+in it, the more I like it.&lt;/p>
+&lt;p>But as with most things, AngularJS has some rough corners. Its
+&lt;a href="http://docs.angularjs.org/" class="external-link" target="_blank" rel="noopener">documentation&lt;/a> still has a long way to go,
+although it has improved since last time I used it over a year ago.
+Common use cases and &amp;ldquo;Angular-y&amp;rdquo; was of doing things is another thing
+that I also feel is lacking out there. I guess it could be considered
+documentation depending on how you look at it.&lt;/p></description></item><item><title>Bootstrapping software projects</title><link>https://jensrantil.github.io/posts/bootstrapping-software-projects/</link><pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/bootstrapping-software-projects/</guid><description>&lt;p>This post is partially related to my &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >previous blog
+post&lt;/a> about
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a> and
+&lt;a href="http://www.github.com/JensRantil/gorewind" class="external-link" target="_blank" rel="noopener">GoRewind&lt;/a>.&lt;/p>
+&lt;p>Even though I&amp;rsquo;ve been working as a full-time developer for the past 4-5
+years, it still hits me how much boiler plate is required to create a
+proper software project. In fact, I&amp;rsquo;ve seen so many times how extra
+functionality is bundled into applications just because the alternative
+would require many hours of setting things up. This despite the fact
+that functionality is orthogonal and has totally different life cycles.&lt;/p></description></item><item><title>CQRS - Time to Rewind</title><link>https://jensrantil.github.io/posts/cqrs-time-to-rewind/</link><pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/cqrs-time-to-rewind/</guid><description>&lt;p>For the last year I&amp;rsquo;ve been thinking a lot about
+&lt;a href="http://www.cqrsinfo.com" class="external-link" target="_blank" rel="noopener">CQRS&lt;/a>
+[&lt;a href="http://martinfowler.com/bliki/CQRS.html" class="external-link" target="_blank" rel="noopener">1&lt;/a>], &lt;a href="http://martinfowler.com/eaaDev/EventSourcing.html" class="external-link" target="_blank" rel="noopener">Event
+Sourcing&lt;/a> and
+distributed architecture using &lt;a href="http://www.zeromq.org" class="external-link" target="_blank" rel="noopener">ZeroMQ&lt;/a>. I first
+stumbled across the concept of CQRS through the mailing list for a &lt;a href="http://www.meetup.com/SoftPub/" class="external-link" target="_blank" rel="noopener">nerd
+meetup in Helsingborg&lt;/a>, Sweden. This led
+me to a lot of CQRS
+&lt;a href="http://msdn.microsoft.com/en-us/library/jj554200.aspx" class="external-link" target="_blank" rel="noopener">reading&lt;/a> and
+&lt;a href="http://cqrs.wordpress.com/video/" class="external-link" target="_blank" rel="noopener">videos&lt;/a>, and with that the Event
+Sourcing data model.&lt;/p>
+&lt;p>To try out CQRS and Event Sourcing in practise, I started writing an
+open source event store about a year ago. I named it
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a>. This also opened up
+for me to try some concepts that I had never tried before [2].&lt;/p></description></item><item><title>Migrating to Python 3</title><link>https://jensrantil.github.io/posts/migrating-to-python3/</link><pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/migrating-to-python3/</guid><description>&lt;p>This post is partially related to my &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >previous blog
+post&lt;/a> about
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a>.&lt;/p>
+&lt;p>I initially started the implementation of Rewind in Python 2.7. I
+constantly kept test coverage to 100%, and I tried to stick to
+&lt;a href="http://en.wikipedia.org/wiki/Test-driven_development" class="external-link" target="_blank" rel="noopener">TDD&lt;/a> as much as
+possible. The Python testing tool
+&lt;a href="https://nose.readthedocs.org/en/latest/" class="external-link" target="_blank" rel="noopener">Nose&lt;/a> proved to be very
+valuable, as did &lt;a href="https://travis-ci.org/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Travis CI&lt;/a>.&lt;/p>
+&lt;p>After some time I thought &amp;ldquo;Hey, why work in Python 2 when Python 3 seems
+around corner?&amp;rdquo;. I installed Python 3.2 on my laptop and started
+executing those tests. Travis CI helped a lot here to always make sure
+that Rewind was backward compatible with Python 2.7. Ever nervous about
+a test failing? Make pull request on &lt;a href="http://www.github.com" class="external-link" target="_blank" rel="noopener">Github&lt;/a> and
+Travis CI will tell you whether the pull request broke something or not.
+Highly convenient. Migration to Python 3 can be summarized in three
+paragraphs:&lt;/p></description></item><item><title>That initial blogpost</title><link>https://jensrantil.github.io/posts/that-initial-blogpost/</link><pubDate>Tue, 14 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/that-initial-blogpost/</guid><description>&lt;p>So it&amp;rsquo;s time to kick off this blog. I cheated a little and posted &lt;a href="%7cfilename%7creplacing-directory-in-svn.rst" >a
+previously written blog post&lt;/a>.
+It was posted on a personal blog that mostly had Swedish material.&lt;/p>
+&lt;p>My intent with this blog will be to &amp;ldquo;put a URL on my tech and possibly
+entrepreneurship thoughts, in English&amp;rdquo;. If you&amp;rsquo;d like to know more about
+me, check out that brand new &lt;a href="%7cfilename%7cpages/about-me.rst" >About Me&lt;/a>
+page!&lt;/p></description></item><item><title>Replacing a folder in Subversion</title><link>https://jensrantil.github.io/posts/replacing-directory-in-svn/</link><pubDate>Mon, 22 Sep 2008 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/replacing-directory-in-svn/</guid><description>&lt;p>So you have an external library foo version 1.0 that you have committed
+to your Subversion repository together with your code. Let us for
+simplicity say that your external library is situated in its own folder.&lt;/p>
+&lt;p>One day you realize that there is a new version 2.0 of foo released. You
+download it and since there was a while ago a lot of the file structure
+in the foo project has changed. How can you replace the files in your
+current repository in a good looking fashion?&lt;/p></description></item></channel></rss>

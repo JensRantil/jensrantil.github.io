@@ -1,0 +1,62 @@
+<!doctype html><html lang=en><head><title>Simpler Cookieless Cookies · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="Another way of doing cookieless cookies."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Simpler Cookieless Cookies"><meta name=twitter:description content="Another way of doing cookieless cookies."><meta property="og:url" content="https://jensrantil.github.io/posts/simpler-cookieless-cookies/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Simpler Cookieless Cookies"><meta property="og:description" content="Another way of doing cookieless cookies."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2013-08-18T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-22T00:13:45+02:00"><meta property="article:tag" content="HTTP"><link rel=canonical href=https://jensrantil.github.io/posts/simpler-cookieless-cookies/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/simpler-cookieless-cookies/>Simpler Cookieless Cookies</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2013-08-18T00:00:00Z>August 18, 2013
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+3-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/http/>HTTP</a></span></div></div></header><div class=post-content><p>I recently read the blog article &ldquo;<a href=http://lucb1e.com/rp/cookielesscookies/ class=external-link target=_blank rel=noopener>Cookieless
+Cookies</a>&rdquo; that talks about
+<a href=https://en.wikipedia.org/wiki/HTTP_ETag#Tracking_using_ETags class=external-link target=_blank rel=noopener>using ETag for tracking
+users</a>.
+Smart. This is the second article I read about obscure ways to store
+tracking information of a user. The first one was about <a href=https://epic.org/privacy/cookies/flash.html class=external-link target=_blank rel=noopener>storing Cookie
+information using Flash</a>.</p><p>Using cookieless tracking is not really something new. While it can be
+fun to read about various advanced way of tracking users, there&rsquo;s been a
+way of doing that without cookies for a long time.</p><h2 id=enter-jsessionid>Enter jsessionid
+<a class=heading-link href=#enter-jsessionid><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Have you ever seen a URL something like</p><blockquote><p><a href="http://www.example.com/hello/;jsessionid=XXXX" class=external-link target=_blank rel=noopener>http://www.example.com/hello/;jsessionid=XXXX</a></p></blockquote><p>where <code>XXXX</code> is a code of arbitrary length? <em>jsessionid</em> is the name if
+the session identifier that a couple of Java web servers are using to
+store the unique session identifier that maps the session inbetween
+requests. In the case of <a href=https://tomcat.apache.org/ class=external-link target=_blank rel=noopener>Tomcat</a>, (by
+default) it tries to set a cookie with the name <code>jsessionid</code>. If it
+can&rsquo;t, <a href=http://fralef.me/tomcat-disable-jsessionid-in-url.html class=external-link target=_blank rel=noopener>it puts the session identifier in the URL
+instead</a>.</p><p>Wait a minute here! We are tracking users without cookies here! Touché.
+While there are all these various complicated ways of tracking a user,
+this is a very simple way of doing it.</p><h2 id=url-based-tracking>URL based tracking
+<a class=heading-link href=#url-based-tracking><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Let&rsquo;s call this &ldquo;URL based tracking&rdquo;. The tracking is governed by two
+simple rules:</p><ul><li><strong>For a new user that does not have a tracking identifier in its
+URL</strong>: Redirect him/her to the exact same URL, but with a unique
+identifier appended to the url.</li><li><strong>For all other page loads</strong>: Make sure that every single <code>&lt;a></code> tag
+has its <code>href</code> attribute appended with the unique
+tracking identifier.</li></ul><p>As long as all links on <a href=http://www.example.com class=external-link target=_blank rel=noopener>http://www.example.com</a> are appended with the
+tracking identifier, we can every single move that a user makes on a
+website. This type of tracking has three specific features that are
+noteworthy:</p><p>First, as opposed to Flash based or cache/Etag based tracking, <em>URL
+based tracking cannot permanently be disabled</em>. Flash can be
+uninstalled, and a cache can be cleared. Sure, a browser plugin could do
+clientside URL replacement, but there are many complicated ways of
+embedding the session identifier in a URL. You could even use a
+symmetric encryption for it.</p><p>Nowadays there are many websites that are using long and complicated
+URLs. They are a perfect case for cookieless tracking. Just look at
+Amazon&rsquo;s URL:s:</p><pre><code>http://www.amazon.com/gp/product/B0083Q04IQ/ref=s9_pop_gw_g424_ir03/183-0559114-0776210?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=center-2&amp;pf_rd_r=18XKAT7PX42T9S5BHAHV&amp;pf_rd_t=101&amp;pf_rd_p=1263340922&amp;pf_rd_i=507846
+</code></pre><p>Very few visitors would notice if one of these parameters would stay
+unchanged as you would progress from page to page on Amazon. In fact,
+they might even use a cookieless tracking ID already based on the cheer
+number of parameters they have&mldr;</p><p>Secondly, for less obscure tracking identifiers in the URL, it&rsquo;s fairly
+easy for a visitor to reset the tracking id. Simply remove it from the
+URL and reload the page. That said, they&rsquo;ll get a new tracking
+identifier set immediately.</p><p>Thirdly, URL based sessions are not persisted between different website
+visits. If you leave <code>http://www.example.com/something/;jsessionid=XXXX</code>
+and come back to it, you will loose your tracking id. This obviously
+means that tracking cannot be done between browser restarts.</p><h2 id=in-summary>In summary
+<a class=heading-link href=#in-summary><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p><strong>For webmasters</strong>: If you&rsquo;d like to track your visitors that has
+cookies disabled, this is probably the easiest way you can do this.</p><p><strong>For privacy aware users</strong>: Make sure to keep track of what&rsquo;s put in
+your URL! ;)</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/cba53b20c33afbbecaa6fd8cc3149dd381e636f7 target=_blank rel=noopener>cba53b2</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

@@ -1,0 +1,257 @@
+<!doctype html><html lang=en><head><title>Business contracts are transport agnostic · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="Business contract testing is much simpler done by method calls instead of using something like PACT."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Business contracts are transport agnostic"><meta name=twitter:description content="Business contract testing is much simpler done by method calls instead of using something like PACT."><meta property="og:url" content="https://jensrantil.github.io/posts/simple-contract-testing/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Business contracts are transport agnostic"><meta property="og:description" content="Business contract testing is much simpler done by method calls instead of using something like PACT."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-04-27T13:40:35+02:00"><meta property="article:modified_time" content="2025-04-27T14:25:03+02:00"><meta property="article:tag" content="Simplicity"><meta property="article:tag" content="Testing"><meta property="article:tag" content="Java"><link rel=canonical href=https://jensrantil.github.io/posts/simple-contract-testing/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/simple-contract-testing/>Business contracts are transport agnostic</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2025-04-27T13:40:35+02:00>April 27, 2025
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+7-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/simplicity/>Simplicity</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/testing/>Testing</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/java/>Java</a></span></div></div></header><div class=post-content><p>I have never been a big fan of how some people equate &ldquo;contract testing&rdquo; with using something like <a href=https://docs.pact.io class=external-link target=_blank rel=noopener>PACT</a>. There are other ways of doing contract testing, but a lot of engineers don&rsquo;t seem to know this. Today, I thought I would write something about this.</p><h2 id=contract-testing>Contract testing?
+<a class=heading-link href=#contract-testing><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p><em>Contract testing</em> is about making sure that two pieces of software (usually two services) can communicate correctly with each other, and that they agree on how they should talk.</p><p>The &ldquo;contract&rdquo; is an agreement that &ldquo;When you send me this kind of request, I&rsquo;ll send you this kind of response.&rdquo;</p><p>Contract testing checks that:</p><ul><li>The consumer (the thing sending the request) is using the right format.</li><li>The provider (the thing answering the request) is sending back the right format.</li></ul><h2 id=testing-with-pact>Testing with PACT
+<a class=heading-link href=#testing-with-pact><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>PACT is a testing tool that allows developers to replay recorded HTTP traffic to ensure API contracts are still met:</p><figure><img src=/posts/simple-contract-testing/pact.svg alt="Figure showing PACT."><figcaption><p>PACT testing is done in two phases. The first phase is recording API requests and responses. The second phase is to replay those requests against a server to ensure it returns the same responses.</p></figcaption></figure><p>PACT does this by recording and replaying API traffic. You record the API traffic and store the request and response in a recording file (called a &ldquo;pact&rdquo;). Once you have a recording file, you can rerun it against a server (and its future versions) and assert that it returns the same response as in the recording.</p><p>PACT is mostly a tool to ensure your API is forward/backward compatible and you don&rsquo;t break any previous/future API contracts.</p><h2 id=business-contract-testing>Business contract testing
+<a class=heading-link href=#business-contract-testing><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The biggest problem with how PACT is being used is its to a transport protocol (in this case HTTP<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>). In most cases, it is <em>not</em> the transport protocol, nor the JSON parser<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>, the test foremost intends to test. Most contract tests test things that relate to &ldquo;business contracts&rdquo;, such as</p><ul><li>old business actions (such as &ldquo;creating a user&rdquo;, or &ldquo;uploading a file&rdquo;) work with the new API (where fields are usually missing).</li><li>new business actions (adding a new field) work with older APIs/server versions.</li></ul><p>Of course, you want to make sure that your JSON parser can parse a JSON request and map it to a variable. And of course, you want to make sure that your web server can receive a request. But those are <em>two</em> basic tests. All other business contract tests do not need to test this.</p><h2 id=testing-without-pact>Testing without PACT
+<a class=heading-link href=#testing-without-pact><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The modern way of doing API development involves defining an API schema in a high-level <abbr title="Domain-Specific Language">DSL</abbr>, such as <a href=https://grpc.io class=external-link target=_blank rel=noopener>gRPC</a> or <a href=https://www.openapis.org class=external-link target=_blank rel=noopener>OpenAPI</a>, and using those to generate a client and server. If you do this, your generator will have implemented a server interface that you must implement your server in. By doing so, <em>your RPC library implicitly takes care of mapping your transport protocol and parsing</em>, and then makes <strong>basic method calls</strong> to your implemented methods.</p><h3 id=an-example>An example
+<a class=heading-link href=#an-example><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Let&rsquo;s say we have an OpenAPI schema for a &ldquo;Hello World&rdquo; server:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>openapi</span>: <span style=color:#ae81ff>3.0.3</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>info</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>title</span>: <span style=color:#ae81ff>Hello World API</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>description</span>: <span style=color:#ae81ff>A simple API that returns &#34;Hello, {name}!&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>version</span>: <span style=color:#ae81ff>1.0.0</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>servers</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>url</span>: <span style=color:#ae81ff>https://api.example.com/v1</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>paths</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>/hello</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>get</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>summary</span>: <span style=color:#ae81ff>Returns a personalized Hello World message</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>parameters</span>:
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>name</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>in</span>: <span style=color:#ae81ff>query</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>description</span>: <span style=color:#ae81ff>The name of the person to greet</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>required</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>schema</span>:
+</span></span><span style=display:flex><span>            <span style=color:#f92672>type</span>: <span style=color:#ae81ff>string</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>responses</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#39;200&#39;</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>description</span>: <span style=color:#ae81ff>A successful response</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>content</span>:
+</span></span><span style=display:flex><span>            <span style=color:#f92672>application/json</span>:
+</span></span><span style=display:flex><span>              <span style=color:#f92672>schema</span>:
+</span></span><span style=display:flex><span>                <span style=color:#f92672>type</span>: <span style=color:#ae81ff>object</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>properties</span>:
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>message</span>:
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>string</span>
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>example</span>: <span style=color:#ae81ff>Hello, John!</span>
+</span></span></code></pre></div><p>The generated (Java) server <code>interface</code> would look something like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>package</span> com.example.api;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> javax.ws.rs.*;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> javax.ws.rs.core.MediaType;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> javax.ws.rs.BeanParam;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Path</span>(<span style=color:#e6db74>&#34;/hello&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>HelloWorldApi</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@GET</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Produces</span>(MediaType.<span style=color:#a6e22e>APPLICATION_JSON</span>)
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Consumes</span>(MediaType.<span style=color:#a6e22e>APPLICATION_JSON</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> MessageResponse <span style=color:#a6e22e>hello</span>(<span style=color:#a6e22e>@BeanParam</span> HelloWorldRequest params);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>where your <code>HelloWorldRequest</code> would be</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>package</span> com.example.model;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> javax.ws.rs.QueryParam;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HelloWorldRequest</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@QueryParam</span>(<span style=color:#e6db74>&#34;name&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String name;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>HelloWorldRequest</span>() {}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>HelloWorldRequest</span>(String name) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> name;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getName</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> name;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setName</span>(String name) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> name;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Since our server now is implemented using a basic Java class, writing our API contract test is <em>really simple</em>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>package</span> com.example.api;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.example.model.HelloWorldRequest;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.example.model.MessageResponse;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> org.junit.jupiter.api.Test;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import static</span> org.junit.jupiter.api.Assertions.assertEquals;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HelloWorldApiImplTest</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>testHelloWithName</span>() {
+</span></span><span style=display:flex><span>        HelloWorldApiImpl api <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HelloWorldApiImpl();
+</span></span><span style=display:flex><span>        HelloWorldRequest request <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HelloWorldRequest(<span style=color:#e6db74>&#34;John&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        MessageResponse response <span style=color:#f92672>=</span> api.<span style=color:#a6e22e>hello</span>(request);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        assertEquals(<span style=color:#e6db74>&#34;Hello, John!&#34;</span>, response.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Notice, I am not recording any traffic, not starting up a web server, not making any HTTP calls, nor am I serialising any JSON.</p><p>If we later would like our <code>HelloWorldApiImpl</code> server to support first name and last name, we could easily extend our <code>HelloWorldRequest</code> to support that and write unit tests that assert the old behaviour still works, too. Our HelloWorldRequest would turn into this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>package</span> com.example.model;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> javax.ws.rs.QueryParam;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HelloWorldRequest</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     * @deprecated Use firstname and lastname instead.
+</span></span></span><span style=display:flex><span><span style=color:#75715e>     */</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Deprecated</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@QueryParam</span>(<span style=color:#e6db74>&#34;name&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String name;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@QueryParam</span>(<span style=color:#e6db74>&#34;firstname&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String firstname;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@QueryParam</span>(<span style=color:#e6db74>&#34;lastname&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String lastname;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>HelloWorldRequest</span>() {}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>HelloWorldRequest</span>(String name) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> name;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>HelloWorldRequest</span>(String firstname, String lastname) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstname</span> <span style=color:#f92672>=</span> firstname;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastname</span> <span style=color:#f92672>=</span> lastname;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getName</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> name;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setName</span>(String name) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> name;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getFirstname</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> firstname;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setFirstname</span>(String firstname) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstname</span> <span style=color:#f92672>=</span> firstname;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getLastname</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> lastname;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setLastname</span>(String lastname) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastname</span> <span style=color:#f92672>=</span> lastname;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>and our updated unit test file would look like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>package</span> com.example.api;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.example.model.HelloWorldRequest;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.example.model.MessageResponse;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> org.junit.jupiter.api.Test;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import static</span> org.junit.jupiter.api.Assertions.assertEquals;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HelloWorldApiImplTest</span> {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>testDeprecatedHelloWithName</span>() {
+</span></span><span style=display:flex><span>        HelloWorldApiImpl api <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HelloWorldApiImpl();
+</span></span><span style=display:flex><span>        HelloWorldRequest request <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HelloWorldRequest(<span style=color:#e6db74>&#34;John&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        MessageResponse response <span style=color:#f92672>=</span> api.<span style=color:#a6e22e>hello</span>(request);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        assertEquals(<span style=color:#e6db74>&#34;Hello, John!&#34;</span>, response.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>testHelloWithFirstnameAndLastname</span>() {
+</span></span><span style=display:flex><span>        HelloWorldApiImpl api <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HelloWorldApiImpl();
+</span></span><span style=display:flex><span>        HelloWorldRequest request <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HelloWorldRequest();
+</span></span><span style=display:flex><span>        request.<span style=color:#a6e22e>setFirstname</span>(<span style=color:#e6db74>&#34;Jane&#34;</span>);
+</span></span><span style=display:flex><span>        request.<span style=color:#a6e22e>setLastname</span>(<span style=color:#e6db74>&#34;Doe&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        MessageResponse response <span style=color:#f92672>=</span> api.<span style=color:#a6e22e>hello</span>(request);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        assertEquals(<span style=color:#e6db74>&#34;Hello, Jane Doe!&#34;</span>, response.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>In other words, testing business APIs <em>can</em> be done without having to make any HTTP calls. This makes the tests simpler & faster to run - easier to understand, easier to execute, easier to debug, without having to start up any web server for every test suite run.</p><h2 id=controllers-and-services>Controllers and services
+<a class=heading-link href=#controllers-and-services><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Strictly speaking, an RPC library is not needed for method-based API contract testing. In layered software design, <em>controllers</em> take care of transport protocol (HTTP) work, and delegate actual business work to a <em>service</em> through basic method calls. Here is an example:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>package</span> com.example.controller;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.example.model.HelloWorldRequest;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> com.example.service.HelloWorldService;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> javax.servlet.ServletException;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> javax.servlet.annotation.WebServlet;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> javax.servlet.http.*;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.io.IOException;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.io.PrintWriter;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@WebServlet</span>(<span style=color:#e6db74>&#34;/hello&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HelloWorldController</span> <span style=color:#66d9ef>extends</span> HttpServlet {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> HelloWorldService helloWorldService;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Constructor injection: Now the controller simply takes a HelloWorldService as a parameter</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>HelloWorldController</span>(HelloWorldService helloWorldService) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>helloWorldService</span> <span style=color:#f92672>=</span> helloWorldService;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>doGet</span>(HttpServletRequest req, HttpServletResponse resp) <span style=color:#66d9ef>throws</span> ServletException, IOException {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Parse query parameters manually</span>
+</span></span><span style=display:flex><span>        String name <span style=color:#f92672>=</span> req.<span style=color:#a6e22e>getParameter</span>(<span style=color:#e6db74>&#34;name&#34;</span>);
+</span></span><span style=display:flex><span>        String firstname <span style=color:#f92672>=</span> req.<span style=color:#a6e22e>getParameter</span>(<span style=color:#e6db74>&#34;firstname&#34;</span>);
+</span></span><span style=display:flex><span>        String lastname <span style=color:#f92672>=</span> req.<span style=color:#a6e22e>getParameter</span>(<span style=color:#e6db74>&#34;lastname&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Build HelloWorldRequest object</span>
+</span></span><span style=display:flex><span>        HelloWorldRequest helloWorldRequest <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HelloWorldRequest();
+</span></span><span style=display:flex><span>        helloWorldRequest.<span style=color:#a6e22e>setName</span>(name);
+</span></span><span style=display:flex><span>        helloWorldRequest.<span style=color:#a6e22e>setFirstname</span>(firstname);
+</span></span><span style=display:flex><span>        helloWorldRequest.<span style=color:#a6e22e>setLastname</span>(lastname);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Delegate to HelloWorldService for business logic</span>
+</span></span><span style=display:flex><span>        String message <span style=color:#f92672>=</span> helloWorldService.<span style=color:#a6e22e>hello</span>(helloWorldRequest);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Prepare HTTP response</span>
+</span></span><span style=display:flex><span>        resp.<span style=color:#a6e22e>setContentType</span>(<span style=color:#e6db74>&#34;application/json&#34;</span>);
+</span></span><span style=display:flex><span>        resp.<span style=color:#a6e22e>setCharacterEncoding</span>(<span style=color:#e6db74>&#34;UTF-8&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Write JSON response manually</span>
+</span></span><span style=display:flex><span>        PrintWriter writer <span style=color:#f92672>=</span> resp.<span style=color:#a6e22e>getWriter</span>();
+</span></span><span style=display:flex><span>        writer.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#34;{\&#34;message\&#34;:\&#34;&#34;</span> <span style=color:#f92672>+</span> escapeJson(message) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;\&#34;}&#34;</span>);
+</span></span><span style=display:flex><span>        writer.<span style=color:#a6e22e>flush</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Simple JSON escaping</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String <span style=color:#a6e22e>escapeJson</span>(String str) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> str.<span style=color:#a6e22e>replace</span>(<span style=color:#e6db74>&#34;\&#34;&#34;</span>, <span style=color:#e6db74>&#34;\\\&#34;&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>If you have a controller like this, you can write plenty of simple unit tests to make sure that <code>HelloWorldService.hello(...)</code> does what it&rsquo;s supposed to do. Testing of <code>HelloWorldController</code> must be done using HTTP calls (that&rsquo;s its responsibility) and can be done by injecting a <a href=https://martinfowler.com/bliki/TestDouble.html class=external-link target=_blank rel=noopener>test double</a> with preprogrammed canned answers.</p><h2 id=when-pact-is-useful>When PACT is useful
+<a class=heading-link href=#when-pact-is-useful><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>PACT can be useful in two cases:</p><ul><li>Blackbox testing of services where you can&rsquo;t control the source code implementation;</li><li>Testing of a legacy service where refactoring is a major risk undertaking, and some automated testing must be in place first.</li></ul><h2 id=closing-thoughts>Closing thoughts
+<a class=heading-link href=#closing-thoughts><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Unfortunately, &ldquo;contract testing&rdquo; has become synonymous with &ldquo;testing using the transport protocol&rdquo;. It doesn&rsquo;t have to be that way. Most API testing can be done without transport protocol or serialisation considerations (such as HTTP or JSON). I hope this article has proven this.</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>PACT supports transport protocols other than HTTP, for example, various message passing protocols such as ActiveMQ, RabbitMQ, SNS, SQS, Kafka, and Kinesis. However, that&rsquo;s mostly irrelevant to this article.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>&mldr;if it&rsquo;s a JSON API.&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/04571f1e64f5740d7e5a76e05e30d07116339a55 target=_blank rel=noopener>04571f1</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

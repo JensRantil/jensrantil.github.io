@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HTTP on Jens Rantil</title><link>https://jensrantil.github.io/tags/http/</link><description>Recent content in HTTP on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 22 Aug 2023 00:13:45 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/http/index.xml" rel="self" type="application/rss+xml"/><item><title>Why the Web is so Slow</title><link>https://jensrantil.github.io/posts/why-the-web-is-so-slow/</link><pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/why-the-web-is-so-slow/</guid><description>&lt;p>I just read the blog post &lt;a href="http://calendar.perfplanet.com/2013/why-is-the-web-so-slow/" class="external-link" target="_blank" rel="noopener">Why is the web so
+slow?&lt;/a> by
+&lt;a href="http://www.phpied.com/" class="external-link" target="_blank" rel="noopener">Stoyan Stefanov&lt;/a>. This gave me the idea to give
+some common reasons for the web to be slow. I&amp;rsquo;ve been using &amp;ldquo;web
+application&amp;rdquo; fairly sloppy here. It could also mean &amp;ldquo;website&amp;rdquo; etc. Here
+they are:&lt;/p>
+&lt;ul>
+&lt;li>Because of actual distance from your computer to the webserver. The
+upper limit is the speed of light. This means that it is an
+impossibility for information to travel from Sydney to London in
+less than ~0.056 seconds (17009 kilometers).&lt;/li>
+&lt;li>Fetching a webpage requires a roundtrip of information; a request
+and response. This effectively nearly doubles the time to
+fetch something.&lt;/li>
+&lt;li>Websites generally has a bunch of static files (images,
+javascript, CSS). The web browser has a
+&lt;a href="http://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser" class="external-link" target="_blank" rel="noopener">limit&lt;/a>
+on the number of files that can be fetched in parallel. Similar
+images can be assembled into
+&lt;a href="http://css-tricks.com/css-sprites/" class="external-link" target="_blank" rel="noopener">sprites&lt;/a>, JavaScript and CSS
+can be &lt;a href="https://code.google.com/p/minify/" class="external-link" target="_blank" rel="noopener">combined and compressed&lt;/a>.&lt;/li>
+&lt;li>The &lt;a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" class="external-link" target="_blank" rel="noopener">HTTP
+protocol&lt;/a>
+does not support a single connection fetching multiple static assets
+in parallel.&lt;/li>
+&lt;li>SSL requires a longer complicated handshake and extra CPU when
+sending and receiving data.&lt;/li>
+&lt;li>Because of unnecessary synchronicity in dynamic applications.
+Historically it&amp;rsquo;s been possible for developers to only update the
+portions of a website that needs update. However, the tools have not
+really been up to speed. This has changed. Many modern JavaScript
+frameworks has created new opportunities here. Yes, I&amp;rsquo;m thinking of
+you &lt;a href="http://angularjs.org/" class="external-link" target="_blank" rel="noopener">AngularJS&lt;/a>.&lt;/li>
+&lt;li>Because of sloppy considerations of caching. Getting up to speed
+with a web application is pretty easy. Getting HTTP caching right
+requires some thought.&lt;/li>
+&lt;li>Because many web applications have not migrated to use a
+&lt;a href="https://en.wikipedia.org/wiki/Content_delivery_network" class="external-link" target="_blank" rel="noopener">CDN&lt;/a>. If we
+come together and all use CDNs, our visitors would be way more
+likely to have the common static files cached.&lt;/li>
+&lt;li>Because of complex rendering of websites. The implications of
+complex HTML structure and CSS selectors is that rendering of a
+website is slow. KISS = Keep It Simple, Stupid.&lt;/li>
+&lt;li>Because many web servers today are still not delivering compressed
+HTTP responses, such as GZip.&lt;/li>
+&lt;li>Because many webdevelopers don&amp;rsquo;t understand the implications of
+using slow third party assets. Yes, I&amp;rsquo;m looking at you Analytics and
+Ad Companies! Slow assets gives website visitors the feeling that
+the website is not done loading when 99% of the assets really are.&lt;/li>
+&lt;li>Because many webdevelopers still are using JavaScript when they
+don&amp;rsquo;t have to. CSS3 can animate and allow for simple logic
+without JavaScript.&lt;/li>
+&lt;li>Because we are sending cookies for a lot of content that does not
+require cookes.&lt;/li>
+&lt;li>Because HTML is larger that it needs to be. Reusing CSS classes
+reduces the size of HTML to be fetched.&lt;/li>
+&lt;li>Because images are sent when they really could be emulated
+using CSS. This is a thing of the past that still bugs me.&lt;/li>
+&lt;/ul>
+&lt;p>Google&amp;rsquo;s networking protocol &lt;a href="https://en.wikipedia.org/wiki/SPDY" class="external-link" target="_blank" rel="noopener">SPDY&lt;/a>
+aims to solve some of these issues and make the web faster.&lt;/p></description></item><item><title>Simpler Cookieless Cookies</title><link>https://jensrantil.github.io/posts/simpler-cookieless-cookies/</link><pubDate>Sun, 18 Aug 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/simpler-cookieless-cookies/</guid><description>&lt;p>I recently read the blog article &amp;ldquo;&lt;a href="http://lucb1e.com/rp/cookielesscookies/" class="external-link" target="_blank" rel="noopener">Cookieless
+Cookies&lt;/a>&amp;rdquo; that talks about
+&lt;a href="https://en.wikipedia.org/wiki/HTTP_ETag#Tracking_using_ETags" class="external-link" target="_blank" rel="noopener">using ETag for tracking
+users&lt;/a>.
+Smart. This is the second article I read about obscure ways to store
+tracking information of a user. The first one was about &lt;a href="https://epic.org/privacy/cookies/flash.html" class="external-link" target="_blank" rel="noopener">storing Cookie
+information using Flash&lt;/a>.&lt;/p>
+&lt;p>Using cookieless tracking is not really something new. While it can be
+fun to read about various advanced way of tracking users, there&amp;rsquo;s been a
+way of doing that without cookies for a long time.&lt;/p></description></item></channel></rss>
