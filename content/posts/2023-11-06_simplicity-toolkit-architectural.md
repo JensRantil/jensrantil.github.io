@@ -35,3 +35,5 @@ https://pleasejusttryhtmx.com/
 Your staging environment will never look and behave like your production environment. Consider dropping your staging environment altogether and learn how to test in production using feature flags, canary deploys etc. instead.
 
 ### A managed runtime over Kubernetes
+
+https://thedecipherist.com/articles/docker_swarm_vs_kubernetes/
