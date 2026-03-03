@@ -21,7 +21,11 @@ Since at least the 1980s, computers have played [Tic-tac-toe][ttt], chess, compl
 
 _Machine learning_ is another type of AI. For example, recommender systems ("Customer who bought this, also bought X"), classifiers (spam detection in e-mail), and image analysis (face detection) are all in that bucket.
 
-What is "human-like" is not always that clear-cut. I tend to think of AI not as a binary thing of "Is it intelligent or not? Yes or no.". Rather, I think of artificial intelligence as a range going from rule-based on one end of the **AI spectrum**, and on the other end something like <abbr title="Artificial General Intelligence">AGI</abbr> -- human-level cognitive abilities, enabling it to understand, learn, and apply knowledge across a wide range of tasks, much like a human.
+What is "human-like" is not always that clear-cut. I tend to think of AI not as a binary thing of "Is it intelligent or not? Yes or no". Rather, I think of artificial intelligence as a range of smartness. An **AI spectrum** if you will:
+
+At one end of the AI spectrum you find the _rule-based AI_; A computer can hold all the tic-tac-toe board combinations in its memory. "If it looks like X, do Y. If it looks like A, do B." Simple rules. Yet, they do take some time to build up. And they make the AI smart enough to play the game.
+
+On the other end of the spectrum is something like <abbr title="Artificial General Intelligence">_AGI_</abbr> -- human-level cognitive abilities, enabling it to understand, learn, and apply knowledge across a wide range of tasks, much like a human.
 
 Ever since the 1950s, we as humans have been on a journey along the AI spectrum, in the direction of smarter and more intelligent systems. <abbr title="Large Language-Models">LLMs</abbr> are our current last stop.
 
