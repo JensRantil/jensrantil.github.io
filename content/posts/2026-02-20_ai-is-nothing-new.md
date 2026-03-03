@@ -11,7 +11,7 @@ But let me tell you what feels like a little secret these days: [AI has been aro
 
 [ai-history]: https://en.wikipedia.org/wiki/History_of_artificial_intelligence
 
-So, what is AI anyway? Artificial intelligence (AI) is a field of computer science focused on creating systems that can perform tasks requiring **human-like** intelligence, such as learning, reasoning, perception, and decision-making.
+So, what is AI anyway? Artificial intelligence (AI) is a field of computer science focused on creating systems that can perform tasks requiring **_human-like_ intelligence**, such as learning, reasoning, perception, and decision-making.
 
 Before today's AI frenzy, I would call AI features "smart" or "data-driven". It was all AI, just with a different name. Heck, possibly even a better and more inclusive name.
 
