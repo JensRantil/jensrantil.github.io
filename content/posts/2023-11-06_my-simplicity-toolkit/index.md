@@ -50,7 +50,7 @@ As Hickey points out,
 
 > Simplicity is a choice.
 
-and these days I would even say it is controversial. This includes things like
+and these days I would even say it is [controversial][no-promo]. This includes things like
 focusing on simple programming language constructs, doing _simple_ dependency
 injection without any dependency injection framework/library, focusing on
 simple libraries over frameworks, avoiding complex/complicated build tooling,
@@ -59,6 +59,7 @@ smaller scoped tests, smaller interfaces, not needing microservices by default,
 possible][rad-simplicity] etc. Also, a focus on backward compatibility and a
 preference towards [not using the latest and coolest tech][boring-tech].
 
+[no-promo]: https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity/
 [no-spa]: https://www.thoughtworks.com/radar/techniques/spa-by-default
 
 Further, I am a big believer in simple solutions programming-wise; Boring code
