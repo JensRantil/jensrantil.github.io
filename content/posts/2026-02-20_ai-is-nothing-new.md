@@ -27,7 +27,9 @@ At one end of the AI spectrum you find the _rule-based AI_; A computer can hold 
 
 On the other end of the spectrum is something like <abbr title="Artificial General Intelligence">_AGI_</abbr> -- human-level cognitive abilities, enabling it to understand, learn, and apply knowledge across a wide range of tasks, much like a human.
 
-Ever since the 1950s, we as humans have been on a journey along the AI spectrum, in the direction of smarter and more intelligent systems. <abbr title="Large Language-Models">LLMs</abbr> are our current last stop.
+Ever since the 1950s, we as humans have been on [a journey along the AI spectrum][ai-journey], in the direction of smarter and more intelligent systems. <abbr title="Large Language-Models">LLMs</abbr> are our current last stop.
+
+[ai-journey]: https://geohot.github.io//blog/jekyll/update/2026/03/11/running-69-agents.html
 
 Whenever someone talks to me about AI these days, I ask what type of AI they are referring to. AI is a long-lived, wide, and deep domain encompassing a lot of things. Not just LLMs.
 
