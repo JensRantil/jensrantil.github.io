@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Staging Environment on Jens Rantil</title><link>https://jensrantil.github.io/tags/staging-environment/</link><description>Recent content in Staging Environment on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 19 Feb 2026 14:20:28 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/staging-environment/index.xml" rel="self" type="application/rss+xml"/><item><title>On staging environments</title><link>https://jensrantil.github.io/posts/on-staging-environments/</link><pubDate>Sun, 12 May 2024 15:44:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/on-staging-environments/</guid><description>&lt;div class="notice info">
+ &lt;div class="notice-title">
+ &lt;i class="fa-solid fa-exclamation-circle" aria-hidden="true">&lt;/i>Info
+ &lt;/div>
+ &lt;div class="notice-content">This article is about staging environments, but it almost equally applies to the concept of single-tenant environments.&lt;/div>
+&lt;/div>
+
+&lt;blockquote>
+&lt;p>The ultimate quality assurance is when customers get their hands on your
+software and actually try it. &lt;em>That&amp;rsquo;s&lt;/em> when you know if your software does what
+it&amp;rsquo;s supposed to do or not. This happens in production.&lt;/p>
+&lt;/blockquote>
+&lt;p>Every technical decision has a tradeoff, but certain things are
+rarely challenged in our industry. Having a staging environment&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, and having
+every change go through that staging environment, are two of those things.&lt;/p></description></item></channel></rss>

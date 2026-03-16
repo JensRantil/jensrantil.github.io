@@ -1,0 +1,155 @@
+<!doctype html><html lang=en><head><title>On staging environments · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="The cost-benefit ratio for your staging environment is probably higher than you think."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="On staging environments"><meta name=twitter:description content="The cost-benefit ratio for your staging environment is probably higher than you think."><meta property="og:url" content="https://jensrantil.github.io/posts/on-staging-environments/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="On staging environments"><meta property="og:description" content="The cost-benefit ratio for your staging environment is probably higher than you think."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-05-12T15:44:35+02:00"><meta property="article:modified_time" content="2026-02-19T14:20:28+01:00"><meta property="article:tag" content="Staging Environment"><meta property="article:tag" content="Testing"><link rel=canonical href=https://jensrantil.github.io/posts/on-staging-environments/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/on-staging-environments/>On staging environments</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2024-05-12T15:44:35+02:00>May 12, 2024
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+10-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/staging-environment/>Staging Environment</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/testing/>Testing</a></span></div></div></header><div class=post-content><div class="notice info"><div class=notice-title><i class="fa-solid fa-exclamation-circle" aria-hidden=true></i>Info</div><div class=notice-content>This article is about staging environments, but it almost equally applies to the concept of single-tenant environments.</div></div><blockquote><p>The ultimate quality assurance is when customers get their hands on your
+software and actually try it. <em>That&rsquo;s</em> when you know if your software does what
+it&rsquo;s supposed to do or not. This happens in production.</p></blockquote><p>Every technical decision has a tradeoff, but certain things are
+rarely challenged in our industry. Having a staging environment<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>, and having
+every change go through that staging environment, are two of those things.</p><p>So, what is a staging environment? It is a full replica of a production
+environment. Do you have a backend service running in production? Then you also
+need that service in staging. Do you have a database in production? Then you
+need a database in your staging environment. Etcetera. Most companies having a
+staging environment require every change to first go through staging to verify
+that the change works before hitting production.</p><h2 id=reasons-for-_not_-having-a-staging-environment>Reasons for <em>not</em> having a staging environment
+<a class=heading-link href=#reasons-for-_not_-having-a-staging-environment><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>There are multiple reasons why I consider having, and using, a staging
+environment as <a href=/posts/waste-in-software-development/>wasteful</a>. They can be summed up in three big categories:</p><ul><li>A staging environment gives a false sense of safety.</li><li>It slows down developer velocity.</li><li>It has a high operational and financial cost.</li></ul><p>Let me explain:</p><h3 id=not-sustainable-over-time>Not sustainable over time
+<a class=heading-link href=#not-sustainable-over-time><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>As engineers, we are all encouraged to build up automated test suites (unit
+tests, etc.) to make sure that tests can verify that today&rsquo;s behavior will work
+in the future. Manual testing, such as the one used in a staging environment,
+is frowned upon in our industry. Yet, why are we doing it? I think staging
+environments encourage manual testing. If we want to Build Quality In&#8482;&#xfe0f;, we
+need automated testing. If we need automated testing, we need to stop manual
+testing. A great way to stop manual testing is to not have a staging
+environment.</p><h3 id=bottlenecked-shared-resource>Bottlenecked shared resource
+<a class=heading-link href=#bottlenecked-shared-resource><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><blockquote><p>Good morning! Could everyone hold off with your deploys for then ext hour?
+We are testing something on staging.</p></blockquote><p>The more engineers you have, the more a staging environment will bottleneck as
+a testing ground. One team is testing something and want a stable environment
+to make sure that no other bugs randomly pop up. By definition, they can&rsquo;t control
+which other changes are made to the environment since it is shared between
+teams.</p><h3 id=version-surprises>Version surprises
+<a class=heading-link href=#version-surprises><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Let&rsquo;s say services A & B both have the following CI pipeline: <code>code review -> staging -> [approval] -> production</code> The <code>[approval]</code> step means that the
+deployment flow is what is called a &ldquo;staged rollout&rdquo;.</p><p>If each service is being deployed from version 1 to version 2, the version
+combinations in production for services A & B can then be (1, 1), (1, 2), (2,
+1), and (2, 2). Four combinations! For three services, that&rsquo;s eight
+combinations.</p><p>Needless to say, the number of version combinations that could be running in
+production grows exponentially - and making sure to cover all the cases becomes
+an impossibility. By skipping staging we would know that what is running in
+production is what is the latest version in our source code. Much simpler,
+fewer surprises.</p><h3 id=batched-deploys>Batched deploys
+<a class=heading-link href=#batched-deploys><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Continuing on the topic of staged rollout above, the manual <code>[approval]</code> step
+requires manual work. And manual work tends to happen less often. This means
+that there are multiple changes lined up in staging to be deployed to
+production. While this gives an increased sense of safety, this actually has
+the opposite effect:</p><p>It makes it much harder to debug if a deployment breaks in production. Which of
+the 6 changes have a bug in it? What did we change? Had we deployed each change
+individually to production, we would immediately know which change was bad.</p><p>Deployers are not <em>really</em> reviewing what is going out in production because
+the list is just too big.</p><h3 id=a-false-sense-of-safety>A false sense of safety
+<a class=heading-link href=#a-false-sense-of-safety><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>I have heard the argument &ldquo;So, if we don&rsquo;t test it in staging - how do we know
+if it works in production?&rdquo;. There is an assumption that everything that works
+on staging will work in production. As most Site Reliability Engineers (SREs)
+are aware of, this isn&rsquo;t true. By definition, a staging environment is
+<em>different</em> than production. Here are some common things that can differ
+between staging and production:</p><ul><li>The amount of data being stored.</li><li>The actual data being stored. Production usually have a lot of surprises&mldr;</li><li>Traffic patterns</li><li>Runtime configuration (CPU, memory, application configuration&mldr;)</li><li>Feature flags</li><li>Different database schema (by mistake).</li><li>And more&mldr;</li></ul><p><strong>Believing that a change will work in production if it works on staging is a
+fallacy.</strong></p><h3 id=we-need-to-test-our-infrastructure-changes>&ldquo;We need to test our infrastructure changes&rdquo;
+<a class=heading-link href=#we-need-to-test-our-infrastructure-changes><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Infrastructure changes <em>can</em> be safely done without a staging environment, but
+it requires a different mindset. The key is to think about gradual rollouts and
+routing of new functionality. See the bottom of this article for some
+staging-independent ways to do this.</p><p>Here are some staging-independent ways to test things in production without
+negatively impacting users:</p><ul><li>Feature flags on users or accounts to route to different infrastructure.</li><li><a href=https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-weighted.html class=external-link target=_blank rel=noopener>Weighted round-robin DNS records.</a></li><li><a href="https://github.com/JensRantil/java-canary-tools?tab=readme-ov-file#weightedshardedbuilder" class=external-link target=_blank rel=noopener>Partitioning of users based on identifiers in source code</a>
+to route to different infrastructure. For example &ldquo;all users with UUID
+starting with &lsquo;00&rsquo; use the new cache cluster&rdquo;.</li><li><a href="https://github.com/JensRantil/java-canary-tools?tab=readme-ov-file#weightedroundrobinbuilder" class=external-link target=_blank rel=noopener>Round-robin users in source code</a> to different infrastructure
+components.</li></ul><p>I think the engineers who are best at this, are the true DevOps engineers who
+can freely move between being a developer and operations person. Knowing where
+to introduce the new functionality gradually is key.</p><p>Being able to do the above requires a strong focus on good observability. How
+will you make sure that your change doesn&rsquo;t break anything?</p><h3 id=cost>Cost
+<a class=heading-link href=#cost><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>A staging environment has infrastructure costs. For complex systems, this cost
+can be significant. Every service you run in production must run in staging.
+Every database running in production, must also run one in staging. Databases
+can be expensive&mldr;</p><p>There is also the cost of maintaining a staging environment. This is either
+salary costs for more engineers or slower development. See more below.</p><h3 id=slower-feedback-cycle-in-the-development-of-software>Slower feedback cycle in the development of software
+<a class=heading-link href=#slower-feedback-cycle-in-the-development-of-software><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The DORA metric &ldquo;lead time to production&rdquo; is defined as the average time it
+takes to get a change out in production. If every change must go through a
+staging environment, it will significantly impact this metric negatively.</p><p>&ldquo;get a change out in production&rdquo; also includes rollbacks. If there is a bug
+rolled out to production it will take much longer to revert that change if it
+also needs to go out to a staging environment.</p><h3 id=foundation-for-miscommunication>Foundation for miscommunication
+<a class=heading-link href=#foundation-for-miscommunication><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>If you have ever worked at a company with a staging environment I am sure you
+have occasionally been confused because the user you are looking for doesn&rsquo;t
+exist in the environment you are looking at. You are looking at the wrong
+environment. If there are multiple environments, communicating which
+environment must happen in <em>every internal bug report conversation</em>:
+Slack/IM/chat/e-mail conversation must include which environment. This has a
+cost.</p><p>I have debugged issues for more than one hour only to realize that the issue
+only happens in one environment but not the other.</p><h3 id=but-we-need-to-test-those-ux-changes>&ldquo;But we need to test those UX changes&rdquo;
+<a class=heading-link href=#but-we-need-to-test-those-ux-changes><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>I agree that getting feedback on UX changes can be a challenge. While it <em>is</em>
+possibly to codify automated UX tests using Selenium and/or Playwright,
+manually testing a UX is pretty much a requirement to get early feedback on how
+a UX <em>feels</em>.</p><p>A full staging environment is <em>not</em> a requirement to be able to do this. It can
+be done by starting up a <a href=https://docs.aws.amazon.com/amplify/latest/userguide/pr-previews.html class=external-link target=_blank rel=noopener>frontend preview per pull request</a>, and
+have that frontend pointing to a production backend.</p><p>Or even better, wrap your new UX change behind a feature flag and have your
+colleagues, alpha, or beta testers test it in production!</p><p>A pull request environment as a full replica of a production environment has
+all the same downsides as having a staging environment. I would avoid that.</p><h4 id=but-we-need-to-test-the-frontend-changes-with-the-backend-changes>&ldquo;But we need to test the frontend changes with the backend changes&rdquo;
+<a class=heading-link href=#but-we-need-to-test-the-frontend-changes-with-the-backend-changes><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>Deploy your backend changes with backward compatibility. Then test your
+frontend changes. Simple as that. Deploying a frontend and a backend change as
+an &ldquo;atomic&rdquo; deploy is a bad practice anyway.</p><h3 id=but-we-need-to-have-it-for-security-reasons>&ldquo;But we need to have it for security reasons&rdquo;
+<a class=heading-link href=#but-we-need-to-have-it-for-security-reasons><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Some companies implement a separation between staging and production data by
+having a staging environment. There are other, cheaper, controls that can solve
+that in a completely different way; Tag all users as either being a test user
+or a production user. And introduce access control based on this tag.</p><p>It&rsquo;s also worth pointing out that having two environments will <em>not</em> protect
+anyone from leaking data between two production users which in my opinion is a
+much more serious bug.</p><p>I think having a staging environment is a good example of <a href=/posts/security-and-risk/>a security control
+that doesn&rsquo;t consider other forms of risks</a>.</p><h2 id=ways-to-relax-the-dependency-on-a-staging-environment>Ways to relax the dependency on a staging environment
+<a class=heading-link href=#ways-to-relax-the-dependency-on-a-staging-environment><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Here are some staging-independent ways to test things in production without
+negatively impacting users:</p><ul><li>Partitioning users by using feature flags on users or accounts.</li><li><a href="https://github.com/JensRantil/java-canary-tools?tab=readme-ov-file#weightedshardedbuilder" class=external-link target=_blank rel=noopener>Partitioning users based on identifiers in source code</a> to
+route to different infrastructure. For example &ldquo;all users with UUID starting
+with &lsquo;00&rsquo; use the new cache cluster&rdquo;.</li><li><a href=https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-weighted.html class=external-link target=_blank rel=noopener>Weighted round-robin DNS records.</a></li><li><a href="https://github.com/JensRantil/java-canary-tools?tab=readme-ov-file#weightedroundrobinbuilder" class=external-link target=_blank rel=noopener>Round-robin users in source code</a> to different infrastructure
+components.</li><li>Gradual/staged rollouts such as &ldquo;blue-green deployment&rdquo; and &ldquo;canary
+deployments&rdquo;.</li><li>Pull request environments to mostly test frontend changes.</li><li>Smoke tests to make sure a deployment rolled out properly.</li><li>End-to-end tests to make sure that important user flows work after a
+deployment.</li><li>Automatic rollback on errors. This can be done both on an
+infrastructure level, but much simpler <a href="https://github.com/JensRantil/java-canary-tools?tab=readme-ov-file#circuitbreakerfallbackbuilder" class=external-link target=_blank rel=noopener>on intra-service level in
+source code</a>.</li></ul><p>In the article <a href=https://iism.org/article/why-are-ceos-failing-software-engineers-56 class=external-link target=_blank rel=noopener>&ldquo;Why CEOs are failing software engineers and other creative
+teams&rdquo;</a>, Gene Bond talks about how Creative Management has the goal
+to to drive down the cost of failure, not the number of failures. This is
+exactly what some of these tools do.</p><h2 id=reasons-for-_having_-a-staging-environment>Reasons for <em>having</em> a staging environment
+<a class=heading-link href=#reasons-for-_having_-a-staging-environment><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>I have seen staging environments being required for compliance reasons. That&rsquo;s
+a valid reason! If I would end up in that situation, I would make sure to at
+least deploy to production and staging in parallel, if I could.</p><p>There <em>might</em> occasionally be a reason where you might want to have a
+production replica temporarily if you are doing a big rewrite of something.
+That said, <a href=https://skamille.medium.com/avoiding-the-rewrite-trap-b1283b8dd39e class=external-link target=_blank rel=noopener>big rewrites are generally bad</a>, so I would avoid it.</p><p>Apart from the above, I am struggling to find real good long-term reasons for
+having a staging environment.</p><h2 id=closing-thoughts>Closing thoughts
+<a class=heading-link href=#closing-thoughts><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Certain workplaces have <em>more</em> than one pre-production environment (&ldquo;staging&rdquo;,
+&ldquo;testing&rdquo;, &ldquo;qa&rdquo;, &ldquo;pre-production&rdquo;&mldr; - hello banks! &#x1f44b;&#x1f60a;). Suffice to
+say, everything in this document applies to all of these pre-production
+environments proportionally to the number of additional environments that need
+to be maintained.</p><p>Having a staging environment can be useful for <a href=https://orghacking.com/pioneers-settlers-town-planners-wardley-9dcd3709cde7 class=external-link target=_blank rel=noopener>town planners</a>.
+But if a company values moving quickly over risk averseness, I would strongly
+suggest to not have a staging environment.</p><h2 id=references>References
+<a class=heading-link href=#references><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>I am not the first person to write about this. Here are some other articles on the Internet:</p><ul><li><a href=https://www.infoq.com/presentations/testing-production-2018/ class=external-link target=_blank rel=noopener>Yes, I Test in Production (And So Do You)</a></li><li><a href=https://thenewstack.io/honeycombs-charity-majors-go-ahead-test-in-production/ class=external-link target=_blank rel=noopener>Go Ahead, Test in Production</a></li><li><a href=https://www.linkedin.com/pulse/staging-environments-inefficient-relic-past-julien-danjou-/ class=external-link target=_blank rel=noopener>Staging Environments: An Inefficient Relic of the Past?</a></li><li><a href=https://www.linkedin.com/pulse/myth-staging-environment-why-production-testing-crucial-tobias-mende/ class=external-link target=_blank rel=noopener>The myth of the staging environment: Why production testing is crucial</a></li><li><a href=https://refactoring.fm/p/do-you-need-staging class=external-link target=_blank rel=noopener>Do you really need a Staging environment?</a></li><li><a href=https://squeaky.ai/blog/development/why-we-dont-use-a-staging-environment/ class=external-link target=_blank rel=noopener>Why we don’t use a staging environment</a></li></ul><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>A staging environment can have many names: staging, QA, pre-prod,
+preproduction, testing, etc.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/e09164985556f13dda7e8469e1c9d33cf7313fc7 target=_blank rel=noopener>e091649</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

@@ -1,0 +1,88 @@
+<!doctype html><html lang=en><head><title>Autoscaling is not a panacea · Jens Rantil
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="There is a belief that autoscaling will solve problems it will not."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Autoscaling is not a panacea"><meta name=twitter:description content="There is a belief that autoscaling will solve problems it will not."><meta property="og:url" content="https://jensrantil.github.io/posts/autoscaling-not-a-panacea/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Autoscaling is not a panacea"><meta property="og:description" content="There is a belief that autoscaling will solve problems it will not."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-11-06T17:25:35+02:00"><meta property="article:modified_time" content="2025-04-12T23:00:49+02:00"><meta property="article:tag" content="Simplicity"><link rel=canonical href=https://jensrantil.github.io/posts/autoscaling-not-a-panacea/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.7763f8bc6341ecf82378e867c285e1549abb063a899be313ccd25dbfcd24fa7d.css integrity="sha256-d2P4vGNB7PgjeOhnwoXhVJq7BjqJm+MTzNJdv80k+n0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.2e198fefc57dcc517a51f5b2040b841f014759bd551d4dd18df6dd0c1b954a62.css integrity="sha256-LhmP78V9zFF6UfWyBAuEHwFHWb1VHU3RjfbdDBuVSmI=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/autoscaling-not-a-panacea/>Autoscaling is not a panacea</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2023-11-06T17:25:35+02:00>November 6, 2023
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+5-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/simplicity/>Simplicity</a></span></div></div></header><div class=post-content><p>Back in the day when The Cloud (AWS) was The New Hot Thing&#8482;&#xfe0f;, I thought
+autoscaling would solve most of our problems related to costs, availability,
+performance, and scalability. Over the years, I have learned that autoscaling
+has a high maintenance cost, adds complexity, and <a href=https://en.wikipedia.org/wiki/Ironies_of_Automation class=external-link target=_blank rel=noopener>doesn&rsquo;t solve all those
+problems I initially thought it would</a>. In this article I
+will give examples of incorrect assumptions I made when it came to autoscaling:</p><p><strong>&ldquo;Once we have autoscaling, we will never have any performance problems.&rdquo;</strong> I
+thought any traffic spike would immediately be handled by autoscaling. Suddenly
+receiving 20k requests per second within a minute? My service would scale up
+immediately, handle those requests, and then quickly scale down! I had three
+invalid assumptions here:</p><ul><li><em>&ldquo;Autoscaling will react within a second.&rdquo;</em> This isn&rsquo;t true. Autoscaling
+usually kicks in within <em>minutes</em>. And usually you don&rsquo;t want autoscaling to
+be that sensitive anyway as it likely would immediately overprovision the
+number of instances.</li><li><em>&ldquo;My application will start within a few seconds.&rdquo;</em> Ever started a large
+Java service? Booting up an ORM, loading all the classes, and reading up
+stuff from a database takes time. I&rsquo;ve seen many services taking close to a
+minute to start..</li><li><em>&ldquo;My application is the bottleneck.&rdquo;</em> Anyone who has done any significant
+performance benchmark knows that the performance bottleneck <a href=https://en.wikipedia.org/wiki/Theory_of_constraints class=external-link target=_blank rel=noopener>moves
+around</a>. For example, an application backed by supporting
+infrastructure such a database can usually only scale up until a certain
+level until <em>the database</em> turns into the performance bottleneck instead.
+That said, based on experience 99% of the time, <em>the database</em> is the
+bottleneck, not your application&mldr;</li></ul><p><strong>&ldquo;Once we have autoscaling, our stability will improve.&rdquo;</strong> Autoscaling offers
+automated restarts of services. That&rsquo;s great and definitely improves system
+stability since crashed, or deadlocked, services automatically gets restarted.</p><p>However, autoscaling also (optionally) comes with scaling up and down. Over and
+over again, I have seen downscaling impact availability; shutdowns not properly
+draining ongoing HTTP requests and improperly set shutdown timeouts killing
+processes prematurely.</p><p>Scaling up can, surprisingly, also impact stability negatively. If your
+application is doing any lazy loading, it can be slow until it has warmed up
+(hello <abbr title="Java Virtual Machine">JVM</abbr>!). This is a problem that
+gets magnified if you scale up frequently. There are workarounds here, though.
+You <em>can</em> spend time heating your process after startup.</p><p>Further, since there is no subsecond autoscaling there will be a time until
+scale-up happens. During that time, your service might not be able to serve all
+your requests. This is where load-shedding and retries can help - and now you
+have another problem to solve!</p><p><strong>&ldquo;Scaling up can not be done until infinity!&rdquo;</strong>. Your autoscaling group has a
+limit on the maximum number of instances configured by you. AWS also maintains
+limits which usually always kick in at the worst possible time degrading your
+system. Funnily enough, increasing the max instances limit tends to introduce
+an <a href=https://en.wikipedia.org/wiki/Induced_demand class=external-link target=_blank rel=noopener>induced demand</a> such that you start hitting your new
+limit&mldr;</p><p><strong>&ldquo;Once we have autoscaling, I will not need to tune the <em>vertical</em> sizing of
+my system.&rdquo;</strong> Memory usage of processes increases over time, and the amount of
+memory/CPU can have an impact on latency. For example, more memory/CPU
+resources can reduce the impact garbage collection has. Request-based limits
+(maximum length on request body etc.) help here, but over time adjusting the
+vertical sizing usually needs to happen unless your workload never changes.</p><p>Another problem with autoscaling is that it implicitly invalidates all the
+hardcoded constants found during a performance benchmark. When you run
+performance benchmarks, you usually configure the optimal number of threads in
+thread pools, database connection pool size, etc. All of those constants are
+<em>based on the current state of your architecture, including the number of
+instances running</em>. Once any of these things change, you need different
+settings. If you truly need optimal performance with autoscaling, you also need
+to invest in something like <a href=https://github.com/JensRantil/conc class=external-link target=_blank rel=noopener>Conc</a> or <a href=https://github.com/Netflix/concurrency-limits class=external-link target=_blank rel=noopener>Netflix&rsquo;s
+<code>concurrency-limits</code></a>. Introducing autoscaling means you now have
+a new problem.</p><p><strong>&ldquo;Once we have autoscaling, I will not need to tune the horizontal sizing of
+my system.&rdquo;</strong> When enabling autoscaling, you go from simply maintaining the
+number of instances to also having to understand, maintain, and adjust</p><ul><li>upscaling policy, including the maximum number of instances allowed to run.</li><li>downscaling policy, including the minimum number of instances allowed to
+run.</li><li>shutdown timeouts.</li><li>shutdown processes, including proper draining of traffic.</li><li>startup health checks.</li><li>scheduled scaling policies.</li></ul><p>Turns out there were even more knobs now! More complexity.</p><p><strong>&ldquo;Autoscaling will save me money.&rdquo;</strong> This is mostly true! Unless you have
+spiky traffic and end up configuring your upscaling policy to be very
+aggressive and your downscaling to rarely scale down. I have seen systems that
+constantly run on the maximum number of instances. In that case, I would
+probably disable autoscaling altogether.</p><p><strong>&ldquo;I can easily autoscale stateful infrastructure.&rdquo;</strong> The database is slow?
+Just scale up more instances! There are three common misconceptions here:</p><p>The first one is that copying data has no weight. Starting up another database
+instance means you must first copy all the data it needs to serve. Independent
+of if your database stores 10 GB, 50 GB, 100 GB, or 1 TB, this will take time.</p><p>The second misconception is that horizontally scaling <em>writes</em> can be done
+easily. While this <em>is</em> true if you are running certain NoSQL databases, it is
+not for ACID-compliant databases such as RDBM/PostgreSQL/MySQL. For an RDBM,
+you will likely need to do some sharding. Switching between shards can have an
+impact on availability.</p><p>The third misconception is that database performance will be good immediately.
+Generally, databases contain caches (looking at you, MySQL & PostgreSQL) that
+need to be &ldquo;heated&rdquo; (populated, loaded into RAM) until they can be considered
+fully performant. This impacts performance for the first minutes/hour when a
+new database instance has come up.</p><h2 id=conclusion>Conclusion
+<a class=heading-link href=#conclusion><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Whether autoscaling is useful to you requires a cost-benefit analysis. If you
+are not hitting any memory or CPU limits nor cost is a big problem, I would
+suggest you stay away from automatic upscaling/downscaling to keep things
+<a href=/posts/my-simplicity-toolkit/>simple</a>.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/2908558d9982ac7e094a5aa71ced729a2378898b target=_blank rel=noopener>2908558</a>]</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>

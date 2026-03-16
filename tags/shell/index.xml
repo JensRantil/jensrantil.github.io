@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shell on Jens Rantil</title><link>https://jensrantil.github.io/tags/shell/</link><description>Recent content in Shell on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 05 Feb 2026 15:58:24 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml"/><item><title>A shell --dry-run trick</title><link>https://jensrantil.github.io/posts/a-shell-dry-run-trick/</link><pubDate>Sun, 01 Feb 2026 22:05:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/a-shell-dry-run-trick/</guid><description>&lt;p>I recently read the blog post &lt;a href="https://henrikwarne.com/2026/01/31/in-praise-of-dry-run/" class="external-link" target="_blank" rel="noopener">&amp;ldquo;In Praise of –dry-run&amp;rdquo;&lt;/a>. I love &lt;code>--dry-run&lt;/code> mode! It can be immensely useful to avoid Bad Things&amp;#x2122;&amp;#xfe0f; from happening. The blog post reminded me of a small terminal/shell/Bash trick that I have used for years, but never shared with the Internet:&lt;/p>
+&lt;h2 id="an-example">
+ An example
+ &lt;a class="heading-link" href="#an-example">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Imagine you want to download many profile pictures from the Internet. All the images are stored in a &lt;abbr title="Comma-separated values">CSV&lt;/abbr> file containing 1) the name of the person and 2) a URL to the image. Something like this:&lt;/p></description></item></channel></rss>
