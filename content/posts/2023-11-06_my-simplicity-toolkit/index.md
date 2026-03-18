@@ -57,10 +57,12 @@ simple libraries over frameworks, avoiding complex/complicated build tooling,
 smaller scoped tests, smaller interfaces, not needing microservices by default,
 [not needing SPAs by default][no-spa], [avoiding as many moving parts as
 possible][rad-simplicity] etc. Also, a focus on backward compatibility and a
-preference towards [not using the latest and coolest tech][boring-tech].
+preference towards [not using the latest and coolest tech][boring-tech]. Further,
+[simplicity is a great path toward reliability][google-sre-simplicity].
 
 [no-promo]: https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity/
 [no-spa]: https://www.thoughtworks.com/radar/techniques/spa-by-default
+[google-sre-simplicity]: https://sre.google/sre-book/simplicity/
 
 Further, I am a big believer in simple solutions programming-wise; Boring code
 is good code. This is mainly why I have had a growing fondness for [the Go
