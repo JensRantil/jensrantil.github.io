@@ -5,11 +5,15 @@ description = "LinkedIn is a social network of toxic positivity."
 tags = ["LinkedIn"]
 slug = "linked-and-toxic-positivity"
 +++
-> **Toxic positivity** (excessive positivity or positive toxicity) is dysfunctional emotional management without the full acknowledgment of negative emotions [...]
->
-> ([Wikipedia][wiki])
 
-I rarely rant on this blog. But for a change, now is the time!
+<figure>
+  <img src="linkedin-speak.png" alt="A screenshot of Kagi Translate when it translates 'i suck at my job'. It gets translated to 'I am currently embracing a period of professional growth and seeking new challenges to better align my unique skill set with a role that fosters continuous improvement and high-impact results.'.">
+  <figcaption>
+    <p>Kagi Translate supports translating from English to LinkedIn Speak.</p>
+  </figcaption>
+</figure>
+
+**I rarely rant on this blog. But for a change, now is the time!**
 
 [wiki]: https://en.wikipedia.org/wiki/Toxic_positivity
 
@@ -28,3 +32,7 @@ I don't think LinkedIn necessarily should turn into a hate-speech corner of the 
 LinkedIn's UI does not help with any of this. Every single emoji reaction is positive, and the above screenshot also shows that all proposed responses are positive.
 
 I am tired of LinkedIn's toxic positivity. The industry I am in forces me to use LinkedIn. Sometimes I just wish I didn't have to.
+
+> **Toxic positivity** (excessive positivity or positive toxicity) is dysfunctional emotional management without the full acknowledgment of negative emotions [...]
+>
+> ([Wikipedia][wiki])
