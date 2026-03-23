@@ -14,7 +14,7 @@ In most cases, a process exists _to help us_ by [making something easier][adhd-s
 [adhd-structure]: https://sudarkoff.com/blog/hate-being-told-what-to-do-heres-how-to-make-structure-work-for-your-adhd-brain
 [survival-bias]: https://en.wikipedia.org/wiki/Survivorship_bias
 
-As software engineers, we use processes all the time. We just don't notice all of them. Pushing code to GitHub and submitting a pull request is a process of sharing code. There are [many other ways to share patches][git-mail], yet many people chose "the GitHub process". There is a process for getting into your office involving a badge or tag. There are many processes in place for your team to collaborate; daily standups, retrospectives, planning sessions, ...
+As software engineers, we use processes all the time. We just don't notice all of them. Pushing code to GitHub and submitting a pull request is a process of sharing code. There are [many other ways to share patches][git-mail], yet many people chose "the GitHub process". There is a process for getting into your office involving a badge or tag. There are many processes in place for your team to collaborate: daily standups, retrospectives, planning sessions, ...
 
 [git-mail]: https://git-scm.com/docs/git-send-email
 
