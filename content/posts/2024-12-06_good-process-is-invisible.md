@@ -7,7 +7,7 @@ slug = "good-process-is-invisible"
 +++
 Throughout my career I have heard _soooo_ many people complain about the general concept of _process_ - the standardized series of steps needed to perform a task. Saying something like "I think we might be helped by coming up with a process for this" has given me the looks as if I brought a skunk to a garden party. Nobody wants a process.
 
-Processes exist to structure, manage, and optimize tasks, particularly complex multi-step tasks. For example, a process can help reduce mistakes and cognitive overhead.
+Processes exist to structure, manage, and optimize tasks, particularly complex multi-step tasks. For example, a process can help reduce mistakes or cognitive overhead.
 
 In most cases, a process exists _to help us_ by [making something easier][adhd-structure]. Yet, why are processes so frowned upon? I think the answer lies in a variant of [survivorship bias][survival-bias]; We notice bad processes more than good ones. A _good_ process is invisible. It's there and once we have learned it, it stays out of the way for us.
 
