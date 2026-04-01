@@ -1,10 +1,10 @@
 ---
-title: "How to (partially) declassify NSA documents"
+title: "How to (partially) declassify documents numbers"
 date: 2014-12-27
-tags: [NSA]
-slug: how-to-partially-declassify-NSA-docs
+tags: []
+slug: how-to-partially-declassify-document-numbers
 ---
-The day before Christmas Eve, the (American) NSA published a bunch of
+The day before Christmas Eve, the NSA published a bunch of
 [declassified
 reports](https://www.nsa.gov/public_info/declass/IntelligenceOversightBoard.shtml)
 that have been handed to the President's Intelligence Oversight Board
@@ -17,7 +17,7 @@ The idea
 --------
 
 What struck me was that what most of the redacted text that I think the
-public (and me) are interested in is the magnitude of NSA surveillance,
+public are interested in is the magnitude of NSA surveillance,
 namely how large the redacted numbers are. I started asking myself,
 **can the space that the redacted numbers take up on a document tell us
 anything about what's redacted behind the white boxes?** I think the
@@ -25,14 +25,14 @@ answer is fairly obvious - yes - the number "1000000" definitely does
 not fit into most boxes, so we can conclude that targetted surveillance
 is less than that. But can we do better?
 
-Before we dig further - how to we know that the content underneath the
+Before we dig further, how do we know that the content underneath the
 redaction boxes are similarly sized as the numbers they redact? We
 don't. However, we can always be certain of the width of the number plus
 the space to the left and right of it (since it's visible):
 
 ![Known width.](number-width.png)
 
-In the NSA case, we also know that
+In the redacted documents's case, we also know that
 
 -   they are not using justified alignments. This would make spacing
     less deterministic.
@@ -53,9 +53,9 @@ width signatures even more unique.
 The font
 --------
 
-By the way, which font are NSA they using? I gave
+By the way, which font are NSA's redacted documents using? I gave
 [WhatTheFont](https://www.myfonts.com/WhatTheFont/) a try and it hinted
-that the NSA is using any of the following fonts:
+that they are using any of the following fonts:
 
 -   Esperanto Condensed Bold
 -   URW Garamonds ExtraNarrow Medium
@@ -63,11 +63,10 @@ that the NSA is using any of the following fonts:
 -   Printed Claude.
 -   FF Seria Sans Pro Bold Italic
 
-Looking at those fonts, the only one the it could potentially be would
-be Garamond, which is a fairly popular font. That said, when overlaying
-it with NSA text it didn't match too well. However, a simple guess that
-the NSA was using the good 'ole Times New Roman looked like a better
-match:
+Looking at those fonts, the only one the it could potentially be would be
+Garamond, which is a fairly popular font. That said, when overlaying it with
+leaked documents it didn't match too well. However, a simple guess that the
+documents were using the good 'ole Times New Roman looked like a better match:
 
 ![Times New Roman overlay](overlay-nsa.png)
 
@@ -129,17 +128,17 @@ think about the following:
 -   To avoid leaking magnitude of numbers, pad all numbers with fixed,
     or random, spaces.
 
-That said, it would be a fun thought experiment if NSA, or other
-intelligence organizations, would infiltrate (Times New Roman)
-typesetters to create unique kerning for digits such that one could reverse engineer redacted numbers in declassified
-documents from around the world. Call it a *typography backdoor* if you
-will.
+That said, it would be a fun thought experiment if NSA, or other intelligence
+organizations, would infiltrate (Times New Roman) typesetters to create unique
+kerning for digits such that one could reverse engineer redacted numbers in
+declassified documents from around the world. Call it a *typography backdoor*
+if you will.
 
 Conclusion
 ----------
 
 This little experiment tested and showed that it's possible to extract
-the magnitude in the redacted numbers in declassified (NSA) documents.
+the magnitude in the redacted numbers in declassified documents.
 It could not show that digit width or kerning could help in determining
 the numbers more specifically. However, there is definitely future
 improvements.
