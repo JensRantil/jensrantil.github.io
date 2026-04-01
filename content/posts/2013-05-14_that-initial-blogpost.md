@@ -1,7 +1,7 @@
 ---
 title: "That initial blogpost"
 date: 2013-05-14
-tags: ["howdy"]
+tags: []
 slug: that-initial-blogpost
 ---
 So it's time to kick off this blog. I cheated a little and posted [a
