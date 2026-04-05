@@ -4,6 +4,8 @@ Hosts a blog and a few static pages.
 
 Generated using [Hugo](https://gohugo.io).
 
+You can find all the content in Markdown files in the `content` directory.
+
 To develop
 ----------
 ```bash
