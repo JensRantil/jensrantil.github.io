@@ -1,9 +1,10 @@
 +++
 date = 2026-04-05T22:42:12+02:00
-title = "Code freeze"
+title = "Code freezes"
 description = "Code freezes can undermine the very thing they are meant to protect."
 tags = ["risk", "safety", "site reliability engineering", "service levels", "management", "leadership", "metrics"]
 slug = "code-freeze"
+aliases = ["code-freezes"]
 +++
 **Code freezes** commonly stirs up strong emotions within the engineering community. Either people find them useful, or hate them. Some companies have a code freeze on Fridays, others do it over the December holidays, or around important dates when systems must be extra stable, such as Black Friday.
 
