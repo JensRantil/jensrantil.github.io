@@ -25,8 +25,9 @@ In short, a _code freeze_ is when changes to a software system are suspended to 
 
 **All these important questions need answering before entering a code freeze.** If there is anything you should take away from this article, it is that.
 
-It's also worth remembering that a system can break even without anyone touching it. During a code freeze, the environment around it keeps changing. During a code freeze, disks can still fill up, traffic can spike, or a hidden bug can surface. The website [how.complexsystems.fail][hcf] has more on this.
+It's also worth remembering that [a system can change and break even without anyone touching it][different-changes]. During a code freeze, the environment around it keeps changing. During a code freeze, disks can still fill up, traffic can spike, or a hidden bug can surface. The website [how.complexsystems.fail][hcf] has more on this.
 
+[different-changes]: https://cherkaskyb.medium.com/what-is-that-change-that-is-the-source-of-all-instability-c3eb03c5fdc3
 [hcf]: https://how.complexsystems.fail
 
 ## Why not code freezes?
