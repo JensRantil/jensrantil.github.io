@@ -22,9 +22,10 @@ insights and learnings can be [found here][quora].
 [quora]: https://www.quora.com/What-are-the-best-secrets-of-great-programmers/answer/Jens-Rantil
 
 **Processes.** A good process is one that solves a problem while [minimizing
-waste][muda]. I strive for *individuals and interactions over processes and
-tools* ([The Agile Manifesto][agile]), and *automation over manual work*.
+waste][muda] and [visibility][invisible]. I strive for *[individuals and interactions over processes and
+tools][agile]*, and *automation over manual work*.
 
+[invisible]: {{< ref "/posts/2024-12-06_good-process-is-invisible.md" >}}
 [muda]: {{< ref "/posts/2023-06-27_waste-in-software-development.md" >}}
 [agile]: https://agilemanifesto.org/
 
