@@ -65,5 +65,3 @@ they are:
 
 Google's networking protocol [SPDY](https://en.wikipedia.org/wiki/SPDY)
 aims to solve some of these issues and make the web faster.
-
-Did I miss something? Feel free to comment below!
