@@ -287,3 +287,4 @@ I am not the first person to write about this. Here are some other articles on t
  * [The myth of the staging environment: Why production testing is crucial](https://www.linkedin.com/pulse/myth-staging-environment-why-production-testing-crucial-tobias-mende/)
  * [Do you really need a Staging environment?](https://refactoring.fm/p/do-you-need-staging)
  * [Why we don’t use a staging environment](https://squeaky.ai/blog/development/why-we-dont-use-a-staging-environment/)
+ * [Test In Production](https://medium.com/@hans.knechtions/test-in-production-85224e7a82f3)
