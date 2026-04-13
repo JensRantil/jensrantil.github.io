@@ -57,10 +57,12 @@ The implication of shifting towards safety type 2 is also increased agility; You
  * [Richard Cooks's "Resilience In Complex Adaptive Systems: Operating At The Edge of Failure"][cook] from Vecolity 2013 was my first introduction to these ideas and they have followed me since.
  * [The Theory Behind Understanding Failure][failure] by Evan Smith.
  * [How Complex Systems Fail][complex-failure] by Richard Cook.
+ * [The System Resiliency Pyramid][pyramid].
 
 [cook]: https://www.youtube.com/watch?v=PGLYEDpNu60
 [failure]: https://iamevan.me/blog/the-theory-behind-understanding-failure/
 [complex-failure]: https://how.complexsystems.fail
+[pyramid]: https://www.codereliant.io/p/the-system-resiliency-pyramid
 
 {{< notice tip >}}
 Heads up! [I offer consultancy services][services] in this space. Don't hesitate to reach out if you would like me to help your company improve when it comes to reliability, resiliency, architecture feedback, on-call, alerting, or incident training. :wave:
