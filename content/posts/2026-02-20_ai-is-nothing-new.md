@@ -2,7 +2,7 @@
 date = 2026-02-20T19:35:35+02:00
 title = "AI is nothing new, LLMs are"
 description = "The term 'AI' is the world's new hammer, but it has been around for a long time."
-tags = ["AI", "Artificial intelligence"]
+tags = ["AI"]
 slug = "ai-is-nothing-new"
 +++
 The term <abbr title="Articifial Intelligence">**_AI_**</abbr> is everywhere these days. Suddenly, it feels like _every_ single company frontpage on the Internet says it is either "an AI company" or "using AI to do X". It is as if the whole world has discovered that computers can do smart things.
