@@ -4,3 +4,6 @@ img.smaller {
 img {
 	max-height: 20em;
 }
+.content figcaption p {
+	color: #666;
+}
