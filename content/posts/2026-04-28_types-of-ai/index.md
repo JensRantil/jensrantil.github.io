@@ -39,7 +39,7 @@ AI, and specifically the breakthrough of Large Language Models (LLMs), now means
 
 What was previously done through structured input -- dropdowns, single-entry text fields, checkboxes, etc. -- can now be done by simply entering sentences into a text field. This can be highly useful for flexibility; for example, a few sentences can be translated into a database query.
 
-Less discussed but still relevant is that LLMs also allow for images as input.
+Less discussed but still relevant is that LLMs also allow for images, audio, and video, as input.
 
 Compared to structured input, all this flexibility comes at the cost of correctness (misunderstandings), determinism (same input yields same output), and a loss of discoverability (what you can do).
 
