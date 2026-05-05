@@ -43,7 +43,7 @@ Less discussed but still relevant is that LLMs also allow for images, audio, and
 
 Compared to structured input, all this flexibility comes at the cost of correctness (misunderstandings), determinism (same input yields same output), and a loss of discoverability (what you can do).
 
-Success metric for an AI product interface could be _usage by end users_.
+Success metric for an AI product interface could be _usage by end users_. But ultimately, that does not say anything about the outcome. A better success metric is if users can use the AI/LLM interface to succesfully and quickly perform the task at hand.
 
 ## AI as a product implementation detail
 
