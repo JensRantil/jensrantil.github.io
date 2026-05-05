@@ -100,6 +100,6 @@ Success metric for introducing AI as an administrative tool is probably _increas
 
 ## Conclusion
 
-I suspect that most companies handwavingly introducing "AI" in every little corner of their org. are doing so to [increase company value without focusing on actual customer value][theatre].
+For companies broadly introducing "AI" across their organization without a clear definition of type, it is worth asking whether this is driven by [genuine customer value or by other incentives][theatre].
 
-By defining the type of AI usage in every AI conversation, our world can move away from hype to concrete value. _That's_ how we can make AI more than a bubble.
+By defining the type of AI usage in every AI conversation, our world can move away from broad claims toward concrete value. That's how we can make AI deliver on its potential.
