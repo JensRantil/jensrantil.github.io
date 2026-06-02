@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Architecture on Jens Rantil</title><link>https://jensrantil.github.io/tags/architecture/</link><description>Recent content in Architecture on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 09 Mar 2024 08:30:43 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>The downsides of batch APIs</title><link>https://jensrantil.github.io/posts/downsides-of-batch-apis/</link><pubDate>Wed, 03 May 2023 12:50:41 +0200</pubDate><guid>https://jensrantil.github.io/posts/downsides-of-batch-apis/</guid><description>&lt;p>When an HTTP API is too slow to call repeatedly I have seen engineers
+immediately turn to making the API &lt;em>do more in one unit of work&lt;/em>. I think this
+pattern can be very harmful and have many battle scars from this. So I thought
+I would write a post about it.&lt;/p>
+&lt;h2 id="an-example">
+ An example
+ &lt;a class="heading-link" href="#an-example">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Let&amp;rsquo;s start with an example: You have a web service that stores TODO items. It
+has an API endpoint, &lt;code>POST /todo&lt;/code>, which gets called to add a new TODO item.
+Here is an example request/response:&lt;/p></description></item><item><title>I'm a State Engineer. Are you, too?</title><link>https://jensrantil.github.io/posts/lifecycles-and-states/</link><pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/lifecycles-and-states/</guid><description>&lt;p>TL;DR: We need to have a more thorough discussion about state and
+lifecycles in our industry.&lt;/p>
+&lt;p>I recently revisited &lt;a href="http://12factor.net" class="external-link" target="_blank" rel="noopener">The Twelve-Factor App&lt;/a> by
+&lt;a href="https://www.heroku.com" class="external-link" target="_blank" rel="noopener">Heroku&lt;/a>. It&amp;rsquo;s a great read if you are deploying
+your own application, are interested in (organizational and/or
+technincal) scaling or curious of best practices when it comes to
+deployment.&lt;/p>
+&lt;p>As I was reading the manifest it struck me that there are two words that
+I hear all too infrequently in our industry, namely &lt;em>state&lt;/em> and
+&lt;em>lifecycle&lt;/em>. The words have different meaning, yet they are related in
+so many ways. All state has a lifecycle, otherwise the state would not
+be worth thinking of.&lt;/p></description></item></channel></rss>

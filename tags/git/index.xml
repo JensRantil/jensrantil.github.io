@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on Jens Rantil</title><link>https://jensrantil.github.io/tags/git/</link><description>Recent content in Git on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 22 Aug 2023 00:13:45 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>GIT mirroring using Jenkins</title><link>https://jensrantil.github.io/posts/git-mirroring-using-jenkins/</link><pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/git-mirroring-using-jenkins/</guid><description>&lt;p>For the past couple of weeks I&amp;rsquo;ve been annoyed by the high latency when
+connecting to &lt;a href="https://github.com" class="external-link" target="_blank" rel="noopener">Github&lt;/a> over SSH. While the other GIT
+transports could be an option, I prefer to use keys to authenticate
+against Github.&lt;/p>
+&lt;p>This got me thinking about setting up a local GIT mirror at our office.
+To keep my project future proof, I planned to make this a cron-job-ish
+project; every so often it would checkout all repositories for a certain
+organization.&lt;/p></description></item></channel></rss>
