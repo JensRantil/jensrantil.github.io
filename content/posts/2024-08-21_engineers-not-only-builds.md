@@ -2,7 +2,7 @@
 date = 2024-08-21T08:44:35+02:00
 title = "Engineers are not just builders"
 description = "Some of the things that product owners do can, and should, equally be done by engineers."
-tags = []
+tags = ["problem space"]
 slug = "not-just-builders"
 +++
 In the article ["Natural solutions"][ns], I wrote
