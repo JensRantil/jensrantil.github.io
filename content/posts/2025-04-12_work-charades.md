@@ -15,7 +15,7 @@ Sometimes, I have felt like work -- the professional domain -- is like a real-li
 
 People need to **dress differently**, even if they are not comfortable wearing those kinds of clothes. I am personally not too comfortable wearing button-up shirts or, worse, suits.
 
-Similarly, we need to **look or behave in a certain way**. There are workplaces where people will give you a look if you dye your hair in a certain way, do not cover your tattoos, wear big glasses, or behave heteronormatively.
+Similarly, we need to **look or behave in a certain way**. There are workplaces where people will give you a look if you dye your hair in a certain way, do not cover your tattoos, wear big glasses, or don't behave heteronormatively.
 
 There are **hierarchies**. At the top, you have a CEO, in the middle there are managers, and at the bottom, there are "individual contributors". At times, this can feel like hierarchies diminishes the value of certain people based on their role or level. At worst, this can create situations similar to [The Stanford Prison Experiment][prison-experiment], where people forget they are working with humans similarly to themselves. Or, people take advantage of other people to move up the ladder.
 
