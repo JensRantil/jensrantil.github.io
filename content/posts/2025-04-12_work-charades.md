@@ -23,7 +23,7 @@ Some managers think they need to be bossy because that's how they think bosses b
 
 [prison-experiment]: https://en.wikipedia.org/wiki/Stanford_prison_experiment
 
-**Language is different.** People want to sound [smart][buzzword-bingo] & [professions][corp-jargon]: SLOs, KPIs, KYC, ... Not to mention all [the war jargon][war-jargon]: "Conquer the market", "set the pole down in Spain", "A minefield", "Casualties", ... Of course, there are words needed to communicate business & tech, but sometimes I find that vocabulary overly complex.
+**Language is different.** People want to sound [smart][buzzword-bingo] & [professional][corp-jargon]: SLOs, KPIs, KYC, ... Not to mention all [the war jargon][war-jargon]: "Conquer the market", "set the pole down in Spain", "A minefield", "Casualties", ... Of course, there are words needed to communicate business & tech, but sometimes I find that vocabulary overly complex.
 
 [buzzword-bingo]: https://en.wikipedia.org/wiki/Buzzword_bingo
 [corp-jargon]: https://bingobaker.com
