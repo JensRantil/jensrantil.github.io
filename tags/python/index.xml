@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Jens Rantil</title><link>https://jensrantil.github.io/tags/python/</link><description>Recent content in Python on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 22 Aug 2023 00:13:45 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Writing a server in Python</title><link>https://jensrantil.github.io/posts/python-servers/</link><pubDate>Wed, 21 Aug 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/python-servers/</guid><description>&lt;p>This post is partially related to my &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >previous blog
+post&lt;/a> about
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a>.&lt;/p>
+&lt;p>One of the questions that might hit you is &lt;em>why would you ever write a
+server in Python?&lt;/em>. I&amp;rsquo;ve heard many people being raising their concerns
+when it comes to Python. The biggest ones are obviously concurrency and
+the &lt;a href="http://wiki.python.org/moin/GlobalInterpreterLock" class="external-link" target="_blank" rel="noopener">GIL&lt;/a>. I&amp;rsquo;ve also
+heard arguments related to lack of strict typing, that Java has better
+IDE support (partially due to&amp;hellip;strict typing) and the sheer amount of
+libraries that other languages, such as Java, has.&lt;/p></description></item><item><title>Migrating to Python 3</title><link>https://jensrantil.github.io/posts/migrating-to-python3/</link><pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/migrating-to-python3/</guid><description>&lt;p>This post is partially related to my &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >previous blog
+post&lt;/a> about
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a>.&lt;/p>
+&lt;p>I initially started the implementation of Rewind in Python 2.7. I
+constantly kept test coverage to 100%, and I tried to stick to
+&lt;a href="http://en.wikipedia.org/wiki/Test-driven_development" class="external-link" target="_blank" rel="noopener">TDD&lt;/a> as much as
+possible. The Python testing tool
+&lt;a href="https://nose.readthedocs.org/en/latest/" class="external-link" target="_blank" rel="noopener">Nose&lt;/a> proved to be very
+valuable, as did &lt;a href="https://travis-ci.org/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Travis CI&lt;/a>.&lt;/p>
+&lt;p>After some time I thought &amp;ldquo;Hey, why work in Python 2 when Python 3 seems
+around corner?&amp;rdquo;. I installed Python 3.2 on my laptop and started
+executing those tests. Travis CI helped a lot here to always make sure
+that Rewind was backward compatible with Python 2.7. Ever nervous about
+a test failing? Make pull request on &lt;a href="http://www.github.com" class="external-link" target="_blank" rel="noopener">Github&lt;/a> and
+Travis CI will tell you whether the pull request broke something or not.
+Highly convenient. Migration to Python 3 can be summarized in three
+paragraphs:&lt;/p></description></item></channel></rss>
