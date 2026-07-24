@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>End-to-End Testing on Jens Rantil</title><link>https://jensrantil.github.io/tags/end-to-end-testing/</link><description>Recent content in End-to-End Testing on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 30 Mar 2025 09:49:00 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/end-to-end-testing/index.xml" rel="self" type="application/rss+xml"/><item><title>On narrow integration tests</title><link>https://jensrantil.github.io/posts/narrow-integration-tests/</link><pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/narrow-integration-tests/</guid><description>&lt;p>&lt;em>Narrow integration tests&lt;/em> are tests that only involve very few components,
+mostly relying on &lt;a href="https://martinfowler.com/articles/mocksArentStubs.html" class="external-link" target="_blank" rel="noopener">test
+doubles&lt;/a> to simulate
+external dependencies. As always, we have Martin Fowler to thank for yet
+another excellent
+&lt;a href="https://martinfowler.com/bliki/IntegrationTest.html" class="external-link" target="_blank" rel="noopener">article&lt;/a> on integration
+tests so I&amp;rsquo;ll simply refer to that for the details of what a narrow integration
+test is.&lt;/p>
+&lt;p>That said, during 2019 I have grown increasingly convinced that the distinction
+between a narrow and wide integration (also know as &lt;em>system tests&lt;/em> or &lt;em>end-to-end tests&lt;/em>) is an important one, for two reasons:&lt;/p></description></item></channel></rss>
