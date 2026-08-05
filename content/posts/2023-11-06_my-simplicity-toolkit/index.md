@@ -27,11 +27,12 @@ When it comes to software engineering, I have increasingly come to value
 _simplicity_ and going back to basics. I have been coding for ~25+ years (~15
 years professionally) and have truly gone through [The Evolution of a Software
 Engineer][engineer-evolution]. Throughout my career I have grown increasingly
-worried about the growing [cargo culted][cargo-cult] complexity in our
-industry.
+worried about the growing [cargo culted][cargo-cult] [complexity in our
+industry][industry-complexity].
 
 [engineer-evolution]: https://medium.com/@webseanhickey/the-evolution-of-a-software-engineer-db854689243
 [cargo-cult]: https://en.wikipedia.org/wiki/Cargo_cult_programming
+[industry-complexity]: https://antirez.com/news/145
 
 In Rich Hickey's classical talk ["Simple Made Easy"][simple-made-easy] he talks
 about the difference between "Simple" and "Easy". _Simple_ pertains to the lack
