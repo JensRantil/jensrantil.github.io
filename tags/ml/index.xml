@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ML on Jens Rantil</title><link>https://jensrantil.github.io/tags/ml/</link><description>Recent content in ML on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 05 May 2026 12:52:09 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/ml/index.xml" rel="self" type="application/rss+xml"/><item><title>What type of AI usage?</title><link>https://jensrantil.github.io/posts/types-of-ai-implementations/</link><pubDate>Tue, 28 Apr 2026 10:22:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/types-of-ai-implementations/</guid><description>&lt;p>These past years, I have had a lot of people reaching out and wanting to talk &amp;ldquo;AI&amp;rdquo; (&lt;a href="https://jensrantil.github.io/posts/ai-is-nothing-new/" >or &lt;abbr title="Large Language Models">LLMs&lt;/abbr>&lt;/a>) with me. Either the AI conversations have been around AI strategy for themselves, or for their company. Sometimes they have worked for a company claiming to be &amp;ldquo;AI first&amp;rdquo;.&lt;/p>
+&lt;p>Assuming that &lt;a href="https://jensrantil.github.io/posts/the-theater-tasks-that-add-value/" >the conversation is about customer impact&lt;/a> (which &amp;ldquo;AI usage&amp;rdquo; is not&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>), my first question is always&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;What type of AI usage are we talking about here?&amp;rdquo;&lt;/p></description></item><item><title>An AI/ML accuracy tale</title><link>https://jensrantil.github.io/posts/ai-ml-accuracy-tale/</link><pubDate>Sat, 18 Nov 2023 23:55:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/ai-ml-accuracy-tale/</guid><description>&lt;p>I recently read the article &lt;a href="https://shreyans.org/google" class="external-link" target="_blank" rel="noopener">&amp;ldquo;What I learned getting acquired by
+Google&amp;rdquo;&lt;/a> by Shreyans Bhansali. Shreyans wrote&lt;/p>
+&lt;blockquote>
+&lt;p>On the other hand there was the discovery that most Search improvements are
+manually reviewed by engineers through ‘side-by-side’ comparisons between old
+and new results&amp;hellip;on spreadsheets!&lt;/p>
+&lt;/blockquote>
+&lt;p>The above quote reminded of how hard, and often understated, quality assurance
+(QA) in AI/ML systems is. Each change to a model needs to be validated, and
+validation is &lt;em>hard&lt;/em> and &lt;em>cumbersome&lt;/em>. Also, the fact that models can have a
+&lt;em>freshness&lt;/em> does not help - that means that quality assurance must be done
+continuously and treated as a &lt;a href="https://sre.google/sre-book/service-level-objectives/" class="external-link" target="_blank" rel="noopener">service level&lt;/a>.&lt;/p></description></item></channel></rss>
