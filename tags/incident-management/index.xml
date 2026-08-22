@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Incident Management on Jens Rantil</title><link>https://jensrantil.github.io/tags/incident-management/</link><description>Recent content in Incident Management on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 04 Feb 2026 13:07:44 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/incident-management/index.xml" rel="self" type="application/rss+xml"/><item><title>The missed incident priority: The Near Miss</title><link>https://jensrantil.github.io/posts/near-miss-incidents/</link><pubDate>Mon, 19 Jan 2026 16:48:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/near-miss-incidents/</guid><description>&lt;blockquote>
+&lt;p>If a tree falls in a forest and no one is around to hear it, does it make a sound?&lt;/p>
+&lt;/blockquote>
+&lt;p>In my &lt;a href="https://jensrantil.github.io/posts/what-is-an-incident/" >article about incidents&lt;/a>, I wrote:&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Raise an incident when you think a postmortem would be useful for what you are seeing.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>This also includes raising an incident for a near miss. A &lt;strong>near miss&lt;/strong> refers to an event that could have caused an incident, outage, security breach, or service degradation — but ultimately did not. Near misses can be a great source of learning, and &lt;a href="https://www.ishn.com/articles/109182-the-safety-triangle-a-useful-yet-complicated-theory" class="external-link" target="_blank" rel="noopener">reducing near-misses can reduce actual incidents&lt;/a>. Making them visible can also be an integral part in making your organisation more &lt;a href="https://jensrantil.github.io/posts/safety-type-1-and-2/" >resilient&lt;/a> to failures.&lt;/p></description></item><item><title>Incident priority, severity &amp; impact</title><link>https://jensrantil.github.io/posts/incident-priority-severity-impact/</link><pubDate>Mon, 19 Jan 2026 16:14:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/incident-priority-severity-impact/</guid><description>&lt;p>An &lt;a href="https://jensrantil.github.io/posts/what-is-an-incident/" >incident&lt;/a> framework usually has the concept of an &lt;strong>incident priority&lt;/strong>: priority 1 (&amp;ldquo;Systems are DOWN!&amp;rdquo;), priority 2 (&amp;ldquo;I can log in, but there is a bug.&amp;rdquo;), etc. Incident priorities are mostly used for two things:&lt;/p>
+&lt;p>&lt;strong>Operational:&lt;/strong> To help operators and on-callers quickly guide them on how serious an ongoing incident is and help them prioritize their work. A low-priority (priority 3) incident can wait until after the weekend. For example, a high-priority (priority 1) incident means &amp;ldquo;all hands on deck&amp;rdquo; and possibly waking up your colleagues in the middle of the night.&lt;/p></description></item><item><title>What is an incident, anyway?</title><link>https://jensrantil.github.io/posts/what-is-an-incident/</link><pubDate>Wed, 17 Dec 2025 16:57:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/what-is-an-incident/</guid><description>&lt;h1 id="incident-process">
+ Incident process?
+ &lt;a class="heading-link" href="#incident-process">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;p>Many companies have an incident process. An incident process (often called an incident management process) is a defined set of steps an organization follows to detect, respond to, manage, resolve, and learn from incidents that disrupt normal operations or pose a risk.&lt;/p>
+&lt;figure>
+&lt;div class="mermaid">
+flowchart LR
+ A[Incident detected] --> B
+ B[Incident declared] --> C
+ C[Mitigation in place] --> D
+ D[Incident resolved] --> E
+ E[Incident review] --> F
+ F[Corrective / Preventive Actions] --> G[Incident closed]
+
+&lt;/div>
+
+&lt;caption>A common incident process.&lt;/caption>
+&lt;/figure>
+&lt;p>The exact meaning depends a bit on the field, but the core idea is the same: handle unexpected problems in a structured, repeatable way.&lt;/p></description></item><item><title>Incident review action items</title><link>https://jensrantil.github.io/posts/incident-action-items/</link><pubDate>Thu, 31 Oct 2024 11:04:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/incident-action-items/</guid><description>&lt;p>I recently read the article &lt;a href="https://surfingcomplexity.blog/2024/09/28/why-i-dont-like-discussing-action-items-during-incident-reviews/" class="external-link" target="_blank" rel="noopener">&amp;ldquo;Why I don’t like discussing action items during incident reviews&amp;rdquo;&lt;/a> by Lorin Hochstein. The article lists a few reasons why action items should not be discussed during incident reviews&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. While I personally think an incident review is a great place to think about possible action items, I &lt;em>am&lt;/em> missing one major reason to not decide on action items in that meeting: &lt;strong>An incident review is &lt;em>not&lt;/em> a planning session.&lt;/strong>&lt;/p></description></item></channel></rss>
