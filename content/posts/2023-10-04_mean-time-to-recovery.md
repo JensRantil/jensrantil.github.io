@@ -23,11 +23,11 @@ simplistic. I could not agree more.
 When I recently wrote [Mean vs. Median][mean-vs-median], I was reminded of
 Courtney's
 
-> [...] measures of central tendency like the mean, aren’t a good
+> "[...] measures of central tendency like the mean, aren’t a good
 > representation of positively-skewed data, in which most values are clustered
 > around the left side of the distribution while the right tail of the
 > distribution is longer and contains fewer values. The mean will be influenced
-> by the spread of the data, and the inherent outliers.
+> by the spread of the data, and the inherent outliers."
 
 [mean-vs-median]: {{< ref "posts/2023-10-03_mean-vs-median/index.md" >}}
 
