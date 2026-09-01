@@ -42,3 +42,7 @@ Thirdly, by clearly defining the problem, I become **less attached to my propose
 ## Closing thoughts
 
 A downside of explicitly working in the problem space is that people around you might feel frustrated that "we are not moving forward". I have seen this frustration from many people, irrespective of their role. I am confident that exploring the problem space implicitly solves a problem. However, not everyone does. Hopefully, this article help to clarify this.
+
+Want to read more about this? I highly recommend ["Perfection is not over-engineering"][perfect-solution] which is about this same topic.
+
+[perfect-solution]: https://var0.xyz/posts/perfection-is-not-over-engineering.html
