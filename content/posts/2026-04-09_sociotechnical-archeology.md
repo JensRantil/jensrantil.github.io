@@ -29,3 +29,7 @@ Sometimes, putting a word on something is the biggest breakthrough. The term _So
 Ultimately, when this activity has been done well, it has made me a better and more impactful coworker. I know who to talk to, I know what has been tried before, I know how to (not) pitch an idea, I know which type of work the organization rewards, and more. In short, I know how to get things done (without shooting myself in the foot).
 
 Also, Jeff turned into one of my finest friends. Occasionally, we grab a beer and goof out on tech, company cultures, SRE, geeky Linux stuff, and more. If you are ever in Stockholm and enjoy these things, don't hesitate to reach out and join us! :beer:
+
+Want to read more about this? Have a look at ["The Sociotechnical Reality Engineer"][soctech-engineer] by Clint Byrum.
+
+[soctech-engineer]: https://medium.com/@Spamaps/the-sociotechnical-reality-engineer-8a51e31c841b
