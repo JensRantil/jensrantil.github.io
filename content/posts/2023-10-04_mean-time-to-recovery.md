@@ -45,3 +45,8 @@ So why is MTTR used in the first place and not PTTR (Percentile of Time To
 Recover)? Probably because a mean is so much easier to calculate. DORA metrics
 are gathered from lots of companies, and [percentiles are
 hard][mean-vs-median].
+
+If you want to learn more about this, I highly recommend also reading ["MTTR Is
+(Still) Lying to You"][mttr-lie].
+
+[mttr-lie]: https://resilienceinsoftware.org/news/1157532
