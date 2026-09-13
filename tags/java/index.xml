@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Jens Rantil</title><link>https://jensrantil.github.io/tags/java/</link><description>Recent content in Java on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 27 Apr 2025 14:25:03 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Business contracts are transport agnostic</title><link>https://jensrantil.github.io/posts/simple-contract-testing/</link><pubDate>Sun, 27 Apr 2025 13:40:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/simple-contract-testing/</guid><description>&lt;p>I have never been a big fan of how some people equate &amp;ldquo;contract testing&amp;rdquo; with using something like &lt;a href="https://docs.pact.io" class="external-link" target="_blank" rel="noopener">PACT&lt;/a>. There are other ways of doing contract testing, but a lot of engineers don&amp;rsquo;t seem to know this. Today, I thought I would write something about this.&lt;/p>
+&lt;h2 id="contract-testing">
+ Contract testing?
+ &lt;a class="heading-link" href="#contract-testing">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;em>Contract testing&lt;/em> is about making sure that two pieces of software (usually two services) can communicate correctly with each other, and that they agree on how they should talk.&lt;/p></description></item><item><title>Java's missing optional keyword and the issues of null</title><link>https://jensrantil.github.io/posts/the-issues-of-null/</link><pubDate>Thu, 22 Aug 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/the-issues-of-null/</guid><description>&lt;p>One of my pet peaves when it comes to the Java programming languages
+[1] is that it does not do enough &lt;a href="https://en.wikipedia.org/wiki/Type_safety" class="external-link" target="_blank" rel="noopener">type
+safety&lt;/a>. The issue is,
+simply, that programmers tend to believe that Java infers more safety
+than it actually does. The biggest reason for this can be summarized in
+one word; &lt;code>null&lt;/code>.&lt;/p>
+&lt;p>Let&amp;rsquo;s face it, we&amp;rsquo;ve all experienced a &lt;code>NullPointerException&lt;/code> or two.
+Why? Because we focus so much on which variable type to use. This makes
+us tend to forget the simple fact that the variable might not have a
+value at all; It can be &lt;code>null&lt;/code>.&lt;/p></description></item><item><title>Writing a server in Python</title><link>https://jensrantil.github.io/posts/python-servers/</link><pubDate>Wed, 21 Aug 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/python-servers/</guid><description>&lt;p>This post is partially related to my &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >previous blog
+post&lt;/a> about
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a>.&lt;/p>
+&lt;p>One of the questions that might hit you is &lt;em>why would you ever write a
+server in Python?&lt;/em>. I&amp;rsquo;ve heard many people being raising their concerns
+when it comes to Python. The biggest ones are obviously concurrency and
+the &lt;a href="http://wiki.python.org/moin/GlobalInterpreterLock" class="external-link" target="_blank" rel="noopener">GIL&lt;/a>. I&amp;rsquo;ve also
+heard arguments related to lack of strict typing, that Java has better
+IDE support (partially due to&amp;hellip;strict typing) and the sheer amount of
+libraries that other languages, such as Java, has.&lt;/p></description></item></channel></rss>

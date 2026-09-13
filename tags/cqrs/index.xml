@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CQRS on Jens Rantil</title><link>https://jensrantil.github.io/tags/cqrs/</link><description>Recent content in CQRS on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 10 Jan 2025 13:33:12 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/cqrs/index.xml" rel="self" type="application/rss+xml"/><item><title>A follow-up on CouchDB as event store</title><link>https://jensrantil.github.io/posts/follow-up-on-couchdb-as-eventstore/</link><pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/follow-up-on-couchdb-as-eventstore/</guid><description>&lt;p>I &lt;a href="%7cfilename%7ccouchdb-as-event-store.rst" >recently&lt;/a> wrote about using
+CouchDB as an event store. One issue that I mentioned briefly was that
+my proposed solution would not work for a single aggregate root yielding
+multiple key/values in a CouchDB view:&lt;/p>
+&lt;blockquote>
+&lt;p>What a view cannot do is keep track of older versions of an aggregate
+root.&lt;/p>
+&lt;/blockquote>
+&lt;p>Recently I&amp;rsquo;ve been revisiting this problem (because I find it fun to
+think about) and have a slightly different solution to propose, namely
+to store all events for a single aggregate in a single document. That
+is, make the document have a list of events. This will solve all
+previous requirements as well as:&lt;/p></description></item><item><title>Bootstrapping: CouchDB as event store</title><link>https://jensrantil.github.io/posts/couchdb-as-event-store/</link><pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/couchdb-as-event-store/</guid><description>&lt;p>I&amp;rsquo;ve previously written about &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >what event sourcing
+is&lt;/a>. Reading about it, you might
+think &amp;ldquo;heck, sounds great! But how do I get started?&amp;rdquo;. This blog post
+will propose a simple way.&lt;/p>
+&lt;h2 id="a-minimum-viable-product">
+ A Minimum Viable Product
+ &lt;a class="heading-link" href="#a-minimum-viable-product">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>The concept of a &lt;a href="http://en.wikipedia.org/wiki/Minimum_viable_product" class="external-link" target="_blank" rel="noopener">minimum viable
+product&lt;/a> states
+that you shouldn&amp;rsquo;t do more than absolutely necessary before releasing a
+product. You need to release it when it&amp;rsquo;s just good enough. If it&amp;rsquo;s
+received badly, you haven&amp;rsquo;t invested too much time or energy into it.&lt;/p></description></item><item><title>CQRS+Event Sourcing Messaging Patterns</title><link>https://jensrantil.github.io/posts/cqrs-event-sourcing-messaging-patterns/</link><pubDate>Sun, 26 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/cqrs-event-sourcing-messaging-patterns/</guid><description>&lt;p>This post is partially related to my &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >previous blog
+post&lt;/a> about
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a> and
+&lt;a href="http://www.github.com/JensRantil/gorewind" class="external-link" target="_blank" rel="noopener">Gorewind&lt;/a>.&lt;/p>
+&lt;p>Designing a decoupled, message based, system based on the
+&lt;a href="http://martinfowler.com/bliki/CQRS.html" class="external-link" target="_blank" rel="noopener">CQRS&lt;/a> pattern together with
+&lt;a href="http://martinfowler.com/eaaDev/EventSourcing.html" class="external-link" target="_blank" rel="noopener">event sourcing&lt;/a>
+require some thought. Since I&amp;rsquo;ve been thinking about it for a while now,
+I thought I&amp;rsquo;d share some thoughts so far.&lt;/p>
+&lt;h2 id="cqrs">
+ CQRS
+ &lt;a class="heading-link" href="#cqrs">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>First let&amp;rsquo;s think about the way information conceptually flows in a CQRS
+system:&lt;/p>
+&lt;blockquote>
+&lt;p>Client issuing a command -&amp;gt; Command -&amp;gt; Command Handler -&amp;gt;
+Event -&amp;gt; Event Listeners/Projections&lt;/p></description></item><item><title>CQRS - Time to Rewind</title><link>https://jensrantil.github.io/posts/cqrs-time-to-rewind/</link><pubDate>Sun, 19 May 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/cqrs-time-to-rewind/</guid><description>&lt;p>For the last year I&amp;rsquo;ve been thinking a lot about
+&lt;a href="http://www.cqrsinfo.com" class="external-link" target="_blank" rel="noopener">CQRS&lt;/a>
+[&lt;a href="http://martinfowler.com/bliki/CQRS.html" class="external-link" target="_blank" rel="noopener">1&lt;/a>], &lt;a href="http://martinfowler.com/eaaDev/EventSourcing.html" class="external-link" target="_blank" rel="noopener">Event
+Sourcing&lt;/a> and
+distributed architecture using &lt;a href="http://www.zeromq.org" class="external-link" target="_blank" rel="noopener">ZeroMQ&lt;/a>. I first
+stumbled across the concept of CQRS through the mailing list for a &lt;a href="http://www.meetup.com/SoftPub/" class="external-link" target="_blank" rel="noopener">nerd
+meetup in Helsingborg&lt;/a>, Sweden. This led
+me to a lot of CQRS
+&lt;a href="http://msdn.microsoft.com/en-us/library/jj554200.aspx" class="external-link" target="_blank" rel="noopener">reading&lt;/a> and
+&lt;a href="http://cqrs.wordpress.com/video/" class="external-link" target="_blank" rel="noopener">videos&lt;/a>, and with that the Event
+Sourcing data model.&lt;/p>
+&lt;p>To try out CQRS and Event Sourcing in practise, I started writing an
+open source event store about a year ago. I named it
+&lt;a href="http://www.github.com/JensRantil/rewind" class="external-link" target="_blank" rel="noopener">Rewind&lt;/a>. This also opened up
+for me to try some concepts that I had never tried before [2].&lt;/p></description></item></channel></rss>

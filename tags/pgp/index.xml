@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PGP on Jens Rantil</title><link>https://jensrantil.github.io/tags/pgp/</link><description>Recent content in PGP on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 22 Aug 2023 00:13:45 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/pgp/index.xml" rel="self" type="application/rss+xml"/><item><title>New PGP key</title><link>https://jensrantil.github.io/posts/new-pgp-key/</link><pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/new-pgp-key/</guid><description>&lt;p>Just wanted to give you a heads up that I recently generated a &lt;a href="https://dl.dropboxusercontent.com/u/17059539/public.asc" class="external-link" target="_blank" rel="noopener">new PGP
+key&lt;/a>. Its
+fingerprint is &lt;code>4371 E7ED 3A3D DBB4 12B5 C68F BA63 2DB6 91DA 03B8&lt;/code> and
+its bound to &lt;code>jens.rantil@gmail.com&lt;/code>.&lt;/p>
+&lt;p>I&amp;rsquo;ve previously had PGP keys but they are all expired.&lt;/p>
+&lt;p>For people who are learning about PGP I can highly suggest these two
+links on how to do things the right way:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://alexcabal.com/creating-the-perfect-gpg-keypair/" class="external-link" target="_blank" rel="noopener">Creating the perfect GPG
+keypair&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://we.riseup.net/riseuplabs&amp;#43;paow/openpgp-best-practices" class="external-link" target="_blank" rel="noopener">OpenPGP Best
+Practices&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="%7cfilename%7cpages/about-me.rst" >Get in touch with me&lt;/a> if you&amp;rsquo;d like to
+sign my key. I live in south of Sweden (Lund/Malmö area) and
+occasionally visit Stockholm and/or Copenhagen. I&amp;rsquo;m actually thinking
+about hosting a &lt;a href="http://cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html" class="external-link" target="_blank" rel="noopener">key signing
+party&lt;/a>
+in the area. If that happens, I&amp;rsquo;ll put some more info up on it!&lt;/p></description></item></channel></rss>
