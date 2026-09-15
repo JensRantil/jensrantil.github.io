@@ -13,7 +13,9 @@ In April, I published the article ["What type of AI usage?"][ai-usage] In it, I 
 
 After publishing my article, a good friend reached out. This friend warned me that criticizing AI could "negatively impact my career".
 
-I explained that my article simply took a balanced look at AI. AI has its uses, when used thoughtfully! Still, even remotely criticizing AI could do me a lot of harm, they argued.
+I explained that my article simply took a balanced look at AI. AI has its uses, when [used thoughtfully][ai-used-throughfully]! Still, even remotely criticizing AI could do me a lot of harm, they argued.
+
+[ai-used-throughfully]: https://lalitm.com/post/building-syntaqlite-ai
 
 My friend had recently been speaking to a lot of investors. Every investor asked, "Do you use AI?" Investors wanted "AI" regardless of the outcome. This means boards required "AI" irrespective of outcome. My friend argued my hireability would diminish if I had a blog post "criticising AI" somewhere online.
 
