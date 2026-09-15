@@ -41,7 +41,7 @@ Reading between the lines, my friend was asked to stay silent. Not by a specific
 
 [culture-organism]: https://pca.st/oy7dq2uo
 
-## Impact in a silent culture
+## Silenced cultures have less impact
 
 If we want to have impactful, successful companies, we must build a culture that rewards being challenged. I understand it has friction. Getting challenged can be tough. But it is for the better.
 
