@@ -11,7 +11,7 @@ In April, I published the article ["What type of AI usage?"][ai-usage] In it, I 
 
 ## The Industry strikes back
 
-Immediately after publishing my article, a good friend reached out. This friend warned me that criticizing AI could "negatively impact my career".
+After publishing my article, a good friend reached out. This friend warned me that criticizing AI could "negatively impact my career".
 
 I explained that my article simply took a balanced look at AI. AI has its uses, when used thoughtfully! Still, even remotely criticizing AI, they argued, could do me a lot of harm.
 
