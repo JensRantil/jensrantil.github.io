@@ -27,9 +27,13 @@ I am by no means criticising my friend here. They cared for me. _They_ did not s
 
 Another friend used to work as a Staff Engineer at a fairly large tech company in Stockholm. A smart friend I look up to. One day, the executive board announced that "all quarterly goals were to be dropped." The company would instead "focus on AI" for the next six months. No specifics.
 
-My friend asked the leadership, "What type of AI are we talking about here?" People were annoyed. What question _was_ that? "All", they said. The whole company was in turmoil with random AI initiatives all over. Initiators of any "AI" project were rewarded. Irrespective of impact.
+My friend asked the leadership, "What type of AI are we talking about here?" People were annoyed. What question _was_ that? "All", they answered. The whole company was in turmoil with random AI initiatives all over. Initiators of any "AI" project were rewarded[^1]. Irrespective of impact.
 
-My friend asked what the expected outcome was for specific AI initiatives, but got no answers. He was just considered annoying. People thought "AI" was the outcome.
+[^1]: [Similar to Microsoft](https://jonready.com/blog/posts/everyone-in-seattle-hates-ai.html).
+
+My friend asked what the expected outcome was for specific AI initiatives, but got no answers. He was just considered annoying. People thought ["AI" was the outcome][ai-push-throat].
+
+[ai-push-throat]: https://gpt3experiments.substack.com/p/dont-push-ai-down-our-throats
 
 Six months passed. Most initiatives were failures. A lot of wasted person-hours.
 
