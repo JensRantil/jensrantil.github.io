@@ -15,7 +15,7 @@ Assuming that [the conversation is about customer impact][theatre] (which "AI us
 
 > "What type of AI usage are we talking about here?"
 
-I think this question might be my biggest contribution to popping the AI bubble - making AI concrete and useful. Each type of AI usage has a different success metric, requires a different set of skills, and a different conversation.
+I think this question might be my biggest contribution to making AI more concrete and more useful. Each type of AI usage has a different success metric, requires a different set of skills, and a different conversation.
 
 In these talks, I have generally seen four common usages of AI:
 
