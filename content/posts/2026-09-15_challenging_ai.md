@@ -43,7 +43,7 @@ Reading between the lines, my friend was asked to stay silent. Not by a specific
 
 ## Impact in a silent culture
 
-If we want to have impactful, successful companies, we must build a cultures that rewards being challenged. I understand it has friction. Getting challenged can be tough. But it is for the better.
+If we want to have impactful, successful companies, we must build a culture that rewards being challenged. I understand it has friction. Getting challenged can be tough. But it is for the better.
 
 We live in dangerous times if we are not allowed to ask hard questions and challenge basic assumptions -- be it about AI or something else. This applies to companies, our industry, or -- God forbid -- [the world as a whole][trump-press].
 
