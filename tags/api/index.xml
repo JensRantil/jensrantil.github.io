@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Api on Jens Rantil</title><link>https://jensrantil.github.io/tags/api/</link><description>Recent content in Api on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 09 Mar 2024 08:30:43 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/api/index.xml" rel="self" type="application/rss+xml"/><item><title>The downsides of batch APIs</title><link>https://jensrantil.github.io/posts/downsides-of-batch-apis/</link><pubDate>Wed, 03 May 2023 12:50:41 +0200</pubDate><guid>https://jensrantil.github.io/posts/downsides-of-batch-apis/</guid><description>&lt;p>When an HTTP API is too slow to call repeatedly I have seen engineers
+immediately turn to making the API &lt;em>do more in one unit of work&lt;/em>. I think this
+pattern can be very harmful and have many battle scars from this. So I thought
+I would write a post about it.&lt;/p>
+&lt;h2 id="an-example">
+ An example
+ &lt;a class="heading-link" href="#an-example">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Let&amp;rsquo;s start with an example: You have a web service that stores TODO items. It
+has an API endpoint, &lt;code>POST /todo&lt;/code>, which gets called to add a new TODO item.
+Here is an example request/response:&lt;/p></description></item></channel></rss>

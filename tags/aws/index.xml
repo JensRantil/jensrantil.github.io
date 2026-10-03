@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AWS on Jens Rantil</title><link>https://jensrantil.github.io/tags/aws/</link><description>Recent content in AWS on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 22 Aug 2023 00:13:45 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS ELBs and Availability</title><link>https://jensrantil.github.io/posts/aws-elbs-and-availability/</link><pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/aws-elbs-and-availability/</guid><description>&lt;p>Recently I was reading the article &lt;a href="https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236" class="external-link" target="_blank" rel="noopener">&amp;ldquo;Introduction to modern network load
+balancing and
+proxying&amp;rdquo;&lt;/a>
+and I was reminded by something that has bothered, and still is bothering me,
+about the AWS Load Balancers (ElasticLoad Balancers, or ELBs). The article
+quotes &lt;a href="https://en.wikipedia.org/wiki/Load_balancing_%28computing%29" class="external-link" target="_blank" rel="noopener">the Wikipedia article about Load
+Balancer&lt;/a> saying&lt;/p>
+&lt;blockquote>
+&lt;p>Using multiple components with load balancing instead of a single component
+may increase reliability and availability through redundancy.&lt;/p>
+&lt;/blockquote>
+&lt;p>I have always assumed that that&amp;rsquo;s one of the major reasons why putting load
+balancers in front of application servers. That&amp;rsquo;s why I was surprised to learn
+that if an AWS ELB make a TCP connection to an application it will &lt;em>not&lt;/em> retry
+another application server. Instead, for HTTP mode, it will return an &lt;a href="https://httpstatuses.com/503" class="external-link" target="_blank" rel="noopener">HTTP
+503&lt;/a>. At &lt;a href="https://www.tink.se/" class="external-link" target="_blank" rel="noopener">Tink&lt;/a>, we learnt
+this the hard way many years ago when a few application servers ran out of
+memory and restarted. On a few servers we also did in-place application
+upgrades which also would yield 503s during the upgrade, &lt;em>even if we were
+draining the applications properly on shutdown&lt;/em>. We noticed that a spike of
+5XXs were being returned to our end-users until the ELBs healthcheck had
+realized the service was down.&lt;/p></description></item></channel></rss>
