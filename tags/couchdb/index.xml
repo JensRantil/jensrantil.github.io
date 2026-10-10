@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CouchDB on Jens Rantil</title><link>https://jensrantil.github.io/tags/couchdb/</link><description>Recent content in CouchDB on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 10 Jan 2025 13:33:12 +0100</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/couchdb/index.xml" rel="self" type="application/rss+xml"/><item><title>A follow-up on CouchDB as event store</title><link>https://jensrantil.github.io/posts/follow-up-on-couchdb-as-eventstore/</link><pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/follow-up-on-couchdb-as-eventstore/</guid><description>&lt;p>I &lt;a href="%7cfilename%7ccouchdb-as-event-store.rst" >recently&lt;/a> wrote about using
+CouchDB as an event store. One issue that I mentioned briefly was that
+my proposed solution would not work for a single aggregate root yielding
+multiple key/values in a CouchDB view:&lt;/p>
+&lt;blockquote>
+&lt;p>What a view cannot do is keep track of older versions of an aggregate
+root.&lt;/p>
+&lt;/blockquote>
+&lt;p>Recently I&amp;rsquo;ve been revisiting this problem (because I find it fun to
+think about) and have a slightly different solution to propose, namely
+to store all events for a single aggregate in a single document. That
+is, make the document have a list of events. This will solve all
+previous requirements as well as:&lt;/p></description></item><item><title>Bootstrapping: CouchDB as event store</title><link>https://jensrantil.github.io/posts/couchdb-as-event-store/</link><pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate><guid>https://jensrantil.github.io/posts/couchdb-as-event-store/</guid><description>&lt;p>I&amp;rsquo;ve previously written about &lt;a href="%7cfilename%7cCQRS-time-to-rewind.rst" >what event sourcing
+is&lt;/a>. Reading about it, you might
+think &amp;ldquo;heck, sounds great! But how do I get started?&amp;rdquo;. This blog post
+will propose a simple way.&lt;/p>
+&lt;h2 id="a-minimum-viable-product">
+ A Minimum Viable Product
+ &lt;a class="heading-link" href="#a-minimum-viable-product">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>The concept of a &lt;a href="http://en.wikipedia.org/wiki/Minimum_viable_product" class="external-link" target="_blank" rel="noopener">minimum viable
+product&lt;/a> states
+that you shouldn&amp;rsquo;t do more than absolutely necessary before releasing a
+product. You need to release it when it&amp;rsquo;s just good enough. If it&amp;rsquo;s
+received badly, you haven&amp;rsquo;t invested too much time or energy into it.&lt;/p></description></item></channel></rss>

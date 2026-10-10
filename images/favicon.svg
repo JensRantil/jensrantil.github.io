@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="1.6271186"
+       y="5.1525426"
+       width="29.694916"
+       height="21.966101"
+       id="rect1" />
+  </defs>
+  <g
+     id="layer1">
+    <text
+       xml:space="preserve"
+       id="text1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Bangla MN';-inkscape-font-specification:'Bangla MN';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;white-space:pre;shape-inside:url(#rect1);fill:#000000"
+       x="2.4990234"
+       y="0"
+       transform="matrix(1.4730806,0,0,1.4730806,-0.38941929,-3.820059)"><tspan
+         x="1.6269531"
+         y="19.230469"
+         id="tspan2">JR</tspan></text>
+  </g>
+</svg>
