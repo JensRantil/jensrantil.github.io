@@ -21,12 +21,14 @@ Hiring someone is expensive. It usually takes at least 6-9 months for someone to
 
  * Looking back:
    * Why did this person depart? It is a red flag if the answer only blames the employee or points to a single root cause.
+   * We're there any issues with onboarding or training?
    * Did the company give early, clear, and actionable feedback to the employee about a mismatch? When? How?
    * How did the company handle receiving feedback from the employee? Did it change in any way?
    * Hiring process: Why was this person hired in the first place?
  * Looking forward:
-   * How can the company avoid ending up with this kind of departure in the future? ([reliability][safety-types])
+   * Ultimately, how can the company avoid ending up with this kind of departure in the future? ([reliability][safety-types])
    * How can mismatches be discovered during the hiring process? ([reliability][safety-types])
+   * Can onboarding or training be improved?
    * How can feedback be given earlier and better? ([resilience][safety-types])
    * If a bad hire has already been made, how can the company and its employee realise _earlier_ that a departure is the best way forward? ([resilience][safety-types])
 
