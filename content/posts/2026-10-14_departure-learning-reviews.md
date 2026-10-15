@@ -3,7 +3,8 @@ date = 2026-10-14T15:35:12+02:00
 title = "Departure learning reviews"
 description = "Hiring someone is expensive. How can a company learn from non-mutual departures?"
 tags = []
-slug = "hiring-learning-review"
+slug = "departure-learning-reviews"
+aliases = ["hiring-learning-review"]
 +++
 I think many companies could use a formal _learning review_ process for non-mutual employee departures.
 
