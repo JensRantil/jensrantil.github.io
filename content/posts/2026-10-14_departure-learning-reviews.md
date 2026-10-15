@@ -21,7 +21,7 @@ Hiring someone is expensive. It usually takes at least 6-9 months for someone to
 
  * Looking back:
    * Why did this person depart? It is a red flag if the answer only blames the employee or points to a single root cause.
-   * We're there any issues with onboarding or training?
+   * Were there any issues with onboarding or training?
    * Did the company give early, clear, and actionable feedback to the employee about a mismatch? When? How?
    * How did the company handle receiving feedback from the employee? Did it change in any way?
    * Hiring process: Why was this person hired in the first place?
