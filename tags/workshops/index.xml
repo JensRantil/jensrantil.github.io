@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Workshops on Jens Rantil</title><link>https://jensrantil.github.io/tags/workshops/</link><description>Recent content in Workshops on Jens Rantil</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 09 May 2024 20:42:01 +0200</lastBuildDate><atom:link href="https://jensrantil.github.io/tags/workshops/index.xml" rel="self" type="application/rss+xml"/><item><title>A workshop on evolutionary systems design</title><link>https://jensrantil.github.io/posts/evolutionary-systems-design-workshop/</link><pubDate>Thu, 09 May 2024 19:45:35 +0200</pubDate><guid>https://jensrantil.github.io/posts/evolutionary-systems-design-workshop/</guid><description>&lt;p>The &lt;a href="https://agilemanifesto.org" class="external-link" target="_blank" rel="noopener">Agile Manifesto&lt;/a> states&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Responding to change&lt;/strong> over following a plan&lt;/p>
+&lt;/blockquote>
+&lt;p>This implies that we must design our systems to be malleable to change and
+allow for &lt;em>evolutionary design&lt;/em>.&lt;/p>
+&lt;p>Becoming good at evolutionary systems design requires practice, and sadly,
+programming education doesn&amp;rsquo;t teach this enough! Because of this, I ran a
+workshop at &lt;code>$previousEmployer&lt;/code> to teach how you can arrive at a completely
+different solution if building it up iteratively vs. having all the
+requirements from the start.&lt;/p></description></item></channel></rss>
