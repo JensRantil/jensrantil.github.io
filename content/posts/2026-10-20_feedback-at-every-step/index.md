@@ -12,11 +12,11 @@ slug = "merged-code-feedback"
   </figcaption>
 </figure>
 
-A while ago, someone was wrong on the Internet, and it got me triggered[^2]. :smile: A [LinkedIn post][pr-modified-files] asked whether small PRs are only justified for hotfixes, or if they have broader value, and what the maximum number of changed files should be before a PR gets pushed back for splitting.
+A while ago, someone was wrong on the Internet, and I couldn't let it go[^2]. :smile: A [LinkedIn post][pr-modified-files] asked whether small PRs are only justified for hotfixes, or if they have broader value, and what the maximum number of changed files should be before a PR gets pushed back for splitting.
 
 [pr-modified-files]: https://www.linkedin.com/posts/anton-pronin-8b81a916_techlead-cto-pullrequest-activity-7441079542003208192-lEfg
 
-Besides the evident "the number of files is irrelevant", I think the upper "size" of a pull request is about the complexity of your change[^1], and quick feedback loops.
+Beyond the obvious point that the number of files is irrelevant, I think a pull request's upper size limit depends on the change's complexity[^1] and on keeping feedback loops short.
 
 [cunningham]: https://hacker-laws.com/#cunninghams-law
 [^1]: The unit of "change", in the case of the LinkedIn post, is a pull request.
@@ -43,7 +43,7 @@ sequenceDiagram
 <caption>Mental model: feedback only comes from customers</caption>
 </figure>
 
-The above mental model figure is really too simplified. For anyone who has read the classic book [Continuous Delivery by Jess Humble][cd-book], you know that that shipping software can be thought of as a pipeline:
+The above mental model figure is really too simplified. For anyone who has read the classic book [Continuous Delivery by Jez Humble][cd-book], you know that shipping software can be thought of as a pipeline:
 
 [cd-book]: https://www.amazon.com/dp/0321601912
 
@@ -124,9 +124,9 @@ Every step along the pipeline adds more certainty that the change works as inten
 
 {{< x user="KentBeck" id="250733358307500032" >}}
 
-Can we get even faster feedback? Yes, by shipping smaller increments often. The smaller your change is, the faster it will take for you to figure out what is broken. If you have 100 if conditions, debugging is harder. If you have two, that's a whole lot easier. And you can notice and fix performance regressions earlier, instead of at launch.
+Can we get even faster feedback? Yes, by shipping smaller increments often. The smaller your change is, the faster it will take for you to figure out what is broken. If you have 100 if conditions, debugging is harder. More changes mean more places the bug could be. If you have two, that's a whole lot easier. And you can notice and fix performance regressions earlier, instead of at launch.
 
-Besides, smaller changes tend to be less error prone - it makes your far more product stable over time and far more straight forward to roll back. How many times have we not, as an industry, coded away on a giant pull request[^3] for a week or two, only to see if fail in production?
+Besides, smaller changes tend to be less error prone - it makes your product far more stable over time. And easier to roll back. How many times have we, as an industry, coded away on a giant pull request[^3] for a week or two, only to see it fail in production?
 
 [^3]: Pull request, change request, merge requests, changelist...
 
