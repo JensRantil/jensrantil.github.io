@@ -3,7 +3,8 @@ date = 2026-10-20T13:49:12+02:00
 title = "Feedback at every step"
 description = "Agile development, quick feedback, and merged code."
 tags = []
-slug = "merged-code-feedback"
+slug = "feedback-at-every-step"
+aliases = ["merged-code-feedback"]
 +++
 <figure>
   <img src="duty_calls_2x.png" alt="A stick figure refuses to come to bed because they're compelled to correct someone who is wrong on the internet." style="height: 20em;">
