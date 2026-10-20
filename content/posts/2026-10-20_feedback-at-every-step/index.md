@@ -23,7 +23,7 @@ Beyond the obvious point that the number of files is irrelevant, I think a pull 
 [^1]: The unit of "change", in the case of the LinkedIn post, is a pull request.
 [^2]: Obligatory reference to [Cunningham's Law][cunningham].
 
-When people think about feedback loops in the flow of software engineering, there is a tendency to only focus on the explicit customer feedback loop. "Put **it** in the hands of the customer ASAP!", they say. But what is "it", really? Most people think of "it" as "the new customer feature". I think of it as "a change", any change really. For example, if you have refactored some code, ship it immediately. Or, if you have discovered a bug while implementing a new feature, ship that bug immediately.
+When people think about feedback loops in the flow of software engineering, there is a tendency to only focus on the explicit customer feedback loop. "Put **it** in the hands of the customer ASAP!", they say. But what is "it", really? Most people think of "it" as "the new customer feature". I think of it as "a change", any change really. For example, if you have refactored some code, ship it immediately. Or, if you have discovered a bug while implementing a new feature, ship that bug fix immediately.
 
 ## Feedback is not only from your customers
 
@@ -44,7 +44,7 @@ sequenceDiagram
 <caption>Mental model: feedback only comes from customers</caption>
 </figure>
 
-The above mental model figure is really too simplified. For anyone who has read the classic book [Continuous Delivery by Jez Humble][cd-book], you know that shipping software can be thought of as a pipeline:
+The above mental model figure is really too simplified. For anyone who has read the classic book [Continuous Delivery by Jez Humble and David Farley][cd-book], you know that shipping software can be thought of as a pipeline:
 
 [cd-book]: https://www.amazon.com/dp/0321601912
 
@@ -61,7 +61,7 @@ sequenceDiagram
 
     loop While customer is not happy...
       loop Until the code works on Backend...
-        loop Until code review passes and pre-merge tests passes...
+        loop Until code review passes and pre-merge tests pass...
           loop Until it compiles...
             Developer->>Workstation: Coding
             Workstation-->>Developer: Compilation error
@@ -119,15 +119,15 @@ sequenceDiagram
 
 Notice all the arrows pointing left towards the Developer. That's all feedback. **Feedback is not just coming from the customer.** Feedback comes from every step of the system that is shipping your changes from left to right.
 
-Every step along the pipeline adds more certainty that the change works as intended. The earlier in the pipeline a mistake is caught, the faster feedback back to the developer.
+Every step along the pipeline adds more certainty that the change works as intended. The earlier in the pipeline a mistake is caught, the faster the feedback back to the developer.
 
-## Smaller increments means quicker feedback
+## Smaller increments mean quicker feedback
 
 {{< x user="KentBeck" id="250733358307500032" >}}
 
-Can we get even faster feedback? Yes, by shipping smaller increments often. The smaller your change is, the faster it will take for you to figure out what is broken. If you have 100 if conditions, debugging is harder. More changes mean more places the bug could be. If you have two, that's a whole lot easier. And you can notice and fix performance regressions earlier, instead of at launch.
+Can we get even faster feedback? Yes, by shipping smaller increments often. The smaller your change is, the faster it will take for you to figure out what is broken. If you changed 100 if conditions, debugging is hard, because the bug could be in any of them. If you changed two, it's a whole lot easier. More changes mean more places the bug could be. And you can notice and fix performance regressions earlier, instead of at launch.
 
-Besides, smaller changes tend to be less error prone - it makes your product far more stable over time. And easier to roll back. How many times have we, as an industry, coded away on a giant pull request[^3] for a week or two, only to see it fail in production?
+Also, smaller changes tend to be less error-prone - it makes your product far more stable over time. And easier to roll back. How many times have we, as an industry, coded away on a giant pull request[^3] for a week or two, only to see it fail in production?
 
 [^3]: Pull request, change request, merge requests, changelist...
 
@@ -135,6 +135,6 @@ Besides, smaller changes tend to be less error prone - it makes your product far
 
 Coming back to that original [LinkedIn post][pr-modified-files]. What is a "large change" anyway? I have submitted pull requests where I renamed a method in a thousand places. Yet, the change was low-risk since the code compiled.
 
-The better question is, *what is stopping you from shipping really small increments at a constant pace?* I'm sure you will discover a lot of [waste][waste].
+The better question is, *what is stopping you from shipping really small increments at a constant pace?* I'm sure you will discover a lot of [waste][waste], such as slow CI, lacking git knowledge, QA gates, or long-lived branches.
 
 [waste]: {{< relref "2023-06-27_waste-in-software-development.md" >}}
