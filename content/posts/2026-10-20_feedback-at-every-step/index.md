@@ -2,7 +2,7 @@
 date = 2026-10-20T13:49:12+02:00
 title = "Feedback at every step"
 description = "Agile development, quick feedback, and merged code."
-tags = []
+tags = ["Simplicity", "Feedback", "Productivity"]
 slug = "feedback-at-every-step"
 aliases = ["merged-code-feedback"]
 +++
