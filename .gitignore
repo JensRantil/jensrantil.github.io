@@ -6,3 +6,6 @@ hugo_stats.json
 
 # Temporary lock file while building.
 /.hugo_build.lock
+
+# Maintain the theme manually to be able to check it out using Jujutsu to work on multiple branches/workspaces concurrently using a mega merge.
+/themes/hugo-coder

@@ -9,7 +9,6 @@ You can find all the content in Markdown files in the `content` directory.
 To develop
 ----------
 ```bash
-$ git submodule init
-$ git submodule update
+$ git clone https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
 $ hugo server serve
 ```
