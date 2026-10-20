@@ -24,8 +24,7 @@ jobs:
       - name: Checkout theme
         uses: actions/checkout@v7
         with:
-          repository: luizdepra/hugo-coder
-          ref: 58d956f41c056a12e15d5b6ee27c54fc98cd6e49
+          repository: JensRantil/hugo-coder
           path: themes/hugo-coder
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 

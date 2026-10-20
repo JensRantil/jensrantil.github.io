@@ -30,17 +30,17 @@ languageName = ":us:"
 [[languages.en.menu.main]]
 name = "Blog"
 weight = 1
-url = "posts/"
+pageRef = "/posts"
 
 [[languages.en.menu.main]]
 name = "Services"
 weight = 2
-url = "/pages/services/"
+pageRef = "/pages/services"
 
 [[languages.en.menu.main]]
 name = "About"
 weight = 3
-url = "/pages/about-me/"
+pageRef = "/pages/about-me"
 
 [[params.social]]
 name = "E-mail"
