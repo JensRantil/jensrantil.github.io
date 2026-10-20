@@ -1,7 +1,7 @@
 +++
 date = 2026-10-20T13:49:12+02:00
 title = "Feedback at every step"
-description = "Agile development, quick feedback, and merged code."
+description = "Feedback doesn’t only come from customers. Every step of your delivery pipeline gives it, and smaller changes make it faster."
 tags = ["Simplicity", "Feedback", "Productivity"]
 slug = "feedback-at-every-step"
 aliases = ["merged-code-feedback"]
