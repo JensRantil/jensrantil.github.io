@@ -1,0 +1,91 @@
+<!doctype html><html lang=en><head><title>Feedback at every step · Jens Rantil</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jens Rantil"><meta name=description content="Feedback doesn’t only come from customers. Every step of your delivery pipeline gives it, and smaller changes make it faster."><meta name=keywords content="blog,developer,staff engineering,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Feedback at every step"><meta name=twitter:description content="Feedback doesn’t only come from customers. Every step of your delivery pipeline gives it, and smaller changes make it faster."><meta property="og:url" content="https://jensrantil.github.io/posts/feedback-at-every-step/"><meta property="og:site_name" content="Jens Rantil"><meta property="og:title" content="Feedback at every step"><meta property="og:description" content="Feedback doesn’t only come from customers. Every step of your delivery pipeline gives it, and smaller changes make it faster."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-10-20T13:49:12+02:00"><meta property="article:modified_time" content="2026-10-20T17:08:23+02:00"><meta property="article:tag" content="Simplicity"><meta property="article:tag" content="Feedback"><meta property="article:tag" content="Productivity"><link rel=canonical href=https://jensrantil.github.io/posts/feedback-at-every-step/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d4c088da9083de3a0456a126f2fdfa28822d6cc30715fbd74e1daf126f878485.css integrity="sha256-1MCI2pCD3joEVqEm8v36KIItbMMHFfvXTh2vEm+HhIU=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.18009bfd4d743e18b114540e52f4779776386464bc365c00d3717af96f8936b2.css integrity="sha256-GACb/U10PhixFFQOUvR3l3Y4ZGS8NlwA03F6+W+JNrI=" crossorigin=anonymous media=screen><link rel=stylesheet href=/custom.min.d7f2a32658242c2c7e49791c5036d6f0d1abe732f43e9525d538e462c220cfc4.css integrity="sha256-1/KjJlgkLCx+SXkcUDbW8NGr5zL0PpUl1TjkYsIgz8Q=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jensrantil.github.io/>Jens Rantil
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class="navigation-item ancestor" aria-current=true><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/pages/services/>Services</a></li><li class=navigation-item><a class=navigation-link href=/pages/about-me/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jensrantil.github.io/posts/feedback-at-every-step/>Feedback at every step</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2026-10-20T13:49:12+02:00>October 20, 2026
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+5-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/simplicity/>Simplicity</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/feedback/>Feedback</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/productivity/>Productivity</a></span></div></div></header><div class=post-content><figure><img src=duty_calls_2x.png alt="A stick figure refuses to come to bed because they're compelled to correct someone who is wrong on the internet." style=height:20em><figcaption><p>A classic xkcd comic. ([source](https://xkcd.com/386/))</p></figcaption></figure><p>A while ago, someone was wrong on the Internet, and I couldn&rsquo;t let it go<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>. &#x1f604; A <a href=https://www.linkedin.com/posts/anton-pronin-8b81a916_techlead-cto-pullrequest-activity-7441079542003208192-lEfg class=external-link target=_blank rel=noopener>LinkedIn post</a> asked whether small PRs are only justified for hotfixes, or if they have broader value, and what the maximum number of changed files should be before a PR gets pushed back for splitting.</p><p>Beyond the obvious point that the number of files is irrelevant, I think a pull request&rsquo;s upper size limit depends on the change&rsquo;s complexity<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup> and on keeping feedback loops short.</p><p>When people think about feedback loops in the flow of software engineering, there is a tendency to only focus on the explicit customer feedback loop. &ldquo;Put <strong>it</strong> in the hands of the customer ASAP!&rdquo;, they say. But what is &ldquo;it&rdquo;, really? Most people think of &ldquo;it&rdquo; as &ldquo;the new customer feature&rdquo;. I think of it as &ldquo;a change&rdquo;, any change really. For example, if you have refactored some code, ship it immediately. Or, if you have discovered a bug while implementing a new feature, ship that bug fix immediately.</p><h2 id=feedback-is-not-only-from-your-customers>Feedback is not only from your customers
+<a class=heading-link href=#feedback-is-not-only-from-your-customers><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>So what is <em>feedback</em> in terms of shipping code, really? I think people have this mental model when developing software (or any product, really):</p><figure><div class=mermaid>sequenceDiagram
+actor Developer
+actor Customer
+Note over Developer: "Write 100% of the code needed for the feature"
+loop While the customer is not happy...
+Developer->>Customer: Ship or adjust the feature
+Note over Customer: Customer uses the new feature
+Customer->>Developer: Let the Developer know if the feature was useful
+end</div><caption>Mental model: feedback only comes from customers</caption></figure><p>The above mental model figure is really too simplified. For anyone who has read the classic book <a href=https://www.amazon.com/dp/0321601912 class=external-link target=_blank rel=noopener>Continuous Delivery by Jez Humble and David Farley</a>, you know that shipping software can be thought of as a pipeline:</p><figure><div class=mermaid>sequenceDiagram
+actor Developer
+participant Workstation
+participant Review as Code review system
+actor Colleague as Colleague(s)
+participant CI as Test runner
+participant Backend
+actor Customer
+loop While customer is not happy...
+loop Until the code works on Backend...
+loop Until code review passes and pre-merge tests pass...
+loop Until it compiles...
+Developer->>Workstation: Coding
+Workstation-->>Developer: Compilation error
+end
+Developer->>Workstation: Submit code for review
+Workstation->>Review: Code is sent for review
+par Code review
+Review->>Colleague: Human/AI code review
+Colleague->>Developer: Human/AI feedback on implementation
+and Pre-merge tests
+activate CI
+CI->>CI: Execute unit tests
+CI->>CI: Execute integration tests
+CI->>CI: Execute system tests
+break
+CI->>Developer: Notify tests failed
+end
+CI->>Developer: Notify tests passed
+deactivate CI
+end
+end
+Developer->>Review: Submit for merging
+Review->>CI: CI/CD initiated
+activate CI
+CI->>CI: Merge trunk to run integrated tests
+CI->>CI: Execute unit tests
+CI->>CI: Execute integration tests
+CI->>CI: Execute system tests
+break
+CI-->>Developer: Notify of test failure
+end
+CI-->>Backend: Tests passed and deploy initiated
+loop Until all smoke tests have executed or failure
+CI->>Backend: Make requests
+Backend->>CI: Check response
+end
+break
+CI->>Developer: Notify of deployment failure
+end
+CI->>Developer: Notify of deployment success
+deactivate CI
+end
+Backend->>Developer: Backend observability
+par General product usage
+Backend->>Customer: Customer uses product generally
+Customer->>Developer: Support request to notify if a preexisting feature is broken
+and Trying new features
+Backend->>Customer: Customer tries a new product feature
+Customer->>Developer: Let the company know if a new feature is useful or not
+end
+end</div><caption>Reality: feedback comes from every step</caption></figure><p>Notice all the arrows pointing left towards the Developer. That&rsquo;s all feedback. <strong>Feedback is not just coming from the customer.</strong> Feedback comes from every step of the system that is shipping your changes from left to right.</p><p>Every step along the pipeline adds more certainty that the change works as intended. The earlier in the pipeline a mistake is caught, the faster the feedback back to the developer.</p><h2 id=smaller-increments-mean-quicker-feedback>Smaller increments mean quicker feedback
+<a class=heading-link href=#smaller-increments-mean-quicker-feedback><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><blockquote class=twitter-tweet><p lang=en dir=ltr>for each desired change, make the change easy (warning: this may be hard), then make the easy change</p>&mdash; Kent Beck 🌻 (@KentBeck) <a href="https://x.com/KentBeck/status/250733358307500032?ref_src=twsrc%5Etfw">September 25, 2012</a></blockquote><script async src=https://platform.x.com/widgets.js></script><p>Can we get even faster feedback? Yes, by shipping smaller increments often. The smaller your change is, the faster it will take for you to figure out what is broken. If you changed 100 if conditions, debugging is hard, because the bug could be in any of them. If you changed two, it&rsquo;s a whole lot easier. More changes mean more places the bug could be. And you can notice and fix performance regressions earlier, instead of at launch.</p><p>Also, smaller changes tend to be less error-prone - it makes your product far more stable over time. And easier to roll back. How many times have we, as an industry, coded away on a giant pull request<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup> for a week or two, only to see it fail in production?</p><h2 id=complexity-is-relevant-size-is-not>Complexity is relevant, size is not
+<a class=heading-link href=#complexity-is-relevant-size-is-not><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Coming back to that original <a href=https://www.linkedin.com/posts/anton-pronin-8b81a916_techlead-cto-pullrequest-activity-7441079542003208192-lEfg class=external-link target=_blank rel=noopener>LinkedIn post</a>. What is a &ldquo;large change&rdquo; anyway? I have submitted pull requests where I renamed a method in a thousand places. Yet, the change was low-risk since the code compiled.</p><p>The better question is, <em>what is stopping you from shipping really small increments at a constant pace?</em> I&rsquo;m sure you will discover a lot of <a href=/posts/waste-in-software-development/>waste</a>, such as slow CI, lacking git knowledge, QA gates, or long-lived branches.</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>Obligatory reference to <a href=https://hacker-laws.com/#cunninghams-law class=external-link target=_blank rel=noopener>Cunningham&rsquo;s Law</a>.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>The unit of &ldquo;change&rdquo;, in the case of the LinkedIn post, is a pull request.&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p>Pull request, change request, merge requests, changelist&mldr;&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2026
+Jens Rantil
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://github.com/JensRantil/jensrantil.github.io/tree/02990153626988342a2c85c24bed1358f25aa3d9 target=_blank rel=noopener>0299015</a>]</section></footer></main><script src=https://cdn.jsdelivr.net/npm/mermaid@11.13.0/dist/mermaid.min.js integrity="sha256-PiACvzM5B/rnwdaGC7x49dpBe8cLZPPSJoWBuguouWo=" crossorigin=anonymous></script><script>mermaid.initialize({startOnLoad:!0})</script><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-8QE7N3YHJ3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-8QE7N3YHJ3")</script></body></html>
